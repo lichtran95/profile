@@ -1,0 +1,16 @@
+extends layout.pug
+
+//- Setting
+block setting
+	- var layout = true
+
+block head
+	include head.pug
+
+block pages
+	- bodyClasses.push("")
+	- layoutClasses.push("")
+	
+//- Add Body
+block body
+	include page/_home.pug

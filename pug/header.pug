@@ -1,0 +1,43 @@
+header#header
+	.container
+		.content-wrapper
+			.pos-left
+				a.logo(href="#!")
+					img(src="../assets/images/logo.png", alt="")
+				button.btn.btn-outline-dark Contact
+				button.hamburger(onclick='toggleMenu()')
+					span.hamburger-line.hamburger-line-1
+					span.hamburger-line.hamburger-line-2
+					span.hamburger-line.hamburger-line-3
+			.pos-center
+				nav.desktop
+					ul
+						li.item-nav
+							a(href="#!") Home
+						li.item-nav
+							a(href="#!") About
+						li.item-nav
+							a(href="#!") Portfolio
+						li.item-nav
+							a(href="#!") Blog
+						li.item-nav
+							a(href="#!") Contact	
+				nav.navMobile
+					a.logo(href="#!")
+						img(src="../assets/images/logo.png", alt="")
+						p Medad Tran
+					ul
+						li.item-nav
+							a(href="#!") Home
+						li.item-nav
+							a(href="#!") About
+						li.item-nav
+							a(href="#!") Portfolio
+						li.item-nav
+							a(href="#!") Blog
+						li.item-nav
+							a(href="#!") Contact
+					.closeNav(onclick='closeMenu()')
+						img(src="../assets/images/ico_close.png", alt="")
+			.pos-right
+				button.btn.btn-primary.btn-rounded Book me!

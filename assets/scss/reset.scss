@@ -1,0 +1,48 @@
+/* Reset */
+@charset "UTF-8";
+*{margin:0;padding:0;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box}
+*{-webkit-tap-highlight-color:rgba(0,0,0,0);/* Stops flash on tap iOS */}
+a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{border:0;font:inherit;vertical-align:baseline}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block }
+ol,ul, ul li{list-style:none}
+blockquote,q{quotes:none}
+blockquote:before,blockquote:after,q:before,q:after{content:none}
+table{border-collapse:collapse;border-spacing:0}
+a{outline:0;cursor:pointer;transition:color .4s ease, background-color .4s ease;
+	&:hover{text-decoration:none}
+}
+input,textarea{font-family: 'Montserrat', sans-serif !important;
+
+}
+p{margin:0}
+strong, b{font-weight:bold}
+h1, h2, h3, h4, h5, h6{margin:0;font-weight:inherit}
+img{vertical-align:top;max-width:100%}
+img.responsive-img, video.responsive-video{display:block;max-width:100%;height:auto}
+label{-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-o-user-select:none;user-select:none}
+ul,ol,ul ul li,ul ol li,ol ol li,ol ul li,form,fieldset,.alert>p,.alert>ul{margin-bottom:0}
+a, img, span, label, li{text-decoration:none;-webkit-tap-highlight-color:rgba(255,255,255,0);user-select:none}
+button{font:unset;box-shadow:none;border:none;outline:none;cursor:pointer;	font-family: 'Montserrat', sans-serif !important;}
+.clearfix:before,.clearfix:after{content:'\0020';display:block;overflow:hidden;visibility:hidden;width:0;height:0}
+.clearfix{zoom:1}
+.clear, .clearfix:after{clear:both}
+.hidden{display:none!important}
+.block{display:block!important}
+.transparent{background:transparent!important}
+.line-through{text-decoration:line-through}
+.text-break{word-break:break-word;word-wrap:break-word}
+
+/* Typography */
+.h1, .h2, .h3, .h4, .h5, .h6{font-weight:700}
+h1{@extend .h1;}
+h2{@extend .h2;}
+h3{@extend .h3;}
+h4{@extend .h4;}
+h5{@extend .h5;}
+h6{@extend .h6;}
+
+body,html{
+	font-size:16px;
+	font-family: 'Montserrat', sans-serif !important;
+	box-sizing:border-box;
+}

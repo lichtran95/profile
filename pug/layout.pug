@@ -1,0 +1,23 @@
+include config.pug
+block setting
+	- var header = true
+	- var footer = true
+	- var modal = true
+	- var funclist = true
+
+doctype
+html(lang="en")
+	head
+		block head
+
+	//- add class for wrapper
+	- var bodyClasses = [];
+	- var layoutClasses= [];
+
+	block pages
+	body(class=`${bodyClasses}`)
+		if layout
+			include header.pug
+			main(class=`${layoutClasses}`)
+				block body
+			include footer.pug
