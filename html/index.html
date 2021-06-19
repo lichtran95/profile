@@ -29,27 +29,29 @@
           <div class="pos-center">
             <nav class="desktop">
               <ul>
-                <li class="item-nav"><a href="#!">Home</a></li>
-                <li class="item-nav"><a href="#!">About</a></li>
-                <li class="item-nav"><a href="#!">Portfolio</a></li>
-                <li class="item-nav"><a href="#!">Blog</a></li>
-                <li class="item-nav"><a href="#!">Contact	</a></li>
+                <li class="item-nav"><a href="#hero">Home</a></li>
+                <li class="item-nav"><a href="#introduction">About</a></li>
+                <li class="item-nav"><a href="#skill">Skill</a></li>
+                <li class="item-nav"><a href="#canDo">Portfolio</a></li>
+                <li class="item-nav"><a href="#blog">Blog</a></li>
+                <li class="item-nav"><a href="#contact">Contact	</a></li>
               </ul>
             </nav>
             <nav class="navMobile"><a class="logo" href="#!"><img src="../assets/images/logo.png" alt="">
                 <p>Medad Tran</p></a>
               <ul>
-                <li class="item-nav"><a href="#!">Home</a></li>
-                <li class="item-nav"><a href="#!">About</a></li>
-                <li class="item-nav"><a href="#!">Portfolio</a></li>
-                <li class="item-nav"><a href="#!">Blog</a></li>
-                <li class="item-nav"><a href="#!">Contact</a></li>
+                <li class="item-nav"><a href="#hero">Home</a></li>
+                <li class="item-nav"><a href="#introduction">About</a></li>
+                <li class="item-nav"><a href="#skill">Skill</a></li>
+                <li class="item-nav"><a href="#canDo">Portfolio</a></li>
+                <li class="item-nav"><a href="#blog">Blog</a></li>
+                <li class="item-nav"><a href="#contact">Contact</a></li>
               </ul>
               <div class="closeNav" onclick="closeMenu()"><img src="../assets/images/ico_close.png" alt=""></div>
             </nav>
           </div>
           <div class="pos-right">
-            <button class="btn btn-primary btn-rounded">Book me!</button>
+            <button class="btn btn-primary btn-rounded">Contact</button>
           </div>
         </div>
       </div>
@@ -61,9 +63,9 @@
             <div class="container">
               <div class="content-wrapper">
                 <div class="inner text-left"><span class="overlines">UX/UI Designer - HTML Coder</span>
-                  <h1>Hello, I’m Medad Tran Welcome to My World</h1>
+                  <h1>Xin chào, Mình là Lịch <br> Cảm ơn bạn đã ghé thăm</h1>
                   <button class="cta"><img src="../assets/images/download.png" alt="">
-                    <p>Download My CV</p>
+                    <p>Tải CV của Lịch</p>
                   </button>
                 </div>
               </div>
@@ -74,85 +76,87 @@
       <div class="introduction" id="introduction">
         <div class="container">
           <div class="content-wrapper">
-            <div class="img"><img src="../assets/images/img_introduction.png" alt=""></div>
-            <div class="info"><span class="overlines">Introduction</span>
-              <h2>About me</h2>
-              <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi convallis quis odio ut blandit. Phasellus sodales eu massa sit amet sollicitudin Cras fringilla, nisi a tempus posuere, mauris libero posuere ante, at vulputate massa massa</p>
+            <div class="pos-left">
+              <div class="img"><img src="../assets/images/img_introduction.png" alt=""></div>
             </div>
-            <div class="tab-wrapper">
-              <div class="tab">
-                <div class="tablinks active" onclick="tabAbout(event, 'skill')">Skill</div>
-                <div class="tablinks" onclick="tabAbout(event, 'experience')">Experience</div>
-                <div class="tablinks" onclick="tabAbout(event, 'education')">Education</div>
+            <div class="pos-right">
+              <div class="info"><span class="overlines">Giới thiệu</span>
+                <h2>Thông tin cá nhân</h2>
+                <p class="desc">Lịch tốt nghiệp trường đại học vào đầu năm 2019. Và cũng bắt đầu đi làm từ thời điểm đó. Xuất phát điểm của mình là 1 HTML Coder. Và tới đầu năm 2020 mình cũng khá hứng thú với công việc của một UX/UI Design nên cũng bắt tay vào học và làm.</p>
               </div>
-              <div class="content">
-                <div class="tabcontent" id="skill">
-                  <div class="skill">
-                    <p class="lead">UX/UI Designer</p>
-                    <p>Wireframe, Prototyping, Mockup, Design System</p>
-                    <p>UX/UI design in developing Web application for cross-browser</p>
-                    <p>Figma/ Adobe XD/ Sketch/ Pts/ AI</p>
-                  </div>
-                  <div class="skill">
-                    <p class="lead">HTML Coder</p>
-                    <p>HTML/CSS, JavaScript client such as Jquery, JSON, AJAX</p>
-                    <p>Responsive Cross-browser</p>
-                    <p>Basic knowledge Angular/ Reactjs/ Vuejs</p>
-                  </div>
+              <div class="tab-wrapper">
+                <div class="tab">
+                  <div class="tablinks active" onclick="tabAbout(event, 'skill')">Kỹ năng</div>
+                  <div class="tablinks" onclick="tabAbout(event, 'experience')">Kinh nghiệm</div>
+                  <div class="tablinks" onclick="tabAbout(event, 'education')">Học vấn</div>
                 </div>
-                <div class="tabcontent" id="experience" style="display:none">
-                  <h3>Paris</h3>
-                  <p>Paris is the capital of France.</p>
-                </div>
-                <div class="tabcontent" id="education" style="display:none">
-                  <h3>Tokyo</h3>
-                  <p>Tokyo is the capital of Japan.</p>
+                <div class="content">
+                  <div class="tabcontent" id="skill">
+                    <div class="skill">
+                      <p class="lead">UX/UI Designer</p>
+                      <p>Wireframe, Prototyping, Mockup, Design System</p>
+                      <p>UX/UI design in developing Web application for cross-browser</p>
+                      <p>Figma/ Adobe XD/ Sketch/ Pts/ AI</p>
+                    </div>
+                    <div class="skill">
+                      <p class="lead">HTML Coder</p>
+                      <p>HTML/CSS, JavaScript client such as Jquery, JSON, AJAX</p>
+                      <p>Responsive Cross-browser</p>
+                      <p>Basic knowledge Angular/ Reactjs/ Vuejs</p>
+                    </div>
+                  </div>
+                  <div class="tabcontent" id="experience" style="display:none">
+                    <p class="lead">Updating</p>
+                  </div>
+                  <div class="tabcontent" id="education" style="display:none">
+                    <p class="lead">Updating</p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="canDo">
+      <div class="canDo" id="skill">
         <div class="container">
           <div class="content-wrapper">
-            <div class="section-title text-center"><span class="overlines">Reality</span>
-              <h2 class="title">What I can do</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi convallis quis odio ut bland</p>
+            <div class="section-title text-center"><span class="overlines">Trách nhiệm</span>
+              <h2 class="title">Vai trò đóng góp</h2>
+              <p>Lịch có thể đảm nhiệm 2 vài trò cùng 1 lúc đó là UX/UI Design và HTML Coder</p>
             </div>
             <ul>
               <li>
                 <div class="item-canDo">
                   <div class="img"><img src="../assets/images/img_cando1.png" alt=""></div>
-                  <h3>Lorem isum</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi convallis quis odio consectetur adipiscing elit. Morbi convallis quis odio</p>
+                  <h3>Thiết kế Web/ App</h3>
+                  <p>Làm việc có quy trình đối với khách hàng cũng như đội nhóm để đưa ra thiết kế phù hợp một cách tốt nhất và đáp ứng được nhu cầu</p>
                 </div>
               </li>
               <li>
                 <div class="item-canDo">
-                  <div class="img"><img src="../assets/images/img_cando1.png" alt=""></div>
-                  <h3>Lorem isum</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi convallis quis odio consectetur adipiscing elit. Morbi convallis quis odio</p>
+                  <div class="img"><img src="../assets/images/img_cando2.png" alt=""></div>
+                  <h3>Lập trình giao diện</h3>
+                  <p>Có thể chuyển từ design qua HTML thông qua kinh nghiệm và hiểu biết về HTML/CSS/Javascript và Responsive</p>
                 </div>
               </li>
               <li>
                 <div class="item-canDo">
-                  <div class="img"><img src="../assets/images/img_cando1.png" alt=""></div>
-                  <h3>Lorem isum</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi convallis quis odio consectetur adipiscing elit. Morbi convallis quis odio</p>
+                  <div class="img"><img src="../assets/images/img_cando3.png" alt=""></div>
+                  <h3>Làm việc nhóm</h3>
+                  <p>Đã Tích tham gia đóng góp ý kiến mong muốn quá trình làm việc được diễn ra suôn sẻ cũng như hiệu quả nhất</p>
                 </div>
               </li>
             </ul>
           </div>
         </div>
       </div>
-      <div class="lastestProject">
+      <div class="lastestProject" id="canDo">
         <div class="container">
           <div class="content-wrapper">
             <div class="section-title text-center">
-              <div class="section-title text-center"></div><span class="overlines">My completed project</span>
-              <h2 class="title">My Lastest Project</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi convallis quis odio ut bland</p>
+              <div class="section-title text-center"></div><span class="overlines">Sản phẩm</span>
+              <h2 class="title">Đã hoàn thành</h2>
+              <p>Đóng vai trò là 1 UX/UI Design - 1 HTML Coder, Lịch đưa ra các sản phẩm tự tay thiết kế cũng như lập trình giao diện</p>
             </div>
             <ul>
               <li>
@@ -192,12 +196,12 @@
           </div>
         </div>
       </div>
-      <div class="blog">
+      <div class="blog" id="blog">
         <div class="container">
           <div class="content-wrapper">
-            <div class="section-title text-center"><span class="overlines">My completed project</span>
-              <h2 class="title">My Lastest Project</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi convallis quis odio ut bland</p>
+            <div class="section-title text-center"><span class="overlines">Chia sẻ</span>
+              <h2 class="title">Trải nghiệm & Định hướng</h2>
+              <p>Đi làm có lúc vui, có lúc phải "chạy theo" công việc để có thể hoàn thành tốt nhất có thể, từ đó mà mình được trải nghiệm cũng như tiếp xúc với nhiều câu chuyện thú vị</p>
             </div>
             <ul>
               <li>
@@ -237,26 +241,26 @@
           </div>
         </div>
       </div>
-      <div class="contact">
+      <div class="contact" id="contact">
         <div class="container">
           <div class="content-wrapper">
             <div class="pos-right">
               <div class="img"><img src="../assets/images/img_contact.png" alt=""></div>
             </div>
             <div class="pos-left">
-              <div class="section-title"><span class="overlines">Contact</span>
-                <h2 class="title">Hire me</h2>
+              <div class="section-title"><span class="overlines">Make a relationship</span>
+                <h2 class="title">Liên hệ</h2>
                 <ul>
                   <li><span>Phone:</span><strong>(+84) 328 391 129</strong></li>
-                  <li><span>Email:</span><strong>thanhlich250695@gmail.com</strong</li>
+                  <li><span>Email:</span><strong>thanhlich250695@gmail.com</strong></li>
                 </ul>
               </div>
               <form class="form">
-                <input type="text" placeholder="Your name">
-                <input type="text" placeholder="Your Mail">
-                <input type="text" placeholder="Your Phone number">
-                <textarea type="text" placeholder="Your Message"></textarea>
-                <button>SUBMIT NOW</button>
+                <input type="text" placeholder="Nhập họ và tên">
+                <input type="text" placeholder="Email">
+                <input type="text" placeholder="Số điện thoại">
+                <textarea type="text" placeholder="Lời nhắn"></textarea>
+                <button>GỬI NGAY</button>
               </form>
             </div>
           </div>
@@ -271,6 +275,7 @@
     <script src="../assets/javascript/bootstrap/bootstrap.bundle.min.js"></script>
     <script src="../assets/javascript/bootstrap/bootstrap.esm.min.js"></script>
     <script src="../assets/javascript/bootstrap/bootstrap.min.js"></script>
+    <script src="../assets/javascript/jquery.min.js"></script>
     <script src="../assets/javascript/main.js"></script>
   </body>
 </html>

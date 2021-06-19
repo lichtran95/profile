@@ -6,77 +6,77 @@ block body
 				.content-wrapper
 					.inner.text-left
 						span.overlines UX/UI Designer - HTML Coder
-						h1 Hello, I’m Medad Tran Welcome to My World
+						h1 Xin chào, Mình là Lịch <br> Cảm ơn bạn đã ghé thăm
 						button.cta
 							img(src="../assets/images/download.png", alt="")
-							p Download My CV
+							p Tải CV của Lịch
 .introduction#introduction
 	.container
 		.content-wrapper
-			.img
-				img(src="../assets/images/img_introduction.png", alt="")
-			.info
-				span.overlines Introduction
-				h2 About me
-				p.desc Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi convallis quis odio ut blandit. Phasellus sodales eu massa sit amet sollicitudin Cras fringilla, nisi a tempus posuere, mauris libero posuere ante, at vulputate massa massa
-			.tab-wrapper
-				.tab
-					.tablinks.active(onclick="tabAbout(event, 'skill')") Skill
-					.tablinks(onclick="tabAbout(event, 'experience')") Experience
-					.tablinks(onclick="tabAbout(event, 'education')") Education
-				.content
-					#skill.tabcontent
-						.skill
-							p.lead UX/UI Designer
-							p Wireframe, Prototyping, Mockup, Design System
-							p UX/UI design in developing Web application for cross-browser
-							p Figma/ Adobe XD/ Sketch/ Pts/ AI
-						.skill
-							p.lead HTML Coder
-							p HTML/CSS, JavaScript client such as Jquery, JSON, AJAX
-							p Responsive Cross-browser
-							p Basic knowledge Angular/ Reactjs/ Vuejs
-					#experience.tabcontent(style="display:none")
-						h3 Paris
-						p Paris is the capital of France.
-					#education.tabcontent(style="display:none")
-						h3 Tokyo
-						p Tokyo is the capital of Japan.
+			.pos-left
+				.img
+					img(src="../assets/images/img_introduction.png", alt="")
+			.pos-right
+				.info
+					span.overlines Giới thiệu
+					h2 Thông tin cá nhân
+					p.desc Lịch tốt nghiệp trường đại học vào đầu năm 2019. Và cũng bắt đầu đi làm từ thời điểm đó. Xuất phát điểm của mình là 1 HTML Coder. Và tới đầu năm 2020 mình cũng khá hứng thú với công việc của một UX/UI Design nên cũng bắt tay vào học và làm.
+				.tab-wrapper
+					.tab
+						.tablinks.active(onclick="tabAbout(event, 'skill')") Kỹ năng
+						.tablinks(onclick="tabAbout(event, 'experience')") Kinh nghiệm
+						.tablinks(onclick="tabAbout(event, 'education')") Học vấn
+					.content
+						#skill.tabcontent
+							.skill
+								p.lead UX/UI Designer
+								p Wireframe, Prototyping, Mockup, Design System
+								p UX/UI design in developing Web application for cross-browser
+								p Figma/ Adobe XD/ Sketch/ Pts/ AI
+							.skill
+								p.lead HTML Coder
+								p HTML/CSS, JavaScript client such as Jquery, JSON, AJAX
+								p Responsive Cross-browser
+								p Basic knowledge Angular/ Reactjs/ Vuejs
+						#experience.tabcontent(style="display:none")
+							p.lead Updating
+						#education.tabcontent(style="display:none")
+							p.lead Updating
 
-.canDo
+.canDo#skill
 	.container
 		.content-wrapper
 			.section-title.text-center
-				span.overlines Reality
-				h2.title What I can do
-				p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi convallis quis odio ut bland
+				span.overlines Trách nhiệm
+				h2.title Vai trò đóng góp
+				p Lịch có thể đảm nhiệm 2 vài trò cùng 1 lúc đó là UX/UI Design và HTML Coder
 			ul
 				li
 					.item-canDo
 						.img
 							img(src="../assets/images/img_cando1.png", alt="")
-						h3 Lorem isum
-						p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi convallis quis odio consectetur adipiscing elit. Morbi convallis quis odio
+						h3 Thiết kế Web/ App
+						p Làm việc có quy trình đối với khách hàng cũng như đội nhóm để đưa ra thiết kế phù hợp một cách tốt nhất và đáp ứng được nhu cầu
 				li
 					.item-canDo
 						.img
-							img(src="../assets/images/img_cando1.png", alt="")
-						h3 Lorem isum
-						p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi convallis quis odio consectetur adipiscing elit. Morbi convallis quis odio
+							img(src="../assets/images/img_cando2.png", alt="")
+						h3 Lập trình giao diện
+						p Có thể chuyển từ design qua HTML thông qua kinh nghiệm và hiểu biết về HTML/CSS/Javascript và Responsive
 				li
 					.item-canDo
 						.img
-							img(src="../assets/images/img_cando1.png", alt="")
-						h3 Lorem isum
-						p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi convallis quis odio consectetur adipiscing elit. Morbi convallis quis odio
-.lastestProject
+							img(src="../assets/images/img_cando3.png", alt="")
+						h3 Làm việc nhóm
+						p Đã Tích tham gia đóng góp ý kiến mong muốn quá trình làm việc được diễn ra suôn sẻ cũng như hiệu quả nhất
+.lastestProject#canDo
 	.container
 		.content-wrapper
 			.section-title.text-center
 				.section-title.text-center
-				span.overlines My completed project
-				h2.title My Lastest Project
-				p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi convallis quis odio ut bland
+				span.overlines Sản phẩm
+				h2.title Đã hoàn thành
+				p Đóng vai trò là 1 UX/UI Design - 1 HTML Coder, Lịch đưa ra các sản phẩm tự tay thiết kế cũng như lập trình giao diện
 			ul
 				li
 					.item-project
@@ -105,13 +105,13 @@ block body
 							.info
 								span.overlines UX/UI Design
 								h3 ZALO HOME & CAR
-.blog
+.blog#blog
 	.container
 		.content-wrapper
 			.section-title.text-center
-				span.overlines My completed project
-				h2.title My Lastest Project
-				p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi convallis quis odio ut bland
+				span.overlines Chia sẻ
+				h2.title Trải nghiệm & Định hướng
+				p Đi làm có lúc vui, có lúc phải "chạy theo" công việc để có thể hoàn thành tốt nhất có thể, từ đó mà mình được trải nghiệm cũng như tiếp xúc với nhiều câu chuyện thú vị
 			ul
 				li
 					.item-blog
@@ -140,7 +140,7 @@ block body
 							.info
 								span.overlines UX/UI Design
 								h3 ZALO HOME & CAR
-.contact
+.contact#contact
 	.container
 		.content-wrapper
 			.pos-right
@@ -148,18 +148,18 @@ block body
 					img(src="../assets/images/img_contact.png", alt="")
 			.pos-left
 				.section-title
-					span.overlines Contact
-					h2.title Hire me
+					span.overlines Make a relationship
+					h2.title Liên hệ
 					ul
 						li
 							span Phone:
 							<strong>(+84) 328 391 129</strong>
 						li
 							span Email:
-							<strong>thanhlich250695@gmail.com</strong
+							<strong>thanhlich250695@gmail.com</strong>
 				form.form
-					input(type="text" placeholder="Your name")
-					input(type="text" placeholder="Your Mail")
-					input(type="text" placeholder="Your Phone number")
-					textarea(type="text" placeholder="Your Message")
-					button SUBMIT NOW
+					input(type="text" placeholder="Nhập họ và tên")
+					input(type="text" placeholder="Email")
+					input(type="text" placeholder="Số điện thoại")
+					textarea(type="text" placeholder="Lời nhắn")
+					button GỬI NGAY
