@@ -21,7 +21,7 @@ function tabAbout(evt, tabAbout) {
 	evt.currentTarget.className += " active";
 }
 
-// fixed
+// fixed menu
 window.onscroll = function() {myFunction()};
 
 var header = document.getElementById("header");
@@ -36,30 +36,20 @@ function myFunction() {
   }
 }
 
-
+// anchor link
 $(document).ready(function(){
-	// Add smooth scrolling to all links
 	$(".item-nav a").on('click', function(event) {
 	$(".item-nav a").removeClass("is-active");
 	$(this).addClass("is-active");
 	posCenter.classList.remove("is-show");
-	  // Make sure this.hash has a value before overriding default behavior
 	  if (this.hash !== "") {
-		// Prevent default anchor click behavior
 		event.preventDefault();
-  
-		// Store hash
 		var hash = this.hash;
-  
-		// Using jQuery's animate() method to add smooth page scroll
-		// The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
 		$('html, body').animate({
-		  scrollTop: $(hash).offset().top
-		}, 800, function(){
-  
-		  // Add hash (#) to URL when done scrolling (default click behavior)
-		  window.location.hash = hash;
+			scrollTop: $(hash).offset().top
+			}, 800, function(){
+			window.location.hash = hash;
 		});
-	  } // End if
+	  } 
 	});
-  });
+});

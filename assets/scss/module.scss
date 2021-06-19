@@ -71,7 +71,7 @@ header{
 			padding:8px 24px;
 			background:transparent;
 			outline:none;
-
+			color:#252121;
 		}
 	}
 	.pos-center{
@@ -223,6 +223,7 @@ header{
 			background-color:#52AB5C;
 			border-radius:30px;
 			margin-top:32px;
+			width:190px;
 			&:hover{
 				background-color:#028511;
 			}
@@ -302,7 +303,7 @@ header{
 						margin-bottom:8px;
 						&.lead{
 							font-size:16px;
-							font-weight:700;
+							font-weight:600;
 							color:#252121;
 						}
 					}
@@ -680,6 +681,7 @@ header{
 				padding:8px 24px;
 				background:transparent;
 				outline:none;
+				color:#252121;
 			}
 			.hamburger{
 				display:none;
@@ -779,6 +781,7 @@ header{
 		}
 		.inner{
 			padding-top:100px;
+
 			.overlines{
 				font-size:16px;
 			}
@@ -790,6 +793,7 @@ header{
 			.cta{
 				padding:16px 32px;
 				margin-top:48px;
+				width:222px;
 				p{
 					font-size:16px;
 					line-height:24px;

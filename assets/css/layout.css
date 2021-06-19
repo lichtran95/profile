@@ -254,6 +254,7 @@ header .pos-left .btn {
   padding: 8px 24px;
   background: transparent;
   outline: none;
+  color: #252121;
 }
 header .pos-center {
   display: block;
@@ -417,6 +418,7 @@ header .pos-right {
   background-color: #52AB5C;
   border-radius: 30px;
   margin-top: 32px;
+  width: 190px;
 }
 .hero .inner .cta:hover {
   background-color: #028511;
@@ -504,7 +506,7 @@ header .pos-right {
 }
 .introduction .content-wrapper .tab-wrapper .content .skill p.lead {
   font-size: 16px;
-  font-weight: 700;
+  font-weight: 600;
   color: #252121;
 }
 
@@ -900,6 +902,7 @@ header .pos-right {
     padding: 8px 24px;
     background: transparent;
     outline: none;
+    color: #252121;
   }
   header .pos-left .hamburger {
     display: none;
@@ -1012,6 +1015,7 @@ header .pos-right {
   .hero .inner .cta {
     padding: 16px 32px;
     margin-top: 48px;
+    width: 222px;
   }
   .hero .inner .cta p {
     font-size: 16px;
