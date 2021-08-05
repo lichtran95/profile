@@ -4,7 +4,19 @@ $(document).ready(function(){
 			el: ".swiper-pagination",
 		},
 		autoplay: {
-			delay: 2500,
+			delay: 3500,
+			disableOnInteraction: false,
+		},
+	});
+	var swiperProduct = new Swiper(".swiperProduct", {
+		pagination: {
+			el: ".swiper-pagination",
+		},
+		// effect:'slide',
+		loop:true,
+		speed:2500,
+		autoplay: {
+			delay: 3500,
 			disableOnInteraction: false,
 		},
 	});
@@ -22,8 +34,10 @@ $(document).ready(function(){
 		pagination: {
 			el: ".swiper-pagination",
 		},
+		speed:2500,
+		loop:true,
 		autoplay: {
-			delay: 2500,
+			delay: 000,
 			disableOnInteraction: false,
 		},
 		breakpoints: {

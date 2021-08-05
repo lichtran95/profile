@@ -1580,14 +1580,15 @@ html {
   text-align: center;
   font-size: 16px;
   font-weight: 600;
+  border: 1px solid #fff;
 }
 .section-introduction .bl-content-introduction .intro-bar:after {
   position: absolute;
   content: "";
-  top: -2px;
-  bottom: 0;
-  right: 0;
-  left: -2px;
+  top: 2px;
+  left: 2px;
+  width: 100%;
+  height: 100%;
   background-color: #000;
   border-top-right-radius: 16px;
   z-index: -1;
@@ -1620,7 +1621,7 @@ html {
     padding: 50px 0 150px;
   }
   .section-introduction .bl-content-introduction .intro-bar {
-    max-width: 250px;
+    max-width: 230px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -1938,10 +1939,33 @@ html {
   color: #006357;
   max-width: 180px;
   margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+.news h2.title span {
+  position: relative;
+  z-index: 1;
+  background: #fff;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  padding: 10px 0;
 }
 .news h2.title.has-border {
   border-radius: 8px;
-  border: 3px solid #006357;
+  border: 1px solid #006357;
+}
+.news h2.title.has-border:after {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  background: #006357;
+  z-index: 0;
 }
 .news .news-list li .item-new {
   margin-top: 32px;
@@ -2205,10 +2229,32 @@ html {
   max-width: 180px;
   margin: 0 auto;
   color: #006357;
+  position: relative;
+}
+.partner h2 span {
+  position: relative;
+  z-index: 1;
+  background: #fff;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  padding: 10px 0;
 }
 .partner h2.has-border {
   border-radius: 8px;
-  border: 3px solid #006357;
+  border: 1px solid #006357;
+}
+.partner h2.has-border:after {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  background: #006357;
+  z-index: 0;
 }
 .partner .swiperPartner .swiper-slide {
   display: -webkit-box;
@@ -2393,6 +2439,12 @@ html {
 
 .section-product {
   padding: 60px 0;
+}
+.section-product .swiperProduct {
+  padding-bottom: 100px;
+}
+.section-product .swiperProduct .swiper-pagination .swiper-pagination-bullet-active {
+  background: #006357;
 }
 .section-product h2.title {
   font-size: 20px;
