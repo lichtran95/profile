@@ -3,22 +3,44 @@ $(document).ready(function(){
 		pagination: {
 			el: ".swiper-pagination",
 		},
+		loop:true,
+		runCallbacksOnInit:true,
+		speed:1500,
 		autoplay: {
-			delay: 3500,
+			delay: 2500,
 			disableOnInteraction: false,
 		},
 	});
 	var swiperProduct = new Swiper(".swiperProduct", {
+		slidesPerView: 4,
 		pagination: {
 			el: ".swiper-pagination",
 		},
 		// effect:'slide',
+		runCallbacksOnInit:true,
 		loop:true,
-		speed:2500,
+		speed:2000,
 		autoplay: {
-			delay: 3500,
+			delay: 2500,
 			disableOnInteraction: false,
 		},
+		breakpoints: {
+			// when window width is >= 320px
+			320: {
+			  slidesPerView: 2,
+			  spaceBetween: 20
+			},
+			// when window width is >= 480px
+			480: {
+			  slidesPerView: 3,
+			  spaceBetween: 30
+			},
+			// when window width is >= 640px
+			640: {
+			  slidesPerView: 4,
+			  spaceBetween: 40
+			}
+		  }
 	});
 	var swiperImageProduct = new Swiper(".swiperImageProduct", {
 		pagination: {
@@ -34,7 +56,7 @@ $(document).ready(function(){
 		pagination: {
 			el: ".swiper-pagination",
 		},
-		speed:2500,
+		speed:3500,
 		loop:true,
 		autoplay: {
 			delay: 000,

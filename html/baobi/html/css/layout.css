@@ -1119,7 +1119,7 @@ footer .col .info-list .contact {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 12px;
+  margin-bottom: 16px;
 }
 footer .col .info-list .contact .img {
   width: 32px;
@@ -1720,6 +1720,7 @@ html {
   font-size: 14px;
   line-height: 20px;
   letter-spacing: -0.8px;
+  font-weight: 600;
 }
 @media (min-width: 1024px) {
   .section-reason {
@@ -2020,7 +2021,7 @@ html {
 }
 @media (min-width: 1024px) {
   .news {
-    padding: 150px 0 180px;
+    padding: 150px 0 140px;
     position: relative;
   }
   .news .container {
@@ -2042,10 +2043,11 @@ html {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    margin: 0 -24px;
   }
   .news .news-list li {
     width: calc(25%);
-    margin: 0 24px;
+    padding: 0 24px;
     margin-bottom: 32px;
   }
   .news .news-list li .item-new {
@@ -2442,9 +2444,14 @@ html {
 }
 .section-product .swiperProduct {
   padding-bottom: 100px;
+  margin-top: 50px;
 }
 .section-product .swiperProduct .swiper-pagination .swiper-pagination-bullet-active {
   background: #006357;
+}
+.section-product .swiperProduct .swiper-wrapper .swiper-slide .product-list li {
+  width: 100%;
+  margin: 0;
 }
 .section-product h2.title {
   font-size: 20px;
@@ -2627,14 +2634,11 @@ html {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    margin: 0 -24px;
   }
   .section-product ul.product-list li {
     width: calc(25%);
-    margin-left: 24px;
-    margin-right: 24px;
-    -webkit-transition: all 300ms ease-in;
-    -o-transition: all 300ms ease-in;
-    transition: all 300ms ease-in;
+    padding: 0 24px;
   }
   .section-product ul.product-list li .item-product {
     display: -webkit-box;
@@ -2643,6 +2647,9 @@ html {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    -webkit-transition: all 300ms ease-in;
+    -o-transition: all 300ms ease-in;
+    transition: all 300ms ease-in;
   }
   .section-product ul.product-list li .item-product .content {
     padding-left: 16px;
@@ -2655,7 +2662,7 @@ html {
     line-height: 24px;
     margin-top: 8px;
   }
-  .section-product ul.product-list li:hover {
+  .section-product ul.product-list li:hover .item-product {
     -webkit-box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.16);
             box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.16);
   }
