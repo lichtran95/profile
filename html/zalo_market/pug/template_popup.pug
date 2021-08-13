@@ -1,0 +1,32 @@
+extends layout.pug
+
+//- Setting
+block setting
+	- var layout = true
+	- var modal = true
+
+block head
+	include head.pug
+
+block pages
+	- bodyC.push("")
+	- layoutClasses.push("zMarket-layout")
+	- bodyClasses.push("page-content is-bg")
+	- dockbarClasses.push("dockbar")
+	
+//- Add Body
+block body
+	include page/_template_popup.pug
+
+//- Add Footer
+block dockbar
+
+//- Add Modal
+block modal
+	include page/modal_template_popup.pug
+
+block javaScripts extend
+	script.
+		$(window).on('load', function () {
+			$("#modal-template-popup").modal("show");
+		}); 

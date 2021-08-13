@@ -1,0 +1,75 @@
+block Modal
+
+.modal.fade.is-radius(id="modal-filter" tabindex="-1" role="dialog")
+	.modal-dialog(role="document")
+		.modal-content
+			.modal-header
+				span.color-base.fs--l.fw-medium Lọc sản phẩm
+				a.func-close(data-dismiss="modal" aria-label="Close")
+					i.icn.icn-small-remove
+			.modal-body
+				.context-filter.scrollTarget
+					.default-form
+						.form-row.flex-wrap
+							label.fs--m.fw-medium.m-bottom-2 Người bán
+							.checkbox-list.w-100
+								ul
+									li
+										.input-group
+											input(id="optiona11" name="optiona1" type="checkbox")
+											label.fs--l(for="optiona11") Cửa hàng
+									li
+										.input-group
+											input(id="optiona22" name="optiona2" type="checkbox")
+											label.fs--l(for="optiona22") Cá nhân
+						.form-row.flex-wrap
+							label.fs--m.fw-medium.m-bottom-2 Theo giá
+							.checkbox-list.w-100
+								ul
+									li
+										.input-group
+											input(id="optiona1" name="optiona1" type="checkbox")
+											label.fs--l(for="optiona1") 0 - 500.000đ
+									li
+										.input-group
+											input(id="optiona2" name="optiona2" type="checkbox")
+											label.fs--l(for="optiona2") 500.000đ - 1.000.000đ
+									li
+										.input-group
+											input(id="optiona3" name="optiona3" type="checkbox")
+											label.fs--l(for="optiona3") 1.000.000đ - 5.000.000đ
+									li
+										.input-group
+											input(id="optiona4" name="optiona4" type="checkbox")
+											label.fs--l(for="optiona4") > 5.000.000đ
+						.form-row.flex-wrap
+							label.fs--m.fw-medium.m-bottom-2 Khu vực
+							ul.select-list.w-100.custom-for-modal
+								li
+									.item.func-open-tinhthanh
+										span Tp.Hồ Chí Minh
+										.toggle
+											i.icn.icn-small-right
+								li
+									.item.func-open-quanhuyen
+										span Tất cả Quận/Huyện
+										.toggle
+											i.icn.icn-small-right
+						.form-row.flex-wrap
+							label.fs--m.fw-medium.m-bottom-2 Sắp xếp theo
+							.checkbox-list.w-100
+								ul
+									li
+										.input-group
+											input(id="optionb1" name="option" type="radio")
+											label.fs--l(for="optionb1") Giá từ thấp đến cao
+									li
+										.input-group
+											input(id="optionb2" name="option" type="radio")
+											label.fs--l(for="optionb2") Giá từ cao đến thấp
+			.modal-footer
+				.button-wrap.d-flex.justify-content-between.align-items-center
+					a.func-reset.color-base.fs--m(href="#!")
+						i.icn.icn-bold-refresh
+						span.pl-1 Reset bộ lọc
+					a.btn.btn-primary.btn--m.m-left-3(href="#!") Áp dụng

@@ -1,0 +1,163 @@
+block home
+
+- var product = []
+- product.push({"class":""})
+- product.push({"class":""})
+- product.push({"class":""})
+- product.push({"class":""})
+
+- var stores = []
+- stores.push({"name":"Bún Mọc Bà Bưởi"})
+- stores.push({"name":"Marukame Udon"})
+- stores.push({"name":"Aeon Mall"})
+
+- var banner = []
+- banner.push({"class":""})
+- banner.push({"class":""})
+
+- var supersale = []
+- supersale.push({"price":"920.000"})
+- supersale.push({"price":"920.000"})
+- supersale.push({"price":"920.000"})
+- supersale.push({"price":"920.000"})
+- supersale.push({"price":"920.000"})
+
+- var friend = []
+- friend.push({"name":"Lục Tiểu Phụng"})
+- friend.push({"name":"Tiêu Viêm"})
+- friend.push({"name":"Lâm Động"})
+
+.feature-dockbar
+	.context-feature-dockbar.is-absolute.is-dark
+		a.func-home.mr-auto(href="index.html")
+			i.icn.icn-home
+		a.func-cart(href="cart.html")
+			i.icn.icn-shopping-cart
+			span.num 1
+		a.func-share(href="#!share")
+			i.icn.icn-share
+
+.just4u-container
+	span.title-page Just For You
+	.top-just4u
+		span.lstitle & Dành riêng cho bạn
+		.bl-module.module-grid-list.is-transparent
+			ul.product-list.is-column-lite.is-lite.m-bottom-3
+				li
+					.item-product
+						span.img-loader
+				each productItem in product
+					li(class=`${productItem.class}`)
+						a.item-product(href="product_detail.html")
+							span.img-product(style="background-image:url(http://via.placeholder.com/240x240)")
+								.label-discount
+									span.color-light.fs--m.fw-bold 20%
+								.label-price
+									span.color-light.fs--m.fw-bold 200.000đ
+			.text-center
+				a.func-more-just4you(href="#!") See more
+
+	.shop-just4u
+		span.lstitle Shop for you
+		.bl-module.module-stores.m-bottom-3
+			.context-stores
+				ul
+					each storesItem in stores
+						li
+							a.item-stores(href="#!")
+								span.img(style="background-image:url(http://via.placeholder.com/640x360)")
+								.desc
+									.avatar.avatar--s
+										.avatar-img(style="background-image:url(http://via.placeholder.com/48x48)")
+									span.d-block.color-base.fs--m.text-truncate.text-center #{storesItem.name}
+
+	.supersale-just4u
+		span.lstitle #SuperSALE
+		.bl-module.module-grid-list.is-transparent
+			ul.product-list.is-column-lite.is-lite.m-bottom-3
+				li.split-2
+					.item-product
+						span.img-loader
+				each productItem in product
+					li.split-2(class=`${productItem.class}`)
+						a.item-product(href="product_detail.html")
+							span.img-product(style="background-image:url(http://via.placeholder.com/240x240)")
+								.label-discount
+									span.color-light.fs--m.fw-bold 20%
+								.label-price
+									span.color-light.fs--m.fw-bold 200.000đ
+			.text-center
+				a.func-more-just4you(href="#!") See more
+
+	.birthday-just4u
+		span.lstitle #HappyBirthday
+		.friend-list
+			ul
+				each friendItem in friend
+					li
+						.item-friend
+							span.img-friend(style="background-image:url(http://placehold.it/100x100)" href="#!")
+							.desc-friend
+								span.d-block.color-base.fs--m #{friendItem.name}
+								span.d-block.color-base.fs--m 18/10
+
+	.bl-module.module-grid-list.m-bottom-3
+		.heading
+			span.fs--xl.fw-bold Buy gift for your friend
+		ul.product-list.is-column-lite.is-lite
+			li
+				.item-product
+					span.img-loader
+			each productItem in product
+				li(class=`${productItem.class}`)
+					a.item-product(href="product_detail.html")
+						span.img-product(style="background-image:url(http://via.placeholder.com/240x240)")
+							.label-discount
+								span.color-light.fs--m.fw-bold 20%
+							.label-price
+								span.color-light.fs--m.fw-bold 200.000đ
+	.bl-module.module-grid-list.m-bottom-3
+		.heading
+			span.fs--xl.fw-bold Send wishes to your friends
+		ul.banner-list.ml-auto.mr-auto.m-bottom-5
+			li
+				a.item-banner(href="#!" style="background-image:url(http://via.placeholder.com/750x260)")
+			li
+				a.item-banner(href="#!" style="background-image:url(http://via.placeholder.com/750x260)")
+		.text-center
+			a.func-more-just4you.is-default(href="#!") See more
+			
+	.new-just4u
+		span.lstitle #NEWSHOP
+		.bl-module.module-stores.is-transparent.m-bottom-3
+			.context-stores
+				ul
+					each storesItem in stores
+						li
+							a.item-stores(href="#!")
+								span.img(style="background-image:url(http://via.placeholder.com/640x360)")
+								.desc
+									.avatar.avatar--s
+										.avatar-img(style="background-image:url(http://via.placeholder.com/48x48)")
+									span.d-block.color-base.fs--m.text-truncate.text-center #{storesItem.name}
+	
+	.bl-module.module-grid-list.m-bottom-3
+		.heading.justify-content-center
+			span.fs--xl.fw-bold MORE TO EXPLORE
+		ul.product-list.is-column-lite.is-lite
+			li
+				.item-product
+					span.img-loader
+			each productItem in product
+				li(class=`${productItem.class}`)
+					a.item-product(href="product_detail.html")
+						span.img-product(style="background-image:url(http://via.placeholder.com/240x240)")
+							.label-discount
+								span.color-light.fs--m.fw-bold 20%
+							.label-price
+								span.color-light.fs--m.fw-bold 200.000đ
+
+
+
+
+

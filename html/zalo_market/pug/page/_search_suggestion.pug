@@ -1,0 +1,85 @@
+block home
+
+- var product = []
+- product.push({"class":"","name":"Vòng Đeo Tay Thông Minh Theo Dõi Vận Động Xiaomi Mi Band 3 - Hàng Chính Hãng"})
+- product.push({"class":"","name":"Tivi LED Sony"})
+
+.bl-module.module-search
+	a.func-back.color-base(href="index.html")
+		i.icn.icn-small-left
+	.default-form
+		.form-row.has-func-reset
+			input(type="text" placeholder="Tìm kiếm..." value="")
+			a.func-reset(href="#!")
+				i.icn.icn-circle-remove
+			a.func-search(href="#!")
+				i.icn.icn-search
+
+.bl-module.module-search-result.m-bottom-2
+	a.heading(href="#!")
+		span.color-base.fs--l Tất cả kết quả (192)
+		i.icn.icn-small-right
+
+.bl-module.module-grid-list
+	.heading(href="#!")
+		span.color-grey.fs--m Gợi ý tìm kiếm
+	ul.product-list
+		li
+			.item-product
+				span.img-loader
+				.desc-loader
+					span
+					span
+		each productItem in product
+			li(class=`${productItem.class}`)
+				a.item-product(href="#!")
+					span.img-product(style="background-image:url(http://via.placeholder.com/240x240)")
+						.label-discount
+							span.color-light.fs--m.fw-bold 20%
+					.desc
+						h2.product-title.color-base.fs--m.fw-normal.m-bottom-1 #{productItem.name}
+						p.color-base.fs--xl.fw-bold 500.000đ
+						p.color-grey.fs--m.line-through 41.000đ
+						.star-orders.m-top-5
+							fieldset.rating.disabled
+								input#star5(type='radio', name='rating', value='5')
+								label.full(for='star5', title='Awesome - 5 stars')
+								input#star4half(type='radio', name='rating', value='4 and a half' checked)
+								label.half(for='star4half', title='Pretty good - 4.5 stars')
+								input#star4(type='radio', name='rating', value='4')
+								label.full(for='star4', title='Pretty good - 4 stars')
+								input#star3half(type='radio', name='rating', value='3 and a half')
+								label.half(for='star3half', title='Meh - 3.5 stars')
+								input#star3(type='radio', name='rating', value='3')
+								label.full(for='star3', title='Meh - 3 stars')
+								input#star2half(type='radio', name='rating', value='2 and a half')
+								label.half(for='star2half', title='Kinda bad - 2.5 stars')
+								input#star2(type='radio', name='rating', value='2')
+								label.full(for='star2', title='Kinda bad - 2 stars')
+								input#star1half(type='radio', name='rating', value='1 and a half')
+								label.half(for='star1half', title='Meh - 1.5 stars')
+								input#star1(type='radio', name='rating', value='1')
+								label.full(for='star1', title='Sucks big time - 1 star')
+								input#starhalf(type='radio', name='rating', value='half')
+								label.half(for='starhalf', title='Sucks big time - 0.5 stars')
+							span.num.color-base.fs--s 4.8
+							.clear
+
+.bl-module.module-search-suggestion
+	.heading(href="#!")
+		span.color-grey.fs--m Gợi ý tìm kiếm
+	ul.suggestion-list
+		li
+			a(href="#!")
+				span.d-block.color-base.fs--l iPhon
+				span.d-block.color-main.fs--m trong Điện thoại - Điện máy
+		li
+			a(href="#!")
+				span.d-block.color-base.fs--l iPhon
+				span.d-block.color-main.fs--m trong Điện thoại - Điện máy
+
+
+
+
+
+

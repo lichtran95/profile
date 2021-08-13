@@ -1,0 +1,360 @@
+block home
+
+- var gaus = []
+- gaus.push({"link":"#!","ico":"images/icon_cate/all_cate.png", "name":"Danh mục sản phẩm"})
+- gaus.push({"link":"just4you.html","ico":"images/icon_cate/just4you_2.png", "name":"Dành riêng cho bạn"})
+- gaus.push({"link":"brand.html","ico":"images/icon_cate/shop_2.png", "name":"Cửa hàng chính hãng"})
+- gaus.push({"link":"brand.html","ico":"images/icon_cate/icon_flashsale.png", "name":"Flash Sale"})
+//- - gaus.push({"link":"flashsale.html","ico":"images/icon_cate/flash-sale.png", "name":"Flash Sale"})
+//- - gaus.push({"link":"#!","ico":"images/icon_cate/flight.png", "name":"Vé máy bay"})
+//- - gaus.push({"link":"#!","ico":"images/icon_cate/hotel.png", "name":"Khách sạn"})
+//- - gaus.push({"link":"#!","ico":"images/icon_cate/card-topup.png", "name":"Mua mã thẻ"})
+//- - gaus.push({"link":"#!","ico":"images/icon_cate/topup.png", "name":"Nạp tiền điện thoại"})
+
+- var product = []
+- product.push({"class":"","name":"Vòng Đeo Tay Thông Minh Theo Dõi Vận Động Xiaomi Mi Band 3 - Hàng Chính Hãng"})
+- product.push({"class":"","name":"Tivi LED Sony"})
+- product.push({"class":"","name":"Tivi LED Sony 32 inch KDL-32R300E"})
+
+- var stores = []
+- stores.push({"name":"Bún Mọc Bà Bưởi"})
+- stores.push({"name":"Marukame Udon"})
+- stores.push({"name":"Aeon Mall"})
+
+- var discovery = []
+- discovery.push({"class":""})
+- discovery.push({"class":""})
+- discovery.push({"class":""})
+- discovery.push({"class":""})
+
+.bl-module.module-search
+	.default-form
+		.form-row.has-func-right.has-func-search
+			input(type="text" placeholder="11.11 Độc thân" value="")
+			a.func-reset(href="#!")
+				i.icn.icn-circle-remove
+			a.func-search(href="#!")
+				i.icn.icn-search
+		.cart
+			i.icn.icn-cart
+			p.red-dot 1
+.bl-module.module-hero
+	.swiper-container.swiper-hero
+		.swiper-wrapper
+			.swiper-slide
+				a.item-banner(href="event_landing.html" style="background-image:url(http://via.placeholder.com/750x312)")
+			.swiper-slide
+				a.item-banner(href="event_landing.html" style="background-image:url(http://via.placeholder.com/750x312)")
+			.swiper-slide
+				a.item-banner(href="event_landing.html" style="background-image:url(http://via.placeholder.com/750x312)")
+	.swiper-pagination#hero-pagination
+
+//- nếu có 3 hoặc 4  item trong list feature thì dùng 2 class is-three-items và is-four-items, 
+//- .bl-module.module-featured.is-four-items
+//- 	.context-featured
+//- 		ul
+//- 			each gausItem in gaus
+//- 				li
+//- 					a.item-featured(href=`${gausItem.link}`)
+//- 						span.img
+//- 							img(src=`${gausItem.ico}` alt=page)
+//- 						span.name #{gausItem.name}
+.bl-module.new-module-category
+	//- .header-module
+	//- 	p Danh mục rao bán
+	//- 	a Xem tất cả
+	.container-module
+		.big-image
+			span.img-cate(style="background-image:url(http://via.placeholder.com/336)")
+			span.img-cate(style="background-image:url(http://via.placeholder.com/336)")
+		.small-cate-list
+			ul
+				li
+					.item
+						span.img-cate(style="background-image:url(http://via.placeholder.com/56x56)")
+						p Điện thoại
+					.item
+						span.img-cate(style="background-image:url(http://via.placeholder.com/56x56)")
+						p Máy tính bảng
+				li
+					.item
+						span.img-cate(style="background-image:url(http://via.placeholder.com/56x56)")
+						p Điện thoại
+					.item
+						span.img-cate(style="background-image:url(http://via.placeholder.com/56x56)")
+						p Máy tính bảng
+				li
+					.item
+						span.img-cate(style="background-image:url(http://via.placeholder.com/56x56)")
+						p Điện thoại
+					.item
+						span.img-cate(style="background-image:url(http://via.placeholder.com/56x56)")
+						p Máy tính bảng
+				li
+					.item
+						span.img-cate(style="background-image:url(http://via.placeholder.com/56x56)")
+						p Điện thoại
+					.item
+						span.img-cate(style="background-image:url(http://via.placeholder.com/56x56)")
+						p Máy tính bảng
+				li
+					.item
+						span.img-cate(style="background-image:url(http://via.placeholder.com/56x56)")
+						p Điện thoại
+					.item
+						span.img-cate(style="background-image:url(http://via.placeholder.com/56x56)")
+						p Máy tính bảng
+				li
+					.item
+						span.img-cate(style="background-image:url(http://via.placeholder.com/56x56)")
+						p Điện thoại
+					.item
+						span.img-cate(style="background-image:url(http://via.placeholder.com/56x56)")
+						p Máy tính bản
+hr.line-spacing.is-8(style="margin: 0;")
+.bl-module.module-grid-list
+	a.heading(href="flashsale.html")
+		span.fs--l.fw-medium Deal chớp nhoáng
+		.countdown
+			span 00
+			span 00
+			span 00
+			span 00
+	ul.product-list.is-column-lite.is-lite
+		li
+			.item-product
+				span.img-loader
+		each productItem in product
+			li(class=`${productItem.class}`)
+				a.item-product(href="product_detail.html")
+					span.img-product(style="background-image:url(http://via.placeholder.com/240x240)")
+						.label-discount
+							span.color-light.fs--m.fw-bold 20%
+						.label-price
+							span.color-light.fs--m.fw-bold 999.000.000đ
+						span.out-of-stock Tạm hết
+	a.func-more(href="#!") Xem thêm
+
+.bl-module.module-brand-sponsor.m-bottom-3
+	a.heading(href="brand.html")
+		span.fs--l.fw-medium Thương hiệu nổi bật
+	.context-brand-sponsor(style="background-image:url(images/upload/img_brands.png)")
+		a.bs-link(href="#!111")
+		.bs-inside
+			ul.product-list.is-column-lite.is-lite
+				li
+					a.item-product(href="product_detail.html")
+						span.img-product(style="background-image:url(http://via.placeholder.com/240x240)")
+							.label-discount
+								span.color-light.fs--m.fw-bold 20%
+							.label-price
+								span.color-light.fs--m.fw-bold 999.000.000đ
+				li
+					a.item-product(href="product_detail.html")
+						span.img-product(style="background-image:url(http://via.placeholder.com/240x240)")
+							.label-discount
+								span.color-light.fs--m.fw-bold 20%
+							.label-price
+								span.color-light.fs--m.fw-bold 999.000.000đ
+								
+
+.bl-module.module-stores
+	a.heading(href="brand.html")
+		span.fs--l.fw-medium Gian hàng chính hãng
+	.context-stores
+		ul
+			each storesItem in stores
+				li
+					a.item-stores
+						span.img(style="background-image:url(http://via.placeholder.com/640x360)")
+						.desc
+							.avatar.avatar--s
+								.avatar-img(style="background-image:url(http://via.placeholder.com/48x48)")
+							span.d-block.color-base.fs--m.text-truncate.text-center #{storesItem.name}
+
+.bl-module.module-grid-list.m-bottom-3
+	a.heading(href="#!")
+		span.fs--l.fw-medium.text-truncate Section 1
+		i.icn.icn-small-right
+	ul.banner-list
+		li
+			a.item-banner(href="category_banner_list.html" style="background-image:url(http://via.placeholder.com/750x260)")
+
+.bl-module.module-grid-list.m-bottom-3
+	a.heading(href="#!")
+		span.fs--l.fw-medium.text-truncate Section 2
+		i.icn.icn-small-right
+	ul.product-list.is-column
+		li
+			.item-product
+				span.img-loader
+				.desc-loader
+					span
+					span
+		li
+			a.item-product(href="product_detail.html")
+				
+				span.img-product(style="background-image:url(http://via.placeholder.com/240x240)")
+					span.tag-filter.at-homepage
+						i.icn.icn-bold-single
+				.desc
+					h2.product-title.color-base.fs--m.fw-normal.m-bottom-1 Vòng Đeo Tay Thông Minh Theo Dõi Vận Động Xiaomi Mi Band 3 - Hàng Chính Hãng
+					p.color-base.fs--xl.fw-bold 500.000đ
+				
+		each productItem in product
+			li(class=`${productItem.class}`)
+				a.item-product(href="product_detail.html")
+					span.img-product(style="background-image:url(http://via.placeholder.com/240x240)")
+						.label-discount
+							span.color-light.fs--m.fw-bold 20%
+					.desc
+						h2.product-title.color-base.fs--m.fw-normal.m-bottom-1 #{productItem.name}
+						p.color-base.fs--xl.fw-bold 500.000đ
+						p.color-grey.fs--m.line-through 41.000đ
+						.star-orders.d-flex.m-top-2
+							.rating-star.m-right-2
+								i.icn.icn-shape-star.active
+								i.icn.icn-shape-star.active
+								i.icn.icn-shape-star.active
+								i.icn.icn-shape-star.active
+								i.icn.icn-shape-star
+							span.num.color-base.fs--s (4.8)
+
+.bl-module.module-grid-list.m-bottom-3
+	a.heading(href="#!")
+		span.fs--l.fw-medium.text-truncate Section 3
+		i.icn.icn-small-right
+	ul.banner-list
+		li
+			a.item-banner(href="category_banner_list.html" style="background-image:url(http://via.placeholder.com/750x260)")
+	.product-list.is-row
+		ul
+			li
+				.item-product
+					span.img-loader
+					.desc-loader
+						span
+						span
+			li
+					a.item-product(href="product_detail.html")
+						span.img-product(style="background-image:url(http://via.placeholder.com/240x240)")
+							span.tag-filter
+								i.icn.icn-bold-single
+						.desc
+							h2.product-title.color-base.fs--m.fw-normal.m-bottom-1 Vòng Đeo Tay Thông Minh Theo Dõi Vận Động Xiaomi Mi Band 3 - Hàng Chính Hãng
+							p.color-base.fs--xl.fw-bold 500.000đ
+						
+							
+			each productItem in product
+				li(class=`${productItem.class}`)
+					a.item-product(href="product_detail.html")
+						span.img-product(style="background-image:url(http://via.placeholder.com/240x240)")
+							span.tag-filter
+								i.icn.icn-bold-shop
+							.label-discount
+								span.color-light.fs--m.fw-bold 20%
+						.desc
+							h2.product-title.color-base.fs--m.fw-normal.m-bottom-1 #{productItem.name}
+							p.color-base.fs--xl.fw-bold 500.000đ
+							p.color-grey.fs--m.line-through 41.000đ
+							.star-orders.d-flex.m-top-2
+								.rating-star.m-right-2
+									i.icn.icn-shape-star.active
+									i.icn.icn-shape-star.active
+									i.icn.icn-shape-star.active
+									i.icn.icn-shape-star.active
+									i.icn.icn-shape-star
+								span.num.color-base.fs--s (4.8)
+	
+.bl-module.module-grid-list.m-bottom-3
+	a.heading(href="#!")
+		span.fs--l.fw-medium.text-truncate Section 4
+		i.icn.icn-small-right
+	.product-list.is-row
+		ul
+			li
+				.item-product
+					span.img-loader
+					.desc-loader
+						span
+						span
+			each productItem in product
+				li(class=`${productItem.class}`)
+					a.item-product(href="product_detail.html")
+						span.img-product(style="background-image:url(http://via.placeholder.com/240x240)")
+							.label-discount
+								span.color-light.fs--m.fw-bold 20%
+						.desc
+							h2.product-title.color-base.fs--m.fw-normal.m-bottom-1 #{productItem.name}
+							p.color-base.fs--xl.fw-bold 500.000đ
+							p.color-grey.fs--m.line-through 41.000đ
+							.star-orders.d-flex.m-top-2
+								.rating-star.m-right-2
+									i.icn.icn-shape-star.active
+									i.icn.icn-shape-star.active
+									i.icn.icn-shape-star.active
+									i.icn.icn-shape-star.active
+									i.icn.icn-shape-star
+								span.num.color-base.fs--s (4.8)
+
+.bl-module.module-grid-list.m-bottom-3
+	a.heading(href="#!")
+		span.fs--l.fw-medium.text-truncate Section 5
+		i.icn.icn-small-right
+	ul.product-list.is-column-lite
+		li
+			.item-product
+				span.img-loader
+		li
+			a.item-product(href="product_detail.html")
+				
+				span.img-product(style="background-image:url(http://via.placeholder.com/240x240)")
+					.label-price
+						span.color-light.fs--m.fw-bold 200.000đ
+		each productItem in product
+			li(class=`${productItem.class}`)
+				a.item-product(href="product_detail.html")
+					span.img-product(style="background-image:url(http://via.placeholder.com/240x240)")
+						.label-discount
+							span.color-light.fs--m.fw-bold 20%
+						.label-price
+							span.color-light.fs--m.fw-bold 200.000đ
+
+.bl-module.module-grid-list.m-bottom-3
+	a.heading(href="#!")
+		span.fs--l.fw-medium.text-truncate Section 6
+		i.icn.icn-small-right
+	ul.product-list.is-column-lite.is-lite
+		li
+			.item-product
+				span.img-loader
+		li
+			a.item-product(href="product_detail.html")
+				
+				span.img-product(style="background-image:url(http://via.placeholder.com/240x240)")
+					.label-price
+						span.color-light.fs--m.fw-bold 200.000đ
+		each productItem in product
+			li(class=`${productItem.class}`)
+				a.item-product(href="product_detail.html")
+					span.img-product(style="background-image:url(http://via.placeholder.com/240x240)")
+						.label-discount
+							span.color-light.fs--m.fw-bold 20%
+						.label-price
+							span.color-light.fs--m.fw-bold 200.000đ
+
+.bl-module.module-discovery
+	.heading
+		span.fs--l.fw-medium.text-truncate Khám phá trong danh mục 
+	ul.discovery-list
+		each discoveryItem in discovery
+			li(class=`${discoveryItem.class}`)
+				a.item-discovery(href="category_subcate_level1.html")
+					span.img-discovery(style="background-image:url(http://via.placeholder.com/750x246)")
+
+.module-banner-square-ad
+	span.img(style="background-image:url(http://via.placeholder.com/128x128)")
+	i.icn.icn-add
+		
+
+

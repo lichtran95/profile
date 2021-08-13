@@ -1,0 +1,164 @@
+block home
+.header-intro.d-flex.align-items-center.mb-3
+	nav(aria-label="breadcrumb")
+		ol.breadcrumb.mb-0
+			li.breadcrumb-item.active(aria-current="page") Thanh toán phí đăng tin
+form
+	.container-fluid
+		.row
+			.col-4
+				.bl-module.banner-card
+					.default-block 
+						h3.title Gói Basic
+						p Tin đăng còn hiệu lực đến ngày 
+							span dd/mm/yyyy
+					.price-content
+						.block.left.new-block
+							h1 Tên gói
+							p.infor Thời gian hiệu lực
+					.price-content.has-popup
+						.block.left.new-block
+							h1 Tên gói
+							p.infor Thời gian hiệu lực
+					.block-bottom 
+						h3 Kèm tính năng TIN NỔI BẬT
+						p Từ 01/01/2021 đến 01/01/2022
+				.bl-module.package-extend 
+					h3.title Gia hạn gói tin
+					input#extendPackage(type='checkbox')
+					label(for='extendPackage')
+						.left
+							i.icz.icz-fill-check
+							p 100,000đ
+						.right 
+							p 30 ngày
+			.col-4
+				.bl-module.block-price-item#block_premium
+					.item-container
+						.text-block
+							p.sub Gói nâng cấp
+							p.title.uppercase Highlight Premium
+							p.text-line Chữ in hoa toàn bộ và làm đậm, có màu khác biệt.
+							p.text-line Vị trí được ưu tiên cao nhất trong listing
+						img(style="width: 140px;" src="./images/DAIMOND-GIF.gif")
+					.detail-expand#premium
+						.controls.choosing-price
+							.control
+								input(id="premium1" type="radio" name="premium_price" checked)
+								label(for="premium1") 
+									span.price 15,000đ<br/>
+									span.time 1 ngày
+							.control
+								input(id="premium2" type="radio" name="premium_price")
+								label(for="premium2") 
+									span.price 100,000đ<br/>
+									span.time 7 ngày
+							.control
+								input(id="premium3" type="radio" name="premium_price")
+								label(for="premium3") 
+									span.price 420,000đ<br/>
+									span.time 30 ngày
+						.text-block
+							p.title Upsize, gắn nhãn cho tin Highlight
+							p Làm to vùng post
+							p Có button call ngay đến Zalo
+							p Gắn label
+								span.is-blue Nổi bật
+								span.is-yellow Xem nhiều
+								span.is-red Hot
+						.controls.upsize-price
+							.control
+								input(id="upsize4" type="radio" name="upsize_price" checked)
+								label(for="upsize4") 
+									span.price 15,000đ
+									span.time 1 ngày
+							.control
+								input(id="upsize5" type="radio" name="upsize_price")
+								label(for="upsize5") 
+									span.price 100,000đ
+									span.time 7 ngày
+							.control
+								input(id="upsize6" type="radio" name="upsize_price")
+								label(for="upsize6") 
+									span.price 15,000đ
+									span.time 30 ngày
+					a.btn.btn-primary.btn--m.is-light#open-premium Chọn thêm gói Premium
+				.bl-module.block-price-item#block_medium
+					.item-container
+						.text-block
+							p.sub Gói nâng cấp
+							p.title.uppercase Highlight Medium
+							p.text-line Chữ được làm đậm, có màu khác biệt (nhưng kém nổi bật hơn premium).
+							p.text-line Vị trí nằm dưới premium post nhưng phía trên normal post
+						img(style="width: 140px;" src="./images/gold-gif.gif")
+					.detail-expand#medium
+						.controls.choosing-price
+							.control
+								input(id="medium1" type="radio" name="premium_price")
+								label(for="medium1") 
+									span.price 8,000đ<br/>
+									span.time 1 ngày
+							.control
+								input(id="medium2" type="radio" name="premium_price")
+								label(for="medium2") 
+									span.price 55,000đ<br/>
+									span.time 7 ngày
+							.control
+								input(id="medium3" type="radio" name="premium_price")
+								label(for="medium3") 
+									span.price 230,000đ<br/>
+									span.time 30 ngày
+						.text-block
+							p.title Upsize, gắn nhãn cho tin Highlight
+							p Làm to vùng post
+							p Có button call ngay đến Zalo
+							p Gắn label
+								span.is-blue Nổi bật
+								span.is-yellow Xem nhiều
+								span.is-red Hot
+						.controls.upsize-price
+							.control
+								input(id="upsize1" type="radio" name="upsize_price")
+								label(for="upsize1") 
+									span.price 15,000đ
+									span.time 1 ngày
+							.control
+								input(id="upsize2" type="radio" name="upsize_price" disabled)
+								label(for="upsize2") 
+									span.price 100,000đ
+									span.time 7 ngày
+							.control
+								input(id="upsize3" type="radio" name="upsize_price")
+								label(for="upsize3") 
+									span.price 15,000đ
+									span.time 30 ngày
+					a.btn.btn-primary.btn--m.is-light#open-medium Chọn thêm gói Medium
+			.col-4
+				
+				.bl-module.cta
+					p.title Chi tiết thanh toán
+					.block-cta.lick-custom
+						p Phí đăng tin cơ bản
+						p 100,000 VND
+					.block-cta.lick-custom
+						p Gói nâng cấp
+						p Không dùng
+					.lick-sub-text 
+						.left 
+							p Sử dụng [xxx] điểm thưởng
+							p.red Còn lại 20 điểm thưởng
+						.right 
+							p [-5.000]
+							.switch
+								input(id="qc1" type="checkbox")
+								label.slider.round(for="qc1")
+					.block-cta.has-line-up
+						p Số tiền thanh toán
+						p.is-bold 100,000 VND
+					.sub-text 
+						p Đã áp dụng miễn phí đăng tin 
+						p Bạn còn 5 lần sử dụng hạn 31/04/2021
+					a.btn.btn-primary.btn--m.w-100 Thanh toán 100,000đ
+				
+			
+						

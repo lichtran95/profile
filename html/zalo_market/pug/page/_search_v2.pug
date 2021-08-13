@@ -1,0 +1,41 @@
+block home
+
+- var product = []
+- product.push({"class":""})
+- product.push({"class":""})
+- product.push({"class":""})
+- product.push({"class":""})
+- product.push({"class":""})
+- product.push({"class":""})
+
+.bl-module.module-search-v2
+	.field-search
+		.controls
+			input(type="text" placeholder="Tìm kiếm..." value="" autofocus)
+			a.func-reset(href="#!")
+				i.icn.icn-circle-remove
+		a.func-cancel(href="#!") Thoát
+	.suggest-search
+		p.notice Nhập từ khóa tìm kiếm
+		ul.suggest-list
+			li
+				a.item(href="#!")
+					i.icn.icn-search
+					span.desc
+						span.breadcrumb-small
+							small Bất động sản
+							small Bán
+						span.text Nhà đất
+			li
+				a.item(href="#!")
+					i.icn.icn-search
+					span.desc
+						span.breadcrumb-small
+							small Bất động sản
+							small Bán
+						span.text Nhà đất
+			li
+				a.item(href="#!")
+					i.icn.icn-search
+					span.desc
+						span.text Nhà đất

@@ -1,0 +1,172 @@
+block home
+
+- var table = []
+- table.push({"class":""})
+- table.push({"class":""})
+- table.push({"class":""})
+- table.push({"class":""})
+- table.push({"class":""})
+- table.push({"class":""})
+
+.header-intro.d-flex.align-items-center.mb-3
+	nav(aria-label="breadcrumb")
+		ol.breadcrumb.mb-0
+			li.breadcrumb-item.active(aria-current="page") Danh sách tin đăng
+	.func-header-intro.ml-auto
+		a.btn.btn-primary.btn--m.ml-2(href="product_create_lite.html") Tạo tin đăng
+
+form
+	.container-fluid
+		.row
+			.col-12
+				.bl-module
+					ul.nav.nav-tabs.mb-3
+						li.nav-item
+							a.nav-link.active(href='#') Tất cả 
+						li.nav-item
+							a.nav-link.has-new(href='#') Đang rao bán
+						li.nav-item
+							a.nav-link(href='#') Chờ duyệt
+						li.nav-item
+							a.nav-link(href='#') Hết hạn
+						li.nav-item
+							a.nav-link(href='#') Đã bán
+						li.nav-item
+							a.nav-link(href='#') Từ chối
+						li.nav-item
+							a.nav-link(href='#') Nháp
+					.d-flex.flex-wrap.align-items-center.justify-content-between
+						.block-input-first.d-flex.align-items-center
+							.input-group.mr-2.mb-3(style="width:200px")
+								.input-group-append
+									span.input-group-ico
+										i.icz.icz-search
+								input.form-control(type='text' placeholder='Tiêu đề tin rao')
+							select.custom-select.mr-2.mb-3(style="width:180px")
+								option(selected disabled) Danh mục cấp 1
+								option(value="1") One
+								option(value="2") Two
+								option(value="3") Three
+							select.custom-select.mr-2.mb-3(style="width:180px")
+								option(selected disabled) Danh mục cấp 2
+								option(value="1") One
+								option(value="2") Two
+								option(value="3") Three
+							select.custom-select.mr-2.mb-3(style="width:180px")
+								option(selected disabled) Danh mục cấp 3
+								option(value="1") One
+								option(value="2") Two
+								option(value="3") Three
+						.block-button-second.block-input-first.d-flex.align-items-center.mb-3
+							a.btn.btn-outline-primary.btn--m(href="#!") Tìm kiếm
+							a.btn.btn-has-text.btn--m(href="#!") Xóa bộ lọc
+					.table-responsive
+						table.table.mb-0
+							thead.thead-light
+								tr
+									th.align-middle(scope='col' style="width:64px") Hình ảnh
+									th.align-middle(scope='col' style="width:220px") Tiêu đề
+									th.align-middle(scope='col' style="width:100px") Danh mục
+									th.align-middle(scope='col' style="width:100px") Trạng thái
+									th.align-middle(scope='col' style="width:50px") Vị trí tin
+									th.align-middle(scope='col' style="width:100px") Ngày đăng
+									th.align-middle(scope='col' style="width:100px") Thao tác
+							tbody
+								tr
+									td(colspan="6")
+										.text-center Không có kết quả cần tìm
+								tr
+									td
+										img.img-product.img--s(src="https://via.placeholder.com/200x200" alt=page)
+									td
+										a.link-product.word-break(href="product_detail_lite.html") Apple Watch 4 44mm (GPS) Viền Nhôm Xám - Dây Đen
+									td
+										span.word-break Công nghệ
+									td
+										span.status.status-doing  Đơn hàng mới
+										<br />
+										span.status.status-success Thành công
+										<br />
+										span.status.status-pending Đang xử lý
+										<br />
+										span.status.status-pending Đang vận chuyển
+										<br />
+										span.status.status-denied Thất bại
+										<br />
+										span.status.status-denied Hủy
+									td.push-post-now 
+										.blk-bar
+											.page-location
+												.tooltip-page-num Trang 20
+											.bar
+												i.icz.icz-left
+										a.btn.btn-outlined.btn--m.w-100 Đẩy tin ngay
+									td 20/01/2019 16:45
+									td
+										.d-flex.align-items-center
+											a.func-item.mr-2(href="#!")
+												i.icz.icz-fill-edit
+											a.func-item.mr-2(href="#!")
+												i.icz.icz-clone
+											a.func-item.mr-2(href="#!")
+												i.icz.icz-spaceship
+											a.btn.btn-ads.btn--s(href='javascript:void(0);' data-toggle='modal', data-target='#modal-ads') ADS
+								each tableItem in table
+									tr
+										td
+											img.img-product.img--s(src="https://via.placeholder.com/200x200" alt=page)
+										td
+											a.link-product(href="#!") Apple Watch 4 44mm (GPS) Viền Nhôm Xám - Dây Đen
+										td Công nghệ
+										td
+											span.status.status-doing  Đơn hàng mới
+										td.push-post-now 
+											.blk-bar
+												.page-location
+													.tooltip-page-num Trang 2
+												.bar
+													i.icz.icz-left
+											a.btn.btn-outlined.btn--m.w-100 Đẩy tin ngay
+										td 20/01/2019 16:45
+										td
+											.d-flex.align-items-center
+												a.func-item.mr-2(href="#!")
+													i.icz.icz-fill-edit
+												a.func-item.mr-2(href="#!")
+													i.icz.icz-clone
+												a.btn.btn-ads.btn--s(href='javascript:void(0);' data-toggle='modal', data-target='#modal-ads') ADS
+							tfoot.tfoot-light
+								tr
+									td(colspan="11")
+										.d-flex.align-items-center
+											.d-flex.align-items-center.mr-2
+												span.color-grey.flex-shrink-0.mr-2 Hiển thị
+												select.custom-select(style="")
+													option(selected value="1") 20
+													option(value="2") 30
+													option(value="3") 40
+													option(value="4") 50
+											.total-table
+												span.color-grey 1-10 of 100
+											nav.ml-auto
+												ul.pagination.pagination-sm.justify-content-end
+													li.page-item.disabled
+														a.page-link(href='#', tabindex='-1')
+															i.icz.icz-left
+													li.page-item.active
+														a.page-link(href='#') 1
+													li.page-item
+														a.page-link(href='#') 2
+													li.page-item
+														a.page-link(href='#') 3
+													li.page-item
+														a.page-link(href='#')
+															i.icz.icz-right
+
+
+
+
+
+
+
+

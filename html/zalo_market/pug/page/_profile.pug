@@ -1,0 +1,461 @@
+block home
+
+- var product = []
+- product.push({"class":"","name":"Vòng Đeo Tay Thông Minh Theo Dõi Vận Động Xiaomi Mi Band 3 - Hàng Chính Hãng"})
+- product.push({"class":"","name":"Tivi LED Sony"})
+- product.push({"class":"","name":"Tivi LED Sony 32 inch KDL-32R300E"})
+
+.bl-module.module-profile-v2.module-profile.custom-in-shop
+	.context-user-profile
+		.avatar.avatar--m
+			.avatar-img(style="background-image:url(http://via.placeholder.com/200x200)")
+		.desc.new-desc
+			h2.user-name Username
+			.credit
+				a 99 
+					span credit
+				a(href="list_followers.html") 30 
+					span Người theo dõi
+	a.button-share.func-share(href="#!share")
+		i.icn.icn-share
+		.feature-share-list
+			.arrows
+			.item-feature
+				i.icn.icn-a-share
+				span Chia sẻ cho bạn bè
+			.item-feature
+				i.icn.icn-clock
+				span Đăng lên nhật ký
+.bl-module.module-tabs.is-custom.custom-in-shop
+	ul
+		li.tab.active
+			a.fs--l(href="#buying") Mua hàng
+		li.tab
+			a.fs--l(href="#selling") Đăng bán 
+
+.bl-module.bl-module-v2#buying
+	.new-module.module-order-profile
+		.header-module
+			.left-content
+				i.icn.icn-single-content
+				p Đơn hàng
+			.right-content
+				a(href="new_order_list.html") Xem tất cả
+		.container-module
+			.container-block
+				i.icn.icn-tag-sale
+				p Chờ xác nhận
+			.container-block
+				i.icn.icn-tag-check
+				p Đã xác nhận
+			.container-block
+				i.icn.icn-basket-simple-remove
+				p Hủy đơn
+			.container-block
+				i.icn.icn-box
+				p Chuyển hoàn
+	.new-module.module-selling-news-profile
+		.header-module
+			.left-content
+				i.icn.icn-asking
+				p Tin rao đã hỏi
+			.right-content
+				a(href="new_order_asking.html") Xem tất cả
+		.container-module
+			.block-empty-news
+				p Bạn chưa hỏi tin rao vặt nào
+				a.btn.btn-primary.btn--m.w-100 Xem tin rao vặt
+			ul.product-seller-list
+				li
+					a.item-product-seller(href="#!")
+						span.media
+							span.count-img
+								i.icn.icn-bold-img
+								span.number 1
+							span.img(style="background-image:url('images/img_product_seller.png')")
+						span.content
+							span.price 20,1 Tỷ
+							span.desc Căn hộ Green Star Nguyễn Lương Bằng Q.7 Giá 2,3 Tỷ
+							ul.attr-list
+								li 50m
+									sup 2
+								li Q.Bình Thạnh
+								li Tp.HCM
+				li
+					a.item-product-seller(href="#!")
+						span.media
+							span.count-img
+								i.icn.icn-bold-img
+								span.number 1
+							span.img(style="background-image:url('images/img_product_seller.png')")
+						span.content
+							span.price 20,1 Tỷ
+							span.desc Căn hộ Green Star Nguyễn Lương Bằng Q.7 Giá 2,3 Tỷ
+							ul.attr-list
+								li 50m
+									sup 2
+								li Q.Bình Thạnh
+								li Tp.HCM
+	a.new-module.has-header-only(href="addr_list.html")
+		.header-module
+			.left-content
+				i.icn.icn-address
+				p Danh sách địa chỉ
+			.right-content
+				i.icn.icn-small-right
+.bl-module.bl-module-v2#selling(style="display:none")
+	.tab-custom
+		ul
+			li.tab.active 
+				a(href="#d0") Đang chạy
+			li.tab
+				a(href="#d1") Chờ duyệt
+			li.tab
+				a(href="#d2") Hết hạn
+			li.tab
+				a(href="#d3") Đã bán
+			li.tab
+				a(href="#d4") Từ chối
+	.context-tab-content
+		#d0
+			//case when empty
+			.bl-module.module-empty.is-transparent
+				img.m-bottom-2(src="images/img_empty.png" alt=page)
+				p.fs--l.fw-medium.text-center.m-bottom-6 Không có tin đang rao bán nào
+			
+			ul.bl-post-list
+				li
+					.bl-post
+						.head-bl
+							span.status Đang rao bán
+							span.date 24 Mar 2020
+						.body-bl
+							.notification.is-warning
+								i.icn.icn-bold-warning
+								span Sản phẩm này chưa được hiển thị trên Zalo Shop
+							a.content(href="#!")
+								span.img(style="background-image:url(http://via.placeholder.com/200x200)")
+								.desc
+									span.price 2,4 tỷ
+									span.text Sang quán sữa chua Cô Thỏ 142 Võ Văn Ngân
+						.footer-bl
+							span.group-cta
+								a.btn.btn--s(href="#!") Đã bán
+								a.btn.btn--s(href="#!") Đăng nhật ký
+				li
+					.bl-post
+						.head-bl
+							span.status Đang rao bán
+							span.date 24 Mar 2020
+						.body-bl
+							a.content(href="#!")
+								span.img(style="background-image:url(http://via.placeholder.com/200x200)")
+								.desc
+									span.price 2,4 tỷ
+									span.text Sang quán sữa chua Cô Thỏ 142 Võ Văn Ngân
+						.footer-bl
+							span.group-cta
+								a.btn.btn--s(href="#!") Đã bán
+								a.btn.btn--s(href="#!") Đăng nhật ký
+				li
+					.bl-post
+						.head-bl
+							span.status Đang rao bán
+							span.date 24 Mar 2020
+						.body-bl
+							a.content(href="#!")
+								span.img(style="background-image:url(http://via.placeholder.com/200x200)")
+								.desc
+									span.price 2,4 tỷ
+									span.text Sang quán sữa chua Cô Thỏ 142 Võ Văn Ngân
+						.footer-bl
+							span.group-cta
+								a.btn.btn--s(href="#!") Đã bán
+								a.btn.btn--s(href="#!") Đăng nhật ký
+				li
+					.bl-post
+						.head-bl
+							span.status Đang rao bán
+							span.date 24 Mar 2020
+						.body-bl
+							a.content(href="#!")
+								span.img(style="background-image:url(http://via.placeholder.com/200x200)")
+								.desc
+									span.price 2,4 tỷ
+									span.text Sang quán sữa chua Cô Thỏ 142 Võ Văn Ngân
+						.footer-bl
+							span.group-cta
+								a.btn.btn--s(href="#!") Đã bán
+								a.btn.btn--s(href="#!") Đăng nhật ký
+				li
+					.bl-post
+						.head-bl
+							span.status Đang rao bán
+							span.date 24 Mar 2020
+						.body-bl
+							a.content(href="#!")
+								span.img(style="background-image:url(http://via.placeholder.com/200x200)")
+								.desc
+									span.price 2,4 tỷ
+									span.text Sang quán sữa chua Cô Thỏ 142 Võ Văn Ngân
+						.footer-bl
+							span.group-cta
+								a.btn.btn--s(href="#!") Đã bán
+								a.btn.btn--s(href="#!") Đăng nhật ký
+				li
+					.bl-post
+						.head-bl
+							span.status Đang rao bán
+							span.date 24 Mar 2020
+						.body-bl
+							a.content(href="#!")
+								span.img(style="background-image:url(http://via.placeholder.com/200x200)")
+								.desc
+									span.price 2,4 tỷ
+									span.text Sang quán sữa chua Cô Thỏ 142 Võ Văn Ngân
+						.footer-bl
+							span.group-cta
+								a.btn.btn--s(href="#!") Chuyển trạng thái	
+								a.btn.btn--s(href="#!") Đăng nhật ký
+
+
+		#d1(style="display:none")
+			ul.bl-post-list
+				li
+					.bl-post
+						.head-bl
+							span.status Chờ duyệt
+							span.date 24 Mar 2020
+						.body-bl
+							a.content(href="#!")
+								span.img(style="background-image:url(http://via.placeholder.com/200x200)")
+								.desc
+									span.price 2,4 tỷ
+									span.text Sang quán sữa chua Cô Thỏ 142 Võ Văn Ngân
+						.footer-bl
+							span.group-cta
+								a.btn.btn--s(href="#!") Đã bán
+								a.btn.btn--s(href="#!") Đăng nhật ký
+				li
+					.bl-post
+						.head-bl
+							span.status Chờ duyệt
+							span.date 24 Mar 2020
+						.body-bl
+							a.content(href="#!")
+								span.img(style="background-image:url(http://via.placeholder.com/200x200)")
+								.desc
+									span.price 2,4 tỷ
+									span.text Sang quán sữa chua Cô Thỏ 142 Võ Văn Ngân
+						.footer-bl
+							span.group-cta
+								a.btn.btn--s(href="#!") Đã bán
+								a.btn.btn--s(href="#!") Đăng nhật ký
+				li
+					.bl-post
+						.head-bl
+							span.status Chờ duyệt
+							span.date 24 Mar 2020
+						.body-bl
+							a.content(href="#!")
+								span.img(style="background-image:url(http://via.placeholder.com/200x200)")
+								.desc
+									span.price 2,4 tỷ
+									span.text Sang quán sữa chua Cô Thỏ 142 Võ Văn Ngân
+						.footer-bl
+							span.group-cta
+								a.btn.btn--s(href="#!") Đã bán
+								a.btn.btn--s(href="#!") Đăng nhật ký
+		#d2(style="display:none")
+			ul.bl-post-list
+				li
+					.bl-post
+						.head-bl
+							span.status Hết hạn
+							span.date 24 Mar 2020
+						.body-bl
+							a.content(href="#!")
+								span.img(style="background-image:url(http://via.placeholder.com/200x200)")
+								.desc
+									span.price 2,4 tỷ
+									span.text Sang quán sữa chua Cô Thỏ 142 Võ Văn Ngân
+						.footer-bl
+							span.group-cta
+								a.btn.btn--s(href="#!") Gia hạn
+								a.btn.btn--s(href="#!") Đăng nhật ký
+				li
+					.bl-post
+						.head-bl
+							span.status Hết hạn
+							span.date 24 Mar 2020
+						.body-bl
+							a.content(href="#!")
+								span.img(style="background-image:url(http://via.placeholder.com/200x200)")
+								.desc
+									span.price 2,4 tỷ
+									span.text Sang quán sữa chua Cô Thỏ 142 Võ Văn Ngân
+						.footer-bl
+							span.group-cta
+								a.btn.btn--s(href="#!") Gia hạn
+								a.btn.btn--s(href="#!") Đăng nhật ký
+				li
+					.bl-post
+						.head-bl
+							span.status Hết hạn
+							span.date 24 Mar 2020
+						.body-bl
+							a.content(href="#!")
+								span.img(style="background-image:url(http://via.placeholder.com/200x200)")
+								.desc
+									span.price 2,4 tỷ
+									span.text Sang quán sữa chua Cô Thỏ 142 Võ Văn Ngân
+						.footer-bl
+							span.group-cta
+								a.btn.btn--s(href="#!") Gia hạn
+								a.btn.btn--s(href="#!") Đăng nhật ký
+		#d3(style="display:none")
+			ul.bl-post-list
+				li
+					.bl-post
+						.head-bl
+							span.status Đã bán
+							span.date 24 Mar 2020
+						.body-bl
+							a.content(href="#!")
+								span.img(style="background-image:url(http://via.placeholder.com/200x200)")
+								.desc
+									span.price 2,4 tỷ
+									span.text Sang quán sữa chua Cô Thỏ 142 Võ Văn Ngân
+						.footer-bl
+							span.group-cta.has-only-action
+								a.btn.btn--s(href="#!") Rao bán lại
+				li
+					.bl-post
+						.head-bl
+							span.status Đã bán
+							span.date 24 Mar 2020
+						.body-bl
+							a.content(href="#!")
+								span.img(style="background-image:url(http://via.placeholder.com/200x200)")
+								.desc
+									span.price 2,4 tỷ
+									span.text Sang quán sữa chua Cô Thỏ 142 Võ Văn Ngân
+						.footer-bl
+							span.group-cta.has-only-action
+								a.btn.btn--s(href="#!") Rao bán lại
+				li
+					.bl-post
+						.head-bl
+							span.status Đã bán
+							span.date 24 Mar 2020
+						.body-bl
+							a.content(href="#!")
+								span.img(style="background-image:url(http://via.placeholder.com/200x200)")
+								.desc
+									span.price 2,4 tỷ
+									span.text Sang quán sữa chua Cô Thỏ 142 Võ Văn Ngân
+						.footer-bl
+							span.group-cta.has-only-action
+								a.btn.btn--s(href="#!") Rao bán lại
+		#d4(style="display:none")
+			ul.bl-post-list
+				li
+					.bl-post
+						.head-bl
+							span.status Từ chối duyệt
+							span.date 24 Mar 2020
+						.body-bl
+							a.content(href="#!")
+								span.img(style="background-image:url(http://via.placeholder.com/200x200)")
+								.desc
+									span.price 2,4 tỷ
+									span.text Sang quán sữa chua Cô Thỏ 142 Võ Văn Ngân
+			
+
+
+//- .bl-module.module-profile.m-bottom-3
+//- 	.context-order
+//- 		.heading
+//- 			span.fs--l.fw-medium.text-truncate Thông tin cần biết
+//- 		a.heading-order.is-link(href="doc_quychehoatdong.html")
+//- 			span.fs--l Quy chế hoạt động
+//- 			i.icn.icn-small-right.ml-auto
+//- 		a.heading-order.is-link(href="doc_dieukhoandichvu.html")
+//- 			span.fs--l Điều khoản dịch vụ
+//- 			i.icn.icn-small-right.ml-auto
+//- 		a.heading-order.is-link(href="doc_chinhsachbaomat.html")
+//- 			span.fs--l Chính sách bảo mật
+//- 			i.icn.icn-small-right.ml-auto
+//- 		a.heading-order.is-link(href="doc_quychuansanpham.html")
+//- 			span.fs--l Quy chuẩn về sản phẩm
+//- 			i.icn.icn-small-right.ml-auto
+//- 		a.heading-order.is-link(href="doc_cochekhieunai.html")
+//- 			span.fs--l Quy trình xử lý tranh chấp
+//- 			i.icn.icn-small-right.ml-auto
+//- .bl-module.module-grid-list.m-bottom-3
+//- 	a.heading(href="#!")
+//- 		span.fs--l.fw-medium.text-truncate Section 4
+//- 		i.icn.icn-small-right
+//- 	.product-list.is-row
+//- 		ul
+//- 			li
+//- 				.item-product
+//- 					span.img-loader
+//- 					.desc-loader
+//- 						span
+//- 						span
+//- 			each productItem in product
+//- 				li(class=`${productItem.class}`)
+//- 					a.item-product(href="product_detail.html")
+//- 						span.img-product(style="background-image:url(http://via.placeholder.com/240x240)")
+//- 							.label-discount
+//- 								span.color-light.fs--m.fw-bold 20%
+//- 						.desc
+//- 							h2.product-title.color-base.fs--m.fw-normal.m-bottom-1 #{productItem.name}
+//- 							p.color-base.fs--xl.fw-bold 500.000đ
+//- 							p.color-grey.fs--m.line-through 41.000đ
+//- 							.star-orders.d-flex.m-top-2
+//- 								.rating-star.m-right-2
+//- 									i.icn.icn-shape-star.active
+//- 									i.icn.icn-shape-star.active
+//- 									i.icn.icn-shape-star.active
+//- 									i.icn.icn-shape-star.active
+//- 									i.icn.icn-shape-star
+//- 								span.num.color-base.fs--s (4.8)
+
+//- .bl-module.module-grid-list
+//- 	a.heading(href="#!")
+//- 		span.fs--l.fw-medium.text-truncate Section 4
+//- 		i.icn.icn-small-right
+//- 	.product-list.is-row
+//- 		ul
+//- 			li
+//- 				.item-product
+//- 					span.img-loader
+//- 					.desc-loader
+//- 						span
+//- 						span
+//- 			each productItem in product
+//- 				li(class=`${productItem.class}`)
+//- 					a.item-product(href="product_detail.html")
+//- 						span.img-product(style="background-image:url(http://via.placeholder.com/240x240)")
+//- 							.label-discount
+//- 								span.color-light.fs--m.fw-bold 20%
+//- 						.desc
+//- 							h2.product-title.color-base.fs--m.fw-normal.m-bottom-1 #{productItem.name}
+//- 							p.color-base.fs--xl.fw-bold 500.000đ
+//- 							p.color-grey.fs--m.line-through 41.000đ
+//- 							.star-orders.d-flex.m-top-2
+//- 								.rating-star.m-right-2
+//- 									i.icn.icn-shape-star.active
+//- 									i.icn.icn-shape-star.active
+//- 									i.icn.icn-shape-star.active
+//- 									i.icn.icn-shape-star.active
+//- 									i.icn.icn-shape-star
+//- 								span.num.color-base.fs--s (4.8)
+//- .bl-module.module-profile-company.is-transparent
+//- 	.context-profile-company.text-center.pt-2.pb-2
+//- 		h2.fw-medium.fs--m.text-uppercase.mb-2 ZALO SHOP - SẢN PHẨM CỦA CÔNG TY CỔ PHẦN DỊCH VỤ MẠNG VI NA
+//- 		p.fs--m.color-grey.mb-2 Địa chỉ: Lô Z06. Đường số 13 KCN trong KCX Tân Thuận, Phường Tân Thuận Đông, Quận 7, TP. Hồ Chí Minh, Việt Nam
+//- 		p.fs--m.color-grey.mb-2 Giấy chứng nhận Đăng ký Kinh doanh số 0305418909 do Sở Kế hoạch và Đầu tư Thành phố Hồ Chí Minh cấp ngày 29/12/2007
+//- 		p.fs--m.color-grey.mb-2 Hỗ trợ khách hàng: shop@zalo.me

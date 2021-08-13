@@ -1,0 +1,66 @@
+block home
+
+- var subcate = []
+- subcate.push({"class":"","name":"Điện thoại di động"})
+- subcate.push({"class":"","name":"Điện thoại di động"})
+- subcate.push({"class":"","name":"Điện thoại di động"})
+- subcate.push({"class":"","name":"Điện thoại di động"})
+- subcate.push({"class":"","name":"Điện thoại di động"})
+
+.bl-module.module-search.is-first
+	.default-form
+		.form-row.has-func-right.has-func-search
+			.d-flex.align-items-center.w-100
+				.input-wrap
+					input(type="text" placeholder="11.11 Độc thân" value="")
+					a.func-reset(href="#!")
+						i.icn.icn-circle-remove
+					a.func-search(href="#!")
+						i.icn.icn-search
+				a.func-share(href="#!")
+					i.icn.icn-share
+
+.bl-module.module-category
+	a.heading(href="category_subcate_level1.html")
+		span.fs--l.fw-medium Dịch vụ
+		span.func-more Xem tất cả
+	a.item-banner.borderRadius--m.m-bottom-3(href="category_subcate_level1.html" style="background-image:url(http://via.placeholder.com/750x260)")
+	.subcate-list
+		ul
+			each subcateItem in subcate
+				li(class=`${subcateItem.class}`)
+					a.item-subcate(href="category_subcate_level2.html")
+						span.img-subcate(style="background-image:url(http://via.placeholder.com/240x240)")
+						h2.color-base.fs--s.fw-normal.text-center #{subcateItem.name}
+
+.bl-module.module-category
+	a.heading(href="category_subcate_level1.html")
+		span.fs--l.fw-medium Thực phẩm
+		span.func-more Xem tất cả
+	a.item-banner.borderRadius--m.m-bottom-3(href="category_subcate_level1.html" style="background-image:url(http://via.placeholder.com/750x260)")
+	.subcate-list
+		ul
+			each subcateItem in subcate
+				li(class=`${subcateItem.class}`)
+					a.item-subcate(href="category_subcate_level2.html")
+						span.img-subcate(style="background-image:url(http://via.placeholder.com/240x240)")
+						h2.color-base.fs--s.fw-normal.text-center #{subcateItem.name}
+
+.bl-module.module-category
+	a.heading(href="category_subcate_level1.html")
+		span.fs--l.fw-medium Thể thao & du lịch
+		span.func-more Xem tất cả
+	a.item-banner.borderRadius--m.m-bottom-3(href="category_subcate_level1.html" style="background-image:url(http://via.placeholder.com/750x260)")
+	.subcate-list
+		ul
+			each subcateItem in subcate
+				li(class=`${subcateItem.class}`)
+					a.item-subcate(href="category_subcate_level2.html")
+						span.img-subcate(style="background-image:url(http://via.placeholder.com/240x240)")
+						h2.color-base.fs--s.fw-normal.text-center #{subcateItem.name}
+
+
+
+
+
+

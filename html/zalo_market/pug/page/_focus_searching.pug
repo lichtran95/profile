@@ -1,0 +1,101 @@
+block home
+.module-home-search.focus-search 
+	.form-row
+		input(type="text" placeholder="Nhập từ khóa cần tìm" value="")
+		a.func-search(href="#!")
+			i.icn.icn-search
+	.filter-list 
+		.filter-location.filter-item 
+			label Địa điểm
+			i.icn.icn-small-down
+		.filter-category.filter-item
+			label Danh mục
+			i.icn.icn-small-down
+		.filter-price.filter-item 
+			label Khoảng giá
+			i.icn.icn-small-down
+	a.btn.btn-primary.btn--s.w-100 Tìm kiếm	
+.bl-module.module-recently-search
+	.contain-text 
+		h3.title Tin nổi bật 24h
+	.list-search 
+		a.item
+			i.icn.icn-clock 
+			p.text nha thue
+		a.item
+			i.icn.icn-clock 
+			p.text xe 4 cho
+		a.item
+			i.icn.icn-clock 
+			p.text xe hoi 7 cho
+
+
+//- popup
+.bl-popup 
+	.popup-container.has-radius#popup-filter-category
+		.bl-popup-heading
+			span.fw-medium Chọn ngành hàng
+			a.func-close-popup(href="#!")
+				i.icn.icn-small-remove
+		.bl-popup-context
+			.default-form
+				.form-row
+					.checkbox-list.w-100
+						ul
+							li
+								.input-group
+									input(id="optiona-cate-all" name="category" type="radio")
+									label(for="optiona-cate-all") Tất cả
+								.input-group
+									input(id="home" name="category" type="radio")
+									label(for="home") Bất động sản
+								.input-group
+									input(id="car" name="category" type="radio")
+									label(for="car") Xe cộ
+
+	.popup-container.has-radius#popup-filter-price
+		.bl-popup-heading
+			span.fw-medium Chọn mức giá
+			a.func-close-popup(href="#!")
+				i.icn.icn-small-remove
+		.bl-popup-context
+			.default-form
+				.form-row
+					.checkbox-list.w-100
+						ul
+							li
+								.input-group
+									input(id="optiona-price-all" name="price" type="radio")
+									label(for="optiona-price-all") Tất cả
+								.input-group
+									input(id="price_1" name="price" type="radio")
+									label(for="price_1") Dưới 50 triệu
+								.input-group
+									input(id="price_2" name="price" type="radio")
+									label(for="price_2") Item 1		
+								.input-group
+									input(id="price_3" name="price" type="radio")
+									label(for="price_3") Item 2
+		.popup-container.has-radius#popup-filter-location
+			.bl-popup-heading
+				span.fw-medium Chọn Tỉnh thành
+				a.func-close-popup(href="#!")
+					i.icn.icn-small-remove
+			.bl-popup-context
+				.default-form
+					.form-row
+						.checkbox-list.w-100
+							ul
+								li
+									.input-group
+										input(id="optiona-location-all" name="location" type="radio")
+										label(for="optiona-location-all") Tất cả
+									.input-group
+										input(id="location_1" name="location" type="radio")
+										label(for="location_1") TP HCM
+									.input-group
+										input(id="location_2" name="location" type="radio")
+										label(for="location_2") Item 1		
+									.input-group
+										input(id="location_3" name="location" type="radio")
+										label(for="location_3") Item 2					

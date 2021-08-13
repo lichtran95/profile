@@ -1,0 +1,67 @@
+block home
+
+- var table = []
+- table.push({"class":""})
+- table.push({"class":""})
+
+- var table2 = []
+- table2.push({"class":""})
+- table2.push({"class":""})
+
+.header-intro.d-flex.align-items-center.mb-3
+	nav(aria-label="breadcrumb")
+		ol.breadcrumb.mb-0
+			li.breadcrumb-item
+				a(href="#!") Thiết lập thanh toán qua đối tác
+
+form
+	.container-fluid
+		.row
+			.col-12
+				.bl-module
+					.text-right
+						a.btn.btn-link.btn--s.mb-2(href="#!") <i class="icz icz-restore"></i> Lịch sử cập nhật
+					table.table.mb-0
+						thead.thead-light
+							tr
+								th.align-middle(scope='col') Đối tác thanh toán
+								th.align-middle(scope='col' style="width:140px") Tình trạng kết nối
+								th.align-middle(scope='col') Thao tác
+						tbody
+							each table2Item in table2
+								tr
+									td.align-middle
+										img(src="https://via.placeholder.com/150x70" alt=page width="150")
+									td.align-middle
+										span.p-2.fw-bold.status.status-success.status-bg Đang kết nối
+									td.align-middle
+										.d-flex.align-items-center
+											a.func-item.mr-2(href='javascript:void(0);' data-toggle='modal' data-target='#modal-shipping-info')
+												i.icz.icz-fill-link(data-toggle="tooltip" title="Kết nối")
+											a.func-item.mr-2(href='javascript:void(0);')
+												i.icz.icz-fill-edit(data-toggle="tooltip" title="Chỉnh sửa")
+											a.func-item.mr-2(href='javascript:void(0);' data-toggle='modal' data-target='#modal-shipping-disconnect')
+												i.icz.icz-unlink(data-toggle="tooltip" title="Kết nối")
+											a.func-item.mr-2(href='javascript:void(0);' data-toggle='modal' data-target='#modal-shipping-info')
+												i.icz.icz-c-info(data-toggle="tooltip" title="Thông tin")
+							tr
+								td.align-middle
+									img(src="https://via.placeholder.com/150x70" alt=page)
+								td.align-middle
+									span.p-2.fw-bold.status.status-denied.status-bg Ngắt kết nối
+								td.align-middle
+									.d-flex.align-items-center
+										a.func-item.mr-2(href='javascript:void(0);')
+											i.icz.icz-fill-link
+										a.func-item.mr-2(href='javascript:void(0);')
+											i.icz.icz-fill-edit
+										a.func-item.mr-2(href='javascript:void(0);')
+											i.icz.icz-unlink
+										a.func-item.mr-2(href="#!")
+											i.icz.icz-c-info
+
+
+
+
+
+

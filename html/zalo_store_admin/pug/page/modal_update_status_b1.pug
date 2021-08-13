@@ -1,0 +1,25 @@
+block Modal
+
+.modal.fade(id="modal-update-status-b1" tabindex="-1" role="dialog")
+	.modal-dialog.modal-dialog-centered(role="document")
+		.modal-content
+			.modal-header
+				h5.modal-title Cập nhật trạng thái nhiều đơn hàng
+				a.close(href="javascript:void(0);" data-dismiss="modal" aria-label="Close")
+					i.icz.icz-close
+			.modal-body
+				p.fs--m.mb-3 Cập nhật trạng thái cho <strong>2</strong> đơn hàng đã chọn
+				form
+					.form-group.row.mb-2
+						label.col-4.col-form-label.mb-0(for="") Trạng thái hiện tại
+						.col-8
+							input.form-control(type='text' placeholder='' value='Đơn hàng mới' disabled)
+					.form-group.row.mb-2
+						label.col-4.col-form-label.mb-0(for="") Trạng thái kế tiếp
+						.col-8
+							select.custom-select
+								option(value="1" disabled selected) Chọn trạng thái
+								option(value="2") Option
+			.modal-footer
+				a.btn.btn-outline-primary.btn--m(type="button" data-dismiss="modal") Bỏ qua
+				a.btn.btn-primary.btn--m(href='javascript:void(0);' data-dismiss="modal" data-toggle='modal', data-target='#modal-update-status-b2') Cập nhật

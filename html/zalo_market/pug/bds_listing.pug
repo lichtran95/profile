@@ -1,0 +1,427 @@
+extends layout.pug
+
+//- Setting
+block setting
+	- var layout = true
+	- var modal = false
+	- var dockbar = false
+	- var swiperjs = true
+	- var introjs = true
+	- var nouislider= true
+	- var wnumb = true
+
+
+block head
+	include head.pug
+
+block pages
+	- bodyC.push("")
+	- layoutClasses.push("zMarket-layout")
+	- bodyClasses.push("page-content")
+	- dockbarClasses.push("dockbar") 
+	
+//- Add Body
+block body
+	include page/_bds_listing.pug
+
+//- Add Footer
+block dockbar
+	include page/dockbar_listing.pug
+
+//- Add Modal
+block modal
+	//- include page/modal_select_location.pug
+
+block javaScripts extend
+	script.
+		$(".func-filter-advance").click(function(){
+			$("body").addClass("overlay-open");
+			$("#popup-filter-advance").addClass("is-show");
+		});
+		$(".func-open-quanhuyen").click(function(){
+			$("body").addClass("overlay-open");
+			$("#popup-quanhuyen").addClass("is-show");
+		});
+		
+		//new filter category ver2 
+		$(".func-open-category").click(function(){
+			$("body").addClass("overlay-open");
+			$("#popup-filter-category-ver2").addClass("is-show");
+		});
+		$("#popup-filter-category-ver2 #opt-cate-bds").click(function(){
+			$('.group-bds').addClass('show')
+			$('.group-bds .final-step').removeClass('show')
+			
+			$('.group-bds input').prop( "checked", false );
+
+			setTimeout(()=>{
+				
+				$('.group-bds .is-second').addClass('show')
+			},100)
+			setTimeout(()=>{$('.group-bds .is-third').css('display', 'block')},200)
+		})
+		$("#popup-filter-category-ver2 #opt-cate-all").click(function(){
+			$('.group-bds').addClass('show')
+			$('.group-bds .final-step').removeClass('show')
+			
+			$('.group-bds input').prop( "checked", false );
+
+			setTimeout(()=>{
+				$('.group-bds .is-second').addClass('show')
+			},100)
+			setTimeout(()=>{$('.group-bds .is-third').css('display', 'block')},200)
+		})
+		$("#popup-filter-category-ver2 #opt-cate-car").click(function(){
+			$('.group-bds').addClass('show')
+			$('.group-bds .final-step').removeClass('show')
+			//- $('.group-bds .is-third').css('display', 'none')
+			$('.group-bds input').prop( "checked", false );
+
+			setTimeout(()=>{$('.group-bds .is-second').addClass('show')},100)
+		})
+		$("#popup-filter-category-ver2 #opt-bds-1").click(function(){
+			//- $('.group-bds .final-step').removeClass('show')
+			if($("#opt-cate-bds")[0].checked == true){
+				$('.group-bds .is-third').css('display', 'block')
+				if(!$('.group-bds .is-third').hasClass('show')){
+					setTimeout(()=>{$('.group-bds .is-third').addClass('show')},100)
+				}
+				
+			} else if($("#opt-cate-car")[0].checked == true){
+				$('.group-bds .is-third').css('display', 'none')
+				if(!$('.group-bds .is-fourth').hasClass('show')){
+					setTimeout(()=>{$('.group-bds .is-fourth').addClass('show')},100)
+				}
+				
+			} else {
+				setTimeout(()=>{$('.group-bds .blk-radio-choose').addClass('show')},100)
+			}
+				
+		})
+		$("#popup-filter-category-ver2 #opt-bds-2").click(function(){
+			//- $('.group-bds .final-step').removeClass('show')
+			if($("#opt-cate-bds")[0].checked == true){
+				$('.group-bds .is-third').css('display', 'block')
+				if(!$('.group-bds .is-third').hasClass('show')){
+					setTimeout(()=>{$('.group-bds .is-third').addClass('show')},100)
+				}
+				
+			} else if($("#opt-cate-car")[0].checked == true){
+				$('.group-bds .is-third').css('display', 'none')
+				if(!$('.group-bds .is-fourth').hasClass('show')){
+					setTimeout(()=>{$('.group-bds .is-fourth').addClass('show')},100)
+				}
+				
+			} else {
+				setTimeout(()=>{$('.group-bds .blk-radio-choose').addClass('show')},100)
+
+			}
+		})
+		$("#popup-filter-category-ver2 #opt-bds-3").click(function(){
+			//- $('.group-bds .final-step').removeClass('show')
+			if($("#opt-cate-bds")[0].checked == true){
+				$('.group-bds .is-third').css('display', 'block')
+				setTimeout(()=>{$('.group-bds .is-third').addClass('show')},100)
+			} else if($("#opt-cate-car")[0].checked == true){
+				$('.group-bds .is-third').css('display', 'none')
+				if(!$('.group-bds .is-fourth').hasClass('show')){
+					setTimeout(()=>{$('.group-bds .is-fourth').addClass('show')},100)
+				}
+				
+			} else {
+				setTimeout(()=>{$('.group-bds .blk-radio-choose').addClass('show')},100)
+			}
+		})
+
+		//filter policy doc
+		$(".func-filter-policy-doc").click(()=>{
+			$("body").addClass("overlay-open");
+			$("#popup-filter-policy-doc").addClass("is-show");
+		})
+
+		//filter rooms
+		$(".func-filter-rooms").click(()=>{
+			$("body").addClass("overlay-open");
+			$("#popup-filter-rooms").addClass("is-show");
+		})
+		$("#popup-filter-rooms input").click(()=>{
+			$(".popup-container").removeClass("is-show");
+			setTimeout(()=>{$("body").removeClass("overlay-open");}, 200)
+		})
+
+		//filter price
+		$(".func-filter-price").click(()=>{
+			$("body").addClass("overlay-open");
+			$("#popup-filter-price").addClass("is-show");
+		})
+
+		//filter area
+		$(".func-filter-area").click(()=>{
+			$("body").addClass("overlay-open");
+			$("#popup-filter-area").addClass("is-show");
+		})
+
+		//new full filter
+		$(".func-new-full-filter").click(()=>{
+			$("body").addClass("overlay-open");
+			$("#popup-full-filter-new ").addClass("is-show");
+		})
+		$(".open-popup-quanhuyen").click(()=>{
+			$("#slide-select-location").addClass("is-show");
+		})
+		$("#slide-select-location  .select-location").click(function(){
+			$("#slide-filter-full").addClass("is-show");
+		});
+		$("#slide-filter-full  input").click(function(){
+			$(".func-close-slide").click();
+		});
+
+
+		$(".func-quick-filter").click(function(){
+			$("body").addClass("overlay-open");
+			$("#popup-quick-filter").addClass("is-show");
+		});
+		$("#popup-filter-advance .select-list .item").click(function(){
+			$("#slide-select-location").addClass("is-show");
+		});
+
+		$("#popup-quanhuyen  .select-location").click(function(){
+			$("#slide-filter").addClass("is-show");
+		});
+		$('#popup-quick-filter .input-group').click(function(){
+			$("body").removeClass("overlay-open");
+			$(".popup-container").removeClass("is-show");
+		})
+		$("#slide-filter .input-group").click(function(){
+			$(".slide-container").removeClass("is-show");
+			$(".bl-slide").removeClass("is-show");
+
+			setTimeout(()=>{
+				$(".func-close-popup").click()
+			},200)
+			
+		});
+
+		$(".func-close-slide").click(function(){
+			$(".bl-slide").removeClass("is-show");
+			$(".slide-container").removeClass("is-show");
+		});
+		
+		$(".func-close-popup").click(function(){
+			$(".popup-container").removeClass("is-show");
+			setTimeout(()=>{$("body").removeClass("overlay-open");}, 200)
+			
+		});
+		//- demo active dockbar
+		$(".context-dockbar li a").removeClass("active");
+		$(".context-dockbar li:nth-child(1) a").addClass("active");
+
+		var swiper = new Swiper('.swiper-img-bds', {
+			spaceBetween: 8,
+			slidesPerView: 1.1,
+			centeredSlides: true,
+			loop:true,
+			roundLengths: true,
+			pagination: {
+				el: '#img-pagination',
+			},
+		});
+		$(".func-open-filterSearch").click(function(){
+			event.stopPropagation();
+			$(".filterSearch-list").toggleClass("is-active");
+		});
+
+		//- demo collapsed lọc danh mục collapse dòng 1
+		var inputRadioFirst = $(".is-first .wrapper .input-group-radio");
+		var wSecond = $(".is-first .wrapperSecond");
+		var radioListSecond = $(".is-first .wrapperSecond .radio-list");
+		var title = $(".is-first .title");
+		var wFirst = $(".is-first .wrapper");
+		var radioListFirst = $(".is-first .radio-list");
+
+		wFirst.height(0);
+		title.click(function() {
+			wFirst.height(radioListFirst.outerHeight(true));
+			wFirst.addClass('open');
+			$(".title").removeClass("is-active");
+			$(this).addClass("is-active")
+			wFirst2.height(0);
+			wSecond2.height(0);
+			wFirst2.removeClass('open');
+			wSecond2.removeClass('open');
+
+		});
+		//- demo collapsed lọc danh mục con
+		wSecond.height(0);
+		inputRadioFirst.click(function() {
+			wSecond.addClass('open');
+			wSecond.height(radioListSecond.outerHeight(true) + $(".title-second").outerHeight(true) + 24 );
+		});
+
+
+
+		//- demo collapsed lọc danh mục collapse dòng 2
+		var inputRadioFirst2 = $(".is-second .wrapper .input-group-radio");
+		var wSecond2 = $(".is-second .wrapperSecond");
+		var radioListSecond2 = $(".is-second .wrapperSecond .radio-list");
+		var title2 = $(".is-second .title");
+		var wFirst2 = $(".is-second .wrapper");
+		var radioListFirst2 = $(".is-second .radio-list");
+
+		wFirst2.height(0);
+		title2.click(function() {
+			wFirst.height(0);
+			wFirst2.height(radioListFirst2.outerHeight(true));
+			wFirst2.addClass('open');
+			$(".title").removeClass("is-active");
+			$(this).addClass("is-active");
+			wFirst.removeClass('open');
+			wSecond.removeClass('open');
+			wSecond.height(0);
+
+		});
+		//- demo collapsed lọc danh mục con
+		
+
+		wSecond2.height(0);
+		inputRadioFirst2.click(function() {
+			wSecond2.addClass('open');
+			wSecond2.height(radioListSecond2.outerHeight(true) + $(".title-second").outerHeight(true) + 24 );
+		});
+
+		//check ios
+		function iOS() {
+			return [
+				'iPad Simulator',
+				'iPhone Simulator',
+				'iPod Simulator',
+				'iPad',
+				'iPhone',
+				'iPod'
+			].includes(navigator.platform)
+			//- // iPad on iOS 13 detection
+			//- || (navigator.userAgent.includes("Mac") && "ontouchend" in document)
+		}
+		if(iOS() == true){
+			$('.is-premium .item-product-seller').addClass('is-ios')
+		}
+
+		//- var tour = introJs()
+		//- tour.onbeforechange(()=>{
+		//- 	$("body").css('overflow','hidden');
+		//- }).onbeforeexit(()=>{
+		//- 	$("body").css('overflow','auto');
+		//- }).start();
+		//- $(".introjs-skipbutton").click(function(){
+		//- 	$("body").removeClass("is-overflow-hidden");
+		//- });
+		//- $('.introjs-skipbutton').click(function(){
+		//- 	$('html, body').animate({ scrollTop: 0 }, 500);
+		//- })
+
+		window.onscroll = (value) => {
+			let search_bar = document.getElementsByClassName('heading-listing')[0]
+			if(value){
+				if(window.scrollY <= 80){
+					search_bar.classList.remove('is-heading-fix')
+				} else {
+					search_bar.classList.add('is-heading-fix')
+				}
+				
+			}
+		}
+
+		$(document).ready(function() {
+			
+			var rangeSlider = document.getElementById('slider-range');
+			var moneyFormat = wNumb({
+				decimals: 0,
+				thousand: ',',
+				// prefix: 'đ'
+			});
+			noUiSlider.create(rangeSlider, {
+				start: [1000, 7000],
+				step: 100,
+				range: {
+				'min': [0],
+				'max': [10000]
+				},
+				format: moneyFormat,
+				connect: true
+			});
+			
+			// Set visual min and max values and also update value hidden form inputs
+			rangeSlider.noUiSlider.on('update', function(values, handle) {
+				document.getElementById('min').innerHTML = values[0];
+				document.getElementById('max').innerHTML = values[1];
+			});
+
+			var rangeSlider_area = document.getElementById('slider-range-area');
+			var moneyFormat_area = wNumb({
+				decimals: 0,
+				thousand: ',',
+				// prefix: 'đ'
+			});
+			noUiSlider.create(rangeSlider_area, {
+				start: [100, 700],
+				step: 1,
+				range: {
+				'min': [0],
+				'max': [1000]
+				},
+				format: moneyFormat_area,
+				connect: true
+			});
+			
+			// Set visual min and max values and also update value hidden form inputs
+			rangeSlider_area.noUiSlider.on('update', function(values, handle) {
+				document.getElementById('min-area').innerHTML = values[0];
+				document.getElementById('max-area').innerHTML = values[1];
+			});
+
+			var rangeSlider_full = document.getElementById('full-slider-range');
+			var moneyFormat_full = wNumb({
+				decimals: 0,
+				thousand: ',',
+				// prefix: 'đ'
+			});
+			noUiSlider.create(rangeSlider_full, {
+				start: [1000, 7000],
+				step: 100,
+				range: {
+				'min': [0],
+				'max': [10000]
+				},
+				format: moneyFormat,
+				connect: true
+			});
+			
+			// Set visual min and max values and also update value hidden form inputs
+			rangeSlider_full.noUiSlider.on('update', function(values, handle) {
+				document.getElementById('full-min').innerHTML = values[0];
+				document.getElementById('full-max').innerHTML = values[1];
+			});
+
+			var rangeSlider_area_full = document.getElementById('full-slider-range-area');
+			var moneyFormat_area_full = wNumb({
+				decimals: 0,
+				thousand: ',',
+				// prefix: 'đ'
+			});
+			noUiSlider.create(rangeSlider_area_full, {
+				start: [100, 700],
+				step: 1,
+				range: {
+				'min': [0],
+				'max': [1000]
+				},
+				format: moneyFormat_area,
+				connect: true
+			});
+			
+			// Set visual min and max values and also update value hidden form inputs
+			rangeSlider_area_full.noUiSlider.on('update', function(values, handle) {
+				document.getElementById('full-min-area').innerHTML = values[0];
+				document.getElementById('full-max-area').innerHTML = values[1];
+			});
+		});

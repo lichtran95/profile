@@ -1,0 +1,139 @@
+extends layout.pug
+
+//- Setting
+block setting
+	- var layout = true
+	- var modal = false
+	- var dockbar = true
+
+
+block head
+	include head.pug
+
+block pages
+	- bodyC.push("")
+	- layoutClasses.push("zMarket-layout")
+	- bodyClasses.push("page-content")
+	- dockbarClasses.push("dockbar")
+	
+//- Add Body
+block body
+	include page/_sell_buy_listing.pug
+
+//- Add Footer
+block dockbar
+	include page/dockbar_listing.pug
+
+//- Add Modal
+block modal
+	//- include page/modal_confirm_delete.pug
+
+block javaScripts extend
+	script.
+		$(".func-filter-advance").click(function(){
+			$("body").addClass("overlay-open");
+			$("#popup-filter-advance").addClass("is-show");
+		});
+		$(".func-open-quanhuyen").click(function(){
+			$("body").addClass("overlay-open");
+			$("#popup-quanhuyen").addClass("is-show");
+		});
+		$(".func-open-category").click(function(){
+			$("body").addClass("overlay-open");
+			$("#popup-filter-category").addClass("is-show");
+		});
+		$(".func-quick-filter").click(function(){
+			$("body").addClass("overlay-open");
+			$("#popup-quick-filter").addClass("is-show");
+		});
+		$("#popup-filter-advance .select-list .item").click(function(){
+			$("#slide-select-location").addClass("is-show");
+		});
+
+		$("#popup-quanhuyen  .select-location").click(function(){
+			$("#slide-filter").addClass("is-show");
+		});
+		$("  .select-location").click(function(){
+			$("#slide-filter").addClass("is-show");
+		});
+		$('#popup-quick-filter .input-group').click(function(){
+			$("body").removeClass("overlay-open");
+			$(".popup-container").removeClass("is-show");
+		})
+		$("#slide-filter .input-group").click(function(){
+			$(".slide-container").removeClass("is-show");
+			$(".bl-slide").removeClass("is-show");
+		});
+
+		$(".func-close-slide").click(function(){
+			$(".slide-container").removeClass("is-show");
+			$(".bl-slide").removeClass("is-show");
+		});
+		
+		$(".func-close-popup").click(function(){
+			$("body").removeClass("overlay-open");
+			$(".popup-container").removeClass("is-show");
+		});
+	
+		//- demo collapsed lọc danh mục collapse dòng 1
+		var inputRadioFirst = $(".is-first .wrapper .input-group-radio");
+		var wSecond = $(".is-first .wrapperSecond");
+		var radioListSecond = $(".is-first .wrapperSecond .radio-list");
+		var title = $(".is-first .title");
+		var wFirst = $(".is-first .wrapper");
+		var radioListFirst = $(".is-first .radio-list");
+
+		wFirst.height(0);
+		title.click(function() {
+			wFirst.height(radioListFirst.outerHeight(true));
+			wFirst.addClass('open');
+			$(".title").removeClass("is-active");
+			$(this).addClass("is-active")
+			wFirst2.height(0);
+			wSecond2.height(0);
+			wFirst2.removeClass('open');
+			wSecond2.removeClass('open');
+
+		});
+		//- demo collapsed lọc danh mục con
+		wSecond.height(0);
+		inputRadioFirst.click(function() {
+			wSecond.addClass('open');
+			wSecond.height(radioListSecond.outerHeight(true) + $(".title-second").outerHeight(true) + 24 );
+		});
+
+
+
+		//- demo collapsed lọc danh mục collapse dòng 2
+		var inputRadioFirst2 = $(".is-second .wrapper .input-group-radio");
+		var wSecond2 = $(".is-second .wrapperSecond");
+		var radioListSecond2 = $(".is-second .wrapperSecond .radio-list");
+		var title2 = $(".is-second .title");
+		var wFirst2 = $(".is-second .wrapper");
+		var radioListFirst2 = $(".is-second .radio-list");
+
+		wFirst2.height(0);
+		title2.click(function() {
+			wFirst.height(0);
+			wFirst2.height(radioListFirst2.outerHeight(true));
+			wFirst2.addClass('open');
+			$(".title").removeClass("is-active");
+			$(this).addClass("is-active");
+			wFirst.removeClass('open');
+			wSecond.removeClass('open');
+			wSecond.height(0);
+
+		});
+		//- demo collapsed lọc danh mục con
+		
+
+		wSecond2.height(0);
+		inputRadioFirst2.click(function() {
+			wSecond2.addClass('open');
+			wSecond2.height(radioListSecond2.outerHeight(true) + $(".title-second").outerHeight(true) + 24 );
+		});
+
+		$(".func-open-filterSearch").click(function(){
+			event.stopPropagation();
+			$(".filterSearch-list").toggleClass("is-active");
+		});

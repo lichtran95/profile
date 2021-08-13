@@ -1,0 +1,598 @@
+block home
+.bl-module.module-listing
+	.heading-listing.is-heading-fix
+		.search
+			.form-group
+				//- a.func-open-filterSearch
+				//- 	span Tất cả
+				//- 	i.icn.icn-small-down
+				//- 	.filterSearch-list
+				//- 		.arrows
+				//- 		.item-feature
+				//- 			span Tất cả
+				//- 		.item-feature
+				//- 			span Mua bán
+				//- 		.item-feature
+				//- 			span Cho thuê
+				i.icn.icn-search
+				input(type="text" placeholder="Tìm kiếm trong Ô tô")
+				
+		.group-filter
+			.big-filter.func-filter-advance
+				i.icn.icn-bold-filter
+				span.text Bộ lọc
+				.noti-dot-filter
+					p 1
+			ul.quick-filter
+				//- li
+				//- 	a.item-filter.func-open-quanhuyen(href='#!')
+				//- 		span.text Vị trí <strong> Quận 7</strong>
+				//- 		i.icn.icn-small-down
+				li
+					a.item-filter.func-open-category(href='#!')
+						span.text Trong <strong> Nhà riêng</strong>
+						i.icn.icn-small-down
+				li
+					a.item-filter.func-quick-filter(href='#!')
+						span.text Sắp xếp <strong> Mới nhất</strong>
+						i.icn.icn-small-down
+				li
+					a.item-filter.func-filter-advance(href='#!')
+						span.text Khoảng giá
+						i.icn.icn-add-circle.is-plus
+				li
+					a.item-filter.func-filter-advance(href='#!')
+						span.text Diện tích
+						i.icn.icn-add-circle.is-plus
+				li
+					a.item-filter.func-filter-advance(href='#!')
+						span.text Số phòng ngủ
+						i.icn.icn-add-circle.is-plus
+				li
+					a.item-filter.func-filter-advance(href='#!')
+						span.text Hướng
+						i.icn.icn-add-circle.is-plus
+	.heading-offset-block.sell-buy-listing
+	ul.category-list.has-multi
+		li
+			a.item-category(href="sell_buy_listing.html")
+				span.img(style="background-image:url('images/img_category1.png')")
+				span.title Chung cư, căn hộ
+		li
+			a.item-category(href="#!")
+				span.img(style="background-image:url('images/img_category2.png')")
+				span.title Nhà riêng
+		li
+			a.item-category(href="#!")
+				span.img(style="background-image:url('images/img_category2.png')")
+				span.title Đất
+		li
+			a.item-category(href="#!")
+				span.img(style="background-image:url('images/img_category2.png')")
+				span.title Văn phòng
+		li
+			a.item-category(href="#!")
+				span.img(style="background-image:url('images/img_category2.png')")
+				span.title BĐS khác
+		li
+			a.item-category(href="#!")
+				span.img(style="background-image:url('images/img_category2.png')")
+				span.title Phòng trọ
+	ul.category-list.has-multi.is-car
+		li
+			input(type='radio' name="car-brand" id="car1")
+			label.item-category(for="car1")
+				span.img(style="background-image:url('images/car_logo/abarth.png')")
+				span.title Audi
+		li
+			input(type='radio' name="car-brand" id="car2")
+			label.item-category(for="car2")
+				span.img(style="background-image:url('images/car_logo/acura.png')")
+				span.title Ford
+		li
+			input(type='radio' name="car-brand" id="car3")
+			label.item-category(for="car3")
+				span.img(style="background-image:url('images/car_logo/aixam.png')")
+				span.title Toyota
+		li
+			input(type='radio' name="car-brand" id="car4")
+			label.item-category(for="car4")
+				span.img(style="background-image:url('images/car_logo/alfaromeo.png')")
+				span.title Vinfast
+		li
+			input(type='radio' name="car-brand" id="car5")
+			label.item-category(for="car5")
+				span.img(style="background-image:url('images/car_logo/alfaromeo.png')")
+				span.title Mercedes-Benz
+		li
+			input(type='radio' name="car-brand" id="car6")
+			label.item-category(for="car6")
+				span.img(style="background-image:url('images/car_logo/alpine.png')")
+				span.title Audi
+		li
+			input(type='radio' name="car-brand" id="car7")
+			label.item-category(for="car7")
+				span.img(style="background-image:url('images/car_logo/apollo.png')")
+				span.title Ford
+		li
+			input(type='radio' name="car-brand" id="car8")
+			label.item-category(for="car8")
+				span.img(style="background-image:url('images/car_logo/artega.png')")
+				span.title Toyota
+		li
+			input(type='radio' name="car-brand" id="car9")
+			label.item-category(for="car9")
+				span.img(style="background-image:url('images/car_logo/asia.png')")
+				span.title Vinfast
+		li
+			input(type='radio' name="car-brand" id="car10")
+			label.item-category(for="car10")
+				span.img(style="background-image:url('images/car_logo/astonmartin.png')")
+				span.title Mercedes-Benz
+	.body-listing
+		.module-product-seller
+			.context-product-seller
+				ul.product-seller-list
+					li
+						a.item-product-seller(href="#!")
+							span.media
+								span.count-img
+									i.icn.icn-bold-img
+									span.number 1
+								span.img(style="background-image:url('images/img_product_seller.png')")
+							span.content
+								span.price 20,1 Tỷ
+								span.desc Căn hộ Green Star Nguyễn Lương Bằng Q.7 Giá 2,3 Tỷ
+								ul.attr-list
+									li 50m
+										sup 2
+									li Q.Bình Thạnh
+									li Tp.HCM
+					li
+						a.item-product-seller(href="#!")
+							span.media
+								span.count-img
+									i.icn.icn-bold-img
+									span.number 1
+								span.img(style="background-image:url('images/img_product_seller.png')")
+							span.content
+								span.price 20,1 Tỷ
+								span.desc Căn hộ Green Star Nguyễn Lương Bằng Q.7 Giá 2,3 Tỷ
+								
+					li
+						a.item-product-seller(href="#!")
+							span.media
+								span.count-img
+									i.icn.icn-bold-img
+									span.number 6
+								span.img(style="background-image:url('images/img_product_seller.png')")
+							span.content
+								span.price 700 triệu
+								span.desc Căn hộ Green Star Nguyễn Lương Bằng Q.7 Giá 2,3 Tỷ
+								
+					li
+						a.item-product-seller(href="#!")
+							span.media
+								span.count-img
+									i.icn.icn-bold-img
+									span.number 5
+								span.img(style="background-image:url('images/img_product_seller.png')")
+							span.content
+								span.price 20,1 Tỷ
+								span.desc Căn hộ Green Star Nguyễn Lương Bằng Q.7 Giá 2,3 Tỷ
+								
+					li
+						a.item-product-seller(href="#!")
+							span.media
+								span.count-img
+									i.icn.icn-bold-img
+									span.number 3
+								span.img(style="background-image:url('images/img_product_seller.png')")
+							span.content
+								span.price 20,1 Tỷ
+								span.desc Căn hộ Green Star Nguyễn Lương Bằng Q.7 Giá 2,3 Tỷ
+								
+					li
+						a.item-product-seller(href="#!")
+							span.media
+								span.count-img
+									i.icn.icn-bold-img
+									span.number 1
+								span.img(style="background-image:url('images/img_product_seller.png')")
+							span.content
+								span.price 20,1 Tỷ
+								span.desc Căn hộ Green Star Nguyễn Lương Bằng Q.7 Giá 2,3 Tỷ
+								
+	
+.bl-popup
+	.popup-container.has-radius#popup-filter-category
+		.bl-popup-heading
+			span.fs--l.fw-medium Chọn danh mục
+			a.func-close-popup(href="#!")
+				i.icn.icn-small-remove
+			a.func-reset(href="#!")
+				span Làm mới
+		.bl-popup-context
+			.group-filter-category.is-first
+				span.title Bất động sản
+				.wrapper
+					ul.radio-list.default-form
+						li
+							.input-group-radio
+								input(id="opt1-1" name="option2-1" type="radio")
+								label.fs--m(for="opt1-1") Tất cả BĐS
+						li
+							.input-group-radio
+								input(id="opt1-2" name="option2-1" type="radio")
+								label.fs--m(for="opt1-2") Bán BĐS
+						li
+							.input-group-radio
+								input(id="opt1-3" name="option2-1" type="radio")
+								label.fs--m(for="opt1-3") Bán BĐS
+				.wrapperSecond
+					span.title-second
+					ul.radio-list.list-fisrt.default-form
+						li
+							.input-group-radio
+								input(id="opt2-1" name="option2-2" type="radio")
+								label.fs--m(for="opt2-1") Tất cả Bán BĐS
+						li
+							.input-group-radio
+								input(id="opt2-2" name="option2-2" type="radio")
+								label.fs--m(for="opt2-2") Chung cư, căn hộ
+						li
+							.input-group-radio
+								input(id="opt2-3" name="option2-2" type="radio")
+								label.fs--m(for="opt2-3") Nhà riêng
+						li
+							.input-group-radio
+								input(id="opt2-4" name="option2-2" type="radio")
+								label.fs--m(for="opt2-4") Đất nền
+						li
+							.input-group-radio
+								input(id="opt2-5" name="option2-2" type="radio")
+								label.fs--m(for="opt2-5") Văn phòng
+						li
+							.input-group-radio
+								input(id="opt2-6" name="option2-2" type="radio")
+								label.fs--m(for="opt2-6") BĐS khác
+			.group-filter-category.is-second
+				span.title Xe hơi
+				.wrapper
+					ul.radio-list.default-form
+						li
+							.input-group-radio
+								input(id="opt3-1" name="option3-1" type="radio")
+								label.fs--m(for="opt3-1") Tất cả xe
+						li
+							.input-group-radio
+								input(id="opt3-2" name="option3-1" type="radio")
+								label.fs--m(for="opt3-2") Bán xe
+			.dockbar-temp-footer
+		.bl-popup-footer
+			.button-dockbar
+				a.btn.w-100(href="#!") Áp dụng bộ lọc
+		
+	.popup-container.has-radius#popup-filter-advance
+		.bl-popup-heading
+			span.fs--l.fw-medium Áp dụng bộ lọc
+			a.func-close-popup(href="#!")
+				i.icn.icn-small-remove
+			a.func-reset(href="#!")
+				span Làm mới
+		.bl-popup-context
+			.group-filter-category
+				span.title.is-active Tìm tại 
+				.content-wrapper 
+					.item.select-location
+						span Chọn Thành phố/Tỉnh thành
+						i.icn.icn-small-down
+					.item.select-location
+						span Chọn Quận/Huyện
+						i.icn.icn-small-down
+			.group-filter-category
+				span.title.is-active Hình thức
+				.content-wrapper 
+					.item
+						span Chọn hình thức
+						i.icn.icn-small-down
+			.group-filter-category
+				span.title.is-active Khoảng giá
+				.content-wrapper 
+					.item
+						span Chọn khoảng giá
+						i.icn.icn-small-down
+			.group-filter-category
+				span.title.is-active Diện tích
+				.content-wrapper 
+					.item
+						span Chọn diện tích
+						i.icn.icn-small-down
+			.group-filter-category
+				span.title.is-active Số phòng ngủ
+				.wrapper
+					ul.radio-list.default-form
+						li
+							.input-group-radio
+								input(id="ppp-1" name="pppo" type="radio")
+								label.fs--m(for="ppp-1") 1 phòng
+						li
+							.input-group-radio
+								input(id="ppp-2" name="pppo" type="radio")
+								label.fs--m(for="ppp-2") 2 phòng
+						li
+							.input-group-radio
+								input(id="ppp-3" name="pppo" type="radio")
+								label.fs--m(for="ppp-3") 3 phòng
+			.dockbar-temp-footer
+		.bl-popup-footer
+			.button-dockbar
+				a.btn.w-100(href="#!") Áp dụng bộ lọc
+		
+	.popup-container.has-radius#popup-quick-filter
+		.bl-popup-heading
+			span.fw-medium nameFilter
+			a.func-close-popup(href="#!")
+				i.icn.icn-small-remove
+		.bl-popup-context
+			//- ul.select-list
+			//- 	li
+			//- 		.item
+			//- 			span Value 1
+			//- 			.toggle
+			//- 				i.icn.icn-small-right
+			//- 	li
+			//- 		.item
+			//- 			span Value 2
+			//- 			.toggle
+			//- 				i.icn.icn-small-right
+			.default-form
+				.form-row
+					.checkbox-list.w-100
+						ul
+							li
+								.input-group
+									input(id="optiona-all" name="optiona1" type="radio")
+									label(for="optiona-all") Tất cả
+								.input-group
+									input(id="optiona111111" name="optiona1" type="radio")
+									label(for="optiona111111") Item1
+								.input-group
+									input(id="optiona111112" name="optiona1" type="radio")
+									label(for="optiona111112") Item2
+								.input-group
+									input(id="optiona111113" name="optiona1" type="radio")
+									label(for="optiona111113") Item3
+								.input-group
+									input(id="optiona111114" name="optiona1" type="radio")
+									label(for="optiona111114") Item 4
+								.input-group
+									input(id="optiona111115" name="optiona1" type="radio")
+									label(for="optiona111115") Item5
+								.input-group
+									input(id="optiona111116" name="optiona1" type="radio")
+									label(for="optiona111116") Item6
+								.input-group
+									input(id="optiona111117" name="optiona1" type="radio")
+									label(for="optiona111117") Item7
+								.input-group
+									input(id="optiona111111" name="optiona1" type="radio")
+									label(for="optiona111111") Item8
+								.input-group
+									input(id="optiona111112" name="optiona1" type="radio")
+									label(for="optiona111112") Item9
+								.input-group
+									input(id="optiona111113" name="optiona1" type="radio")
+									label(for="optiona111113") Item10
+								.input-group
+									input(id="optiona111114" name="optiona1" type="radio")
+									label(for="optiona111114") Item11
+								.input-group
+									input(id="optiona111115" name="optiona1" type="radio")
+									label(for="optiona111115") Item12
+								.input-group
+									input(id="optiona111116" name="optiona1" type="radio")
+									label(for="optiona111116") Item13
+								.input-group
+									input(id="optiona111117" name="optiona1" type="radio")
+									label(for="optiona111117") Item14
+		//- 	.dockbar-temp-footer
+		//- .bl-popup-footer
+		//- 	.button-dockbar
+		//- 		a.btn.w-100(href="#!") Bộ lọc
+	.popup-container.has-radius#popup-quanhuyen
+		.bl-popup-heading
+			span.fw-medium Chọn Tỉnh, thành phố
+			a.func-close-popup(href="#!")
+				i.icn.icn-small-remove
+		.bl-popup-context
+			ul.select-list
+				li
+					.item
+						span Toàn quốc
+				li
+					.item.select-location
+						span Thành Phố Hồ Chí Minh
+						.toggle
+							i.icn.icn-small-right
+				li
+					.item.select-location
+						span Hà Nội
+						.toggle
+							i.icn.icn-small-right
+				li
+					.item.select-location.func-seemore
+						span Quảng Ngãi
+						.toggle
+							i.icn.icn-small-right
+				li
+					.item.select-location
+						span Đà Nẵng
+						.toggle
+							i.icn.icn-small-right
+				li
+					.item.select-location
+						span Cần Thơ
+						.toggle
+							i.icn.icn-small-right
+				li
+					.item.select-location
+						span Bình Dương
+						.toggle
+							i.icn.icn-small-right
+				li
+					.item.select-location
+						span Bà Rịa - Vũng Tàu
+						.toggle
+							i.icn.icn-small-right
+				li
+					.item.select-location
+						span Đồng Nai
+						.toggle
+							i.icn.icn-small-right
+				li
+					.item.select-location
+						span Bình Thuận
+						.toggle
+							i.icn.icn-small-right
+				li
+					.item.select-location
+						span Lâm Đồng
+						.toggle
+							i.icn.icn-small-right
+				li
+					.item.select-location
+						span Vĩnh Phúc
+						.toggle
+							i.icn.icn-small-right
+				li
+					.item.select-location
+						span Hải Phòng
+						.toggle
+							i.icn.icn-small-right
+.bl-slide#slide-select-location
+	.slide-container
+		.bl-slide-heading
+			span.fw-medium Chọn Tỉnh, thành phố
+			a.func-close-slide(href="#!")
+				i.icn.icn-small-left
+			
+		.bl-slide-context
+			ul.select-list
+				li
+					.item
+						span Toàn quốc
+				li
+					.item.select-location
+						span Thành Phố Hồ Chí Minh
+						.toggle
+							i.icn.icn-small-right
+				li
+					.item.select-location
+						span Hà Nội
+						.toggle
+							i.icn.icn-small-right
+				li
+					.item.select-location.func-seemore
+						span Quảng Ngãi
+						.toggle
+							i.icn.icn-small-right
+				li
+					.item.select-location
+						span Đà Nẵng
+						.toggle
+							i.icn.icn-small-right
+				li
+					.item.select-location
+						span Cần Thơ
+						.toggle
+							i.icn.icn-small-right
+				li
+					.item.select-location
+						span Bình Dương
+						.toggle
+							i.icn.icn-small-right
+				li
+					.item.select-location
+						span Bà Rịa - Vũng Tàu
+						.toggle
+							i.icn.icn-small-right
+				li
+					.item.select-location
+						span Đồng Nai
+						.toggle
+							i.icn.icn-small-right
+				li
+					.item.select-location
+						span Bình Thuận
+						.toggle
+							i.icn.icn-small-right
+				li
+					.item.select-location
+						span Lâm Đồng
+						.toggle
+							i.icn.icn-small-right
+				li
+					.item.select-location
+						span Vĩnh Phúc
+						.toggle
+							i.icn.icn-small-right
+				li
+					.item.select-location
+						span Hải Phòng
+						.toggle
+							i.icn.icn-small-right
+				li
+					.item.select-location
+						span Hải Phòng
+						.toggle
+							i.icn.icn-small-right
+				li
+					.item.select-location
+						span Hải Phòng
+						.toggle
+							i.icn.icn-small-right
+.bl-slide#slide-filter
+	.slide-container
+		.bl-slide-heading
+			span.fw-medium Chọn quận, huyện, thị xã
+			a.func-close-slide(href="#!")
+				i.icn.icn-small-left
+		.bl-slide-context
+			.default-form
+				.form-row
+					.checkbox-list.w-100
+						ul
+							li
+								.input-group
+									input(id="optiona1111111" name="optiona1" type="radio")
+									label(for="optiona1111111") Tất cả
+							li
+								.input-group
+									input(id="optiona2222222" name="optiona2" type="radio")
+									label(for="optiona2222222") Tp. Bà Rịa
+							li
+								.input-group
+									input(id="optiona33333333" name="optiona2" type="radio")
+									label(for="optiona33333333") Tp. Vũng Tàu
+							li
+								.input-group
+									input(id="optiona4444444" name="optiona2" type="radio")
+									label(for="optiona4444444") Huyện Châu Đức
+							li
+								.input-group
+									input(id="optiona5555555" name="optiona2" type="radio")
+									label(for="optiona5555555") Huyện Đất Đỏ
+							li
+								.input-group
+									input(id="optiona6666666" name="optiona2" type="radio")
+									label(for="optiona6666666") Huyện Long Điền
+							li
+								.input-group
+									input(id="optiona7777777" name="optiona2" type="radio")
+									label(for="optiona7777777") Thị Xã Phú Mỹ
+							li
+								.input-group
+									input(id="optiona8888888" name="optiona2" type="radio")
+									label(for="optiona8888888") Huyện Xuyên Mộc
+					

@@ -1,0 +1,16 @@
+block Modal
+
+.modal.fade(id="modal-call" tabindex="-1" role="dialog")
+	.modal-dialog.modal-dialog-centered.modal-sm(role="document")
+		.modal-content
+			.modal-header
+				h5.modal-title Gọi cho PhongVu
+				a.close(href="javascript:void(0);" data-dismiss="modal" aria-label="Close")
+					i.icz.icz-close
+			.modal-body
+				.qrcode-user
+					img(src="images/qrcode_user.jpg" alt=page)
+				p.text-center
+					strong 099.6336.111
+			.modal-footer.justify-content-center
+				a.btn.btn-outline-primary.btn--m(type="button") Đóng lại

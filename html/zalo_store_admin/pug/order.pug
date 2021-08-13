@@ -1,0 +1,49 @@
+extends layout.pug
+
+//- Setting
+block setting
+	- var layout = true
+	- var header = true
+	- var footer = true
+	- var navigate = true
+	- var modal = true
+
+block head
+	include head.pug
+
+block pages
+	- bodyC.push("")
+	- layoutClasses.push("admin-layout")
+	- headerClasses.push("")
+	- bodyClasses.push("main-content")
+	- navigateClasses.push("sidebar-navigation")
+	- footerClasses.push("")
+	
+//- Add Header
+block header
+	include page/header.pug
+
+//- Add Body
+block body
+	include page/_order.pug
+
+//- Add Nav
+block navigate
+	include page/_navigate.pug
+
+//- Add Footer
+block footer
+	include page/footer.pug
+
+//- Add Modal
+block modal
+	include page/modal_call.pug
+	include page/modal_feedback.pug
+	include page/modal_edit_info.pug
+
+block javaScripts extend
+	script.
+		//- $(window).on('load', function () {
+		//- 	$("#modal-login").modal("show");
+		//- });
+		

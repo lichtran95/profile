@@ -1,0 +1,52 @@
+extends layout.pug
+
+//- Setting
+block setting
+	- var layout = true
+	- var header = true
+	- var footer = true
+	- var navigate = true
+	- var popperjs = true
+	- var modal = true
+
+block head
+	include head.pug
+
+block pages
+	- bodyC.push("")
+	- layoutClasses.push("admin-layout")
+	- headerClasses.push("")
+	- bodyClasses.push("main-content")
+	- navigateClasses.push("sidebar-navigation")
+	- footerClasses.push("")
+	
+//- Add Header
+block header
+	include page/header.pug
+
+//- Add Body
+block body
+	include page/_setting_shipping.pug
+
+//- Add Nav
+block navigate
+	include page/_navigate.pug
+
+//- Add Footer
+block footer
+	include page/footer.pug
+
+//- Add Modal
+block modal
+	include page/modal_edit_shipping.pug
+	include page/modal_shipping_info.pug
+	include page/modal_shipping_disconnect.pug
+
+block javaScripts extend
+	script.
+		$(function () {
+			$('[data-toggle="tooltip"]').tooltip()
+		});
+		$(document).on('click', '.dropdown-outside .dropdown-menu', function (e) {
+			e.stopPropagation();
+		});

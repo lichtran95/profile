@@ -1,0 +1,320 @@
+block home
+
+- var table = []
+- table.push({"class":""})
+- table.push({"class":""})
+- table.push({"class":""})
+- table.push({"class":""})
+- table.push({"class":""})
+- table.push({"class":""})
+
+- var vary = []
+- vary.push({"class":""})
+- vary.push({"class":""})
+- vary.push({"class":""})
+- vary.push({"class":""})
+- vary.push({"class":""})
+
+.header-intro.d-flex.align-items-center.mb-3
+	nav(aria-label="breadcrumb")
+		ol.breadcrumb.mb-0
+			li.breadcrumb-item
+				a(href="#!") Sản phẩm
+			li.breadcrumb-item.active(aria-current="page") Tạo sản phẩm
+
+form
+	.container-fluid
+		.row
+			.col-8
+				.bl-module
+					.form-group
+						label(for="") Tên sản phẩm <i>*</i>
+						input.form-control.is-invalid(type='text' placeholder='')
+						.invalid-feedback Lorem ipsum
+						small.mt-2 Giới hạn [n] ký tự
+					.form-group.mb-0
+						label(for="") Mô tả sản phẩm
+						.editor-wrap
+						small.mt-2 Giới hạn [n] ký tự
+				.bl-module
+					h3.mb-2 Ảnh sản phẩm <i>*</i>
+					small.mb-3 Tối đa 10 ảnh, kích thước tối thiểu 500x500. Dung lượng tối đa 1 Mb. Định dạng .jpg, .png
+					.img-list
+						ul
+							li
+								.img(style="background-image:url(https://via.placeholder.com/120x120)")
+									a.func-set.is-primary(href="#!")
+										.icz.icz-check
+									a.func-remove(href="#!remove")
+										.icz.icz-trash
+							li
+								.img(style="background-image:url(https://via.placeholder.com/120x120)")
+									a.func-set(href="#!")
+										.icz.icz-check
+									a.func-remove(href="#!remove")
+										.icz.icz-trash
+							//li
+								.img-upload
+									.inputfile-container
+										input.inputfile(id="upload" type="file")
+										label(for="upload")
+									i.icz.icz-fill-add
+							li
+								a.img-upload(href='javascript:void(0);' data-toggle='modal', data-target='#modal-upload-image')
+									i.icz.icz-fill-add
+				.bl-module
+					h3.mb-2 Thuộc tính sản phẩm
+					.variation-list.mb-3
+						each varyItem in vary
+							.row.mb-3
+								.col-3
+									input.form-control(type='text' placeholder='' value="Khối lượng" disabled)
+								.col-8.pl-0
+									.var-input
+										span.var-value Khối lượng
+											a.func-remove(href="#!")
+												i.icz.icz-close
+										span.var-value Khối lượng
+											a.func-remove(href="#!")
+												i.icz.icz-close
+										span.var-value Khối lượng
+											a.func-remove(href="#!")
+												i.icz.icz-close
+										span.var-value Khối lượng
+											a.func-remove(href="#!")
+												i.icz.icz-close
+										span.var-value Khối lượng
+											a.func-remove(href="#!")
+												i.icz.icz-close
+										input.form-control(type='text' placeholder='')
+										a.btn.btn-default.btn--s.disabled(href="#!") + Giá trị mới
+									.var-input.is-past
+										span.var-value Value 1-Past
+											a.func-remove(href="#!")
+												i.icz.icz-close
+										
+								//.col-2.pl-0
+									a.func-remove(href="#!")
+										i.icz.icz-trash
+						//a.btn.btn-outline-primary.btn--m(href="#!") Thêm thuộc tính
+				.bl-module
+					.d-flex.align-items-center.mb-3
+						h3 Chi tiết thuộc tính
+						a.btn.btn-outline-primary.btn--m.ml-auto(href="product_create_variation.html") Chỉnh sửa
+					.table-responsive
+						table.table.table-fixed.mb-0
+							thead.thead-light
+								tr
+									th.align-middle(scope='col' style="width:30px") #
+									th.align-middle(scope='col' style="width:150px") Thuộc tính 1
+									th.align-middle(scope='col' style="width:150px") Thuộc tính 2
+									th.align-middle(scope='col' style="width:150px") Thuộc tính 3
+									th.align-middle(scope='col' style="width:150px") Thuộc tính 4
+									th.align-middle(scope='col' style="width:150px") Giá bán (đ)
+									th.align-middle(scope='col' style="width:150px") Giá gốc (đ)
+									th.align-middle(scope='col' style="width:80px") * SKU
+									th.align-middle(scope='col' style="width:120px") * Khối lượng v.c (gram)
+									th.align-middle(scope='col' style="width:120px") Số lượng
+									th.align-middle(scope='col' style="width:80px") Hiển thị
+									th.align-middle(scope='col' style="width:80px") Mặc định
+							tbody
+								each tableItem in table
+									tr
+										td.align-middle 1
+										td.align-middle
+											strong Xanh lá 1
+										td.align-middle
+											strong Xanh lá 2
+										td.align-middle
+											strong Xanh lá 3
+										td.align-middle
+											strong Xanh lá 4
+										td.align-middle 200.000
+										td.align-middle
+											input.custom-select(type='text' placeholder='' value='200.000' style="width:100px")
+										td.align-middle
+											input.custom-select(type='text' placeholder='' style="width:50px")
+										td.align-middle
+											input.custom-select(type='text' placeholder='' style="width:100px")
+										td.align-middle
+											.d-flex.align-items-center
+												input.custom-select(type='text' placeholder='' style="width:80px")
+												a.func-item.is-non-border.func-refresh(href="javascript:void(0);")
+													i.icz.icz-reload
+										td.align-middle
+											.custom-control.custom-checkbox
+												input(type="checkbox" class="custom-control-input" id="check-table")
+												label.custom-control-label(for="check-table") &nbsp;
+										td.align-middle
+											.custom-control.custom-radio
+												input(type="radio" class="custom-control-input" id="check-table1")
+												label.custom-control-label(for="check-table1") &nbsp;
+							tfoot.tfoot-light
+								tr
+									td(colspan="12")
+										.d-flex.align-items-center
+											.total-table
+												span.color-grey 1-10 of 100
+											nav.ml-auto
+												ul.pagination.pagination-sm.justify-content-end
+													li.page-item.disabled
+														a.page-link(href='#', tabindex='-1')
+															i.icz.icz-left
+													li.page-item.active
+														a.page-link(href='#') 1
+													li.page-item
+														a.page-link(href='#') 2
+													li.page-item
+														a.page-link(href='#') 3
+													li.page-item
+														a.page-link(href='#')
+															i.icz.icz-right
+			.col-4
+				.custom-control.custom-checkbox.is-min.mb-2
+					input(type="checkbox" class="custom-control-input" id="check1" checked)
+					label.custom-control-label.fs--m.fw-medium(for="check1") Hiển thị sản phẩm
+				.bl-module
+					.form-group.mb-0
+						label(for="") Ngành hàng <i>*</i>
+						.dropdown-select.dropdown
+							.select-fa.form-control.is-invalid(href="javascript:void(0);" role="button" id="dropdown-select" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+								select.custom-select
+									option(selected) Chọn...
+									option(value="1") One
+									option(value="2") Two
+									option(value="3") Three
+							.invalid-feedback Lorem ipsum
+							.dropdown-menu(aria-labelledby="dropdown-select")
+								ul
+									li
+										a.menu-back(href="#!") Quay lại
+									li
+										a(href="#!") Category 01
+									li
+										a(href="#!") Category 02
+									li
+										a(href="#!") Category 03
+									li
+										a(href="#!") Category 04
+									li
+										a(href="#!") Category 05
+									li
+										a(href="#!") Category 06
+				.bl-module
+					.form-group.mb-0
+						label(for="") Danh mục
+						select.custom-select.is-invalid
+							option(selected) Chọn...
+							option(value="1") One
+							option(value="2") Two
+							option(value="3") Three
+						.invalid-feedback Lorem ipsum
+				.bl-module
+					h3.mb-2 Giá sản phẩm
+					.row
+						.col-6
+							.form-group
+								label(for="") Giá ban đầu <i>*</i>
+								input.form-control.is-invalid(type='text' placeholder='')
+								.invalid-feedback Lorem ipsum
+						.col-6.pl-0
+							.form-group
+								label(for="") Giá đã giảm
+								input.form-control.is-invalid(type='text' placeholder='')
+								.invalid-feedback Lorem ipsum
+					.row
+						.col-12
+							.custom-control.custom-checkbox
+								input(type="checkbox" class="custom-control-input" id="check2")
+								label.custom-control-label.fs--l(for="check2") Giá liên hệ
+				.bl-module
+					h3.mb-2 Quản lý số lượng <i>*</i>
+					.form-group
+						label(for="") SKU
+						input.form-control.is-invalid(type='text' placeholder='')
+						.invalid-feedback Lorem ipsum
+						small.mt-2 Giới hạn [n] ký tự
+					.form-group
+						label(for="") Cập nhật quản lý số lượng
+						.mb-2
+							select.custom-select.is-invalid
+								option(selected) Chọn quản lý số lượng
+								option(value="1") One
+								option(value="2") Two
+								option(value="3") Three
+							.invalid-feedback Lorem ipsum
+						input.form-control.is-invalid(type='text' placeholder='')
+						.invalid-feedback Lorem ipsum
+					.form-group.mb-0
+						label(for="") Khối lượng và kích thước sau đóng gói
+						.input-group.has-append-text.mb-2
+							input.form-control.is-invalid(type='text' placeholder='Khối lượng')
+							.input-group-append
+								span.input-group-text gram
+							.invalid-feedback Lorem ipsum
+
+						.d-flex.align-items-center
+							.input-group.has-append-text.mr-2
+								input.form-control.is-invalid(type='text' placeholder='Dài')
+								.input-group-append
+									span.input-group-text cm
+								.invalid-feedback Lorem ipsum
+							.input-group.has-append-text.mr-2
+								input.form-control.is-invalid(type='text' placeholder='Rộng')
+								.input-group-append
+									span.input-group-text cm
+								.invalid-feedback Lorem ipsum
+							.input-group.has-append-text
+								input.form-control.is-invalid(type='text' placeholder='Cao')
+								.input-group-append
+									span.input-group-text cm
+								.invalid-feedback Lorem ipsum
+				.bl-module
+					h3
+						a.is-collapsed.collapsed(data-toggle="collapse" href="#collapse-bhsp" role="button" aria-expanded="false" aria-controls="collapse-bhsp") Bảo hành sản phẩm
+					.collapse(id="collapse-bhsp")
+						.mb-3
+						.form-group
+							label(for="") Loại hình bảo hành
+							select.custom-select.is-invalid
+								option(selected) Chọn...
+								option(value="1") One
+								option(value="2") Two
+								option(value="3") Three
+							.invalid-feedback Lorem ipsum
+						.form-group
+							label(for="") Thời gian bảo hành
+							select.custom-select.is-invalid
+								option(selected) Chọn...
+								option(value="1") One
+								option(value="2") Two
+								option(value="3") Three
+							.invalid-feedback Lorem ipsum
+						.form-group
+							label(for="") Xuất xứ
+							input.form-control.is-invalid(type='text' placeholder='')
+							.invalid-feedback Lorem ipsum
+						.form-group
+							label(for="") Chính sách bảo hành
+							textarea.form-control.is-invalid(name="", cols="30", rows="4")
+							.invalid-feedback Lorem ipsum
+							small.form-text.text-muted.mt-2 Giới hạn 0/5000 ký tự
+
+				.bl-module.module-qrcode
+					.qrcode-wrap
+						img(src="images/qrcode.png")
+						a.btn.btn-outline-primary.btn--s(href="#!") Tải .PNG
+		.row
+			.col-12
+				.button-wrap
+					a.btn.btn-danger.btn--m(href="#!") Xóa
+					div.ml-auto
+						a.btn.btn-primary.btn--m.ml-2(href="#!") Lưu
+						a.btn.btn-outline-primary.btn--m.ml-2(href="#!") <i class="icz icz-clone"></i>Sao chép
+
+
+
+
+
+
+

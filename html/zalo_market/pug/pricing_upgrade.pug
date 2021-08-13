@@ -1,0 +1,48 @@
+extends layout.pug
+
+//- Setting
+block setting
+	- var layout = true
+	- var modal = false
+
+block head
+	include head.pug
+
+block pages
+	- bodyC.push("")
+	- layoutClasses.push("zMarket-layout")
+	- bodyClasses.push("page-content is-bg")
+	- dockbarClasses.push("dockbar")
+	
+//- Add Body
+block body
+	include page/_pricing_upgrade.pug
+
+//- Add Footer
+block dockbar
+	//include page/dockbar.pug
+
+//- Add Modal
+block modal
+
+block javaScripts extend
+	script.
+		const buttonPremium = document.getElementById('open-premium')
+		const buttonMedium = document.getElementById('open-medium')
+		const blockPremium = document.getElementById('premium')
+		const blockMedium = document.getElementById('medium')
+
+		buttonPremium.onclick = () => {
+			$("#premium").slideDown('fast',"linear")
+			$("#medium").slideUp('fast',"linear")
+			buttonPremium.style.display = 'none'
+			buttonMedium.style.display = 'block'
+		}
+
+		buttonMedium.onclick = () => {
+			$("#medium").slideDown('fast',"linear")
+			$("#premium").slideUp('fast',"linear")
+			buttonMedium.style.display = 'none'
+			buttonPremium.style.display = 'block'
+		}
+

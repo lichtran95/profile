@@ -1,0 +1,75 @@
+extends layout.pug
+
+//- Setting
+block setting
+	- var layout = true
+	- var modal = false
+	- var dockbar = true
+
+
+block head
+	include head.pug
+
+block pages
+	- bodyC.push("")
+	- layoutClasses.push("zMarket-layout")
+	- bodyClasses.push("page-content")
+	- dockbarClasses.push("dockbar") 
+	
+//- Add Body
+block body
+	include page/_profile_v2.pug
+
+//- Add Footer
+block dockbar
+	include page/dockbar_listing.pug
+
+//- Add Modal
+block modal
+	//- include page/modal_select_location.pug
+
+block javaScripts extend
+	script.
+		$('.tab a').on('click', function (e) {
+			e.preventDefault();
+			$(this).parent().addClass('active');
+			$(this).parent().siblings().removeClass('active');
+			
+			target = $(this).attr('href');
+			$('.context-tab-content > div').not(target).hide();
+			$(target).fadeIn(600);
+			$("html, body").animate({ scrollTop: 0 }, 500);
+		});
+		$(document).ready(function(){
+			$(window).scroll(function(){
+				if ($(this).scrollTop() > ($(".module-profile-v2").height() +  $(".module-tabs").height()) + $(".notification-group").height()) {
+					$('.module-tabs').addClass('is-fixed');
+				}
+				else {
+					$('.module-tabs').removeClass('is-fixed');
+				}
+			});
+		});
+		//- demo active dockbar
+		$(".context-dockbar li a").removeClass("active");
+		$(".context-dockbar li:nth-child(3) a").addClass("active");
+		$(".func-share").click(function(){
+			event.stopPropagation();
+			$(".feature-share-list").toggleClass("is-active");
+		});
+		$(".func-open-logout").click(function(){
+			console.log('check')
+			event.stopPropagation();
+			$(".feature-logout").toggleClass("is-active");
+		});
+		$(".page-content").click(function(){
+			$(".feature-share-list").removeClass("is-active");
+			$(".feature-logout").removeClass("is-active");
+		});
+		$('#logout-cta').click(()=>{
+			if (window.confirm("Bạn có chắc chắn thoát ra?")) {
+				console.log('ok')
+			} else {
+				console.log('no')
+			}
+		})

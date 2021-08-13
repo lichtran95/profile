@@ -1,0 +1,91 @@
+extends layout.pug
+
+//- Setting
+block setting
+	- var layout = true
+	- var dockbar = false
+	- var modal = true
+	- var swiperjs = true
+
+block head
+	include head.pug
+
+block pages
+	- bodyC.push("")
+	- layoutClasses.push("zMarket-layout")
+	- bodyClasses.push("page-content")
+	- dockbarClasses.push("dockbar")
+	
+//- Add Body
+block body
+	include page/_create_sell_post.pug
+
+//- Add Footer
+block dockbar
+
+//- Add Modal
+block modal
+
+
+block javaScripts extend
+	script.
+		$(".func-filter-advance").click(function(){
+			$("body").addClass("overlay-open");
+			$("#popup-select-category").addClass("is-show");
+		});
+		$(".func-open-project").click(function(){
+			$("body").addClass("overlay-open");
+			$("#popup-project").addClass("is-show");
+		});
+		$(".func-open-share").click(function(){
+			$("body").addClass("overlay-open");
+			$("#popup-share").addClass("is-show");
+		});
+
+		$(".func-open-multi-upload").click(function(){
+			$("body").addClass("overlay-open");
+			$("#popup-multi-upload").addClass("is-show");
+		});
+
+		$("#popup-select-category .select-list .item").click(function(){
+			$("#slide-category1").addClass("is-show");
+		});
+
+		$(".open-cat2").click(function(){
+			$("#slide-category2").addClass("is-show");
+		});
+
+		$(".func-close-slide").click(function(){
+			$(".slide-container").removeClass("is-show");
+			$(".bl-slide").removeClass("is-show");
+		});
+
+		$(".func-close-popup").click(function(){
+			$("body").removeClass("overlay-open");
+			$(".popup-container").removeClass("is-show");
+		});
+		$(".func-back-category").click(function(e){
+			$("#slide-category2").removeClass("is-show");
+		});
+		$("#slide-category2 .input-group").click(function(){
+			$(".bl-slide").removeClass("is-show");
+			$("body").removeClass("overlay-open");
+			$(".popup-container").removeClass("is-show");
+		});
+		// auto adjust the height of
+		$('.form-row').on( 'keydown', 'textarea', function (e){
+			$(this).css('height', 'auto' );
+			$(this).height( this.scrollHeight );
+		});
+		$('.form-row').find( 'textarea' ).keydown();
+		//- sharetimeline show hết chữ
+		$(".cta.is-seemore").click(function(){
+			$(".content").removeClass("hide-text");
+			$(this).hide();
+			$(".cta.is-hide").show();
+		});
+		$(".cta.is-hide").click(function(){
+			$(".content").addClass("hide-text");
+			$(".cta.is-seemore").show();
+			$(this).hide();
+		});

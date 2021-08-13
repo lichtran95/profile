@@ -1,0 +1,106 @@
+block home
+
+- var table = []
+- table.push({"class":""})
+- table.push({"class":""})
+- table.push({"class":""})
+- table.push({"class":""})
+- table.push({"class":""})
+- table.push({"class":""})
+
+.header-intro.d-flex.align-items-center.mb-3
+	nav(aria-label="breadcrumb")
+		ol.breadcrumb.mb-0
+			li.breadcrumb-item.active(aria-current="page") Khuyến mãi
+	.func-header-intro.ml-auto
+		a.btn.btn-primary.btn--m.ml-2(href="event_create.html") Tạo khuyến mãi
+
+form
+	.container-fluid
+		.row
+			.col-12
+				.bl-module
+					ul.nav.nav-tabs.mb-3(id="myTab" role="tablist")
+						li.nav-item
+							a.nav-link.active(id="tab1-tab" data-toggle="tab" href="#tab1" role="tab" aria-controls="tab1" aria-selected="true") Đang chạy
+						li.nav-item
+							a.nav-link(id="tab2-tab" data-toggle="tab" href="#tab2" role="tab" aria-controls="tab2" aria-selected="false") Chờ chạy
+						li.nav-item
+							a.nav-link(id="tab3-tab" data-toggle="tab" href="#tab3" role="tab" aria-controls="tab3" aria-selected="false") Kết thúc
+					.d-flex.align-items-center.mb-3
+						.input-group.mr-2(style="width:300px")
+							.input-group-append
+								span.input-group-ico
+									i.icz.icz-search
+							input.form-control(type='text' placeholder='Tên chương trình')
+					.tab-content(id="myTabContent")
+						.tab-pane.fade.show.active(id="tab1" role="tabpanel" aria-labelledby="tab1")
+							.table-responsive
+								table.table.mb-0
+									thead.thead-light
+										tr
+											th.align-middle(scope='col' style="width:40px") #
+											th.align-middle(scope='col' style="width:20%") Tên chương trình
+											th.align-middle(scope='col' style="width:20%") Hình ảnh
+											th.align-middle(scope='col') Ngày bắt đầu
+											th.align-middle(scope='col') Ngày kết thúc
+											th.align-middle(scope='col') Số lượng
+											th.align-middle(scope='col') Thao tác
+									tbody
+										each tableItem in table
+											tr
+												td 1
+												td
+													strong Ngày hội mua sắm cuối năm
+												td
+													img(src="https://via.placeholder.com/750x220" atl=page)
+												td DD/MM/YYYY HH:MM
+												td DD/MM/YYYY HH:MM
+												td 12
+												td
+													.d-flex.align-items-center
+														a.func-item.mr-2(href="#!")
+															i.icz.icz-fill-edit
+														a.func-item.mr-2(href="#!")
+															i.icz.icz-trash
+														a.func-item(href="#!")
+															i.icz.icz-fill-link
+									tfoot.tfoot-light
+										tr
+											td(colspan="7")
+												.d-flex.align-items-center
+													.d-flex.align-items-center.mr-2
+														span.color-grey.flex-shrink-0.mr-2 Hiển thị
+														select.custom-select(style="")
+															option(selected value="1") 20
+															option(value="2") 30
+															option(value="3") 40
+															option(value="4") 50
+													.total-table
+														span.color-grey 1-10 of 100
+													nav.ml-auto
+														ul.pagination.pagination-sm.justify-content-end
+															li.page-item.disabled
+																a.page-link(href='#', tabindex='-1')
+																	i.icz.icz-left
+															li.page-item.active
+																a.page-link(href='#') 1
+															li.page-item
+																a.page-link(href='#') 2
+															li.page-item
+																a.page-link(href='#') 3
+															li.page-item
+																a.page-link(href='#')
+																	i.icz.icz-right
+						.tab-pane.fade(id="tab2" role="tabpanel" aria-labelledby="tab2")
+							p 222
+						.tab-pane.fade(id="tab3" role="tabpanel" aria-labelledby="tab3")
+							p 333
+
+
+
+
+
+
+
+

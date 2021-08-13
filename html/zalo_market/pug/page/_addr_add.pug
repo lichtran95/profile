@@ -1,0 +1,42 @@
+block home
+
+- var addr = []
+- addr.push({"class":"id-1"})
+- addr.push({"class":"id-2"})
+
+.bl-module.module-cart.is-transparent
+	.heading-cart
+		span.fs--l.fw-medium Thêm/ Chỉnh sửa địa chỉ giao hàng
+	.default-form
+		.form-row.m-bottom-5
+			label.fs--m.m-bottom-2 Họ và tên
+			input.is-invalid(type="text" placeholder="" value="")
+			.invalid-feedback Please provide a valid state.
+		.form-row.m-bottom-5
+			label.fs--m.m-bottom-2 Điện thoại
+			input(type="text" placeholder="" name="" value="")
+		.form-row.m-bottom-5
+			label.fs--m.m-bottom-2 Tỉnh / Thành phố
+			.wrap-select
+				select()
+					option(value="1") Chọn
+		.form-row.m-bottom-5
+			label.fs--m.m-bottom-2 Quận / Huyện
+			.wrap-select
+				select()
+					option(value="1") Chọn
+		.form-row.m-bottom-5
+			label.fs--m.m-bottom-2 Địa chỉ
+			textarea(type="textarea" placeholder="" name="" value="" rows="2")
+		.custom-control.custom-checkbox.m-bottom-5
+			input(type="checkbox" class="custom-control-input" id="policyCheck")
+			label.custom-control-label.is-radius(for="policyCheck") Lưu làm địa chỉ mặc định
+		.btn-wrap
+			a.btn.btn-outline-primary.btn--m(href="addr_list.html") Hủy bỏ
+			a.btn.btn-primary.btn--m(href="cart_b2_confirm.html") Lưu thông tin
+
+
+
+
+
+

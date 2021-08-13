@@ -1,0 +1,16 @@
+block Modal
+
+.modal.fade.modal-center(id="modal-follow" tabindex="-1" role="dialog")
+	.modal-dialog(role="document")
+		.modal-content
+			.modal-header
+				span.color-base.fs--l.fw-medium Thông báo từ hệ thống
+				a.func-close(data-dismiss="modal" aria-label="Close")
+					i.icn.icn-small-remove
+			.modal-body
+				.context-default.text-center
+					p Bạn có muốn bỏ quan tâm <strong>[OA Name]?</strong>
+			.modal-footer
+				.button-wrap.is-multi-button
+					a.btn.btn-outline-primary.btn--m(href="#!") Bỏ qua
+					a.btn.btn-primary.btn--m.m-left-3(href="#!") Đồng ý

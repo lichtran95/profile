@@ -1,0 +1,192 @@
+block home
+
+- var table = []
+- table.push({"class":""})
+- table.push({"class":""})
+
+- var noted = []
+- noted.push({"class":""})
+- noted.push({"class":""})
+
+.header-intro.d-flex.align-items-center.mb-3
+	nav(aria-label="breadcrumb")
+		ol.breadcrumb.mb-0
+			li.breadcrumb-item.active
+				span Đơn hàng #5687999
+				span.ig Mã nhóm #12345678 - <span class="timer">Ngày đặt: 12/02/2019 12:00<span>
+
+form
+	.container-fluid
+		.row
+			.col-8
+				.bl-module.module-3steps
+					.context-3steps
+						.step.is-active
+							.ico-wrap
+							span Đơn hàng mới
+						.step.is-here
+							.ico-wrap
+							span Đang xử lý
+						.step
+							.ico-wrap
+							span Đang vận chuyển
+						.step
+							.ico-wrap
+							span Thành công
+
+				.row.mb-3
+					.col-6.height-100
+						.bl-module.is-same-height
+							h3.mb-2 Khách hàng
+							.d-flex.align-items-center.mb-2
+								i.icz.icz-account.mr-2
+								span.fs--m.color-grey Anh Vũ
+							.d-flex.align-items-center.mb-2
+								i.icz.icz-phone.mr-2
+								span.fs--m.color-grey 099.999.9999
+							.group-func-more
+								a.func-default.ml-2(href='javascript:void(0);' data-toggle='modal', data-target='#modal-call')
+									i.icz.icz-phone
+								a.func-default.ml-2(href="#!")
+									i.icz.icz-chat
+					.col-6
+						.bl-module.is-same-height
+							h3.mb-2 Nhận hàng
+							.d-flex.align-items-center.mb-2
+								i.icz.icz-account.mr-2
+								span.fs--m.color-grey Anh Vũ
+							.d-flex.align-items-center.mb-2
+								i.icz.icz-phone.mr-2
+								span.fs--m.color-grey 099.999.9999
+							.d-flex.align-items-center.mb-2
+								i.icz.icz-pin.mr-2
+								span.fs--m.color-grey 182 Lê Đại Hành. Quận 11. Tp. Hồ Chí Minh
+							.group-func-more
+								a.func-default.ml-2(href='javascript:void(0);' data-toggle='modal', data-target='#modal-edit-info')
+									i.icz.icz-fill-edit
+				.bl-module
+					h3.mb-2 Giao hàng
+					.form-group.row.mb-0
+						label.col-4.col-form-label.mb-0(for="") Đơn vị vận chuyển
+						.col-6.d-flex.align-items-center
+							span.fs--m.color-base Tự vận chuyển
+					.form-group.row.mb-0
+						label.col-4.col-form-label.mb-0(for="") Phương thức vận chuyển
+						.col-6.d-flex.align-items-center
+								span.fs--m.color-base Giao hàng cấp tốc
+					.form-group.row.mb-0
+						label.col-4.col-form-label.mb-0(for="") Phí vận chuyển
+						.col-6.d-flex.align-items-center
+							span.fs--m.color-base 50.000đ
+					.form-group.row.mb-0
+						label.col-4.col-form-label.mb-0(for="") Dự kiến giao hàng
+						.col-6.d-flex.align-items-center
+							span.fs--m.color-base 24h
+				.bl-module
+					h3.mb-2 Thông tin đơn hàng
+					table.table.table-bordered.mb-0
+						thead.thead-light
+							tr
+								th.align-middle(scope='col') Sản phẩm - ProductID - SKU
+								th.align-middle(scope='col') Giá gốc (đ)
+								th.align-middle(scope='col') Giá bán (đ)
+								th.align-middle(scope='col' style="width:80px") Số lượng
+								th.align-middle(scope='col') Thành tiền (đ)
+						tbody
+							each tableItem in table
+								tr
+									td
+										<a class="link-product" href="#!">Cafe Romano</a> - #123455 - tp67
+									td.text-right 200.000
+									td.text-right 200.000 <br /><span class="color-error">-30%</span>
+									td.text-right 1
+									td.text-right <strong>200.000</strong>
+							tr
+								td.text-right(colspan="4") Tạm tính (đ)
+								td.text-right 200.000
+							tr
+								td.text-right(colspan="4") Phí vận chuyển (đ)
+								td.text-right 20.000
+							tr
+								td.text-right(colspan="4") Tổng tiền (đ)
+								td.text-right <strong class="fs--xl">220.000</strong>
+			.col-4
+				.bl-module
+					h3.mb-2 Chuyển trạng thái
+					.row
+						.col-8
+							select.custom-select
+								option(value="1" selected) Chọn trạng thái kế tiếp
+								option(value="2") Two
+								option(value="3") Three
+						.col-4.pl-0
+							a.btn.btn-primary.btn--m(href="#!") Cập nhật
+				.bl-module
+					h3.mb-2 Thanh toán
+					.form-group.row.mb-0
+						label.col-4.col-form-label.mb-0(for="") Phương thức
+						.col-8.d-flex.align-items-center
+							span.fs--m.color-base COD
+					.form-group.row.mb-0
+						label.col-4.col-form-label.mb-0(for="") Tình trạng
+						.col-8.d-flex.align-items-center
+							span.fs--m.color-base Chưa thanh toán
+					.form-group.row.mb-0
+						label.col-4.col-form-label.mb-0(for="") Mã giao dịch
+						.col-8.d-flex.align-items-center
+							span.fs--m.color-base 1232554566225
+				.bl-module
+					h3.mb-2 Ghi chú khách hàng
+					.row
+						.col-12
+							p.fs--m.color-grey Lorem Ipsum is simply dummy text of the printing and typesetting industry
+
+				.bl-module
+					h3.mb-2 Ghi chú Admin
+					.row
+						.col-12
+							textarea.form-control.mb-2(type="textarea" rows="3") Lorem Ipsum is simply dummy text of the printing and typesetting industry
+							.d-flex.align-items-start
+								span.color-grey.fs--s 0/500
+								a.btn.btn-outline-primary.btn--m.ml-auto(href="#!") Lưu lại
+							.noted-list.mt-3
+								ul
+									each notedItem in noted
+										li
+											p.color-base.fs--m {Nội dung ghi chú}
+											p.color-grey.fs--s Bởi: {Tên admin}
+											p.color-grey.fs--s Vào lúc: 17/02/2019 12:00 | Đơn hàng mới
+								
+				.bl-module
+					h3.mb-2 Lịch sử cập nhật đơn hàng
+					.row
+						.col-12
+							.flow-list
+								ul
+									li.active
+										.context
+											p.color-base.fs--m.fw-medium {Trạng thái đơn hàng}
+											p.color-grey.fs--s Bởi: {Tên admin}
+											p.color-grey.fs--s Vào lúc: 17/02/2019 12:00
+									li.active
+										.context
+											p.color-base.fs--m.fw-medium {Trạng thái đơn hàng}
+											p.color-grey.fs--s Bởi: {Tên admin}
+											p.color-grey.fs--s Vào lúc: 17/02/2019 12:00
+									li
+										.context
+											p.color-base.fs--m.fw-medium {Trạng thái đơn hàng}
+											p.color-grey.fs--s Bởi: {Tên admin}
+											p.color-grey.fs--s Vào lúc: 17/02/2019 12:00
+									li
+										.context
+											p.color-base.fs--m.fw-medium {Trạng thái đơn hàng}
+											p.color-grey.fs--s Bởi: {Tên admin}
+											p.color-grey.fs--s Vào lúc: 17/02/2019 12:00
+
+
+
+
+
+
+

@@ -1,0 +1,57 @@
+block home
+.row 
+	.col-12 
+		.bl-module.module-notice-success 
+			img(src="./images/success_notice_upload.png")
+			p Tin của bạn đã tạo thành công và đang được duyệt
+.header-intro.d-flex.align-items-center.mb-3
+	nav(aria-label="breadcrumb")
+		ol.breadcrumb.mb-0
+			li.breadcrumb-item.active(aria-current="page") Bán nhanh hơn với gói dịch vụ đẩy tin của Zalo Home & Car
+form.push-post-now-form
+	.container-fluid
+		.row
+			.col-5
+				.bl-module.module-pricing.version-lick
+					.addition-block.push-post-now
+						.pricing-container
+							.block-price-item
+								.item-container
+									.text-block
+										p.title Dịch vụ đẩy tin
+										p.text-line Tin được đẩy lên những vị trí đầu trên trang danh mục
+										p.text-line Không giới hạn số lần đẩy tin. Áp dụng sau khi thanh toán 5 phút
+									img(style="width: 120px;" src="./images/HnC_DayTin_GIF_new.gif")
+							.block-price-sale 
+								input#select-sale(type='checkbox' name='sale')
+								label.block-price-content(for='select-sale')
+									.left-col 
+										i.icz.icz-fill-check
+										.price 
+											p 10,000đ
+												span -33%
+											p.old 15,000đ
+									.right-col 
+										p 1 lần
+			.col-4
+				.bl-module.module-pricing.version-lick
+					.addition-block.has-cta
+						.cta
+							p.title Chi tiết thanh toán
+							.block-cta.lick-custom
+								p Phí đẩy tin
+								p 100,000đ
+							.lick-sub-text 
+								.left 
+									p Sử dụng [xxx] điểm thưởng
+									p.red Còn lại 20 điểm thưởng
+								.right 
+									p [-5.000]
+									.switch
+										input(id="qc1" type="checkbox")
+										label.slider.round(for="qc1")
+							.block-cta.has-line-up
+								p Số tiền thanh toán
+								p.is-bold 100,000đ
+							
+							a.btn.btn-primary.btn--m.w-100 Thanh toán 100,000đ

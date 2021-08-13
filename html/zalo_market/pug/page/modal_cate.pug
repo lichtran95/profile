@@ -1,0 +1,29 @@
+block Modal
+
+- var cate = []
+- cate.push({"class":"","name":"Đồ điện tử"})
+- cate.push({"class":"","name":"Đồ điện tử Đồ điện tử Đồ điện tử Đồ điện tử Đồ điện tử"})
+- cate.push({"class":"","name":"Đồ điện tử"})
+- cate.push({"class":"","name":"Đồ điện tử"})
+- cate.push({"class":"","name":"Đồ điện tử"})
+- cate.push({"class":"","name":"Đồ điện tử"})
+- cate.push({"class":"","name":"Đồ điện tử"})
+
+.modal.fade.is-radius(id="modal-cate" tabindex="-1" role="dialog")
+	.modal-dialog(role="document")
+		.modal-content
+			.modal-header
+				span.color-base.fs--l.fw-medium Danh mục
+				a.func-close(data-dismiss="modal" aria-label="Close")
+					i.icn.icn-small-remove
+			.modal-body
+				.context-cate.scrollTarget
+					ul.cate-list
+						each cateItem in cate
+							li(class=`${cateItem.class}`)
+								a.color-base.func-cate-more(href="#!")
+									span.d-block.text-truncate #{cateItem.name} 
+									i.icn.icn-small-right
+			//.modal-footer
+				.button-wrap.d-flex.justify-content-end.align-items-center
+					a.btn.btn-primary.btn--m(href="#!") Cập nhật

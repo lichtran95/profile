@@ -1,0 +1,36 @@
+block Modal
+
+.modal.fade(id="modal-edit-info" tabindex="-1" role="dialog")
+	.modal-dialog.modal-dialog-centered(role="document")
+		.modal-content
+			.modal-header
+				h5.modal-title Chỉnh sửa thông tin người nhận hàng
+				a.close(href="javascript:void(0);" data-dismiss="modal" aria-label="Close")
+					i.icz.icz-close
+			.modal-body
+				form
+					.form-group.row.mb-2
+						label.col-4.col-form-label.mb-0(for="") Tên người nhận
+						.col-8
+							input.form-control(type='text' placeholder='' value='Laguna La')
+					.form-group.row.mb-2
+						label.col-4.col-form-label.mb-0(for="") Số điện thoại
+						.col-8
+							input.form-control(type='text' placeholder='' value='0999999999')
+					.form-group.row.mb-2
+						label.col-4.col-form-label.mb-0(for="") Tỉnh/ thành
+						.col-8
+							select.custom-select
+								option(value="1" selected) Tp. Hồ Chí Minh
+					.form-group.row.mb-2
+						label.col-4.col-form-label.mb-0(for="") Quận/ huyện
+						.col-8
+							select.custom-select
+								option(value="1" selected) Quận 11
+					.form-group.row.mb-2
+						label.col-4.col-form-label.mb-0(for="") Địa chỉ
+						.col-8
+							input.form-control(type='text' placeholder='' value='182 Lê Đại Hành')
+			.modal-footer
+				a.btn.btn-outline-primary.btn--m(type="button") Bỏ qua
+				a.btn.btn-primary.btn--m(type="button") Lưu

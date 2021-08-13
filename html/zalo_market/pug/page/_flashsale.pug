@@ -1,0 +1,76 @@
+block home
+
+- var product = []
+- product.push({"class":"","name":"Vòng Đeo Tay Thông Minh Theo Dõi Vận Động Xiaomi Mi Band 3 - Hàng Chính Hãng"})
+- product.push({"class":"","name":"Tivi LED Sony"})
+- product.push({"class":"","name":"Tivi LED Sony 32 inch KDL-32R300E"})
+- product.push({"class":"","name":"Vòng Đeo Tay Thông Minh Theo Dõi Vận Động Xiaomi Mi Band 3 - Hàng Chính Hãng"})
+- product.push({"class":"","name":"Tivi LED Sony"})
+- product.push({"class":"","name":"Tivi LED Sony 32 inch KDL-32R300E"})
+
+.bl-module.module-tabs.is-fixed
+	ul
+		li.tab.active
+			a.fs--l(href="#d0") Dành cho bạn
+		li.tab
+			a.fs--l(href="#d1") Đồ điện tử
+		li.tab
+			a.fs--l(href="#d2") Đồ thời trang
+		li.tab
+			a.fs--l(href="#d3") Đồ gia dụng
+.tabs-pad
+
+.tab-content.clearfix
+	#d0
+		.bl-module.module-countdown.m-top-3.m-bottom-3
+			.context-coundown
+				span 00
+				span 00
+				span 00
+				span 00
+		.bl-module.module-grid-list
+			ul.product-list
+				li
+					.item-product
+						span.img-loader
+						.desc-loader
+							span
+							span
+				li
+					a.item-product.is-not-sale(href="product_detail.html")
+						span.img-product(style="background-image:url(http://via.placeholder.com/240x240)")
+						.desc
+							span.sponsor Tài trợ
+							h2.product-title.color-base.fs--m.fw-normal.m-bottom-1 Tivi LED Sony 32 inch KDL-32R300E
+							p.color-base.fs--xl.fw-bold 500.000đ
+							.sl-count
+								.percent
+									span.active(style="width:75%")
+								p.color-base.fs--s Đã bán 1029
+					a.btn.btn-sale.btn--s(href="cart.html") Mua hàng
+				each productItem in product
+					li(class=`${productItem.class}`)
+						a.item-product(href="product_detail.html")
+							span.img-product(style="background-image:url(http://via.placeholder.com/240x240)")
+								.label-discount
+									span.color-light.fs--m.fw-bold 20%
+							.desc
+								h2.product-title.color-base.fs--m.fw-normal.m-bottom-1 #{productItem.name}
+								p.color-base.fs--xl.fw-bold 500.000đ
+								p.color-grey.fs--m.line-through 41.000đ
+								.sl-count
+									.percent
+										span.active(style="width:75%")
+									p.color-base.fs--s Đã bán 1029
+						a.btn.btn-sale.btn--s(href="cart.html") Mua hàng
+	#d1
+
+	#d2
+
+	#d3
+
+
+
+
+
+

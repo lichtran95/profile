@@ -1,0 +1,38 @@
+block home
+
+.bl-module.bl-module-v2.module-upgrade-pricing.module-pricing
+	.addition-block.push-post-now
+		h3.title Bán nhanh hơn với các gói dịch vụ đẩy tin của Zalo Home & Car
+		.block-price-item.push-post-now
+			.item-container
+				.text-block
+					p.title Dịch vụ đẩy tin
+					p.text-line Tin được đẩy lên những vị trí đầu trên trang danh mục
+					p.text-line Không giới hạn số lần đẩy tin. Áp dụng sau khi thanh toán 5 phút
+				img(style="width: 120px;" src="./images/HnC_DayTin_GIF_new.gif")
+		.block-price-sale 
+			input#select-sale(type='checkbox' name='sale')
+			label.block-price-content(for='select-sale')
+				.left-col 
+					i.icn.icn-check-circle
+					.price 
+						p 10,000đ
+							span -33%
+						p.old 15,000đ
+				.right-col 
+					p 1 lần
+	.block-fixed.has-lick-sub-text
+		//- .sub-text 
+		//- 	p Đã áp dụng miễn phí đăng tin 
+		//- 	p Bạn còn 5 lần sử dụng hạn 31/04/2021
+		.lick-sub-text 
+			.left 
+				p Sử dụng <strong>[xxx] điểm thưởng</strong>
+				p.red Còn lại 20 điểm thưởng
+			.right 
+				p [-5.000]
+				.switch
+					input(id="qc1" type="checkbox")
+					label.slider.round(for="qc1")
+		a.btn.btn-primary.btn--m.w-100 Thanh toán 100,000đ
+	//- .fixed-temp-forbtn

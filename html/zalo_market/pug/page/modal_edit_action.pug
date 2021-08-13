@@ -1,0 +1,15 @@
+block Modal
+
+.modal.fade.modal-center(id="modal-edit-action" tabindex="-1" role="dialog")
+	.modal-dialog(role="document")
+		.modal-content
+			.modal-header
+				span.color-base.fs--l.fw-medium Thông báo
+				a.func-close(data-dismiss="modal" aria-label="Close")
+					i.icn.icn-small-remove
+			.modal-body
+				.context-default.text-center
+					p  Bạn có chắc muốn …. sản phẩm này
+			.modal-footer
+				.button-wrap
+					a.btn.btn-primary.btn--m.w-100.func-open-toast(href="#!" data-dismiss="modal" aria-label="Close") [Action]

@@ -1,0 +1,134 @@
+block home
+
+- var table = []
+- table.push({"class":""})
+- table.push({"class":""})
+- table.push({"class":""})
+- table.push({"class":""})
+- table.push({"class":""})
+- table.push({"class":""})
+
+.header-intro.d-flex.align-items-center.mb-3
+	nav(aria-label="breadcrumb")
+		ol.breadcrumb.mb-0
+			li.breadcrumb-item
+				a(href="#!") Sản phẩm
+			li.breadcrumb-item.active(aria-current="page") Chỉnh sửa thuộc tính
+
+form
+	.container-fluid
+		.row
+			.col-12
+				.bl-module
+					h3.mb-2 Thuộc tính sản phẩm
+					.variation-list.mb-3
+						.row.mb-3
+							.col-2
+								input.form-control(type='text' placeholder='' value="Khối lượng" disabled)
+							.col-10.pl-0
+								.var-input
+									span.var-value Value 1
+										a.func-remove(href="#!")
+											i.icz.icz-close
+									input.form-control(type='text' placeholder='')
+									a.btn.btn-default.btn--s(href="#!") + Giá trị mới
+					//a.btn.btn-outline-primary.btn--m(href="#!") Thêm thuộc tính
+				.bl-module
+					.d-flex.align-items-center.mb-3
+						h3 Chi tiết thuộc tính
+					.group-func
+						span.color-grey.fs--m Đã chọn <strong class="color-base">2/100</strong> thuộc tính
+						.ml-auto.d-flex
+							.dropdown
+								a#choose-m10.btn.btn-outline-primary.btn--s.btn-dropdown(role='button', data-toggle='dropdown') Thay đổi nhanh
+								.dropdown-menu(role='menu', aria-labelledby='choose-m10', style='min-width:130px')
+									ul
+										li
+											a(href='javascript:void(0);') SKU
+										li
+											a(href='javascript:void(0);') Giá gốc
+										li
+											a(href='javascript:void(0);') Số lượng
+										li
+											a(href='javascript:void(0);') Khối lượng
+							a.btn.btn--s.ml-2(href="#!") <i class="icz icz-preview"></i>Hiện
+							a.btn.btn--s.ml-2(href="#!") <i class="icz icz-non-preview"></i>Ẩn
+							a.btn.btn-outline-danger.btn--s.ml-2(href="#!") <i class="icz icz-trash"></i>Xóa
+					.table-responsive
+						table.table.table-fixed.mb-0
+							thead.thead-light
+								tr
+									th.align-middle(scope='col' style="width:40px")
+										.custom-control.custom-checkbox
+											input(type="checkbox" class="custom-control-input" id="check-table")
+											label.custom-control-label(for="check-table") &nbsp;
+									th.align-middle(scope='col') Màu sắc
+									th.align-middle(scope='col') Giá bán (đ)
+									th.align-middle(scope='col' style="width:150px") Giá gốc (đ)
+									th.align-middle(scope='col' style="width:80px") * SKU
+									th.align-middle(scope='col' style="width:100px") * Khối lượng v.c (gram)
+									th.align-middle(scope='col' style="width:120px") Số lượng
+									th.align-middle(scope='col' style="width:80px") Hiển thị
+									th.align-middle(scope='col' style="width:80px") Mặc định
+							tbody
+								tr
+									td(colspan="9")
+										.text-center Không có kết quả cần tìm
+								each tableItem in table
+									tr
+										td.align-middle
+											.custom-control.custom-checkbox
+												input(type="checkbox" class="custom-control-input" id="check-table")
+												label.custom-control-label(for="check-table") &nbsp;
+										td.align-middle
+											strong Xanh lá cây
+										td.align-middle 200.000
+										td.align-middle
+											input.custom-select(type='text' placeholder='' value='200.000')
+										td.align-middle
+											input.custom-select(type='text' placeholder='')
+										td.align-middle
+											input.custom-select(type='text' placeholder='')
+										td.align-middle
+											input.custom-select(type='text' placeholder='')
+										td.align-middle
+											.custom-control.custom-checkbox
+												input(type="checkbox" class="custom-control-input" id="check-table")
+												label.custom-control-label(for="check-table") &nbsp;
+										td.align-middle
+											.custom-control.custom-radio
+												input(type="radio" class="custom-control-input" id="check-table1")
+												label.custom-control-label(for="check-table1") &nbsp;
+							tfoot.tfoot-light
+								tr
+									td(colspan="9")
+										.d-flex.align-items-center
+											.total-table
+												span.color-grey 1-10 of 100
+											nav.ml-auto
+												ul.pagination.pagination-sm.justify-content-end
+													li.page-item.disabled
+														a.page-link(href='#', tabindex='-1')
+															i.icz.icz-left
+													li.page-item.active
+														a.page-link(href='#') 1
+													li.page-item
+														a.page-link(href='#') 2
+													li.page-item
+														a.page-link(href='#') 3
+													li.page-item
+														a.page-link(href='#')
+															i.icz.icz-right
+		.row
+			.col-12
+				.button-wrap
+					div.ml-auto
+						a.btn.btn-primary.btn--m.ml-2(href="#!") Lưu
+						a.btn.btn-outline-primary.btn--m.ml-2(href="#!") Hủy
+
+
+
+
+
+
+

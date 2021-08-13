@@ -1,0 +1,47 @@
+block home
+
+.bl-module.module-cart.is-transparent
+	.heading-cart
+		span.fs--l.fw-medium Chọn địa chỉ giao hàng
+	.context-choose-addr
+		ul.addr-list
+			li.d-flex
+				.custom-control.custom-radio
+					input(type="radio" name="cradio" class="custom-control-input" id="id1" checked)
+					label.custom-control-label.is-radius.fs--l(for="id1")
+				.item-addr.m-bottom-2
+					h2.fs--l.fw-normal.m-bottom-2 Chị Quang Anh <span class="label-default color-main fs--s">Mặc định</span>
+					p.fs--m.m-bottom-2 132 Lê Thánh Tôn, P.15, Quận Gò Vấp, TP.HCM
+					p.color-base.fs--m 0996336199
+					a.btn.btn-link.btn--s(href="addr_add.html") Chỉnh sửa
+				a.func-remove(href="#!remove")
+					i.icn.icn-trash
+			li.d-flex
+				.custom-control.custom-radio
+					input(type="radio" name="cradio" class="custom-control-input" id="id2")
+					label.custom-control-label.is-radius.fs--l(for="id2")
+				.item-addr.m-bottom-2
+					h2.fs--l.fw-normal.m-bottom-2 Chị Quang Anh
+					p.fs--m.m-bottom-2 132 Lê Thánh Tôn, P.15, Quận Gò Vấp, TP.HCM
+					p.color-base.fs--m 0996336199
+					a.btn.btn-link.btn--s(href="addr_add.html") Chỉnh sửa
+				a.func-remove(href="#!remove")
+					i.icn.icn-trash
+			li
+				a.func-add-addr(href="addr_add.html")
+					i.icn.icn-add
+					span Thêm địa chỉ
+
+.button-dockbar
+	.context-button-dockbar
+		.summary-cart
+			.color-grey.fs--s Tổng cộng
+			.color-base.fs--xl.fw-bold 305.000đ
+		a.btn.btn-primary.btn--m.w-50(href="cart_b2_confirm.html") Xác nhận
+	.trans-button-dockbar
+
+
+
+
+
+

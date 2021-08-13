@@ -1,0 +1,355 @@
+block home
+.module-sell-post
+	.notification.is-info.has-shadow
+			i.icn.icn-bold-bulb
+			span  Tạo tin rao trên máy tính tại Zaloshop.me/PC
+			.delete
+				i.icn.icn-small-remove
+	.heading
+		h2.fs--xl.fw-bold Đăng tin rao bán
+		p.fs--m Tin rao bán sẽ được đăng trên Zalo Shop, bạn cũng có thể chia sẻ trên nhật ký của mình
+	.context-sell-post
+		.bl-upload
+			.d-flex.align-items-center.justify-content-between
+				p.title.fs--m.pr-3 Thêm ảnh rao bán (tối đa 10 ảnh)
+				span.fs--s.fw-bold 2/10
+			.image-upload-list
+				.image-upload.is-uploaded
+					.content
+						img(src="http://via.placeholder.com/120x90", alt="")
+						a.func-remove(href="#remove")
+							i.icn.icn-small-remove
+				.image-upload.is-uploaded
+					.content
+						img(src="http://via.placeholder.com/120x90", alt="")
+						a.func-remove(href="#remove")
+							i.icn.icn-small-remove
+				.image-upload.func-open-multi-upload
+					.content
+						.wrap-edit
+							i.icn.icn-image-add
+							span Thêm ảnh
+			form.default-form
+				.form-row
+					label.d-flex.align-items-center.justify-content-between.w-100(for="input1")
+						span.fs--m Tiêu đề rao bán
+						span.color-grey.fs--m 0/50
+					input(id="input1" type="text" placeholder="Nhập tiêu đề rao bán" value="")
+				.box-notification
+					.item.is-success
+						i.icn.icn-check-circle
+						span Chỉ nhập tên sản phẩm cần rao bán
+					.item.is-error
+						i.icn.icn-circle-delete
+						span Không nhập số điện thoại vào tiêu đề
+				.form-row
+					label.d-flex.align-items-center.justify-content-between.w-100(for="input2")
+						span.fs--m Họ tên
+						span.color-grey.fs--m 0/50
+					input(id="input2" type="text" placeholder="Nhập họ tên" value="")
+				.form-row
+					label.d-flex.align-items-center.justify-content-between.w-100(for="input3")
+						span.fs--m Giá (VND)
+					input(id="input3" type="text" placeholder="Nhập giá rao bán" value="")
+					p Ba triệu đồng
+				.form-row
+					label.fs--m Danh mục
+					.wrap-select.func-filter-advance
+						span Đồ nội thất
+				.form-row
+					label.fs--m Dự án
+					.wrap-select.func-open-project
+						span Chọn dự án
+				.form-row
+					label.d-flex.align-items-center.justify-content-between.w-100(for="input3")
+						span.fs--m [Label]
+					input(id="input3" type="text" placeholder="[value]" value="")
+				.form-row
+					label.d-flex.align-items-center.justify-content-between.w-100(for="input4")
+						span.fs--m Mô tả
+						span.color-grey.fs--m 0/5000 
+					textarea(id="input4" type="text" placeholder="Nhập mô tả sản phẩm" value="")
+				.form-row
+					label.fs--m Chọn Tỉnh/Thành muốn rao
+					.wrap-select
+						select
+							option Chọn Tỉnh/Thành
+							option Hồ Chí Minh
+							option Hà Nội
+							option Bình Phước
+							option Bình Dương
+				.form-row
+					label.fs--m Chọn Quận/Huyện muốn rao
+					.wrap-select
+						select
+							option Chọn Quận/Huyện
+							option Quận 1
+							option Quận 2
+							option Quận 3
+							option Quận 4
+			.share-timeline
+				span.label Chia sẻ lên dòng thời gian sau khi đăng tin
+				label.switch.switch-theme
+					input(type="checkbox")
+					span.slider.round
+			p.policy-text.fs--s Bằng việc bấm vào nút đăng rao bán, bạn đã đồng ý với <a href="#!" class="color-link" target="_blank"> Điều khoản </a> của chúng tôi
+			.button
+				//- a.btn.btn--m.btn-primary.w-100.func-open-share(href="#!") Đăng tin rao bán
+				a.btn.btn--m.btn-primary.w-100(href="notice_upload.html") Đăng tin rao bán
+			//- func open share khi share-timline đã check
+
+
+
+//- popup
+.bl-popup
+	.popup-container.has-radius#popup-share
+		.bl-popup-heading
+			span.fs--l.fw-medium Chia sẻ lên dòng thời gian
+			a.func-close-popup(href="#!")
+				i.icn.icn-small-remove
+			a.func-reset(href="#!")
+				span Đăng
+		.bl-popup-context
+			.bl-module.module-share-timeline
+				.tl-head
+					span.text Nội dung chia sẻ
+				.tl-body
+					.content.hide-text
+						p Lorem isum  Lorem isum Lorem isum Lorem isum Lorem isum Lorem isum Lorem isum Lorem isum Lorem isum Lorem isum  Lorem isum Lorem isum Lorem isum Lorem isum Lorem isum Lorem isum Lorem isum  Lorem isum Lorem isum Lorem isum Lorem isum Lorem isum Lorem isum 
+						a.cta.is-seemore(href="#!") Xem thêm <i class="icn icn-small-down"></i>
+						a.cta.is-hide(href="#!" style="display:none") Thu gọn <i class="icn icn-small-up"></i>
+					.info
+						//- thẻ img có 3 trường hợp ( hình có 1 tấm, 2 tấm, 3 tấm)
+						span.img(style="background-image:url(images/img_sharetimeline.png)")
+						span.img(style="background-image:url(images/img_sharetimeline2.png)")
+						span.img(style="background-image:url(images/img_sharetimeline3.png)")
+						.desc-info
+							span.text
+								span.link Shop.me
+								span.title Sang nhượng căn hộ dự án Sunrise City 3PN, 3WC. CĂN GÓC VIEW LANDMARK, PARK HYATT SANG CHẢNH 
+								span.desc 2,500,000,000 - Quận 3, Tp.Hồ Chí Minh
+							//- span.cta
+							//- 	a.func-share(href="#func-share")
+							//- 		i.icn.icn-share
+
+	.popup-container#popup-multi-upload
+		.bl-popup-context.context-select-upload
+			a.d-block.camera(href="#chuphinhmoi") Chụp hình mới 
+			a.d-block.gallery(href="#!")
+				input(type="file")
+				span Tải tình từ thư viện máy ảnh
+			a.d-block.color-error.func-close-popup(href="#chuphinhmoi") Cancel
+	.popup-container.has-radius#popup-select-category
+		.bl-popup-heading
+			span.fs--l.fw-medium Chọn danh mục
+			a.func-close-popup(href="#!")
+				i.icn.icn-small-remove
+		.bl-popup-context
+			ul.select-list
+				li
+					.item
+						span Bất động sản
+						.toggle
+							i.icn.icn-small-right
+				li
+					.item
+						span Oto
+						.toggle
+							i.icn.icn-small-right
+				li
+					.item
+						span Du lịch
+						.toggle
+							i.icn.icn-small-right
+				li
+					.item
+						span Ẩm thực
+						.toggle
+							i.icn.icn-small-right
+				li
+					.item
+						span Mẹ & Bé
+						.toggle
+							i.icn.icn-small-right
+				li
+					.item
+						span Thể thao & Du lịch
+						.toggle
+							i.icn.icn-small-right
+				li
+					.item
+						span Văn phòng phẩm
+						.toggle
+							i.icn.icn-small-right
+				li
+					.item
+						span Nhà cửa đời sống
+						.toggle
+							i.icn.icn-small-right
+				li
+					.item
+						span Văn phòng phẩm
+						.toggle
+							i.icn.icn-small-right
+				li
+					.item
+						span Nhà cửa đời sống
+						.toggle
+							i.icn.icn-small-right
+				li
+					.item
+						span Văn phòng phẩm
+						.toggle
+							i.icn.icn-small-right
+				li
+					.item
+						span Nhà cửa đời sống
+						.toggle
+							i.icn.icn-small-right
+				li
+					.item
+						span Văn phòng phẩm
+						.toggle
+							i.icn.icn-small-right
+				li
+					.item
+						span Nhà cửa đời sống
+						.toggle
+							i.icn.icn-small-right
+	.popup-container.has-radius#popup-project
+		.bl-popup-heading
+			span.fs--l.fw-medium Dự án
+			a.func-close-popup(href="#!")
+				i.icn.icn-small-remove
+		.bl-popup-context
+			.field-search-project
+				.controls
+					input(type="text" placeholder="Nhập tên dự án " value="Hà nội" autofocus)
+					a.func-reset(href="#!")
+						i.icn.icn-circle-remove
+			.add-project
+				i.icn.icn-bold-circle-add
+				p Thêm dự án <strong>“Hà nội”</strong>
+			ul.select-list.is-project
+				li
+					.item
+						span An Bình Plaza Hà nội
+				li
+					.item
+						span Công viên công nghệ Hà nội
+				li
+					.item
+						span Công viên công nghệ Hà nội
+				li
+					.item
+						span Pandora Hà nội
+				li
+					.item
+						span Hà nội Aqua Central
+				li
+					.item
+						span An Bình Plaza Hà nội
+				li
+					.item
+						span Công viên công nghệ Hà nội
+				li
+					.item
+						span Công viên công nghệ Hà nội
+				li
+					.item
+						span Pandora Hà nội
+				li
+					.item
+						span Hà nội Aqua Central
+				li
+					.item
+						span An Bình Plaza Hà nội
+				li
+					.item
+						span Công viên công nghệ Hà nội
+				li
+					.item
+						span Công viên công nghệ Hà nội
+				li
+					.item
+						span Pandora Hà nội
+				li
+					.item
+						span Hà nội Aqua Central
+				li
+					.item
+						span An Bình Plaza Hà nội
+				li
+					.item
+						span Công viên công nghệ Hà nội
+				li
+					.item
+						span Công viên công nghệ Hà nội
+				li
+					.item
+						span Pandora Hà nội
+				li
+					.item
+						span Hà nội Aqua Central
+.bl-slide#slide-category1
+	.slide-container
+		.bl-slide-heading
+			span.fw-medium Bất động sản
+			a.func-close-slide(href="#!")
+				i.icn.icn-small-left
+			
+		.bl-slide-context
+			ul.select-list
+				li
+					.item.open-cat2
+						span Mua bán
+						.toggle
+							i.icn.icn-small-right
+				li
+					.item.open-cat2
+						span Cho thuê
+						.toggle
+							i.icn.icn-small-right
+				li
+					.item.open-cat2
+						span Cần mua
+						.toggle
+							i.icn.icn-small-right
+				li
+					.item.open-cat2
+						span Cần thuê
+						.toggle
+							i.icn.icn-small-right
+.bl-slide#slide-category2
+	.slide-container
+		.bl-slide-heading
+			span.fw-medium Mua bán
+			a.func-back-category(href="#!")
+				i.icn.icn-small-left
+			
+		.bl-slide-context
+			.default-form
+				.form-row
+					.checkbox-list.w-100
+						ul
+							li
+								.input-group
+									input(id="itemCat2" name="optiona1" type="radio")
+									label(for="itemCat2") Căn hộ/chung cư
+							li
+								.input-group
+									input(id="itemCat2-1" name="optiona2" type="radio")
+									label(for="itemCat2-1") Nhà ở
+							li
+								.input-group
+									input(id="itemCat2-2" name="optiona2" type="radio")
+									label(for="itemCat2-2") Đất
+							li
+								.input-group
+									input(id="itemCat2-3" name="optiona2" type="radio")
+									label(for="itemCat2-3") Văn phòng, mặt bằng	
+							li
+								.input-group
+									input(id="itemCat2-4" name="optiona2" type="radio")
+									label(for="itemCat-4") Phòng trọ
+	

@@ -1,0 +1,99 @@
+block home
+
+- var table = []
+- table.push({"class":""})
+- table.push({"class":""})
+- table.push({"class":""})
+- table.push({"class":""})
+- table.push({"class":""})
+- table.push({"class":""})
+
+header-intro.d-flex.align-items-center.mb-3
+	nav(aria-label="breadcrumb")
+		ol.breadcrumb.mb-0
+			li.breadcrumb-item.active(aria-current="page") Lịch sử thanh toán
+
+form
+	.container-fluid
+		.row
+			.col-12
+				.bl-module
+					.group-search.mb-3
+						.context-group-search
+							.form-row
+								.col-4
+									.input-group
+										.input-group-append
+											span.input-group-ico
+												i.icz.icz-fill-calendar
+										input.form-control(type="text" name="daterange" value="01/01/2018 - 01/15/2018" autocomplete="off")
+						.context-action
+							a.btn.btn-outline-primary.btn--m.ml-2(href="#!") Tìm kiếm
+					.table-responsive
+						table.table.mb-0
+							thead.thead-light
+								tr
+
+									th.align-middle(scope='col' style="width:30px") #
+									th.align-middle(scope='col' style="width:150px;") Thời gian
+									th.align-middle(scope='col' style="width:400px") Nội dung
+									th.price.align-middle(scope='col' style="width:50px") Tổng cộng (đ)
+							tbody
+								tr
+									
+									td 1
+									td 30/01/2020
+									td Phí đăng tin và gói đăng tin cho tín đăng <span class="ellips-2">Title tin đăng Title tin đăng Title tin đăng Title tin đăng</span>
+									td.price 500.000
+								tr
+									
+									td 1
+									td 30/01/2020
+									td Phí đăng tin và gói đăng tin cho tín đăng <span class="ellips-2">Title tin đăng Title tin đăng Title tin đăng Title tin đăng</span>
+									td.price 500.000
+								tr
+									
+									td 1
+									td 30/01/2020
+									td Phí đăng tin và gói đăng tin cho tín đăng <span class="ellips-2">Title tin đăng Title tin đăng Title tin đăng Title tin đăng</span>
+									td.price 500.000
+								tr
+									
+									td 1
+									td 30/01/2020
+									td Phí đăng tin và gói đăng tin cho tín đăng <span class="ellips-2">Title tin đăng Title tin đăng Title tin đăng Title tin đăng</span>
+									td.price 500.000
+								tr
+									
+									td 1
+									td 30/01/2020
+									td Phí đăng tin và gói đăng tin cho tín đăng <span class="ellips-2">Title tin đăng Title tin đăng Title tin đăng Title tin đăng</span>
+									td.price 500.000
+									
+							tfoot.tfoot-light
+								tr
+									td(colspan="11")
+										.d-flex.align-items-center
+											.d-flex.align-items-center.mr-2
+												span.color-grey.flex-shrink-0.mr-2 Hiển thị
+												select.custom-select(style="")
+													option(selected value="1") 20
+													option(value="2") 30
+													option(value="3") 40
+													option(value="4") 50
+											.total-table
+												span.color-grey 1-10 of 100
+											nav.ml-auto
+												ul.pagination.pagination-sm.justify-content-end
+													li.page-item.disabled
+														a.page-link(href='#', tabindex='-1')
+															i.icz.icz-left
+													li.page-item.active
+														a.page-link(href='#') 1
+													li.page-item
+														a.page-link(href='#') 2
+													li.page-item
+														a.page-link(href='#') 3
+													li.page-item
+														a.page-link(href='#')
+															i.icz.icz-right

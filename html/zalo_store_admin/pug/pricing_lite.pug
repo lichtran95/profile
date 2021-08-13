@@ -1,0 +1,66 @@
+extends layout_lite.pug
+
+//- Setting
+block setting
+	- var layout = true
+	- var header = true
+	- var footer = true
+	- var navigate = true
+	- var modal = true
+
+block head
+	include head.pug
+
+block pages
+	- bodyC.push("")
+	- layoutClasses.push("admin-layout")
+	- headerClasses.push("")
+	- bodyClasses.push("main-content main-content-lite")
+	- navigateClasses.push("sidebar-navigation")
+	- footerClasses.push("")
+	
+//- Add Header
+block header
+	include page/header_lite.pug
+
+//- Add Body
+block body
+	include page/_pricing_lite.pug
+
+//- Add Nav
+block navigate
+	include page/_navigate_lite.pug
+
+//- Add Footer
+block footer
+	include page/footer.pug
+
+//- Add Modal
+block modal
+	include page/modal_confirm.pug
+	include page/modal_ads.pug
+
+block javaScripts extend
+	script.
+		const buttonPremium = document.getElementById('open-premium')
+		const buttonMedium = document.getElementById('open-medium')
+		const blockPremium = document.getElementById('block_premium')
+		const blockMedium = document.getElementById('block_medium')
+
+		buttonPremium.onclick = () => {
+			$("#premium").slideDown('fast',"linear")
+			$("#medium").slideUp('fast',"linear")
+			//- buttonPremium.style.display = 'none'
+			//- buttonMedium.style.display = 'block'
+			blockPremium.classList.add('is-expand')
+			blockMedium.classList.remove('is-expand')
+		}
+
+		buttonMedium.onclick = () => {
+			$("#medium").slideDown('fast',"linear")
+			$("#premium").slideUp('fast',"linear")
+			//- buttonMedium.style.display = 'none'
+			//- buttonPremium.style.display = 'block'
+			blockMedium.classList.add('is-expand')
+			blockPremium.classList.remove('is-expand')
+		}

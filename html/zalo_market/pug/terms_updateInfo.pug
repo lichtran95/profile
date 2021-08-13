@@ -1,0 +1,43 @@
+extends layout.pug
+
+//- Setting
+block setting
+	- var layout = true
+	- var loading = false
+	- var dockbar = false
+	- var tooltip = true
+	- var popup = false
+	- var modal = false
+
+block head
+	include head.pug
+
+block pages
+	- bodyC.push("")
+	- layoutClasses.push("zMarket-layout")
+	- bodyClasses.push("page-content has-grey-background term")
+	- dockbarClasses.push("dockbar")
+
+//- Add Body
+block body
+	include page/_terms_updateInfo.pug
+
+
+block javaScripts extend
+	script.
+		$(document).ready(function () {
+		// tab content
+			$(".b-tab").hide();
+			$(".b-tab:first").show();
+
+		// if in tab mode
+			$(".b-nav-tab").click(function() {
+				$("html, body").animate({scrollTop: 0});
+				$(".b-tab").hide();
+				var activeTab = $(this).attr("href"); 
+				$(activeTab).fadeIn();
+
+				$(".b-nav-tab").addClass("is-outlined");
+				$(this).removeClass("is-outlined");
+			});
+		});

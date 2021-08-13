@@ -1,0 +1,179 @@
+block home
+
+- var banner = []
+- banner.push({"class":""})
+- banner.push({"class":""})
+- banner.push({"class":""})
+- banner.push({"class":""})
+
+- var bannersale = []
+- bannersale.push({"class":""})
+- bannersale.push({"class":""})
+- bannersale.push({"class":""})
+- bannersale.push({"class":""})
+
+.header-intro.d-flex.align-items-center.mb-3
+	nav(aria-label="breadcrumb")
+		ol.breadcrumb.mb-0
+			li.breadcrumb-item
+				a(href="#!") Thiết lập cửa hàng
+
+form
+	.container-fluid
+		.row
+			.col-8
+				.bl-module
+					ul.nav.nav-tabs.mb-3(id="myTab" role="tablist")
+						li.nav-item
+							a.nav-link.active(id="tab1-tab" data-toggle="tab" href="#tab1" role="tab" aria-controls="tab1" aria-selected="true") Shop Banner
+						li.nav-item
+							a.nav-link(id="tab2-tab" data-toggle="tab" href="#tab2" role="tab" aria-controls="tab2" aria-selected="false") Khuyến mãi
+						li.nav-item
+							a.nav-link(id="tab3-tab" data-toggle="tab" href="#tab3" role="tab" aria-controls="tab3" aria-selected="false") Danh sách sản phẩm
+					.tab-content(id="myTabContent")
+						.tab-pane.fade.show.active(id="tab1" role="tabpanel" aria-labelledby="tab1")
+							.tools-content
+								.header-tools
+									h4 Banner (3)
+									.func-more
+										a(href="#!") <i class="icz icz-fill-add"></i> Thêm banner
+								.body-tools
+									.line-row
+										span Ảnh banner shop (<i>*</i>). Tối đa 10 banners
+										span Ảnh quy định kích thước 1920x800. Tối đa 1Mb
+									.group-banner
+										ul
+											each bannerItem in banner
+												li
+													.item-banner(class=`${bannerItem.class}`)
+														.g-func
+															a.func-move(href="#!")
+																i.icz.icz-fill-move
+															a.func-remove(href="#!")
+																i.icz.icz-trash
+														.g-img
+															.img-banner(style="background-image:url(https://via.placeholder.com/1920x800)")
+																.layer-action
+																	a.func-action(href="#!")
+																		i.icz.icz-data-upload
+																	a.func-action(href="#!")
+																		i.icz.icz-trash
+														.g-option
+															.dropdown
+																a#choose-m2.btn.btn-default.btn--s.btn-dropdown(role='button', data-toggle='dropdown') <i class="icz icz-fill-link"></i>Chọn đường dẫn
+																.dropdown-menu(role='menu', aria-labelledby='choose-m2', style='min-width:130px')
+																	ul
+																		li
+																			a(href='javascript:void(0);' data-toggle='modal', data-target='#addSp-lite-modal') Sản phẩm
+																		li
+																			a(href='javascript:void(0);' data-toggle='modal', data-target='#addTopic-lite-modal') Bài viết
+																		li
+																			a(href='javascript:void(0);' data-toggle='modal', data-target='#addVideo-lite-modal') Video
+						.tab-pane.fade(id="tab2" role="tabpanel" aria-labelledby="tab2")
+							.tools-content
+								.header-tools
+									h4 Khuyến mãi
+									.func-more
+										a(href="#!") <i class="icz icz-fill-add"></i> Thêm banner
+								.body-tools
+									.line-row
+										span Tối đa 5 khuyến mãi
+									.group-banner
+										ul
+											each bannersaleItem in bannersale
+												li
+													.item-banner(class=`${bannersaleItem.class}`)
+														.g-func
+															a.func-move(href="#!")
+																i.icz.icz-fill-move
+															a.func-remove(href="#!")
+																i.icz.icz-trash
+														.g-img
+															.img-banner-sale(style="background-image:url(https://via.placeholder.com/750x220)")
+														.g-option
+															.d-flex.align-items-center
+																a.btn.btn-default.btn--s(href='javascript:void(0);' data-toggle='modal', data-target='#addKm-lite-modal') Chọn khuyến mãi
+																span.status.status-doing.status-bg.hidden Đang chạy
+																span.status.status-pending.status-bg.hidden Tạm dừng
+																span.status.status-pending.status-bg Chờ lịch chạy
+																span.status.status-end.status-bg.hidden Kết thúc
+						.tab-pane.fade(id="tab3" role="tabpanel" aria-labelledby="tab3")
+							.tools-content
+								.header-tools
+									h4 Danh sách sản phẩm
+									.func-more
+										a(href="#!") <i class="icz icz-fill-add"></i> Thêm banner
+								.body-tools
+									.line-row
+										span Tối đa 5 danh sách (<i>*</i>)
+									.group-banner
+										ul
+											each bannersaleItem in bannersale
+												li
+													.item-banner(class=`${bannersaleItem.class}`)
+														.g-func
+															a.func-move(href="#!")
+																i.icz.icz-fill-move
+															a.func-remove(href="#!")
+																i.icz.icz-trash
+														.g-form
+															input.custom-select(type="text" placeholder="Nhập tên danh sách")
+														.g-img
+															.img-banner-sale(style="background-image:url(https://via.placeholder.com/750x220)")
+																.layer-action
+																	a.func-action(href="#!")
+																		i.icz.icz-data-upload
+																	a.func-action(href="#!")
+																		i.icz.icz-trash
+														.g-option
+															a.btn.btn-default.btn--s.mb-2(href='javascript:void(0);' data-toggle='modal', data-target='#manageSp-lite-modal') Quản lý sản phẩm
+															p.color-grey.fs--s 100/100 sản phẩm hiển thị
+			.col-4
+				.bl-module.text-center
+					p.color-base.fs--m.mb-2 Tăng hiệu quả bán hàng cho Zalo Shop của bạn
+					.zads-btn-wrap
+						a.btn.btn-ads.btn--m.pr-1(href="#!") Quảng cáo <i class="icz icz-down"></i>
+						.zads-container
+							a.item-zads(href="#!1")
+								img(src="images/img_zads1.png" alt=page)
+								.desc
+									h2 Quảng cáo cửa hàng
+									p.summary Tăng tương tác của người dùng quan tâm đến cửa hàng của bạn
+									p.color-main Chạy ngay
+							a.item-zads(href="#!2")
+								img(src="images/img_zads2.png" alt=page)
+								.desc
+									h2 Tăng khách hàng quan tâm
+									p.summary Tăng người dùng quan tâm OA của bạn nhiều hơn
+									p.color-main Chạy ngay
+							a.item-zads(href="#!3")
+								img(src="images/img_zads3.png" alt=page)
+								.desc
+									h2 Quảng cáo danh mục/ nổi bật
+									p.summary Đưa cửa hàng của bạn nằm ở vị trí nổi bật trên Zalo shop hoặc trên từng danh mục theo ngành hàng của bạn
+									p.color-main Chạy ngay
+							.text-center.p-2
+								a.btn.btn-link.btn--m(href='#!') Tìm hiểu nhiều hơn với Zalo Ads
+				.bl-module
+					h3.mb-2.text-center Xem trước
+					.preview-container
+						.iframe-wrap
+							iframe(src="https://preview.brand.zing.vn/h5_campaign/demo/html/zalobank_home.html")
+
+				.bl-module.module-qrcode
+					.qrcode-wrap
+						img(src="images/qrcode.png")
+						a.btn.btn-outline-primary.btn--s(href="#!") Tải .PNG
+		.row
+			.col-12
+				.button-wrap
+					div.ml-auto
+						a.btn.btn-primary.btn--m.ml-2(href="#!") Lưu
+						a.btn.btn-outline-primary.btn--m.ml-2(href="#!") <i class="icz icz-preview"></i>Xem thử
+
+
+
+
+
+
+

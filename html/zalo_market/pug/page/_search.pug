@@ -1,0 +1,66 @@
+block home
+
+- var product = []
+- product.push({"class":""})
+- product.push({"class":""})
+- product.push({"class":""})
+- product.push({"class":""})
+- product.push({"class":""})
+- product.push({"class":""})
+
+.bl-module.module-search.m-bottom-2
+	a.func-back.color-base(href="index.html")
+		i.icn.icn-small-left
+	.default-form
+		.form-row.has-func-right
+			input(type="text" placeholder="Tìm kiếm..." value="")
+			a.func-reset(href="#!")
+				i.icn.icn-circle-remove
+			a.func-search(href="#!")
+				i.icn.icn-search
+
+.bl-module.module-search-result.m-bottom-2
+	.heading
+		span.color-grey.fs--m Đang được quan tâm nhiều
+	ul.result-list
+		li
+			a.color-base.text-truncate(href="#!") Combo 3 Nước Hoa It's Well Plus Prestige 333 It's Well Plus Prestige 333
+		li
+			a.color-base.text-truncate(href="#!") Combo 3 Nước Hoa It's Well Plus
+
+.bl-module.module-search-result.m-bottom-2
+	.heading
+		span.color-grey.fs--m Sản phẩm đã tìm kiếm
+		a.func-remove(href="#!") Xóa
+	ul.result-list
+		li
+			a.color-base.text-truncate(href="#!") Combo 3 Nước Hoa It's Well Plus Prestige 333 It's Well Plus Prestige 333
+		li
+			a.color-base.text-truncate(href="#!") Combo 3 Nước Hoa It's Well Plus
+
+.bl-module.module-search-result.m-bottom-2
+	.heading
+		span.color-grey.fs--m Sản phẩm vừa xem
+		a.func-remove(href="#!") Xóa
+	.viewed-list
+		ul
+			each productItem in product
+				li(class=`${productItem.class}`)
+					a.item-product(href="#!")
+						span.img-product(style="background-image:url(http://via.placeholder.com/240x240)")
+
+.bl-module.module-search-result.m-bottom-2
+	.heading
+		span.color-grey.fs--m Có thể bạn quan tâm
+	.viewed-list
+		ul
+			each productItem in product
+				li(class=`${productItem.class}`)
+					a.item-product(href="#!")
+						span.img-product(style="background-image:url(http://via.placeholder.com/240x240)")
+			
+
+
+
+
+

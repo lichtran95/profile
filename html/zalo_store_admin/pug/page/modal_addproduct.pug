@@ -1,0 +1,114 @@
+block Modal
+
+.modal.fade(id="modal-addproduct" tabindex="-1" role="dialog")
+	.modal-dialog.modal-xl(role="document")
+		.modal-content
+			.modal-header
+				h5.modal-title Thêm sản phẩm
+				a.close(href="javascript:void(0);" data-dismiss="modal" aria-label="Close")
+					i.icz.icz-close
+			.modal-body
+				.d-flex.align-items-center.mb-3
+					.input-group.mr-2(style="width:300px")
+						.input-group-append
+							span.input-group-ico
+								i.icz.icz-search
+						input.form-control(type='text' placeholder='SKU/ Tên sản phẩm')
+					select.custom-select.mr-2(style="width:180px")
+						option(selected disabled) Trạng thái
+						option(value="1") One
+						option(value="2") Two
+						option(value="3") Three
+				.group-func
+					span.color-grey.fs--m Đã chọn <strong class="color-base">2/100</strong> sản phẩm
+					.ml-auto
+						a.btn.btn--s.ml-2(href="#!") <i class="icz icz-preview"></i>Hiện
+						a.btn.btn--s.ml-2(href="#!") <i class="icz icz-non-preview"></i>Ẩn
+						a.btn.btn-outline-danger.btn--s.ml-2(href="#!") <i class="icz icz-trash"></i>Xóa
+				.table-responsive
+					table.table.mb-0
+						thead.thead-light
+							tr
+								th.align-middle(scope='col' style="width:40px")
+									.custom-control.custom-checkbox
+										input(type="checkbox" class="custom-control-input" id="check-table")
+										label.custom-control-label(for="check-table") &nbsp;
+								th.align-middle(scope='col' style="width:40px") #
+								th.align-middle(scope='col' style="width:64px")
+								th.align-middle(scope='col' style="width:180px") Tên sản phẩm
+								th.align-middle(scope='col' style="width:180px") Danh mục
+								th.align-middle(scope='col' style="width:80px") SKU
+								th.align-middle(scope='col') Thuộc tính
+								th.align-middle(scope='col' style="width:170px") Giá (đ)
+								th.align-middle(scope='col') Số lượng
+								th.align-middle(scope='col') Hiển thị
+						tbody
+							tr
+								td
+									.custom-control.custom-checkbox
+										input(type="checkbox" class="custom-control-input" id="check-table")
+										label.custom-control-label(for="check-table") &nbsp;
+								td 1
+								td
+									img.img-product.img--s(src="https://via.placeholder.com/200x200" alt=page)
+								td
+									a.link-product(href="#!") Apple Watch 4 44mm (GPS) Viền Nhôm Xám - Dây Đen
+								td Danh mục ABC
+								td tp67
+								td 12
+								td
+									.d-flex.align-items-center()
+										p 200.000 ~ 500.000<br /><span class="color-error">100.000 ~ 300.000</span>
+										a.func-faqs(data-toggle="tooltip" data-html="true" title="<b>[Tên Event đang tham gia]</b><br />Thời gian diễn ra event: DD/MM/YYYY HH:MM")
+											i.icz.icz-fill-info
+								td 12
+								td
+									i.icz.icz-check
+							each tableItem in table
+								tr
+									td
+										.custom-control.custom-checkbox
+											input(type="checkbox" class="custom-control-input" id="check-table")
+											label.custom-control-label(for="check-table") &nbsp;
+									td 1
+									td
+										img.img-product.img--s(src="https://via.placeholder.com/200x200" alt=page)
+									td
+										a.link-product(href="#!") Apple Watch 4 44mm (GPS) Viền Nhôm Xám - Dây Đen
+									td Danh mục ABC
+									td tp67
+									td 12
+									td 200.000
+									td 12
+									td
+										i.icz.icz-check
+						tfoot.tfoot-light
+							tr
+								td(colspan="10")
+									.d-flex.align-items-center
+										.d-flex.align-items-center.mr-2
+											span.color-grey.flex-shrink-0.mr-2 Hiển thị
+											select.custom-select(style="")
+												option(selected value="1") 20
+												option(value="2") 30
+												option(value="3") 40
+												option(value="4") 50
+										.total-table
+											span.color-grey 1-10 of 100
+										nav.ml-auto
+											ul.pagination.pagination-sm.justify-content-end
+												li.page-item.disabled
+													a.page-link(href='#', tabindex='-1')
+														i.icz.icz-left
+												li.page-item.active
+													a.page-link(href='#') 1
+												li.page-item
+													a.page-link(href='#') 2
+												li.page-item
+													a.page-link(href='#') 3
+												li.page-item
+													a.page-link(href='#')
+														i.icz.icz-right
+			.modal-footer
+				a.btn.btn-outline-primary.btn--m(type="button" data-dismiss="modal") Bỏ qua
+				a.btn.btn-primary.btn--m(type="button") Đồng ý

@@ -1,0 +1,126 @@
+block home
+
+- var cart = []
+- cart.push({"class":"id-1", "class2":"id-3"})
+- cart.push({"class":"id-2", "class2":"id-4"})
+
+- var cartshop = []
+- cartshop.push({"class":""})
+- cartshop.push({"class":""})
+
+.bl-module.module-cart.is-transparent
+	.heading-cart.m-bottom-2
+		span.fs--l.fw-medium Kiểm tra đơn hàng
+	.bl-module.m-bottom-2
+		.d-flex.justify-content-between.align-items-center
+			h2.color-base.fs--m.fw-medium.m-bottom-2 Địa chỉ giao hàng
+			a.func-link.fs--m(href="addr_list.html") Thay đổi
+		p.color-base.fs--l.m-bottom-1 Chị Quang Anh
+		p.color-base.fs--m.m-bottom-1 132 Lê Thánh Tôn, P.15, Quận Gò Vấp, TP.HCM
+		p.color-base.fs--m 0996336199
+	each cartshopItem in cartshop
+		.context-inside.m-bottom-2(class=`${cartshopItem.class}`)
+			.heading-store
+				i.icn.icn-home
+				span.color-base.fs--m Cửa hàng: SHOP bé bi Nai tơ
+			ul.product-list
+				li
+					.item-product.is-cart.m-bottom-2
+						span.img-product(style="background-image:url(http://via.placeholder.com/240x240)")
+							.label-discount
+								span.color-light.fs--m.fw-bold 20%
+						.desc
+							h2.product-title.color-base.fs--m.fw-normal.m-bottom-1 Vòng Đeo Tay Thông Minh Theo Dõi Vận Động Xiaomi Mi Band 3 - Hàng Chính Hãng
+							p.color-base.fs--m.fw-bold.m-bottom-3 500.000đ
+							.sl-wrap
+								span.color-base.fs--m Số lượng: 1
+						p.color-grey.fs--s.m-top-3 Trắng, Hồng, Xanh, 32GB, Bạc
+				li
+					.item-product.is-cart.m-bottom-2
+						span.img-product(style="background-image:url(http://via.placeholder.com/240x240)")
+							.label-discount
+								span.color-light.fs--m.fw-bold 20%
+						.desc
+							h2.product-title.color-base.fs--m.fw-normal.m-bottom-1 Vòng Đeo Tay Thông Minh Theo Dõi Vận Động Xiaomi Mi Band 3 - Hàng Chính Hãng
+							p.color-base.fs--m.fw-bold.m-bottom-3 500.000đ
+							.sl-wrap
+								span.color-base.fs--m Số lượng: 1
+						p.color-grey.fs--s.m-top-3 Trắng, Hồng, Xanh, 32GB, Bạc
+			.method-shipping.m-top-3
+				.d-flex.justify-content-between.align-items-center
+					span.color-base.fs--m.m-right-2 Đơn vị vận chuyển
+					a.func-link.fs--m(href="delivery_edit.html") Thay đổi
+				.item-method.m-bottom-3
+					div
+						h2.color-base.fs--l.fw-medium Giao hàng nhanh
+						p.color-grey.fs--m Dự kiến giao hàng: 1-2 ngày
+					span.color-base.fs--l 11.000đ
+			.note
+				textarea(type="textarea" placeholder="Lưu ý cho cửa hàng..." name="" value="" rows="2")
+			.d-flex.justify-content-between.align-items-center
+				span.color-base.fs--m.m-right-2 Thành tiền
+				span.color-base.fs--xl.fw-bold 150.000đ
+
+	.bl-module
+		h4.color-base.fs--m.fw-bold.m-bottom-4 Thông tin thanh toán
+		.d-flex.justify-content-between.align-items-center.m-bottom-2
+			span.color-base.fs--m.m-right-2 Thành tiền
+			span.color-grey.fs--m 150.000đ
+		.d-flex.justify-content-between.align-items-center.m-bottom-2
+			span.color-base.fs--m.m-right-2 Phí vận chuyển
+			span.color-grey.fs--m 20.000đ
+		.d-flex.justify-content-between.align-items-start.m-bottom-2
+			span.color-base.fs--l.m-right-2 Tổng tiền
+			div
+				span.d-block.color-price.fs--xl.fw-bold.text-right 170.000đ
+				span.d-block.color-grey.fs--m (Đã bao gồm VAT nếu có)
+		.m-top-4
+		hr.divider
+		.m-top-4
+		h4.color-base.fs--m.fw-normal.m-bottom-4 Phương thức thanh toán đề xuất
+		.d-flex.align-items-center.m-bottom-2
+			img.m-right-3(src="images/img_cod.png" alt=page style="width:38px")
+			span.color-base.fs--m Cash on Delivery (COD)
+		p.d-block.fs--m.mt-3.color-grey(href="#!") Bằng việc tiến hành Đặt Mua, khách hàng đồng ý với 
+			a.color-link(href="doc_quychehoatdong.html") Quy chế hoạt động
+			span được ban hành bởi Zalo Shop
+	//- .bl-module.module-payment-demo.is-transparent
+	//- 	h4.color-base.fs--m.fw-normal.m-bottom-4 Phương thức thanh toán khác (Chưa sẵn sàng)
+	//- 	img.img-payment.m-bottom-4(src='images/img_payment.png', alt='page')
+	//- 	ul.payment-list
+	//- 		li
+	//- 			.item-payment
+	//- 				img(src='images/payment/bank.png', alt='Zalo shop')
+	//- 				p.color-base.fs--s Chuyển khoản
+	//- 		li
+	//- 			.item-payment
+	//- 				img(src='images/payment/napas.png', alt='Zalo shop')
+	//- 				p.color-base.fs--s NAPAS
+	//- 		li
+	//- 			.item-payment
+	//- 				img(src='images/payment/onepay.png', alt='Zalo shop')
+	//- 				p.color-base.fs--s OnePay
+	//- 		li
+	//- 			.item-payment
+	//- 				img(src='images/payment/nganluong.png', alt='Zalo shop')
+	//- 				p.color-base.fs--s Ngân lượng
+	//- 		li
+	//- 			.item-payment
+	//- 				img(src='images/payment/vnpay.png', alt='Zalo shop')
+	//- 				p.color-base.fs--s VNPay
+	//- 		li
+	//- 			.item-payment
+	//- 				img(src='images/payment/zalopay.png', alt='Zalo shop')
+	//- 				p.color-base.fs--s Zalo Pay
+
+.button-dockbar
+	.context-button-dockbar
+		.summary-cart
+			.color-grey.fs--s Tổng cộng
+			.color-price.fs--xl.fw-bold 305.000đ
+		a.btn.btn-primary.btn--m.w-50(href="cart_b3_done.html") Đặt hàng
+	.trans-button-dockbar
+
+
+
+

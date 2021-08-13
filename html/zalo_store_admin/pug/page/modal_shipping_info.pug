@@ -1,0 +1,46 @@
+block Modal
+
+- var location = []
+- location.push({"class":"", "name":"Quận 1"})
+- location.push({"class":"", "name":"Quận 2"})
+- location.push({"class":"", "name":"Quận 3"})
+- location.push({"class":"", "name":"Quận 4"})
+
+.modal.fade(id="modal-shipping-info" tabindex="-1" role="dialog")
+	.modal-dialog(role="document")
+		.modal-content
+			.modal-header
+				h5.modal-title Thông tin kết nối (Napas)
+				a.close(href="javascript:void(0);" data-dismiss="modal" aria-label="Close")
+					i.icz.icz-close
+			.modal-body
+				form
+					.form-group.row.mb-1
+						label.col-4.col-form-label(for='input1') Username
+						.col-8
+							input#input1.form-control(type='text', placeholder='Nhập Username' value="")
+					.form-group.row.mb-1
+						label.col-4.col-form-label(for='input2') Password 
+						.col-8
+							input#input2.form-control(type='password', placeholder='Nhập Password' value="")
+					.form-group.row.mb-1
+						label.col-4.col-form-label(for='input3') Client ID
+						.col-8
+							input#input3.form-control(type='text', placeholder='Nhập Client ID' value="")
+					.form-group.row.mb-1
+						label.col-4.col-form-label(for='input4') Client Secret
+						.col-8
+							input#input4.form-control(type='text', placeholder='Nhập Client Secret' value="")
+							
+				hr.line.mt-4.mb-4
+				.textarea-html
+					h2.color-base.fs--l.fw-medium.m-bottom-1 Miễn trừ trách nhiệm
+					.inside
+						p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+						p It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+						p It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+						p It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+				
+			.modal-footer
+				a.btn.btn-outline-primary.btn--m(type="button" data-dismiss="modal") Bỏ qua
+				a.btn.btn-primary.btn--m(type="button") Kết nối

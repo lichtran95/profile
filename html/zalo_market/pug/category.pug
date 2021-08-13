@@ -1,0 +1,30 @@
+extends layout.pug
+
+//- Setting
+block setting
+	- var layout = true
+	- var dockbar = true
+	- var modal = false
+
+block head
+	include head.pug
+
+block pages
+	- bodyC.push("")
+	- layoutClasses.push("zMarket-layout")
+	- bodyClasses.push("page-content")
+	- dockbarClasses.push("dockbar")
+	
+//- Add Body
+block body
+	include page/_category.pug
+
+//- Add Footer
+block dockbar
+	include page/dockbar.pug
+
+//- Add Modal
+block modal
+
+block javaScripts extend
+	script.

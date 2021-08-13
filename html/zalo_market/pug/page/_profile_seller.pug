@@ -1,0 +1,459 @@
+block home
+
+.bl-module.module-profile-v2.module-profile.seller-profile.custom-in-shop
+	.context-user-profile
+		.avatar.avatar--m
+			.avatar-img(style="background-image:url(http://via.placeholder.com/200x200)")
+		.desc.new-desc
+			h2.user-name Vien khoa hoc cong nghê
+			.credit
+				p 30 người đang theo dõi
+	.right-container
+		a.btn.btn--xs.hidden Theo dõi
+		a.btn.btn--xs.is-followed Đã theo dõi
+		a.button-share.func-share(href="#!share")
+			i.icn.icn-share
+			.feature-share-list
+				.arrows
+				.item-feature
+					i.icn.icn-a-share
+					span Chia sẻ cho bạn bè
+				.item-feature
+					i.icn.icn-clock
+					span Đăng lên nhật ký
+.bl-module.bl-module-v2.module-seller-profile
+	.searching-post
+		i.icn.icn-search
+		input(placeholder="Tìm tin rao")
+	ul.quick-filter
+		li
+			a.item-filter.func-open-status(href='#!')
+				span.text Trạng thái <strong> Tất cả</strong>
+				i.icn.icn-small-down
+		li
+			a.item-filter.func-open-quanhuyen(href='#!')
+				span.text Vị trí <strong> Tất cả</strong>
+				i.icn.icn-small-down
+		li
+			a.item-filter.func-quick-filter(href='#!')
+				span.text Sắp xếp <strong> Mới nhất</strong>
+				i.icn.icn-small-down
+	//case đang bán
+	.block-post#sell-0
+		p.no-post Không có tin rao
+		ul.product-seller-list
+			li
+				a.item-product-seller(href="#!")
+					span.media
+						span.img(style="background-image:url('images/img_product_seller.png')")
+						span.count-img
+							i.icn.icn-bold-img
+							span.number 1
+					span.content
+						span.price 20,1 Tỷ
+						span.desc Căn hộ Green Star 
+						ul.attr-list
+							li 50m
+								sup 2
+							li Q.Bình Thạnh
+							li Tp.HCM
+							li Q.Bình Thạnh
+							li Tp.HCM
+			li
+				a.item-product-seller(href="#!")
+					span.media
+						span.img(style="background-image:url('images/img_product_seller.png')")
+						span.count-img
+							i.icn.icn-bold-img
+							span.number 1
+					span.content
+						span.price 20,1 Tỷ
+						span.desc Căn hộ Green Star Nguyễn Lương Bằng Q.7 Giá 2,3 Tỷ Căn hộ Green Star Nguyễn Lương Bằng Q.7 Giá 2,3 Tỷ
+						ul.attr-list
+							li 50m
+								sup 2
+							li Q.Bình Thạnh
+							li Tp.HCM
+			li
+				a.item-product-seller(href="#!")
+					span.media
+						span.img(style="background-image:url('images/img_product_seller.png')")
+						span.count-img
+							i.icn.icn-bold-img
+							span.number 6
+					span.content
+						span.price 700 triệu
+						span.desc Căn hộ Green Star Nguyễn Lương Bằng Q.7 Giá 2,3 Tỷ
+						ul.attr-list
+							li 50m
+								sup 2
+							li Q.Bình Thạnh
+							li Tp.HCM
+	//case đã bán
+	.block-post#sell-2
+		.title
+			.line
+			p Đã bán
+			.line
+		p.no-post Không có tin rao
+		ul.product-seller-list
+			li
+				a.item-product-seller(href="#!")
+					span.media
+						span.img(style="background-image:url('images/img_product_seller.png')")
+							span.overlay
+								p Đã bán
+						span.count-img
+							i.icn.icn-bold-img
+							span.number 1
+					span.content
+						span.price 20,1 Tỷ
+						span.desc Căn hộ Green Star 
+						ul.attr-list
+							li 50m
+								sup 2
+							li Q.Bình Thạnh
+							li Tp.HCM
+							li Q.Bình Thạnh
+							li Tp.HCM
+			li
+				a.item-product-seller(href="#!")
+					span.media
+						span.img(style="background-image:url('images/img_product_seller.png')")
+							span.overlay
+								p Đã bán
+						span.count-img
+							i.icn.icn-bold-img
+							span.number 1
+					span.content
+						span.price 20,1 Tỷ
+						span.desc Căn hộ Green Star Nguyễn Lương Bằng Q.7 Giá 2,3 Tỷ Căn hộ Green Star Nguyễn Lương Bằng Q.7 Giá 2,3 Tỷ
+						ul.attr-list
+							li 50m
+								sup 2
+							li Q.Bình Thạnh
+							li Tp.HCM
+			li
+				a.item-product-seller(href="#!")
+					span.media
+						span.img(style="background-image:url('images/img_product_seller.png')")
+							span.overlay
+								p Đã bán
+						span.count-img
+							i.icn.icn-bold-img
+							span.number 6
+					span.content
+						span.price 700 triệu
+						span.desc Căn hộ Green Star Nguyễn Lương Bằng Q.7 Giá 2,3 Tỷ
+						ul.attr-list
+							li 50m
+								sup 2
+							li Q.Bình Thạnh
+							li Tp.HCM	
+	//case hết hạn
+	.block-post#sell-3
+		.title
+			.line
+			p Hết hạn
+			.line
+		p.no-post Không có tin rao
+		ul.product-seller-list
+			li
+				a.item-product-seller(href="#!")
+					span.media
+						span.img(style="background-image:url('images/img_product_seller.png')")
+							span.overlay
+								p Hết hạn
+						span.count-img
+							i.icn.icn-bold-img
+							span.number 1
+					span.content
+						span.price 20,1 Tỷ
+						span.desc Căn hộ Green Star 
+						ul.attr-list
+							li 50m
+								sup 2
+							li Q.Bình Thạnh
+							li Tp.HCM
+							li Q.Bình Thạnh
+							li Tp.HCM
+			li
+				a.item-product-seller(href="#!")
+					span.media
+						span.img(style="background-image:url('images/img_product_seller.png')")
+							span.overlay
+								p Hết hạn
+						span.count-img
+							i.icn.icn-bold-img
+							span.number 1
+					span.content
+						span.price 20,1 Tỷ
+						span.desc Căn hộ Green Star Nguyễn Lương Bằng Q.7 Giá 2,3 Tỷ Căn hộ Green Star Nguyễn Lương Bằng Q.7 Giá 2,3 Tỷ
+						ul.attr-list
+							li 50m
+								sup 2
+							li Q.Bình Thạnh
+							li Tp.HCM
+			li
+				a.item-product-seller(href="#!")
+					span.media
+						span.img(style="background-image:url('images/img_product_seller.png')")
+							span.overlay
+								p Hết hạn
+						span.count-img
+							i.icn.icn-bold-img
+							span.number 6
+					span.content
+						span.price 700 triệu
+						span.desc Căn hộ Green Star Nguyễn Lương Bằng Q.7 Giá 2,3 Tỷ
+						ul.attr-list
+							li 50m
+								sup 2
+							li Q.Bình Thạnh
+							li Tp.HCM	
+.bl-popup
+	.popup-container.has-radius#popup-status-selling
+		.bl-popup-heading
+			span.fw-medium Trạng thái
+			a.func-close-popup(href="#!")
+				i.icn.icn-small-remove
+			a.func-reset(href="#!")
+				span Lưu
+		.bl-popup-context
+			.default-form
+				.form-row
+					.checkbox-list.w-100
+						ul
+							li
+								.input-group
+									input(id="selling" name="optiona1" type="checkbox")
+									label(for="selling") Tin đang rao
+							li
+								.input-group
+									input(id="selled" name="optiona1" type="checkbox")
+									label(for="selled") Tin đã bán
+							li
+								.input-group
+									input(id="time_over" name="optiona1" type="checkbox")
+									label(for="time_over") Tin hết hạn
+	.popup-container.has-radius#popup-quanhuyen
+		.bl-popup-heading
+			span.fw-medium Chọn Tỉnh, thành phố
+			a.func-close-popup(href="#!")
+				i.icn.icn-small-remove
+		.bl-popup-context
+			ul.select-list
+				li
+					.item
+						span Toàn quốc
+				li
+					.item.select-location
+						span Thành Phố Hồ Chí Minh
+						.toggle
+							i.icn.icn-small-right
+				li
+					.item.select-location
+						span Hà Nội
+						.toggle
+							i.icn.icn-small-right
+				li
+					.item.select-location.func-seemore
+						span Quảng Ngãi
+						.toggle
+							i.icn.icn-small-right
+				li
+					.item.select-location
+						span Đà Nẵng
+						.toggle
+							i.icn.icn-small-right
+				li
+					.item.select-location
+						span Cần Thơ
+						.toggle
+							i.icn.icn-small-right
+				li
+					.item.select-location
+						span Bình Dương
+						.toggle
+							i.icn.icn-small-right
+				li
+					.item.select-location
+						span Bà Rịa - Vũng Tàu
+						.toggle
+							i.icn.icn-small-right
+				li
+					.item.select-location
+						span Đồng Nai
+						.toggle
+							i.icn.icn-small-right
+				li
+					.item.select-location
+						span Bình Thuận
+						.toggle
+							i.icn.icn-small-right
+				li
+					.item.select-location
+						span Lâm Đồng
+						.toggle
+							i.icn.icn-small-right
+				li
+					.item.select-location
+						span Vĩnh Phúc
+						.toggle
+							i.icn.icn-small-right
+				li
+					.item.select-location
+						span Hải Phòng
+						.toggle
+							i.icn.icn-small-right
+	.popup-container.has-radius#popup-quick-filter
+		.bl-popup-heading
+			span.fw-medium nameFilter
+			a.func-close-popup(href="#!")
+				i.icn.icn-small-remove
+		.bl-popup-context
+			ul.select-list
+				li
+					.item
+						span Value 1
+						.toggle
+							i.icn.icn-small-right
+				li
+					.item
+						span Value 2
+						.toggle
+							i.icn.icn-small-right
+			.default-form
+				.form-row
+					.checkbox-list.w-100
+						ul
+							li
+								.input-group
+									input(id="optiona111111" name="optiona1" type="radio")
+									label(for="optiona111111") Value
+.bl-slide#slide-select-location
+	.slide-container
+		.bl-slide-heading
+			span.fw-medium Chọn Tỉnh, thành phố
+			a.func-close-slide(href="#!")
+				i.icn.icn-small-left
+			
+		.bl-slide-context
+			ul.select-list
+				li
+					.item
+						span Toàn quốc
+				li
+					.item.select-location
+						span Thành Phố Hồ Chí Minh
+						.toggle
+							i.icn.icn-small-right
+				li
+					.item.select-location
+						span Hà Nội
+						.toggle
+							i.icn.icn-small-right
+				li
+					.item.select-location.func-seemore
+						span Quảng Ngãi
+						.toggle
+							i.icn.icn-small-right
+				li
+					.item.select-location
+						span Đà Nẵng
+						.toggle
+							i.icn.icn-small-right
+				li
+					.item.select-location
+						span Cần Thơ
+						.toggle
+							i.icn.icn-small-right
+				li
+					.item.select-location
+						span Bình Dương
+						.toggle
+							i.icn.icn-small-right
+				li
+					.item.select-location
+						span Bà Rịa - Vũng Tàu
+						.toggle
+							i.icn.icn-small-right
+				li
+					.item.select-location
+						span Đồng Nai
+						.toggle
+							i.icn.icn-small-right
+				li
+					.item.select-location
+						span Bình Thuận
+						.toggle
+							i.icn.icn-small-right
+				li
+					.item.select-location
+						span Lâm Đồng
+						.toggle
+							i.icn.icn-small-right
+				li
+					.item.select-location
+						span Vĩnh Phúc
+						.toggle
+							i.icn.icn-small-right
+				li
+					.item.select-location
+						span Hải Phòng
+						.toggle
+							i.icn.icn-small-right
+				li
+					.item.select-location
+						span Hải Phòng
+						.toggle
+							i.icn.icn-small-right
+				li
+					.item.select-location
+						span Hải Phòng
+						.toggle
+							i.icn.icn-small-right
+.bl-slide#slide-filter
+	.slide-container
+		.bl-slide-heading
+			span.fw-medium Chọn quận, huyện, thị xã
+			a.func-close-slide(href="#!")
+				i.icn.icn-small-left
+			
+		.bl-slide-context
+			.default-form
+				.form-row
+					.checkbox-list.w-100
+						ul
+							li
+								.input-group
+									input(id="optiona1111111" name="optiona1" type="radio")
+									label(for="optiona1111111") Tất cả
+							li
+								.input-group
+									input(id="optiona2222222" name="optiona2" type="radio")
+									label(for="optiona2222222") Tp. Bà Rịa
+							li
+								.input-group
+									input(id="optiona33333333" name="optiona2" type="radio")
+									label(for="optiona33333333") Tp. Vũng Tàu
+							li
+								.input-group
+									input(id="optiona4444444" name="optiona2" type="radio")
+									label(for="optiona4444444") Huyện Châu Đức
+							li
+								.input-group
+									input(id="optiona5555555" name="optiona2" type="radio")
+									label(for="optiona5555555") Huyện Đất Đỏ
+							li
+								.input-group
+									input(id="optiona6666666" name="optiona2" type="radio")
+									label(for="optiona6666666") Huyện Long Điền
+							li
+								.input-group
+									input(id="optiona7777777" name="optiona2" type="radio")
+									label(for="optiona7777777") Thị Xã Phú Mỹ
+							li
+								.input-group
+									input(id="optiona8888888" name="optiona2" type="radio")
+									label(for="optiona8888888") Huyện Xuyên Mộc

@@ -1,0 +1,27 @@
+block Modal
+
+.modal.fade(id="modal-update-status-b2" tabindex="-1" role="dialog")
+	.modal-dialog.modal-dialog-centered(role="document")
+		.modal-content
+			.modal-header
+				h5.modal-title Cập nhật trạng thái nhiều đơn hàng - Kết quả
+				a.close(href="javascript:void(0);" data-dismiss="modal" aria-label="Close")
+					i.icz.icz-close
+			.modal-body
+				p.fs--m.mb-3.text-center Cập nhật trạng thái cho <strong>2</strong> đơn hàng
+				.status-transfer
+					.status-key
+						span.value-sk {Trạng thái trước đó}
+						.context-sk.is-success
+							span Thành công
+							strong 1
+					i.icz.icz-double-arrow-right
+					.status-key
+						span.value-sk {Trạng thái hiện tại}
+						.context-sk.is-error
+							span Thất bại
+							strong 1
+				p.fs--m
+					a(href="#!") <i class="icz icz-data-download"></i> Tải về danh sách đơn hàng chuyển thất bại
+			.modal-footer
+				a.btn.btn-outline-primary.btn--m(type="button" data-dismiss="modal") Đóng lại

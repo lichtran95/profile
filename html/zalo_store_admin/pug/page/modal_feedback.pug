@@ -1,0 +1,69 @@
+block Modal
+
+.modal.fade(id="modal-feedback" tabindex="-1" role="dialog")
+	.modal-dialog.modal-lg(role="document")
+		.modal-content
+			.modal-header
+				h5.modal-title Phản hồi & Đánh giá
+				a.close(href="javascript:void(0);" data-dismiss="modal" aria-label="Close")
+					i.icz.icz-close
+			.modal-body.bg-grey
+				.row
+					.col-5
+						.bl-module.module-product
+							h4.heading.mb-4 Thông tin sản phẩm
+							.d-flex.align-items-start
+								img.img-product.img--s.flex-shrink-0.mr-2(src="https://via.placeholder.com/200x200" alt=page)
+								.desc
+									h2.text-truncate.mb-1 Adapter Sạc Xe Hơi 2 Cổng Anker PowerDrive+ 42W Hỗ Trợ Sạc Nhanh QC 3.0 - A2224(021/H21) (Trắng) - Hàng Chính Hãng
+									p.mb-1 500,000đ - Số lượng: 1
+									p Tổng tiền: 500,000đ
+						.bl-module.mb-0
+							h4.heading.mb-4 Thông tin người nhận
+							.d-flex.align-items-center.mb-2
+								i.icz.icz-account.mr-2
+								span.color-base.fs--m.color-grey Anh Vũ
+							.d-flex.align-items-center.mb-2
+								i.icz.icz-phone.mr-2
+								span.color-base.fs--m.color-grey 099.999.9999
+							.d-flex.align-items-center.mb-2
+								i.icz.icz-pin.mr-2
+								span.color-base.fs--m.color-grey 182 Lê Đại Hành. Quận 11. Tp. HCM
+
+					.col-7
+						.bl-module
+							h4.heading.mb-4 Lý do phản ánh
+							form.mb-3
+								.custom-control.custom-radio.is-min.mb-2
+									input(type="radio" id="customRadio1" name="customRadio" class="custom-control-input")
+									label.custom-control-label.fs--m(for="customRadio1") Không gọi được người mua
+								.custom-control.custom-radio.is-min.mb-2
+									input(type="radio" id="customRadio2" name="customRadio" class="custom-control-input")
+									label.custom-control-label.fs--m(for="customRadio2") Người mua không bắt máy nhận hàng
+								.custom-control.custom-radio.is-min
+									input(type="radio" id="customRadio3" name="customRadio" class="custom-control-input")
+									label.custom-control-label.fs--m(for="customRadio3") Người mua spam đơn hàng
+							textarea.form-control(type="textarea" rows="4") Nhập phản ảnh của bạn ...
+							small.mt-2 Tối đa 1000 ký tự
+						.bl-module.mb-0
+							h4.heading.mb-4 Đánh giá của bạn?
+							ul.rating-list
+								li
+									input(type="radio" id="radio-emo1" name="radio")
+									label(for="radio-emo1")
+										i.icz.icz-fill-negative
+										span Negative
+								li
+									input(type="radio" id="radio-emo2" name="radio")
+									label(for="radio-emo2")
+										i.icz.icz-fill-neutral
+										span Neutral
+								li
+									input(type="radio" id="radio-emo3" name="radio")
+									label(for="radio-emo3")
+										i.icz.icz-fill-positive
+										span Positive
+
+			.modal-footer
+				a.btn.btn-outline-primary.btn--m(type="button" data-dismiss="modal") Bỏ qua
+				a.btn.btn-primary.btn--m(type="button") Gửi

@@ -1,0 +1,112 @@
+block Modal
+
+- var location = []
+- location.push({"class":"", "name":"Quận 1"})
+- location.push({"class":"", "name":"Quận 2"})
+- location.push({"class":"", "name":"Quận 3"})
+- location.push({"class":"", "name":"Quận 4"})
+
+.modal.fade(id="modal-edit-shipping" tabindex="-1" role="dialog")
+	.modal-dialog.modal-lg(role="document")
+		.modal-content
+			.modal-header
+				h5.modal-title Tự thiết lập vận chuyển
+				a.close(href="javascript:void(0);" data-dismiss="modal" aria-label="Close")
+					i.icz.icz-close
+			.modal-body
+				h2.color-base.fs--l.fw-medium.mb-3 Phương thức vận chuyển
+				.switch-wrap
+					span.color-grey.fs--s.mr-2 Kích hoạt phương thức vận chuyển
+					label.switch
+						input(type="checkbox" checked)
+						span.slider.round
+				form
+					.form-group.row.mb-1
+						label.col-4.col-form-label(for='input1') Loại phương thức vận chuyển <i>*</i>
+						.col-5
+							input#input1.form-control(type='text', placeholder='' value="24 giờ hằng ngày")
+					.form-group.row.mb-1
+						label.col-4.col-form-label() Thời gian giao hàng <i>*</i>
+						.col-5
+							select.custom-select.mr-2(style="width:180px")
+								option(selected disabled) Danh mục
+								option(value="1") One
+								option(value="2") Two
+								option(value="3") Three
+					.form-group.row.mb-1
+						label.col-4.col-form-label(for='input2') Phí vận chuyển <i>*</i>
+						.col-5
+							input#input2.form-control(type='text', placeholder='' value="24 giờ hằng ngày")
+					.form-group.row.mb-1
+						label.col-4.col-form-label(for='input3') Miễn phí vận chuyển cho đơn hàng từ <i>*</i>
+						.col-5
+							input#input3.form-control(type='text', placeholder='' value="24 giờ hằng ngày")
+							
+				hr.line.mt-4.mb-4
+				.d-flex.align-items-center.mb-3
+					h2.color-base.fs--l.fw-medium Khu vực vận chuyển
+					.d-flex.align-items-center.ml-auto
+						.input-group.mr-2(style="width:230px")
+							.input-group-append
+								span.input-group-ico
+									i.icz.icz-search
+							input.form-control(type='text' placeholder='Tìm kiếm khu vực')
+				table.table.mb-0
+					thead.thead-light
+						tr
+							th.align-middle(scope='col') Tỉnh/ thành phố
+							th.align-middle(scope='col') Quận/ huyện
+							th.align-middle(scope='col') Phí vận chuyển (đ)
+					tbody
+						each tableItem in table
+							tr
+								td
+									.custom-control.custom-checkbox
+										input(type="checkbox" class="custom-control-input" id="check-tp")
+										label.custom-control-label(for="check-tp") Tp. Hồ Chí Minh
+								td
+									.dropdown.dropdown-outside
+										a.btn.btn-default.btn--s.dropdown-toggle.d-inline-block(href="#!" role="button" id="dropdown-table" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Xem tất cả quận/ huyện
+										.dropdown-menu(aria-labelledby="dropdown-table")
+											ul.location-list
+												each locationItem in location
+													li
+														.col-6
+															.custom-control.custom-checkbox
+																input(type="checkbox" class="custom-control-input" id="check-q1")
+																label.custom-control-label(for="check-q1") #{locationItem.name}
+														.col-6.d-flex.align-items-center
+															input.custom-select(type='text' placeholder='' value='250.000')
+															span.flex-shrink-0.color-grey.fs--l.ml-2 (đ)
+								td
+									input.custom-select(type='text' placeholder='' value='200.000')
+					tfoot.tfoot-light
+						tr
+							td(colspan="3")
+								.d-flex.align-items-center
+									.d-flex.align-items-center.mr-2
+										span.color-grey.flex-shrink-0.mr-2 Hiển thị
+										select.custom-select(style="")
+											option(selected value="1") 20
+											option(value="2") 30
+											option(value="3") 40
+											option(value="4") 50
+									.total-table
+										span.color-grey 1-10 of 100
+									nav.ml-auto
+										ul.pagination.pagination-sm.justify-content-end
+											li.page-item.disabled
+												a.page-link(href='#', tabindex='-1')
+													i.icz.icz-left
+											li.page-item.active
+												a.page-link(href='#') 1
+											li.page-item
+												a.page-link(href='#') 2
+											li.page-item
+												a.page-link(href='#') 3
+											li.page-item
+												a.page-link(href='#')
+													i.icz.icz-right
+			.modal-footer
+				a.btn.btn-outline-primary.btn--m(type="button" data-dismiss="modal") Bỏ qua
+				a.btn.btn-primary.btn--m(type="button") Lưu

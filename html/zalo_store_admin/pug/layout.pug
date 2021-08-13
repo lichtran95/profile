@@ -1,0 +1,54 @@
+include config.pug
+block setting
+	- var header = true
+	- var navigate = true
+	- var footer = true
+	- var modal = true
+
+doctype
+html(lang="en")
+	head
+		block head
+
+	//- add class for wrapper
+	- var bodyC = [];
+	- var layoutClasses= [];
+	- var headerClasses = [];
+	- var navigateClasses = [];
+	- var bodyClasses = [];
+	- var footerClasses = [];
+	block pages
+    
+	body(class=`${bodyC}`)
+		include page/survey_popup.pug
+		if layout
+			div(class=`${layoutClasses}`)
+				block layout
+				if header
+					header(class=`${headerClasses}`)
+						block header
+				.page-content
+					if navigate
+						nav(class=`${navigateClasses}`)
+							block navigate
+					div(class=`${bodyClasses}`)
+						block body
+						if footer
+							footer(class=`${footerClasses}`)
+								block footer
+
+		if modal
+			block modal
+
+		// Include Plugin
+		block javaScripts
+			include javascript.pug
+			
+		block javaScripts extend
+	
+	script.
+		$('.module-balon .btn-close').on('click', function(event){
+				$('.module-balon').removeClass('ease-in');
+		});
+		window.setTimeout(function(){$(".module-balon").addClass("ease-in");}, 500);
+			

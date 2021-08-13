@@ -1,0 +1,137 @@
+block home
+
+- var rating = []
+- rating.push({"name":"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"})
+- rating.push({"name":"Nội dung bình luận"})
+- rating.push({"name":"Nội dung bình luận"})
+
+.feature-dockbar
+	.context-feature-dockbar
+		a.func-back-wrap(href="product_detail.html")
+			span.func-back.color-base
+				i.icn.icn-small-left
+			span.color-base.fs--l.fw-medium Đánh giá (100)
+	.trans-feature-dockbar
+
+.bl-module.module-rating.m-bottom-3
+	.rs-left
+		span.d-block.color-base.fs--xxl.fw-bold 4.8
+		.rating-star.is-large.m-bottom-2
+			i.icn.icn-shape-star.active
+			i.icn.icn-shape-star.active
+			i.icn.icn-shape-star.active
+			i.icn.icn-shape-star.active
+			i.icn.icn-shape-star
+		.clear
+		span.d-block.color-grey.fs--s 1111 bầu chọn
+	.rs-right
+		.rating-score-detail
+			.line-score
+				.col-1
+					.rating-star
+						i.icn.icn-shape-star.active
+						i.icn.icn-shape-star.active
+						i.icn.icn-shape-star.active
+						i.icn.icn-shape-star.active
+						i.icn.icn-shape-star.active
+				.col-2
+					.percent
+						.percent-ins(style="width:90%")
+				.col-3
+					span.d-block.color-grey.fs--s.text-right 37
+			.line-score
+				.col-1
+					.rating-star
+						i.icn.icn-shape-star.active
+						i.icn.icn-shape-star.active
+						i.icn.icn-shape-star.active
+						i.icn.icn-shape-star.active
+						i.icn.icn-shape-star
+				.col-2
+					.percent
+						.percent-ins(style="width:80%")
+				.col-3
+					span.d-block.color-grey.fs--s.text-right 37
+			.line-score
+				.col-1
+					.rating-star
+						i.icn.icn-shape-star.active
+						i.icn.icn-shape-star.active
+						i.icn.icn-shape-star.active
+						i.icn.icn-shape-star
+						i.icn.icn-shape-star
+				.col-2
+					.percent
+						.percent-ins(style="width:70%")
+				.col-3
+					span.d-block.color-grey.fs--s.text-right 1137
+			.line-score
+				.col-1
+					.rating-star
+						i.icn.icn-shape-star.active
+						i.icn.icn-shape-star.active
+						i.icn.icn-shape-star
+						i.icn.icn-shape-star
+						i.icn.icn-shape-star
+				.col-2
+					.percent
+						.percent-ins(style="width:60%")
+				.col-3
+					span.d-block.color-grey.fs--s.text-right 137
+			.line-score
+				.col-1
+					.rating-star
+						i.icn.icn-shape-star.active
+						i.icn.icn-shape-star
+						i.icn.icn-shape-star
+						i.icn.icn-shape-star
+						i.icn.icn-shape-star
+				.col-2
+					.percent
+						.percent-ins(style="width:50%")
+				.col-3
+					span.d-block.color-grey.fs--s.text-right 237
+
+.bl-module.module-tabs-rating.m-bottom-3
+	.context-tabs-rating
+		ul
+			li.active
+				a(href="#!") Tất cả
+			li
+				a(href="#!") 5 sao
+			li
+				a(href="#!") 4 sao
+			li
+				a(href="#!") 3 sao
+			li
+				a(href="#!") 2 sao
+			li
+				a(href="#!") 1 sao
+
+.bl-module.module-store-rating
+	ul.rating-list.m-bottom-3
+		each ratingItem in rating
+			li
+				.item-rating
+					.rating-star.m-bottom-2
+						i.icn.icn-shape-star.active
+						i.icn.icn-shape-star.active
+						i.icn.icn-shape-star.active
+						i.icn.icn-shape-star.active
+						i.icn.icn-shape-star
+					.d-flex.justify-content-between.m-bottom-2
+						span.color-base.fs--m Trần Đỗ Cẩm Vân
+						span.color-grey.fs--m Date
+					.quote-tag.m-bottom-2
+						span.color-base.fs--m Màu sắc: Hồng,  Dung lượng: 32GB
+					p.color-base.fs--m.text-break #{ratingItem.name}
+	.text-center
+		a.btn.btn-outline-primary.btn--m.m-bottom-5(href="#!") Xem thêm
+
+
+
+
+
+
+
+

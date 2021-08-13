@@ -1,0 +1,24 @@
+extends layout.pug
+
+//- Setting
+block setting
+	- var layout = true
+	- var modal = false
+
+block head
+	include head.pug
+
+block pages
+	- bodyC.push("")
+	- layoutClasses.push("zMarket-layout")
+	- bodyClasses.push("page-content policy-doc")
+	
+//- Add Body
+block body
+	include page/_policy_quydinh_sp.pug
+
+//- Add Modal
+block modal
+
+block javaScripts extend
+	script.

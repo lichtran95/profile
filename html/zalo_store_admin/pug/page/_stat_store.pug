@@ -1,0 +1,94 @@
+block home
+
+- var table = []
+- table.push({"class":""})
+- table.push({"class":""})
+- table.push({"class":""})
+- table.push({"class":""})
+- table.push({"class":""})
+- table.push({"class":""})
+
+.header-intro.d-flex.align-items-center.mb-3
+	nav(aria-label="breadcrumb")
+		ol.breadcrumb.mb-0
+			li.breadcrumb-item.active(aria-current="page") Thống kê cửa hàng
+	.d-flex.align-items-center.ml-auto.mr-2
+		.dropdown
+			a.btn.btn-default.btn--m.dropdown-toggle(href="#!" role="button" id="dropdown-table" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") 7 ngày trước
+			.dropdown-menu.dropdown-menu-right(aria-labelledby="dropdown-table")
+				ul
+					li
+						a(href="#!") 30 ngày trước
+					li.is-checked
+						a(href="#!") Tháng trước
+					li
+						a(href="#!") Tháng này
+		.form-group.ml-2.mb-0
+			.input-group(style="width:250px")
+				.input-group-append
+					span.input-group-ico
+						i.icz.icz-fill-calendar
+				input.form-control(type="text" name="daterange" value="01/01/2018 - 01/15/2018" autocomplete="off")
+		
+
+form
+	.container-fluid
+		.row
+			.col-12
+				.bl-module
+					table.table.mb-0
+						thead.thead-light
+							tr
+								th.align-middle(scope='col' style="width:30%") Tên sản phẩm - SKU
+								th.align-middle(scope='col') Lượt xem
+								th.align-middle(scope='col') Lượt đặt hàng
+								th.align-middle(scope='col') Doanh thu (đ)
+								th.align-middle(scope='col') Tỉ lệ chuyển đổi
+						tbody
+							tr
+								td(colspan="5")
+									.text-center Không có kết quả cần tìm
+							each tableItem in table
+								tr
+									td
+										strong Cafe Laguna - Sku: 12343434
+									td 123
+									td 500
+									td 500.000
+									td 5.5%
+						tfoot.tfoot-light
+							tr
+								td(colspan="5")
+									.d-flex.align-items-center
+										.d-flex.align-items-center.mr-2
+											span.color-grey.flex-shrink-0.mr-2 Hiển thị
+											select.custom-select(style="")
+												option(selected value="1") 20
+												option(value="2") 30
+												option(value="3") 40
+												option(value="4") 50
+										.total-table
+											span.color-grey 1-10 of 100
+										nav.ml-auto
+											ul.pagination.pagination-sm.justify-content-end
+												li.page-item.disabled
+													a.page-link(href='#', tabindex='-1')
+														i.icz.icz-left
+												li.page-item.active
+													a.page-link(href='#') 1
+												li.page-item
+													a.page-link(href='#') 2
+												li.page-item
+													a.page-link(href='#') 3
+												li.page-item
+													a.page-link(href='#')
+														i.icz.icz-right
+					
+			
+
+
+
+
+
+
+

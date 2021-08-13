@@ -1,0 +1,59 @@
+extends layout.pug
+
+//- Setting
+block setting
+	- var layout = true
+	- var dockbar = true
+	- var modal = true
+	- var swiperjs = true
+
+block head
+	include head.pug
+
+block pages
+	- bodyC.push("")
+	- layoutClasses.push("zMarket-layout")
+	- bodyClasses.push("page-content has-grey-background")
+	- dockbarClasses.push("dockbar")
+	
+//- Add Body
+block body
+	include page/_focus_searching.pug
+
+//- Add Footer
+block dockbar
+	include page/dockbar.pug
+
+//- Add Modal
+block modal
+	//- include page/modal_banner_home.pug
+
+block javaScripts extend
+	script.
+		
+
+		//popup filter search
+		$('.filter-location').click(()=>{
+			$("body").addClass("overlay-open");
+			$("#popup-filter-location").addClass("is-show");
+		})
+
+		$('.filter-price').click(()=>{
+			$("body").addClass("overlay-open");
+			$("#popup-filter-price").addClass("is-show");
+		})
+
+		$('.filter-category').click(()=>{
+			$("body").addClass("overlay-open");
+			$("#popup-filter-category").addClass("is-show");
+		})
+
+		$(".func-close-popup").click(function(){
+			$("body").removeClass("overlay-open");
+			$(".popup-container").removeClass("is-show");
+		});
+
+		$(".input-group").click(function(){
+			$(".popup-container").removeClass("is-show");
+			$("body").removeClass("overlay-open");
+		});

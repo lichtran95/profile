@@ -1,0 +1,90 @@
+block home
+
+- var cart = []
+- cart.push({"class":"id-1", "class2":"id-3"})
+- cart.push({"class":"id-2", "class2":"id-4"})
+
+.bl-module.module-cart.is-transparent
+	.heading-choose.is-fixed.m-bottom-2
+		.custom-control.custom-checkbox
+			input(type="checkbox" class="custom-control-input" id="checkall-1")
+			label.custom-control-label.is-radius.fs--l(for="checkall-1") Chọn hết các sản phẩm (5)
+		a.func-remove(href="#!remove-all")
+			i.icn.icn-trash
+	.trans-heading-choose
+	.context-cart.m-bottom-2
+		.heading-choose.is-shop
+			.custom-control.custom-checkbox
+				input(type="checkbox" class="custom-control-input" id="checkall-2")
+				label.custom-control-label.is-radius.fs--l(for="checkall-2") Cửa hàng: SHOP bé bi Nai tơ
+		.context-inside
+			ul.product-list
+				each cartItem in cart
+					li.d-flex
+						.custom-control.custom-checkbox
+							input(type="checkbox" class="custom-control-input" id=`${cartItem.class}`)
+							label.custom-control-label.is-radius.fs--l(for=`${cartItem.class}`)
+						.item-product.is-cart.m-bottom-2
+							span.img-product(style="background-image:url(http://via.placeholder.com/240x240)")
+								.label-discount
+									span.color-light.fs--m.fw-bold 20%
+							.desc
+								h2.product-title.color-base.fs--m.fw-normal.m-bottom-1 Vòng Đeo Tay Thông Minh Theo Dõi Vận Động Xiaomi Mi Band 3 - Hàng Chính Hãng
+								p.color-base.fs--xl.fw-bold 500.000đ
+								//p.color-grey.fs--m.line-through 41.000đ
+								.sl-wrap.is-otr
+									.plus-minus-wrap.non-border
+										a.func(href="javascript:void(0);" data-toggle="modal" data-target="#modal-confirm-delete")
+											.ic-wrap
+												i.icn.icn-bold-delete
+										span.value.fs--l 1
+										a.func(href="#")
+											.ic-wrap
+												i.icn.icn-bold-add
+									span.color-grey.fs--m Còn: 23
+							p.color-grey.fs--s.m-top-1 Trắng, Hồng, Xanh, 32GB, Bạc
+	
+	.context-cart.m-bottom-2
+		.heading-choose.is-shop
+			.custom-control.custom-checkbox
+				input(type="checkbox" class="custom-control-input" id="checkall-3")
+				label.custom-control-label.is-radius.fs--l(for="checkall-3") Cửa hàng: Laguna Loire
+		.context-inside
+			ul.product-list
+				each cartItem in cart
+					li.d-flex
+						.ic-out-of-stock
+							i.icn.icn-trash
+						.item-product.is-cart.is-out-of-stock.m-bottom-2
+							span.label-out-of-stock.color-error.fs--m.m-bottom-3 Sản phẩm này hiện không có hàng
+							span.img-product(style="background-image:url(http://via.placeholder.com/240x240)")
+								.label-discount
+									span.color-light.fs--m.fw-bold 20%
+							.desc
+								h2.product-title.color-base.fs--m.fw-normal.m-bottom-1 Vòng Đeo Tay Thông Minh Theo Dõi Vận Động Xiaomi Mi Band 3 - Hàng Chính Hãng
+								p.color-base.fs--xl.fw-bold 500.000đ
+								//p.color-grey.fs--m.line-through 41.000đ
+								.sl-wrap
+									span.color-base.fs--m Số lượng
+									.plus-minus-wrap.non-border.m-left-3
+										a.func(href="#")
+											.ic-wrap
+												i.icn.icn-bold-delete
+										span.value.fs--l 1
+										a.func(href="#")
+											.ic-wrap
+												i.icn.icn-bold-add
+							p.color-grey.fs--s.m-top-1 Trắng, Hồng, Xanh, 32GB, Bạc
+
+.button-dockbar
+	.context-button-dockbar
+		.summary-cart
+			.color-grey.fs--s Tổng cộng
+			.color-base.fs--xl.fw-bold 305.000đ
+		a.btn.btn-primary.btn--m.w-50(href="cart_b2_confirm.html") Mua (1)
+	.trans-button-dockbar
+
+
+
+
+

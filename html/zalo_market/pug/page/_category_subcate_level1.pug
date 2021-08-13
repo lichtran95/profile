@@ -1,0 +1,189 @@
+block home
+
+- var product = []
+- product.push({"class":"","name":"Vòng Đeo Tay Thông Minh Theo Dõi Vận Động Xiaomi Mi Band 3 - Hàng Chính Hãng"})
+- product.push({"class":"","name":"Tivi LED Sony"})
+- product.push({"class":"","name":"Tivi LED Sony 32 inch KDL-32R300E"})
+
+- var subcate = []
+- subcate.push({"class":"","name":"Điện thoại di động"})
+- subcate.push({"class":"","name":"Điện thoại di động"})
+- subcate.push({"class":"","name":"Điện thoại di động"})
+- subcate.push({"class":"","name":"Điện thoại di động"})
+- subcate.push({"class":"","name":"Điện thoại di động"})
+
+- var brand = []
+- brand.push({"class":""})
+- brand.push({"class":""})
+- brand.push({"class":""})
+- brand.push({"class":""})
+- brand.push({"class":""})
+
+.bl-module.module-search
+	.default-form
+		.form-row.has-func-right.has-func-search
+			.d-flex.align-items-center.w-100
+				.input-wrap
+					input(type="text" placeholder="11.11 Độc thân" value="")
+					a.func-reset(href="#!")
+						i.icn.icn-circle-remove
+					a.func-search(href="#!")
+						i.icn.icn-search
+				a.func-share(href="#!")
+					i.icn.icn-share
+
+.bl-module.module-category.is-mt-gutter.m-bottom-3
+	a.item-banner.borderRadius--m.m-bottom-3(href="category_subcate_level1.html" style="background-image:url(http://via.placeholder.com/750x260)")
+	.subcate-list
+		ul
+			each subcateItem in subcate
+				li(class=`${subcateItem.class}`)
+					a.item-subcate(href="category_subcate_level2.html")
+						span.img-subcate(style="background-image:url(http://via.placeholder.com/240x240)")
+						h2.color-base.fs--s.fw-normal.text-center
+							span #{subcateItem.name}
+
+.bl-module.module-grid-list.m-bottom-3
+	.product-list.is-row
+		ul
+			li
+				.item-product
+					span.img-loader
+					.desc-loader
+						span
+						span
+			each productItem in product
+				li(class=`${productItem.class}`)
+					a.item-product(href="product_detail.html")
+						span.img-product(style="background-image:url(http://via.placeholder.com/240x240)")
+							.label-discount
+								span.color-light.fs--m.fw-bold 20%
+						.desc
+							span.sponsor Tài trợ
+							h2.product-title.color-base.fs--m.fw-normal.m-bottom-1 #{productItem.name}
+							p.color-base.fs--xl.fw-bold 500.000đ
+							p.color-grey.fs--m.line-through 41.000đ
+							.star-orders.d-flex.m-top-2
+								.rating-star.m-right-2
+									i.icn.icn-shape-star.active
+									i.icn.icn-shape-star.active
+									i.icn.icn-shape-star.active
+									i.icn.icn-shape-star.active
+									i.icn.icn-shape-star
+								span.num.color-base.fs--s (4.8)
+
+.bl-module.module-brand.m-bottom-3
+	.heading
+		span.fs--l.fw-medium Thương hiệu
+	.brand-list
+		ul
+			each brandItem in brand
+				li(class=`${brandItem.class}`)
+					a.item-brand(href="#!")
+						span.img-brand(style="background-image:url(http://via.placeholder.com/200x100)")
+						span.img-brand(style="background-image:url(http://via.placeholder.com/200x100)")
+
+.bl-module.module-grid-list.m-bottom-3
+	a.heading(href="#!")
+		span.fs--l.fw-medium Section 4
+		i.icn.icn-small-right
+	.product-list.is-row
+		ul
+			li
+				.item-product
+					span.img-loader
+					.desc-loader
+						span
+						span
+			each productItem in product
+				li(class=`${productItem.class}`)
+					a.item-product(href="product_detail.html")
+						span.img-product(style="background-image:url(http://via.placeholder.com/240x240)")
+							.label-discount
+								span.color-light.fs--m.fw-bold 20%
+						.desc
+							h2.product-title.color-base.fs--m.fw-normal.m-bottom-1 #{productItem.name}
+							p.color-base.fs--xl.fw-bold 500.000đ
+							p.color-grey.fs--m.line-through 41.000đ
+							.star-orders.d-flex.m-top-2
+								.rating-star.m-right-2
+									i.icn.icn-shape-star.active
+									i.icn.icn-shape-star.active
+									i.icn.icn-shape-star.active
+									i.icn.icn-shape-star.active
+									i.icn.icn-shape-star
+								span.num.color-base.fs--s (4.8)
+.bl-module.module-grid-list.m-bottom-3
+	a.heading(href="#!")
+		span.fs--l.fw-medium Section 4
+		i.icn.icn-small-right
+	.product-list.is-row
+		ul
+			li
+				.item-product
+					span.img-loader
+					.desc-loader
+						span
+						span
+			each productItem in product
+				li(class=`${productItem.class}`)
+					a.item-product(href="product_detail.html")
+						span.img-product(style="background-image:url(http://via.placeholder.com/240x240)")
+							.label-discount
+								span.color-light.fs--m.fw-bold 20%
+						.desc
+							h2.product-title.color-base.fs--m.fw-normal.m-bottom-1 #{productItem.name}
+							p.color-base.fs--xl.fw-bold 500.000đ
+							p.color-grey.fs--m.line-through 41.000đ
+							.star-orders.d-flex.m-top-2
+								.rating-star.m-right-2
+									i.icn.icn-shape-star.active
+									i.icn.icn-shape-star.active
+									i.icn.icn-shape-star.active
+									i.icn.icn-shape-star.active
+									i.icn.icn-shape-star
+								span.num.color-base.fs--s (4.8)
+
+.bl-module.module-filter
+	span.product-total.color-base.fs--l 19 sản phẩm
+	.func-wrap
+		a.func-show
+			i.icn.icn-grid
+			i.icn.icn-list
+		a.func-filter.active(href="javascript:void(0);" data-toggle="modal" data-target="#modal-filter")
+			i.icn.icn-filter
+			span.color-base.fs--l Bộ lọc
+
+
+.bl-module.module-grid-list
+	ul.product-list.is-column#product-list
+		li
+			.item-product
+				span.img-loader
+				.desc-loader
+					span
+					span
+		each productItem in product
+			li(class=`${productItem.class}`)
+				a.item-product(href="product_detail.html")
+					span.img-product(style="background-image:url(http://via.placeholder.com/240x240)")
+						.label-discount
+							span.color-light.fs--m.fw-bold 20%
+					.desc
+						h2.product-title.color-base.fs--m.fw-normal.m-bottom-1 #{productItem.name}
+						p.color-base.fs--xl.fw-bold 500.000đ
+						p.color-grey.fs--m.line-through 41.000đ
+						.star-orders.m-top-2
+							.rating-star.m-right-2
+								i.icn.icn-shape-star.active
+								i.icn.icn-shape-star.active
+								i.icn.icn-shape-star.active
+								i.icn.icn-shape-star.active
+								i.icn.icn-shape-star
+							span.num.color-base.fs--s (4.8)
+
+
+
+
+
+

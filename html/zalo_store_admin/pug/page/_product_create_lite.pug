@@ -1,0 +1,174 @@
+block home
+
+- var table = []
+- table.push({"class":""})
+- table.push({"class":""})
+- table.push({"class":""})
+- table.push({"class":""})
+- table.push({"class":""})
+- table.push({"class":""})
+
+- var vary = []
+- vary.push({"class":""})
+- vary.push({"class":""})
+- vary.push({"class":""})
+- vary.push({"class":""})
+- vary.push({"class":""})
+
+.header-intro.d-flex.align-items-center.mb-3
+	nav(aria-label="breadcrumb")
+		ol.breadcrumb.mb-0
+			li.breadcrumb-item
+				a(href="product_lite.html") Danh sách tin đăng
+			li.breadcrumb-item.active(aria-current="page") Tạo tin đăng
+form
+	.container-fluid
+		.row
+			.col-8
+				.bl-module.module-form-create-lite
+					.form-group
+						label(for="") Tên sản phẩm <i>*</i>
+						input.form-control.is-invalid(type='text' placeholder='')
+						.invalid-feedback Lorem ipsum
+						small.mt-2 Giới hạn 200 ký tự. Chỉ nhập tên sản phẩm cần rao. Không nhập số điện thoại/email/website. Không sử dụng icon/emoji. Không viết hoa tất cả các ký tự
+					.form-group
+						label(for="") Giá (VND) <i>*</i>
+						input.form-control(type='text' placeholder='')
+						small.mt-2 Giá trị trong khoảng: 1-99.000.000.000đ. Điền đầy đủ các số 0 để hiển thị đúng mức giá cần bán
+					.form-group.mb-0
+						label(for="") Mô tả sản phẩm
+						.editor-wrap
+						small.mt-2 Cần thể hiện rõ đặc điểm, tính năng của sản phẩm. Chỉ đăng bán 1 sản phẩm trong mỗi bài đăng. Không đăng số điện thoại/email/website/địa chỉ cửa hàng
+				.bl-module
+					h3.mb-2 Ảnh sản phẩm <i>*</i>
+					small.mb-3 Tối đa 10 ảnh, kích thước tối thiểu 500x500. Dung lượng tối đa 1 Mb. Định dạng .jpg, .png
+					.img-list
+						ul
+							li
+								.img(style="background-image:url(https://via.placeholder.com/120x120)")
+									a.func-set.is-primary(href="#!")
+										.icz.icz-check
+									a.func-remove(href="#!remove")
+										.icz.icz-trash
+							li
+								.img(style="background-image:url(https://via.placeholder.com/120x120)")
+									a.func-set(href="#!")
+										.icz.icz-check
+									a.func-remove(href="#!remove")
+										.icz.icz-trash
+							//li
+								.img-upload
+									.inputfile-container
+										input.inputfile(id="upload" type="file")
+										label(for="upload")
+									i.icz.icz-fill-add
+							li
+								a.img-upload(href='javascript:void(0);' data-toggle='modal', data-target='#modal-upload-image')
+									i.icz.icz-fill-add
+			.col-4
+				.custom-control.custom-checkbox.is-min.mb-2
+					input(type="checkbox" class="custom-control-input" id="check1" checked)
+					label.custom-control-label.fs--m.fw-medium(for="check1") Hiển thị sản phẩm
+				.bl-module
+					.form-group.mb-0
+						label(for="") Ngành hàng <i>*</i>
+						.dropdown-select.dropdown
+							.select-fa.form-control.is-invalid(href="javascript:void(0);" role="button" id="dropdown-select" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+								select.custom-select
+									option(selected) Chọn...
+									option(value="1") One
+									option(value="2") Two
+									option(value="3") Three
+							.invalid-feedback Lorem ipsum
+							.dropdown-menu(aria-labelledby="dropdown-select")
+								ul
+									li
+										a.menu-back(href="#!") Quay lại
+									li
+										a(href="#!") Category 01
+									li
+										a(href="#!") Category 02
+									li
+										a(href="#!") Category 03
+									li
+										a(href="#!") Category 04
+									li
+										a(href="#!") Category 05
+									li
+										a(href="#!") Category 06
+				.bl-module
+					.form-group.mb-0
+						label(for="") Danh mục
+						select.custom-select.is-invalid
+							option(selected) Chọn...
+							option(value="1") One
+							option(value="2") Two
+							option(value="3") Three
+						.invalid-feedback Lorem ipsum
+				.bl-module
+					.form-group
+						label(for="") Dự án
+						.dropdown-select.has-search.dropdown
+							input.form-control(type='text' placeholder='Nhập tên dự án' role="button" id="dropdown-select" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+							.dropdown-menu(aria-labelledby="dropdown-select")
+								.add-project
+									i.icz.icz-fill-add
+									p Thêm dự án <strong>“Hà nội”</strong>
+								ul
+									li
+										a(href="#!") Category 01
+									li
+										a(href="#!") Category 02
+									li
+										a(href="#!") Category 03
+									li
+										a(href="#!") Category 04
+									li
+										a(href="#!") Category 05
+									li
+										a(href="#!") Category 06
+									li
+										a(href="#!") Category 01
+									li
+										a(href="#!") Category 02
+									li
+										a(href="#!") Category 03
+									li
+										a(href="#!") Category 04
+									li
+										a(href="#!") Category 05
+									li
+										a(href="#!") Category 06
+				.bl-module
+					.form-group.mb-0
+						label(for="") Địa điểm
+						select.custom-select
+							option(selected) Chọn Tỉnh/ Thành phố
+							option(value="1") One
+							option(value="2") Two
+							option(value="3") Three
+						select.custom-select(disabled style="margin-top: 10px")
+							option(selected) Chọn Quận/ Huyện
+							option(value="1") One
+							option(value="2") Two
+							option(value="3") Three
+		.custom-control.custom-checkbox.is-min.mb-2
+			input(type="checkbox" class="custom-control-input" id="check1" checked)
+			label.custom-control-label.fs--m.fw-medium(for="check1") Chia sẻ lên Nhật ký Zalo sau khi đăng tin
+		p.policy-text.fs--s(style="padding-bottom: 16px") 
+			|Bằng việc bấm vào Đăng tin mua bán, bạn đã đồng ý với các 
+			a(href="#!")  Thỏa thuận dịch vụ 
+			| được ban hành bởi Zalo Shop. 
+		.row
+			.col-12
+				.button-wrap
+					div.ml-auto
+						a.btn.btn-outline-danger.btn--m(href="#!") Xóa
+						a.btn.btn-primary.btn--m.ml-2(href="#!") Đăng tin mua bán
+
+
+
+
+
+
+

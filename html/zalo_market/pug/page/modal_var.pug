@@ -1,0 +1,46 @@
+block Modal
+
+.modal.fade.is-square(id="modal-var" tabindex="-1" role="dialog")
+	.func-close-down(data-dismiss="modal" aria-label="Close")
+		i.icn.icn-small-down
+	.modal-dialog(role="document")
+		.modal-content
+			.modal-body
+				.context-var.scrollTarget
+					.default-form
+						.line-var
+							span.d-block.color-base.fs--l.m-bottom-3 Màu sắc
+							ul.d-flex.align-items-center.flex-wrap
+								li
+									.input-group-radio
+										input(id="optiona1" name="option" type="radio")
+										label.fs--m(for="optiona1") Xanh
+								li
+									.input-group-radio
+										input(id="optiona2" name="option" type="radio")
+										label.fs--m(for="optiona2") Đỏ
+						.line-var
+							span.d-block.color-base.fs--l.m-bottom-3 Dung lượng
+							ul.d-flex.align-items-center.flex-wrap
+								li
+									.input-group-radio
+										input(id="optionb1" name="option2" type="radio")
+										label.fs--m(for="optionb1") 32Gb
+								li
+									.input-group-radio
+										input(id="optionb2" name="option2" type="radio")
+										label.fs--m(for="optionb2") 64Gb
+						.d-flex.justify-content-between.align-items-center.m-bottom-3
+							span.color-base.fs--l Số lượng <br /><span class="color-grey fs--m">Còn: 23</span>
+							.plus-minus-wrap.non-border.m-left-3
+								a.func.func-open-modal-confirm(href="#")
+									.ic-wrap
+										i.icn.icn-bold-delete
+								span.value.fs--l 1
+								a.func(href="#")
+									.ic-wrap
+										i.icn.icn-bold-add
+			.modal-footer
+				.button-wrap.is-multi-button
+					a.btn.btn-outline-primary.btn--m(href="#!") Thêm vào giỏ
+					a.btn.btn-primary.btn--m.m-left-3(href="#!") Mua ngay

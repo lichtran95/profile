@@ -1,0 +1,75 @@
+block home
+
+ul#menu-accordion
+	li.menu-category
+		a(href="index.html")
+			i.icz.icz-shop
+			span Cửa hàng
+	li.menu-category
+		#heading-1
+			a.active(data-toggle="collapse" data-target="#collapse-1" aria-expanded="false" aria-controls="collapse-1")
+				i.icz.icz-package
+				span Sản phẩm
+		#collapse-1(class="collapse show" aria-labelledby="heading-1" data-parent="#menu-accordion")
+			ul
+				li.menu-item
+					a.active.menu-link(href="product.html") Danh sách sản phẩm
+				li.menu-item
+					a.menu-link(href="category.html") Danh mục
+				li.menu-item
+					a.menu-link(href="event.html") Khuyến mãi
+				li.menu-item
+					a.menu-link(href="evaluate.html") Đánh giá sản phẩm
+	li.menu-category
+		#heading-2
+			a(data-toggle="collapse" data-target="#collapse-2" aria-expanded="false" aria-controls="collapse-2")
+				i.icz.icz-receipt
+				span Đơn hàng
+		#collapse-2(class="collapse" aria-labelledby="heading-2" data-parent="#menu-accordion")
+			ul
+				li.menu-item
+					a.menu-link(href="order_list.html") Danh sách đơn hàng
+				li.menu-item
+					a.menu-link(href="#!") Phản hồi khách hàng
+	li.menu-category
+		#heading-3
+			a(data-toggle="collapse" data-target="#collapse-3" aria-expanded="false" aria-controls="collapse-2")
+				i.icz.icz-chart
+				span Thống kê
+		#collapse-3(class="collapse" aria-labelledby="heading-3" data-parent="#menu-accordion")
+			ul
+				li.menu-item
+					a.menu-link(href="stat_all.html") Tổng quan
+				li.menu-item
+					a.menu-link(href="stat_customer.html") Thống kê khách hàng
+				li.menu-item
+					a.menu-link(href="stat_order.html") Thống kê đơn hàng
+				li.menu-item
+					a.menu-link(href="stat_store.html") Thống kê cửa hàng
+	li.menu-category
+		#heading-4
+			a(data-toggle="collapse" data-target="#collapse-4" aria-expanded="false" aria-controls="collapse-2")
+				i.icz.icz-settings
+				span Thiết lập
+		#collapse-4(class="collapse" aria-labelledby="heading-4" data-parent="#menu-accordion")
+			ul
+				li.menu-item
+					a.menu-link(href="setting.html") Thiết lập cửa hàng
+				li.menu-item
+					a.menu-link(href="#!") Thiết lập kho
+				li.menu-item
+					a.menu-link(href="setting_shipping.html") Thiết lập vận chuyển
+				li.menu-item
+					a.menu-link(href="setting_payment.html") Thiết lập thanh toán
+				li.menu-item
+					a.menu-link(href="#!") Thiết lập phản hồi nhanh
+				li.menu-item
+					a.menu-link(href="#!") Kết nối API
+
+
+
+
+
+
+
+

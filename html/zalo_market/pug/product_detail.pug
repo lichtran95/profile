@@ -1,0 +1,57 @@
+extends layout.pug
+
+//- Setting
+block setting
+	- var layout = true
+	- var modal = true
+	- var swiperjs = true
+	- var fancyboxjs = true
+
+block head
+	include head.pug
+
+block pages
+	- bodyC.push("")
+	- layoutClasses.push("zMarket-layout")
+	- bodyClasses.push("page-content")
+	- dockbarClasses.push("dockbar")
+	
+//- Add Body
+block body
+	include page/_product_detail.pug
+
+//- Add Footer
+block dockbar
+	//include page/dockbar.pug
+
+//- Add Modal
+block modal
+	include page/modal_var.pug
+	include page/modal_follow.pug
+
+block javaScripts extend
+	script.
+		var swiper = new Swiper('.swiper-img', {
+			slidesPerView: 1,
+			spaceBetween: 0,
+			pagination: {
+				el: '#img-pagination',
+			},
+		});
+		$('.tab a').on('click', function (e) {
+			e.preventDefault();
+			$(this).parent().addClass('active');
+			$(this).parent().siblings().removeClass('active');
+			
+			target = $(this).attr('href');
+			$('.tab-content > div').not(target).hide();
+			$(target).fadeIn(600);
+			
+		});
+		setTimeout(function() {
+			$('.bubble-overlay').fadeOut('fast');
+		}, 3000);
+
+		setTimeout(function() {
+			$('.module-toast').removeClass('is-show');
+		}, 1500);

@@ -1,0 +1,198 @@
+block home
+
+- var table = []
+- table.push({"class":""})
+- table.push({"class":""})
+- table.push({"class":""})
+- table.push({"class":""})
+- table.push({"class":""})
+- table.push({"class":""})
+
+.header-intro.d-flex.align-items-center.mb-3
+	nav(aria-label="breadcrumb")
+		ol.breadcrumb.mb-0
+			li.breadcrumb-item
+				a(href="#!") Tạo khuyến mãi
+
+form
+	.container-fluid
+		.row
+			.col-8
+				.bl-module
+					.form-group
+						label(for="") Tên chương trình <i>*</i>
+						input.form-control.is-invalid(type='text' placeholder='')
+						.invalid-feedback Lorem ipsum
+						small.mt-2 Giới hạn [n] ký tự
+					.form-group.mb-0
+						label(for="") Mô tả
+						textarea.form-control.is-invalid(name="", cols="30", rows="3")
+						.invalid-feedback Lorem ipsum
+				.bl-module
+					h3.mb-2 Thời gian áp dụng
+					.form-group
+						label(for="") Khoảng thời gian áp dụng
+						.input-group.mr-2(style="width:250px")
+							.input-group-append
+								span.input-group-ico
+									i.icz.icz-fill-calendar
+							input.form-control.is-invalid(type="text" name="daterange" value="01/01/2018 - 01/15/2018" autocomplete="off")
+							.invalid-feedback Lorem ipsum
+					hr.line.mb-3
+					.group-timer.mb-3
+						.row
+							.col-4
+								.form-group.mb-0
+									label(for="") Giờ áp dụng
+									.row
+										.col
+											.d-flex.align-items-center
+												select.custom-select
+													option(value="1") 00:00
+												span.ml-2.mr-2 -
+												select.custom-select
+													option(value="1") 24:00
+							.col-8
+								.form-group.mb-0
+									label(for="") Ngày áp dụng
+									.dates-list
+										ul
+											li
+												a.active(href="javascript:void(0);") Thứ 2
+											li
+												a(href="javascript:void(0);") Thứ 3
+											li
+												a(href="javascript:void(0);") Thứ 4
+											li
+												a(href="javascript:void(0);") Thứ 5
+											li
+												a(href="javascript:void(0);") Thứ 6
+											li
+												a(href="javascript:void(0);") Thứ 7
+											li
+												a(href="javascript:void(0);") Chủ nhật
+					a.btn.btn-outline-primary.btn--m(href="#!") Thêm thời gian
+
+				.bl-module
+					.d-flex.align-items-center.mb-2
+						h3 Sản phẩm áp dụng
+						a.btn.btn-default.btn--s.ml-auto(href='javascript:void(0);' data-toggle='modal', data-target='#modal-addproduct') <i class="icz icz-fill-add"></i>Thêm sản phẩm
+					.table-responsive
+						table.table.mb-0
+							thead.thead-light
+								tr
+									th.align-middle(scope='col' style="width:40px")
+										.custom-control.custom-checkbox
+											input(type="checkbox" class="custom-control-input" id="check-table")
+											label.custom-control-label(for="check-table") &nbsp;
+									th.align-middle(scope='col' style="width:40px") #
+									th.align-middle(scope='col' style="width:64px")
+									th.align-middle(scope='col' style="width:180px") Tên sản phẩm
+									th.align-middle(scope='col' style="width:180px") Danh mục
+									th.align-middle(scope='col' style="width:80px") SKU
+									th.align-middle(scope='col') Thuộc tính
+									th.align-middle(scope='col' style="width:170px") Giá (đ)
+									th.align-middle(scope='col') Số lượng
+									th.align-middle(scope='col') Hiển thị
+							tbody
+								tr
+									td(colspan="10")
+										.text-center Không có kết quả cần tìm
+								tr
+									td
+										.custom-control.custom-checkbox
+											input(type="checkbox" class="custom-control-input" id="check-table")
+											label.custom-control-label(for="check-table") &nbsp;
+									td 1
+									td
+										img.img-product.img--s(src="https://via.placeholder.com/200x200" alt=page)
+									td
+										a.link-product(href="#!") Apple Watch 4 44mm (GPS) Viền Nhôm Xám - Dây Đen
+									td Danh mục ABC
+									td tp67
+									td 12
+									td
+										.d-flex.align-items-center()
+											p 200.000 ~ 500.000<br /><span class="color-error">100.000 ~ 300.000</span>
+											a.func-faqs(data-toggle="tooltip" data-html="true" title="<b>[Tên Event đang tham gia]</b><br />Thời gian diễn ra event: DD/MM/YYYY HH:MM")
+												i.icz.icz-fill-info
+									td 12
+									td
+										i.icz.icz-check
+								each tableItem in table
+									tr
+										td
+											.custom-control.custom-checkbox
+												input(type="checkbox" class="custom-control-input" id="check-table")
+												label.custom-control-label(for="check-table") &nbsp;
+										td 1
+										td
+											img.img-product.img--s(src="https://via.placeholder.com/200x200" alt=page)
+										td
+											a.link-product(href="#!") Apple Watch 4 44mm (GPS) Viền Nhôm Xám - Dây Đen
+										td Danh mục ABC
+										td tp67
+										td 12
+										td 200.000
+										td 12
+										td
+											i.icz.icz-check
+							tfoot.tfoot-light
+								tr
+									td(colspan="10")
+										.d-flex.align-items-center
+											.d-flex.align-items-center.mr-2
+												span.color-grey.flex-shrink-0.mr-2 Hiển thị
+												select.custom-select(style="")
+													option(selected value="1") 20
+													option(value="2") 30
+													option(value="3") 40
+													option(value="4") 50
+											.total-table
+												span.color-grey 1-10 of 100
+											nav.ml-auto
+												ul.pagination.pagination-sm.justify-content-end
+													li.page-item.disabled
+														a.page-link(href='#', tabindex='-1')
+															i.icz.icz-left
+													li.page-item.active
+														a.page-link(href='#') 1
+													li.page-item
+														a.page-link(href='#') 2
+													li.page-item
+														a.page-link(href='#') 3
+													li.page-item
+														a.page-link(href='#')
+															i.icz.icz-right
+			.col-4
+				.custom-control.custom-checkbox.is-min.mb-2
+					input(type="checkbox" class="custom-control-input" id="check1" checked)
+					label.custom-control-label.fs--m.fw-medium(for="check1") Hiển thị sản phẩm
+				.bl-module
+					h3.mb-2 Ảnh sản phẩm <i>*</i>
+					small.mb-3 Ảnh quy định kích thước 750x220px. Mỗi ảnh tối đa 1 Mb.
+					.img-list
+						ul
+							li
+								.img.img-event(style="background-image:url(https://via.placeholder.com/750x220)")
+									a.func-remove(href="#!remove")
+										i.icz.icz-trash
+							li
+								.img-upload.img-upload-event
+									.inputfile-container
+										input.inputfile(id="upload" type="file")
+										label(for="upload")
+									i.icz.icz-fill-add
+		.row
+			.col-12
+				.button-wrap
+					div.ml-auto
+						a.btn.btn-primary.btn--m.ml-2(href="#!") Tạo giảm giá
+						a.btn.btn-outline-primary.btn--m.ml-2(href="#!") Hủy
+
+
+
+
+
+
+

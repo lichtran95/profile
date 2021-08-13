@@ -1,0 +1,156 @@
+block home
+
+- var table = []
+- table.push({"class":""})
+- table.push({"class":""})
+
+- var table2 = []
+- table2.push({"class":""})
+- table2.push({"class":""})
+
+.header-intro.d-flex.align-items-center.mb-3
+	nav(aria-label="breadcrumb")
+		ol.breadcrumb.mb-0
+			li.breadcrumb-item
+				a(href="#!") Thiết lập vận chuyển
+
+form
+	.container-fluid
+		.row
+			.col-12
+				.bl-module
+					ul.nav.nav-tabs.mb-3(id="myTab" role="tablist")
+						li.nav-item
+							a.nav-link.active(id="tab1-tab" data-toggle="tab" href="#tab1" role="tab" aria-controls="tab1" aria-selected="true") Chính sách giao hàng
+						li.nav-item
+							a.nav-link(id="tab2-tab" data-toggle="tab" href="#tab2" role="tab" aria-controls="tab2" aria-selected="false") Tự thiết lập vận chuyển
+						li.nav-item
+							a.nav-link(id="tab3-tab" data-toggle="tab" href="#tab3" role="tab" aria-controls="tab3" aria-selected="false") Thiết lập vận chuyển qua đối tác
+					.tab-content(id="myTabContent")
+						.tab-pane.fade.show.active(id="tab1" role="tabpanel" aria-labelledby="tab1")
+							.row
+								.col-8
+									.form-group.mb-0
+										label(for="") Chính sách giao hàng <i>*</i>
+										.editor-wrap
+								.col-4
+									.form-group.mb-0
+										label(for="") Địa chỉ giao hàng <i>*</i>
+										select.custom-select
+											option(selected) Chọn...
+											option(value="1") One
+											option(value="2") Two
+											option(value="3") Three
+							.row
+								.col-12.d-flex
+									div.ml-auto.mt-3
+										a.btn.btn-primary.btn--m.ml-2(href="#!") Lưu thiết lập
+						.tab-pane.fade(id="tab2" role="tabpanel" aria-labelledby="tab2")
+							.text-right
+								a.btn.btn-link.btn--s.mb-2(href="#!") <i class="icz icz-support"></i> Xem hướng dẫn
+							.table-responsive
+								table.table.mb-0
+									thead.thead-light
+										tr
+											th.align-middle(scope='col') Phương thức vận chuyển
+											th.align-middle(scope='col') Thời gian giao hàng
+											th.align-middle(scope='col') Phí vận chuyển (đ)
+											th.align-middle(scope='col') Thao tác
+									tbody
+										each tableItem in table
+											tr
+												td.align-middle
+													strong Ship đồng hồ đồng giá
+												td.align-middle
+													select.custom-select.custom-select-sm
+														option(selected) Chọn...
+														option(value="1") One
+														option(value="2") Two
+														option(value="3") Three
+												td.align-middle
+													strong 200.000
+												td.align-middle
+													.d-flex.align-items-center
+														a.func-item.mr-2(href='javascript:void(0);' data-toggle='modal', data-target='#modal-edit-shipping')
+															i.icz.icz-fill-edit
+														a.func-item.mr-2(href="#!")
+															i.icz.icz-trash
+														label.switch
+															input(type="checkbox")
+															span.slider.round
+										tr
+											td.align-middle
+												input.custom-select(type='text' placeholder='' value='Nhập tên phương thức')
+											td.align-middle
+												select.custom-select.custom-select-sm
+													option(selected) Chọn...
+													option(value="1") One
+													option(value="2") Two
+													option(value="3") Three
+											td.align-middle
+												input.custom-select(type='text' placeholder='' value='200.000')
+											td.align-middle
+												.d-flex.align-items-center
+													a.func-item.mr-2(href="#!")
+														i.icz.icz-save
+													a.func-item.mr-2(href="#!")
+														i.icz.icz-trash
+									tfoot.tfoot-light
+										tr
+											td.text-right(colspan="4")
+												a.btn.btn-outline-primary.btn--s.ml-2(href="#!") Thêm phương thức vận chuyển
+							
+						.tab-pane.fade(id="tab3" role="tabpanel" aria-labelledby="tab3")
+							.text-right
+								a.btn.btn-link.btn--s.mb-2(href="#!") <i class="icz icz-restore"></i> Lịch sử cập nhật
+							table.table.mb-0
+								thead.thead-light
+									tr
+										th.align-middle(scope='col') Đối tác vận chuyển
+										th.align-middle(scope='col') Thông tin kết nối
+										th.align-middle(scope='col' style="width:140px") Tình trạng kết nối
+										th.align-middle(scope='col') Thao tác
+								tbody
+									each table2Item in table2
+										tr
+											td.align-middle
+												img(src="https://via.placeholder.com/150x70" alt=page width="150")
+											td.align-middle 
+												span.d-block.color-base.fs--xl.fw-medium.mb-2 Giao hàng tiết kiệm
+												p Kết nối nhà vận chuyển để đơn hàng được tự động chuyển sang hệ thống của Giao hàng tiết kiệm để xử lý.
+											td.align-middle
+												span.p-2.fw-bold.status.status-success.status-bg Đang kết nối
+											td.align-middle
+												.d-flex.align-items-center
+													a.func-item.mr-2(href='javascript:void(0);' data-toggle='modal' data-target='#modal-shipping-info')
+														i.icz.icz-fill-link(data-toggle="tooltip" title="Kết nối")
+													a.func-item.mr-2(href='javascript:void(0);')
+														i.icz.icz-fill-edit(data-toggle="tooltip" title="Chỉnh sửa")
+													a.func-item.mr-2(href='javascript:void(0);' data-toggle='modal' data-target='#modal-shipping-disconnect')
+														i.icz.icz-unlink(data-toggle="tooltip" title="Kết nối")
+													a.func-item.mr-2(href='javascript:void(0);' data-toggle='modal' data-target='#modal-shipping-info')
+														i.icz.icz-c-info(data-toggle="tooltip" title="Kết nối")
+									tr
+										td.align-middle
+											img(src="https://via.placeholder.com/150x70" alt=page)
+										td.align-middle 
+											span.d-block.color-base.fs--xl.fw-medium.mb-2 Giao hàng tiết kiệm
+											p Kết nối nhà vận chuyển để đơn hàng được tự động chuyển sang hệ thống của Giao hàng tiết kiệm để xử lý.
+										td.align-middle
+											span.p-2.fw-bold.status.status-denied.status-bg Ngắt kết nối
+										td.align-middle
+											.d-flex.align-items-center
+												a.func-item.mr-2(href='javascript:void(0);')
+													i.icz.icz-fill-link
+												a.func-item.mr-2(href='javascript:void(0);')
+													i.icz.icz-fill-edit
+												a.func-item.mr-2(href='javascript:void(0);')
+													i.icz.icz-unlink
+												a.func-item.mr-2(href="#!")
+													i.icz.icz-c-info
+
+
+
+
+
+

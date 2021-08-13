@@ -1,0 +1,163 @@
+block home
+
+- var table = []
+- table.push({"class":""})
+- table.push({"class":""})
+- table.push({"class":""})
+- table.push({"class":""})
+- table.push({"class":""})
+- table.push({"class":""})
+
+.header-intro.d-flex.align-items-center.mb-3
+	nav(aria-label="breadcrumb")
+		ol.breadcrumb.mb-0
+			li.breadcrumb-item.active(aria-current="page") Đơn hàng
+
+form
+	.container-fluid
+		.row
+			.col-12
+				.bl-module
+					ul.nav.nav-tabs.mb-3
+						li.nav-item
+							a.nav-link.active(href='#') Tất cả
+						li.nav-item
+							a.nav-link(href='#') Đơn hàng mới
+						li.nav-item
+							a.nav-link(href='#') Đang xử lý
+						li.nav-item
+							a.nav-link(href='#') Đang vận chuyển
+						li.nav-item
+							a.nav-link(href='#') Thành công
+						li.nav-item
+							a.nav-link(href='#') Thất bại
+						li.nav-item
+							a.nav-link(href='#') Hủy
+					.group-search.mb-3
+						.context-group-search
+							.form-row
+								.col-3
+									input.form-control.form-control-placeholder(id="mdh" name="mdh" type="text" placeholder="" autofocus required)
+									label.label(for="mdh") Mã đơn hàng
+								.col-3
+									input.form-control.form-control-placeholder(id="mnh" name="mnh" type="text" placeholder="" autofocus required)
+									label.label(for="mnh") Mã nhóm
+								.col-3
+									input.form-control.form-control-placeholder(id="sp" name="sp" type="text" placeholder="" autofocus required)
+									label.label(for="sp") Sản phẩm
+								.col-3
+									input.form-control.form-control-placeholder(id="tel" name="tel" type="text" placeholder="" autofocus required)
+									label.label(for="tel") Số điện thoại
+							.form-row
+								.col-3
+									select.custom-select
+										option(selected disabled) Loại vận chuyển
+										option(value="1") One
+										option(value="2") Two
+										option(value="3") Three
+								.col-4
+									.input-group
+										.input-group-append
+											span.input-group-ico
+												i.icz.icz-fill-calendar
+										input.form-control(type="text" name="daterange" value="01/01/2018 - 01/15/2018" autocomplete="off")
+						.context-action
+							a.btn.btn-outline-primary.btn--m.ml-2(href="#!") Tìm kiếm
+					.group-func
+						span.color-grey.fs--m Đã chọn <strong class="color-base">2/100</strong> đơn hàng
+						.ml-auto
+							a.btn.btn--s.ml-2(href="#!") <i class="icz icz-data-upload"></i>Xuất đơn
+							a.btn.btn--s.ml-2(href='javascript:void(0);' data-toggle='modal', data-target='#modal-update-status-b1') <i class="icz icz-reload"></i>Cập nhật đơn
+							a.btn.btn--s.ml-2(href='javascript:void(0);' data-toggle='modal', data-target='#modal-status-cancel') <i class="icz icz-reload"></i>Demo hủy
+					.table-responsive
+						table.table.mb-0
+							thead.thead-light
+								tr
+									th.align-middle(scope='col' style="width:40px")
+										.custom-control.custom-checkbox
+											input(type="checkbox" class="custom-control-input" id="check-table")
+											label.custom-control-label(for="check-table") &nbsp;
+									th.align-middle(scope='col' style="width:30px") #
+									th.align-middle(scope='col' style="width:160px") Đơn hàng
+									th.align-middle(scope='col' style="width:180px") Sản phẩm
+									th.align-middle(scope='col' style="width:120px") Tổng đơn (đ)
+									th.align-middle(scope='col' style="width:100px") Vận chuyển
+									th.align-middle(scope='col' style="width:100px") Thanh toán
+									th.align-middle(scope='col' style="width:100px") Khách hàng
+									th.align-middle(scope='col' style="width:120px") Trạng thái
+									th.align-middle(scope='col' style="width:100px") Ngày đặt
+									th.align-middle(scope='col') Thao tác
+							tbody
+								each tableItem in table
+									tr
+										td
+											.custom-control.custom-checkbox
+												input(type="checkbox" class="custom-control-input" id="check-table")
+												label.custom-control-label(for="check-table") &nbsp;
+										td 1
+										td <a class="link-product fw-bold" href="order.html">#5687999</a></strong>Nhóm: <strong>#1234567</strong>
+										td
+											a.link-product.mb-1(href="#!")
+												span.ellips-2 Apple Watch 4 44mm (GPS) pple Watch 4 44mm (GPS) pple Watch 4 44mm (GPS)
+											p Số lượng: <strong>1</strong>
+										td 200.000
+										td Tự vận chuyển <br /> 200.000đ
+										td COD
+										td <strong>Anh Vũ</strong><br />099.999.9999
+										td
+											span.status.status-doing  Đơn hàng mới
+											<br />
+											span.status.status-success Thành công
+											<br />
+											span.status.status-pending Đang xử lý
+											<br />
+											span.status.status-pending Đang vận chuyển
+											<br />
+											span.status.status-denied Thất bại
+											<br />
+											span.status.status-denied Hủy
+										td 20/01/2019 16:45
+										td
+											.d-flex.align-items-center
+												a.func-item.mr-2(href='javascript:void(0);' data-toggle='modal', data-target='#modal-call')
+													i.icz.icz-phone
+												a.func-item.mr-2(href="#!")
+													i.icz.icz-chat
+												//a.func-item.mr-2(href='javascript:void(0);' data-toggle='modal', data-target='#modal-feedback')
+													i.icz.icz-help
+
+							tfoot.tfoot-light
+								tr
+									td(colspan="11")
+										.d-flex.align-items-center
+											.d-flex.align-items-center.mr-2
+												span.color-grey.flex-shrink-0.mr-2 Hiển thị
+												select.custom-select(style="")
+													option(selected value="1") 20
+													option(value="2") 30
+													option(value="3") 40
+													option(value="4") 50
+											.total-table
+												span.color-grey 1-10 of 100
+											nav.ml-auto
+												ul.pagination.pagination-sm.justify-content-end
+													li.page-item.disabled
+														a.page-link(href='#', tabindex='-1')
+															i.icz.icz-left
+													li.page-item.active
+														a.page-link(href='#') 1
+													li.page-item
+														a.page-link(href='#') 2
+													li.page-item
+														a.page-link(href='#') 3
+													li.page-item
+														a.page-link(href='#')
+															i.icz.icz-right
+
+
+
+
+
+
+
+

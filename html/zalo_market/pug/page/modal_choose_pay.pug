@@ -1,0 +1,21 @@
+block Modal
+
+.modal.fade.is-radius(id="modal-choose-pay" tabindex="-1" role="dialog")
+	.modal-dialog(role="document")
+		.modal-content
+			.modal-header
+				span.color-base.fs--l.fw-medium Thanh toán đơn hàng
+				a.func-close(data-dismiss="modal" aria-label="Close")
+					i.icn.icn-small-remove
+			.modal-body
+				.m-bottom-3
+				.custom-control.custom-checkbox.m-bottom-3
+					input(type="checkbox" class="custom-control-input" id="p-atm")
+					label.custom-control-label.is-radius(for="p-atm") Thanh toán qua thẻ ATM
+				.custom-control.custom-checkbox.m-bottom-3
+					input(type="checkbox" class="custom-control-input" id="p-visa")
+					label.custom-control-label.is-radius(for="p-visa") Thanh toán qua bằng VISA / MASTER CARD
+					
+			.modal-footer
+				.button-wrap.d-flex.justify-content-between.align-items-center
+					a.btn.btn-primary.btn--m.w-100(href="#!") Thanh toán

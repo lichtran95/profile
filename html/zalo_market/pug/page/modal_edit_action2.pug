@@ -1,0 +1,18 @@
+block Modal
+
+.modal.fade.modal-center(id="modal-edit-action2" tabindex="-1" role="dialog")
+	.modal-dialog(role="document")
+		.modal-content
+			.modal-header
+				span.color-base.fs--l.fw-medium Thông báo
+				a.func-close(data-dismiss="modal" aria-label="Close")
+					i.icn.icn-small-remove
+			.modal-body
+				.context-default.text-center
+					p Vui lòng bật chế độ "Nhận tin nhắn từ người lạ" trong mục Cài đặt. Tin rao bán của bạn đang được lưu nháp, bạn có thẻ đăng tin sau khi thay đổi chế độ cài đặt
+					video(width="250" height="250" autoplay loop muted)
+						source(src="images/guide.mp4" type="video/mp4")
+						source(src="images/guide.webm" type="video/webm")
+			.modal-footer
+				.button-wrap
+					a.btn.btn-primary.btn--m.w-100.func-open-toast(href="#!" data-dismiss="modal" aria-label="Close") [Action]

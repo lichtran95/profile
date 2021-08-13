@@ -1,0 +1,38 @@
+extends layout.pug
+
+//- Setting
+block setting
+	- var layout = true
+	- var dockbar = true
+	- var modal = true
+
+block head
+	include head.pug
+
+block pages
+	- bodyC.push("")
+	- layoutClasses.push("zMarket-layout")
+	- bodyClasses.push("page-content")
+	- dockbarClasses.push("dockbar")
+	
+//- Add Body
+block body
+	include page/_category_banner_list.pug
+
+//- Add Footer
+block dockbar
+	include page/dockbar.pug
+
+//- Add Modal
+block modal
+	include page/modal_filter.pug
+
+block javaScripts extend
+	script.
+		$(window).on('load', function () {
+			//$("#modal-filter").modal("show");
+		});
+		$(".func-show").click(function() {
+			$(this).toggleClass("on");
+			$(".product-list").toggleClass("is-column");
+		});

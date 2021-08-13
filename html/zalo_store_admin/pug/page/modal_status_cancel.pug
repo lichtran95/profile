@@ -1,0 +1,42 @@
+block Modal
+
+- var location = []
+- location.push({"class":"", "name":"Quận 1"})
+- location.push({"class":"", "name":"Quận 2"})
+- location.push({"class":"", "name":"Quận 3"})
+- location.push({"class":"", "name":"Quận 4"})
+
+.modal.fade(id="modal-status-cancel" tabindex="-1" role="dialog")
+	.modal-dialog(role="document")
+		.modal-content
+			.modal-header
+				h5.modal-title Xác nhận hủy đơn hàng
+				a.close(href="javascript:void(0);" data-dismiss="modal" aria-label="Close")
+					i.icz.icz-close
+			.modal-body
+				p.fs--m.mb-3 Lý do hủy <strong>2</strong> đơn hàng này
+				.custom-control.custom-radio.mb-1
+					input(type="radio" name="ld" class="custom-control-input" id="ld-1")
+					label.custom-control-label(for="ld-1") Sản phẩm đã hết hàng
+				.custom-control.custom-radio.mb-1
+					input(type="radio" name="ld" class="custom-control-input" id="ld-2")
+					label.custom-control-label(for="ld-2") Không liên lạc được với khách hàng
+				.custom-control.custom-radio.mb-1
+					input(type="radio" name="ld" class="custom-control-input" id="ld-3")
+					label.custom-control-label(for="ld-3") Khách yêu cầu hủy
+				.custom-control.custom-radio.mb-1
+					input(type="radio" name="ld" class="custom-control-input" id="ld-4")
+					label.custom-control-label(for="ld-4") Vượt quá số lần hỗ trợ giao hàng
+				.custom-control.custom-radio.mb-1
+					input(type="radio" name="ld" class="custom-control-input" id="ld-5")
+					label.custom-control-label(for="ld-5") Địa chỉ không hỗ trợ giao hàng
+				.custom-control.custom-radio.mb-1
+					input(type="radio" name="ld" class="custom-control-input" id="ld-6")
+					label.custom-control-label(for="ld-6") Lý do khác
+				.ml-4
+					textarea.form-control.mb-1(type="textarea" rows="3" disabled) Nhập lý do
+					p.color-grey.fs--s.text-right 0/500
+				
+			.modal-footer
+				a.btn.btn-outline-primary.btn--m(type="button" data-dismiss="modal") Bỏ qua
+				a.btn.btn-primary.btn--m(type="button") Xác nhận Hủy

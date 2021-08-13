@@ -1,0 +1,112 @@
+extends layout_lite.pug
+
+//- Setting
+block setting
+	- var layout = true
+	- var header = false
+	- var footer = false
+	- var navigate = false
+	- var modal = false
+	//- - var swiperjs = true
+	- var swiperbundlejs = true
+
+block head
+	include head.pug
+
+block pages
+	- bodyC.push("")
+	- layoutClasses.push("admin-layout layout-home-car")
+	- headerClasses.push("")
+	- bodyClasses.push("home-car-landing")
+	
+
+
+//- Add Body
+block body
+	include page/_home_car_landing.pug
+
+
+block javaScripts extend
+	script.
+
+		$(window).scroll(function(){
+			var height = $(window).scrollTop();
+			if(height > 100){
+				$(".header").addClass("is-shadow");
+			}
+			else{
+				$(".header").removeClass("is-shadow");
+			}
+		});
+
+		var swiper = new Swiper ('#phone-swiper', {
+				autoplay: {
+					//- delay: 7240,
+				},
+				loop: true,
+				pagination: {
+					el: ".swiper-pagination",
+					clickable: true,
+				},
+			});
+		var swiper = new Swiper ('#phone-swiper-mb', {
+				loop: true,
+				pagination: {
+					el: ".swiper-pagination",
+					clickable: true,
+				},
+				autoplay: {
+					//- delay: 7000,
+				},
+			});
+
+		$(".tab-choose .item").click(e=>{
+			let button = e.currentTarget.id
+
+			$(".tab-choose .item").removeClass('active')
+			$('.content-cate .block-cate').removeClass('active')
+			$('#'+button).toggleClass('active')
+
+			switch(button){
+				case "cate_1": $('#item_1').addClass('active'); break;
+				case "cate_2": $('#item_2').addClass('active'); break;
+				case "cate_3": $('#item_3').addClass('active'); break;
+				case "cate_4": $('#item_4').addClass('active'); break;
+			}
+		})
+
+		$(".nav .nav-link").click(e=>{
+			let button = e.currentTarget.id
+			$(".nav-link").removeClass('active')
+			$('.table-price').removeClass('active')
+			$('#'+button).toggleClass('active')
+			switch(button){
+				case 'n_home': $('#home').addClass('active'); break;
+				case 'n_car': $('#car').addClass('active'); break;
+			}
+		})
+
+		$('.tab-choose').scroll(e => {
+			let scrollX = e.target.scrollLeft
+			let max = e.target.scrollWidth - e.target.clientWidth
+			if(scrollX == 0){
+				$('#nav-left').css("display", 'none');
+				$('#nav-right').css("display", 'block');
+			} else if(scrollX == max){
+				$('#nav-right').css("display", 'none');
+				$('#nav-left').css("display", 'block');
+			} else if(scrollX > 0 && scrollX < max){
+				$('#nav-left').css("display", 'block');
+				$('#nav-right').css("display", 'block');
+			}
+			
+		})
+
+		$('.tab-container .nav-tab').click(e=>{
+			let click = e.currentTarget.id
+			if(click == 'nav-right'){
+				$('.tab-choose')[0].scrollLeft += 90
+			} else if(click == 'nav-left'){
+				$('.tab-choose')[0].scrollLeft -= 90
+			}
+		})

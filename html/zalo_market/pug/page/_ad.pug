@@ -1,0 +1,60 @@
+block home
+
+- var product = []
+- product.push({"class":"","name":"Vòng Đeo Tay Thông Minh Theo Dõi Vận Động Xiaomi Mi Band 3 - Hàng Chính Hãng"})
+- product.push({"class":"","name":"Tivi LED Sony"})
+- product.push({"class":"","name":"Tivi LED Sony 32 inch KDL-32R300E"})
+- product.push({"class":"","name":"Vòng Đeo Tay Thông Minh Theo Dõi Vận Động Xiaomi Mi Band 3 - Hàng Chính Hãng"})
+- product.push({"class":"","name":"Tivi LED Sony"})
+- product.push({"class":"","name":"Tivi LED Sony 32 inch KDL-32R300E"})
+
+.feature-dockbar
+	.context-feature-dockbar
+		nav.breadcrumb
+			ol
+				li.breadcrumb-item
+					a(href="index.html")
+						i.icn.icn-home
+				li.breadcrumb-item.active(aria-current="page")
+					a(href="javascript:void(0);")
+						span.text-truncate Ad
+		a.func-search(href="search.html")
+			i.icn.icn-search
+		a.func-cart(href="cart.html")
+			i.icn.icn-shopping-cart
+			span.num 1
+		a.func-share(href="#!share")
+			i.icn.icn-share
+	.trans-feature-dockbar
+
+.bl-module.module-filter
+	span.product-total.color-base.fs--l 19 sản phẩm
+	.func-wrap
+		a.func-show
+			i.icn.icn-grid
+			i.icn.icn-list
+		a.func-filter.active(href="javascript:void(0);" data-toggle="modal" data-target="#modal-filter")
+			i.icn.icn-filter
+			span.color-base.fs--l Bộ lọc
+
+.bl-module.module-grid-list
+	ul.product-list.is-column
+		li
+			.item-product
+				span.img-loader
+				.desc-loader
+					span
+					span
+		each productItem in product
+			li(class=`${productItem.class}`)
+				a.item-product(href="product_detail.html")
+					span.img-product(style="background-image:url(http://via.placeholder.com/240x240)")
+						.label-discount
+							span.color-light.fs--m.fw-bold 20%
+					.desc
+						p.color-grey.fs--s.text-uppercase.m-bottom-1 Tài trợ
+						h2.product-title.color-base.fs--m.fw-normal.m-bottom-1 #{productItem.name}
+						p.color-base.fs--xl.fw-bold 500.000đ
+						p.color-grey.fs--m.line-through 41.000đ
+				.btn-ad-wrap.m-top-2
+					a.btn.btn-sale.btn--s.position-static(href="cart.html") Mua hàng

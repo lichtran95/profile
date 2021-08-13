@@ -1,0 +1,56 @@
+extends layout.pug
+
+//- Setting
+block setting
+	- var layout = true
+	- var dockbar = true
+	- var modal = false
+
+block head
+	include head.pug
+
+block pages
+	- bodyC.push("")
+	- layoutClasses.push("zMarket-layout")
+	- bodyClasses.push("page-content")
+	- dockbarClasses.push("dockbar")
+	
+//- Add Body
+block body
+	include page/_profile.pug
+
+//- Add Footer
+block dockbar
+	include page/dockbar.pug
+
+//- Add Modal
+block modal
+
+block javaScripts extend
+	script.
+		//- demo active dockbar
+		$(".context-dockbar li a").removeClass("active");
+		$(".context-dockbar li:nth-child(3) a").addClass("active");
+
+		$('.tab a').on('click', function (e) {
+			e.preventDefault();
+			$(this).parent().addClass('active');
+			$(this).parent().siblings().removeClass('active');
+			
+			target = $(this).attr('href');
+			if(target =='#buying' || target == '#selling'){
+				$('.bl-module-v2').not(target).hide();
+				$(target).fadeIn(400);
+				$("html, body").animate({ scrollTop: 0 }, 500);
+			} else {
+				$('.context-tab-content > div').not(target).hide();
+				$(target).fadeIn(500);
+				$("html, body").animate({ scrollTop: 0 }, 500);
+			}
+			
+		});
+
+		$(".func-share").click(function(){
+			event.stopPropagation();
+			$(".feature-share-list").toggleClass("is-active");
+		});

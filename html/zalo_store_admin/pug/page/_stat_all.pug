@@ -1,0 +1,117 @@
+block home
+
+- var table = []
+- table.push({"class":""})
+- table.push({"class":""})
+- table.push({"class":""})
+- table.push({"class":""})
+- table.push({"class":""})
+- table.push({"class":""})
+
+.header-intro.d-flex.align-items-center.mb-3
+	nav(aria-label="breadcrumb")
+		ol.breadcrumb.mb-0
+			li.breadcrumb-item.active(aria-current="page") Tổng quan
+	.d-flex.align-items-center.ml-auto.mr-2
+		.dropdown
+			a.btn.btn-default.btn--m.dropdown-toggle(href="#!" role="button" id="dropdown-table" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") 7 ngày trước
+			.dropdown-menu.dropdown-menu-right(aria-labelledby="dropdown-table")
+				ul
+					li
+						a(href="#!") 30 ngày trước
+					li.is-checked
+						a(href="#!") Tháng trước
+					li
+						a(href="#!") Tháng này
+		.form-group.ml-2.mb-0
+			.input-group(style="width:250px")
+				.input-group-append
+					span.input-group-ico
+						i.icz.icz-fill-calendar
+				input.form-control(type="text" name="daterange" value="01/01/2018 - 01/15/2018" autocomplete="off")
+		
+
+form
+	.container-fluid
+		.row
+			.col-4
+				.bl-module
+					.group-filter.d-flex.align-items-center.mb-4
+						ul
+							li.w-100
+								h4.mb-1 Lượt xem sản phẩm
+								p
+									strong 256
+									small lượt
+						.ml-auto.mr-3
+							a.btn.btn-default.btn--s(href="stat_store.html") Chi tiết
+					.chart-container
+						img.d-block.ml-auto.mr-auto(src="images/img_chart1.png" alt=page)
+			.col-4
+				.bl-module
+					.group-filter.d-flex.align-items-center.mb-4
+						ul
+							li.w-100
+								h4.mb-1 Lượt mua hàng
+								p
+									strong 256
+									small lượt
+						.ml-auto.mr-3
+							a.btn.btn-default.btn--s(href="stat_order.html") Chi tiết
+					.chart-container
+						img.d-block.ml-auto.mr-auto(src="images/img_chart1.png" alt=page)
+			.col-4
+				.bl-module
+					.group-filter.d-flex.align-items-center.mb-4
+						ul
+							li.w-100
+								h4.mb-1 Tỉ lệ chuyển đổi
+								p.color-error
+									strong 3.2%
+						.ml-auto.mr-3
+							a.btn.btn-default.btn--s(href="stat_store.html") Chi tiết
+					.chart-container
+						img.d-block.ml-auto.mr-auto(src="images/img_chart1.png" alt=page)
+			.col-4
+				.bl-module
+					.group-filter.d-flex.align-items-center.mb-4
+						ul
+							li.w-100
+								h4.mb-1 Lượt đánh giá của ng. mua
+								p
+									strong 500
+						.ml-auto.mr-3
+							a.btn.btn-default.btn--s(href="#!") Chi tiết
+					.chart-container
+						img.d-block.ml-auto.mr-auto(src="images/img_chart1.png" alt=page)
+			.col-4
+				.bl-module
+					.group-filter.d-flex.align-items-center.mb-4
+						ul
+							li.w-100
+								h4.mb-1 Doanh thu
+								p
+									strong 5.000.000
+						.ml-auto.mr-3
+							a.btn.btn-default.btn--s(href="#!") Chi tiết
+					.chart-container
+						img.d-block.ml-auto.mr-auto(src="images/img_chart1.png" alt=page)
+			.col-4
+				.bl-module
+					.group-filter.d-flex.align-items-center.mb-4
+						ul
+							li.w-100
+								h4.mb-1 Lượt tương tác
+								p.color-success
+									strong 0.5%
+						.ml-auto.mr-3
+							a.btn.btn-default.btn--s(href="#!") Chi tiết
+					.chart-container
+						img.d-block.ml-auto.mr-auto(src="images/img_chart1.png" alt=page)
+
+
+
+
+
+
+

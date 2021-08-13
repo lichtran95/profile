@@ -1,0 +1,207 @@
+block home
+
+- var stores = []
+- stores.push({"name":"Bún Mọc Bà Bưởi"})
+- stores.push({"name":"Marukame Udon"})
+- stores.push({"name":"Aeon Mall"})
+
+- var product = []
+- product.push({"class":"","name":"Vòng Đeo Tay Thông Minh Theo Dõi Vận Động Xiaomi Mi Band 3 - Hàng Chính Hãng"})
+- product.push({"class":"","name":"Tivi LED Sony"})
+- product.push({"class":"","name":"Tivi LED Sony 32 inch KDL-32R300E"})
+
+.landing-container
+	.bl-module.module-search.is-transparent.is-first
+		.default-form
+			.form-row.has-func-right.has-func-search
+				.d-flex.align-items-center.w-100
+					a.func-home(href="index.html")
+						i.icn.icn-home.color-light
+					.input-wrap
+						input(type="text" placeholder="11.11 Độc thân" value="")
+						a.func-reset(href="#!")
+							i.icn.icn-circle-remove
+						a.func-search(href="#!")
+							i.icn.icn-search
+					a.func-share(href="#!")
+						i.icn.icn-share.color-light
+	.header-landing
+		img(src="images/upload/header_landing.png")
+	.bl-module.module-stores.is-transparent.m-bottom-3
+		.heading
+			span.fs--xl.fw-bold.color-light.text-truncate Featured Brand
+		.context-stores-banner
+			ul
+				each storesItem in stores
+					li
+						a.item-stores-banner
+							span.img(style="background-image:url(http://via.placeholder.com/400x200)")
+	.bl-module.module-grid-list.is-transparent.m-bottom-3
+		.heading-landing(style="background-image:url(http://via.placeholder.com/960x218)")
+			.position-absolute
+				h2.color-light.fs--xl.fw-bold.text-truncate Quà tặng cho người thân yêu tặng cho người thân yêu
+				p.color-light.fs--m.text-truncate Chỉ tặng cho người thân yêu tặng cho người thân yêu cho người thân yêu
+		.context-landing
+			ul.product-list.is-column-lite.is-lite
+				li
+					.item-product
+						span.img-loader
+				each productItem in product
+					li(class=`${productItem.class}`)
+						a.item-product(href="product_detail.html")
+							span.img-product(style="background-image:url(http://via.placeholder.com/240x240)")
+								.label-discount
+									span.color-light.fs--m.fw-bold 20%
+								.label-price
+									span.color-light.fs--m.fw-bold 200.000đ
+	.bl-module.module-grid-list.is-transparent.m-bottom-3
+		.heading-landing.is-otr(style="background-image:url(http://via.placeholder.com/640x220)")
+			.position-absolute
+				h2.color-light.fs--xl.fw-bold.text-truncate Quà tặng cho người thân yêu tặng cho người thân yêu
+				p.color-light.fs--m.text-truncate Chỉ tặng cho người thân yêu tặng cho người thân yêu cho người thân yêu
+		ul.promoted-list
+			li
+				a(href="#!")
+					span.img-product(style="background-image:url(http://via.placeholder.com/240x240)")
+			li
+				a(href="#!")
+					span.img-product(style="background-image:url(http://via.placeholder.com/240x240)")
+			li
+				a(href="#!")
+					span.img-product(style="background-image:url(http://via.placeholder.com/240x240)")
+	.bl-module.module-grid-list.is-transparent.m-bottom-3
+		.heading-landing.is-otr(style="background-image:url(http://via.placeholder.com/640x220)")
+			.position-absolute
+				h2.color-light.fs--xl.fw-bold.text-truncate Quà tặng cho người thân yêu tặng cho người thân yêu
+				p.color-light.fs--m.text-truncate Chỉ tặng cho người thân yêu tặng cho người thân yêu cho người thân yêu
+		ul.promoted-list
+			li
+				a(href="#!")
+					span.img-product(style="background-image:url(http://via.placeholder.com/240x240)")
+			li
+				a(href="#!")
+					span.img-product(style="background-image:url(http://via.placeholder.com/240x240)")
+			li
+				a(href="#!")
+					span.img-product(style="background-image:url(http://via.placeholder.com/240x240)")
+	.bl-module.module-grid-list.is-transparent.m-bottom-3
+		.heading-landing(style="background-image:url(http://via.placeholder.com/640x150)")
+			.position-absolute
+				h2.color-light.fs--xl.fw-bold.text-truncate Quà tặng cho người thân yêu tặng cho người thân yêu
+				p.color-light.fs--m.text-truncate Chỉ tặng cho người thân yêu tặng cho người thân yêu cho người thân yêu
+		.context-landing
+			ul.product-list.is-column-lite
+				li
+					.item-product
+						span.img-loader
+				each productItem in product
+					li(class=`${productItem.class}`)
+						a.item-product(href="product_detail.html")
+							span.img-product(style="background-image:url(http://via.placeholder.com/240x240)")
+								.label-discount
+									span.color-light.fs--m.fw-bold 20%
+								.label-price
+									span.color-light.fs--m.fw-bold 200.000đ
+	.bl-module.module-grid-list.is-transparent.m-bottom-3
+		.heading-landing(style="background-image:url(http://via.placeholder.com/640x150)")
+			.position-absolute
+				h2.color-light.fs--xl.fw-bold.text-truncate Quà tặng cho người thân yêu tặng cho người thân yêu
+				p.color-light.fs--m.text-truncate Chỉ tặng cho người thân yêu tặng cho người thân yêu cho người thân yêu
+		.context-landing
+			ul.product-list.is-column-lite
+				li
+					.item-product
+						span.img-loader
+				each productItem in product
+					li(class=`${productItem.class}`)
+						a.item-product(href="product_detail.html")
+							span.img-product(style="background-image:url(http://via.placeholder.com/240x240)")
+								.label-discount
+									span.color-light.fs--m.fw-bold 20%
+								.label-price
+									span.color-light.fs--m.fw-bold 200.000đ
+	.bl-module.module-grid-list.is-transparent.m-bottom-3
+		.heading-landing.is-otr(style="background-image:url(http://via.placeholder.com/640x220)")
+			.position-absolute
+				h2.color-light.fs--xl.fw-bold.text-truncate Quà tặng cho người thân yêu tặng cho người thân yêu
+				p.color-light.fs--m.text-truncate Chỉ tặng cho người thân yêu tặng cho người thân yêu cho người thân yêu
+		ul.promoted-list
+			li
+				a(href="#!")
+					span.img-product(style="background-image:url(http://via.placeholder.com/240x240)")
+			li
+				a(href="#!")
+					span.img-product(style="background-image:url(http://via.placeholder.com/240x240)")
+			li
+				a(href="#!")
+					span.img-product(style="background-image:url(http://via.placeholder.com/240x240)")
+	.bl-module.module-grid-list.is-transparent.m-bottom-3
+		.heading-landing(style="background-image:url(http://via.placeholder.com/640x150)")
+			.position-absolute
+				h2.color-light.fs--xl.fw-bold.text-truncate Quà tặng cho người thân yêu tặng cho người thân yêu
+				p.color-light.fs--m.text-truncate Chỉ tặng cho người thân yêu tặng cho người thân yêu cho người thân yêu
+		.context-landing
+			ul.product-list.is-column-lite.is-lite
+				li
+					.item-product
+						span.img-loader
+				each productItem in product
+					li(class=`${productItem.class}`)
+						a.item-product(href="product_detail.html")
+							span.img-product(style="background-image:url(http://via.placeholder.com/240x240)")
+								.label-discount
+									span.color-light.fs--m.fw-bold 20%
+								.label-price
+									span.color-light.fs--m.fw-bold 200.000đ
+	.bl-module.module-tabs
+		ul
+			li.tab.active
+				a.fs--l(href="#d0") Dành cho bạn cho bạn cho bạn cho bạn
+			li.tab
+				a.fs--l(href="#d1") Đồ điện tử
+			li.tab
+				a.fs--l(href="#d2") Đồ thời trang
+			li.tab
+				a.fs--l(href="#d3") Đồ gia dụng
+
+	.tab-content.clearfix
+		#d0
+			.bl-module.module-grid-list
+				ul.product-list.is-column
+					li
+						.item-product
+							span.img-loader
+							.desc-loader
+								span
+								span
+					each productItem in product
+						li(class=`${productItem.class}`)
+							a.item-product(href="product_detail.html")
+								span.img-product(style="background-image:url(http://via.placeholder.com/240x240)")
+									.label-discount
+										span.color-light.fs--m.fw-bold 20%
+								.desc
+									h2.product-title.color-base.fs--m.fw-normal.m-bottom-1 #{productItem.name}
+									p.color-base.fs--xl.fw-bold 500.000đ
+									p.color-grey.fs--m.line-through 41.000đ
+									.star-orders.d-flex.m-top-2
+										.rating-star.m-right-2
+											i.icn.icn-shape-star.active
+											i.icn.icn-shape-star.active
+											i.icn.icn-shape-star.active
+											i.icn.icn-shape-star.active
+											i.icn.icn-shape-star
+										span.num.color-base.fs--s (4.8)
+		#d1
+
+		#d2
+
+		#d3
+
+
+
+
+
+
+
+

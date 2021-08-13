@@ -1,0 +1,30 @@
+block home
+
+- var delivery = []
+- delivery.push({"class":"active"})
+- delivery.push({"class":""})
+- delivery.push({"class":""})
+
+.bl-module.module-cart
+	.heading-cart
+		span.fs--l.fw-medium Chọn đơn vị vận chuyển
+	.context-delivery
+		ul.delivery-list
+			each deliveryItem indelivery
+				li(class=`${deliveryItem.class}`)
+					.item-delivery
+						.desc
+							span.logo-partner(style="background-image:url(http://via.placeholder.com/200x100)")
+							h2.color-base.fs--l.fw-medium.m-bottom-1 Box Me
+							p.color-base.fs--m Dự kiến giao hàng: 1 - 2 ngày
+						.value.color-base.fs--xl.fw-bold 11.000đ
+		.btn-wrap
+			a.btn.btn-outline-primary.btn--m(href="cart_b2_confirm.html") Hủy bỏ
+			a.btn.btn-primary.btn--m(href="cart_b2_confirm.html") Cập nhật
+
+
+
+
+
+
+

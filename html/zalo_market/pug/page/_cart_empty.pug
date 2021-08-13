@@ -1,0 +1,45 @@
+block home
+
+- var product = []
+- product.push({"class":"","name":"Vòng Đeo Tay Thông Minh Theo Dõi Vận Động Xiaomi Mi Band 3 - Hàng Chính Hãng"})
+- product.push({"class":"","name":"Tivi LED Sony"})
+- product.push({"class":"","name":"Tivi LED Sony 32 inch KDL-32R300E"})
+
+.bl-module.module-empty.m-bottom-2
+	img(src="images/img_cart_empty.png" alt=page)
+	p.color-base.fs--l Bạn chưa có sản phẩm nào trong giỏ hàng
+
+.bl-module.module-grid-list
+	.heading
+		span.fs--l.fw-medium Có thể bạn thích
+	ul.product-list.is-column
+		li
+			.item-product
+				span.img-loader
+				.desc-loader
+					span
+					span
+		each productItem in product
+			li(class=`${productItem.class}`)
+				a.item-product(href="product_detail.html")
+					span.img-product(style="background-image:url(http://via.placeholder.com/240x240)")
+						.label-discount
+							span.color-light.fs--m.fw-bold 20%
+					.desc
+						h2.product-title.color-base.fs--m.fw-normal.m-bottom-1 #{productItem.name}
+						p.color-base.fs--xl.fw-bold 500.000đ
+						p.color-grey.fs--m.line-through 41.000đ
+						.star-orders.d-flex.m-top-2
+							.rating-star.m-right-2
+								i.icn.icn-shape-star.active
+								i.icn.icn-shape-star.active
+								i.icn.icn-shape-star.active
+								i.icn.icn-shape-star.active
+								i.icn.icn-shape-star
+							span.num.color-base.fs--s (4.8)
+
+
+
+
+
+

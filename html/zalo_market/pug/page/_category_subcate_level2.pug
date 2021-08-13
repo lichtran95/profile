@@ -1,0 +1,184 @@
+block home
+
+- var product = []
+- product.push({"class":"","name":"Vòng Đeo Tay Thông Minh Theo Dõi Vận Động Xiaomi Mi Band 3 - Hàng Chính Hãng"})
+- product.push({"class":"","name":"Tivi LED Sony"})
+- product.push({"class":"","name":"Tivi LED Sony 32 inch KDL-32R300E"})
+
+- var subcate = []
+- subcate.push({"class":"","name":"Điện thoại di động"})
+- subcate.push({"class":"","name":"Điện thoại di động"})
+- subcate.push({"class":"","name":"Điện thoại di động"})
+- subcate.push({"class":"","name":"Điện thoại di động"})
+- subcate.push({"class":"","name":"Điện thoại di động"})
+
+- var brand = []
+- brand.push({"class":""})
+- brand.push({"class":""})
+- brand.push({"class":""})
+- brand.push({"class":""})
+- brand.push({"class":""})
+
+.bl-module.module-search
+	.default-form
+		.form-row.has-func-right.has-func-search
+			.d-flex.align-items-center.w-100
+				.input-wrap
+					input(type="text" placeholder="11.11 Độc thân" value="")
+					a.func-reset(href="#!")
+						i.icn.icn-circle-remove
+					a.func-search(href="#!")
+						i.icn.icn-search
+				a.func-share(href="#!")
+					i.icn.icn-share
+
+.bl-module.module-category.is-mt-gutter.m-bottom-3
+	.subcate-list
+		ul
+			each subcateItem in subcate
+				li(class=`${subcateItem.class}`)
+					a.item-subcate(href="category_subcate_level3.html")
+						span.img-subcate(style="background-image:url(http://via.placeholder.com/240x240)")
+						h2.color-base.fs--s.fw-normal.text-center
+							span #{subcateItem.name}
+
+.bl-module.module-filter
+	span.product-total.color-base.fs--l 19 sản phẩm
+	.func-wrap
+		a.func-show
+			i.icn.icn-grid
+			i.icn.icn-list
+		a.func-filter.active(href="javascript:void(0);" data-toggle="modal" data-target="#modal-filter")
+			i.icn.icn-filter
+			span.color-base.fs--l Bộ lọc
+
+
+.bl-module.module-grid-list
+	ul.tag-list
+		li
+			a.item-tag(href="#!")
+				span Cửa hàng 
+				.func-remove
+					i.icn.icn-circle-remove
+		li
+			a.item-tag(href="#!")
+				span Cá nhân
+				.func-remove
+					i.icn.icn-circle-remove
+		li
+			a.item-tag(href="#!")
+				span Quận 2 
+				.func-remove
+					i.icn.icn-circle-remove
+		li
+			a.item-tag(href="#!")
+				span Quận 10
+				.func-remove
+					i.icn.icn-circle-remove
+		li
+			a.item-tag(href="#!")
+				span Cửa hàng 
+				.func-remove
+					i.icn.icn-circle-remove
+		li
+			a.item-tag(href="#!")
+				span Cửa hàng 
+				.func-remove
+					i.icn.icn-circle-remove
+	ul.product-list.is-column
+		li
+			.item-product
+				span.img-loader
+				.desc-loader
+					span
+					span
+		each productItem in product
+			li(class=`${productItem.class}`)
+				a.item-product(href="product_detail.html")
+					span.img-product(style="background-image:url(http://via.placeholder.com/240x240)")
+						.label-discount
+							span.color-light.fs--m.fw-bold 20%
+						span.tag-filter
+							i.icn.icn-bold-shop
+					.desc.has-tag-filter
+						h2.product-title.color-base.fs--m.fw-normal.m-bottom-1 #{productItem.name}
+						p.color-base.fs--xl.fw-bold 500.000đ
+						p.color-grey.fs--m.line-through 41.000đ
+						.star-orders.m-top-2
+							.rating-star.m-right-2
+								i.icn.icn-shape-star.active
+								i.icn.icn-shape-star.active
+								i.icn.icn-shape-star.active
+								i.icn.icn-shape-star.active
+								i.icn.icn-shape-star
+							span.num.color-base.fs--s (4.8)
+						span.tag-filter.is-grid
+							i.icn.icn-bold-single
+							small 1 ngày trước - Tp. Vũng Tàu
+
+//- popup
+.bl-popup
+	.popup-container.has-radius#popup-tinhthanh
+		.bl-popup-heading
+			span.fs--l.fw-medium Chọn Tỉnh/Thành Phố
+		.bl-popup-context
+			.default-form
+				.form-row.flex-wrap
+					.checkbox-list.w-100
+						ul
+							li
+								.input-group
+									input(id="tt1" name="optiona4" type="radio")
+									label.fs--l(for="tt1") Tp Hồ Chí Minh
+							li
+								.input-group
+									input(id="tt2" name="optiona4" type="radio")
+									label.fs--l(for="tt2") Hà Nội
+							li
+								.input-group
+									input(id="tt3" name="optiona4" type="radio")
+									label.fs--l(for="tt3") Hải Phòng
+							li
+								.input-group
+									input(id="tt4" name="optiona4" type="radio")
+									label.fs--l(for="tt4") Đà Nẵng
+							li
+								.input-group
+									input(id="tt5" name="optiona4" type="radio")
+									label.fs--l(for="tt5") Cần Thơ
+						
+		.bl-popup-footer
+			.button-wrap.d-flex.justify-content-between.align-items-center
+					a.btn.btn-primary.btn--m.w-100.func-close-popup(href="#!") Áp dụng
+	.popup-container.has-radius#popup-quanhuyen
+		.bl-popup-heading
+			span.fs--l.fw-medium Chọn Quận/Huyện
+		.bl-popup-context
+			.default-form
+				.form-row.flex-wrap
+					.checkbox-list.w-100
+						ul
+							li
+								.input-group
+									input(id="optiona1" name="optiona1" type="checkbox")
+									label.fs--l(for="optiona1") Tất cả Quận/Huyện
+							li
+								.input-group
+									input(id="optiona2" name="optiona2" type="checkbox")
+									label.fs--l(for="optiona2") Quận 1
+							li
+								.input-group
+									input(id="optiona3" name="optiona3" type="checkbox")
+									label.fs--l(for="optiona3") Quận 2
+							li
+								.input-group
+									input(id="optiona4" name="optiona4" type="checkbox")
+									label.fs--l(for="optiona4") Quận 3
+		.bl-popup-footer
+			.button-wrap.d-flex.justify-content-between.align-items-center
+					a.btn.btn-primary.btn--m.w-100.func-close-popup(href="#!") Áp dụng
+
+
+
+
+

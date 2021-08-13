@@ -1,0 +1,36 @@
+include config.pug
+block setting
+	- var dockbar = false
+	- var modal = false
+
+doctype
+html(lang="en")
+	head
+		block head
+
+	//- add class for wrapper
+	- var bodyC = [];
+	- var layoutClasses= [];
+	- var bodyClasses = [];
+	- var dockbarClasses = [];
+	block pages
+    
+	body(class=`${bodyC}`)
+		if layout
+			div(class=`${layoutClasses}`)
+				block layout
+				div(class=`${bodyClasses}`)
+					block body
+				if dockbar
+					div(class=`${dockbarClasses}`)
+						block dockbar
+
+		if modal
+			block modal
+
+		// Include Plugin
+		block javaScripts
+			include javascript.pug
+			
+		block javaScripts extend
+			

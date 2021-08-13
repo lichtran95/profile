@@ -1,0 +1,130 @@
+block Body
+
+.header
+	.header-container
+		a(href="javascript:history.back()")
+			i.icn.icn-small-remove
+			span Cập nhật thông tin
+	.layer
+.body
+	.section-terms-form
+		p Các thông tin sau được dùng để xuất hóa đơn nếu bạn có yêu cầu. Bạn có thể bỏ qua bước này và cập nhật sau.
+		p Tất cả các thông tin sau là bắt buộc. Vui lòng kiểm tra thông tin chính xác trước khi gửi vì hóa đơn không thể xuất lại. Tất cả thông tin nhập bằng Tiếng Việt có dấu và không viết tắt
+		hr.line.is-outside.mb-3
+		.field
+			label.label Bạn là
+			.buttons.has-addons.is-multi.is-multi-2
+				button.button.is-primary.b-nav-tab(href="#tab1" data-tab="tab1") Khách hàng cá nhân
+				button.button.is-primary.is-outlined.b-nav-tab(href="#tab2" data-tab="tab2") Doanh nghiệp
+		#tab1.b-tab
+			.field
+				label.label.is-small Họ tên
+				.control.has-icons-right.is-danger
+					input.input.is-large(type="text" placeholder="Nhập họ tên")
+					span.icon.is-small.is-right
+						i.icn.icn-bold-warning
+				p.help.has-text-danger Nội dung báo lỗi
+			.field
+				label.label.is-small Ngành nghề
+				.control
+					span.select.is-large.is-fullwidth.is-danger
+						select
+							option(selected disabled) Chọn ngành nghề
+							option Thiết bị điện tử & phần mềm
+				p.help.has-text-danger Nội dung báo lỗi
+			.field
+				label.label.is-small Email
+				.control.has-icons-right.is-danger
+					input.input.is-large(type="text" placeholder="email@example.co")
+					span.icon.is-small.is-right
+						i.icn.icn-bold-warning
+				p.help.has-text-danger Nội dung báo lỗi
+			.field
+				label.label.is-small Số điện thoại
+				.control.has-icons-right.is-danger
+					input.input.is-large(type="text" placeholder="0809999999")
+					span.icon.is-small.is-right
+						i.icn.icn-bold-warning
+				p.help.has-text-danger Nội dung báo lỗi
+			.field
+				label.label.is-small Mã số thuế
+				.control.has-icons-right.is-danger
+					input.input.is-large(type="text" placeholder="000")
+					span.icon.is-small.is-right
+						i.icn.icn-bold-warning
+				p.help.has-text-danger Nội dung báo lỗi
+			.field
+				label.label.is-small Điạ chỉ
+				.control
+					textarea.textarea.is-large.is-warning(type="textarea" placeholder="Nhập địa chỉ đầy đủ")
+				p.help.has-text-danger Nội dung báo lỗi
+				
+			.field
+				label.label.is-small Điạ chỉ nhận hóa đơn (không bắt buộc)
+				.control
+					textarea.textarea.is-large(type="textarea" placeholder="Nhập địa chỉ nhận hóa đơn")
+			hr.line.is-outside.mb-3
+		#tab2.b-tab
+			.field
+				label.label.is-small Họ tên
+				.control.has-icons-right.is-danger
+					input.input.is-large(type="text" placeholder="Nhập họ tên")
+					span.icon.is-small.is-right
+						i.icn.icn-bold-warning
+				p.help.has-text-danger Nội dung báo lỗi
+			.field
+				label.label.is-small Email
+				.control.has-icons-right.is-danger
+					input.input.is-large(type="text" placeholder="email@example.co")
+					span.icon.is-small.is-right
+						i.icn.icn-bold-warning
+				p.help.has-text-danger Nội dung báo lỗi
+			.field
+				label.label.is-small Số điện thoại
+				.control.has-icons-right.is-danger
+					input.input.is-large(type="text" placeholder="0809999999")
+					span.icon.is-small.is-right
+						i.icn.icn-bold-warning
+				p.help.has-text-danger Nội dung báo lỗi
+			hr.line.mb-3
+			.field
+				label.label.is-small Tên đơn vị
+				.control.has-icons-right.is-danger
+					input.input.is-large(type="text" placeholder="Nhập tên đơn vị")
+					span.icon.is-small.is-right
+						i.icn.icn-bold-warning
+				p.help.has-text-danger Nội dung báo lỗi
+			.field
+				label.label.is-small Ngành nghề
+				.control.has-icons-right
+					span.select.is-large.is-fullwidth.is-danger
+						select
+							option(selected disabled) Chọn ngành nghề
+							option Thiết bị điện tử & phần mềm
+				p.help.has-text-danger Nội dung báo lỗi
+			.field
+				label.label.is-small Người đại diện
+				.control.has-icons-right.is-danger
+					input.input.is-large(type="text" placeholder="Nhập tên người đại diện")
+					span.icon.is-small.is-right
+						i.icn.icn-bold-warning
+				p.help.has-text-danger Nội dung báo lỗi
+			.field
+				label.label.is-small Mã số thuế
+				.control.has-icons-right.is-danger
+					input.input.is-large(type="text" placeholder="000")
+					span.icon.is-small.is-right
+						i.icn.icn-bold-warning
+				p.help.has-text-danger Nội dung báo lỗi
+			.field
+				label.label.is-small Điạ chỉ
+				.control.has-icons-right.is-danger
+					textarea.textarea.is-large(type="textarea" placeholder="Nhập địa chỉ đầy đủ")
+					
+			.field
+				label.label.is-small Điạ chỉ nhận hóa đơn (không bắt buộc)
+				.control.has-icons-right.is-danger
+					textarea.textarea.is-large(type="textarea" placeholder="Nhập địa chỉ nhận hóa đơn")
+			hr.line.is-outside.mb-3
+		.bottom
+			button.button.is-primary.is-large.is-fullwidth(onclick="location.href='terms.html'") Tiếp tục

@@ -1,0 +1,123 @@
+block home
+
+- var table = []
+- table.push({"class":""})
+- table.push({"class":""})
+- table.push({"class":""})
+- table.push({"class":""})
+- table.push({"class":""})
+- table.push({"class":""})
+
+.header-intro.d-flex.align-items-center.mb-3
+	nav(aria-label="breadcrumb")
+		ol.breadcrumb.mb-0
+			li.breadcrumb-item.active(aria-current="page") Đánh giá sản phẩm
+
+form
+	.container-fluid
+		.row
+			.col-12
+				.bl-module
+					ul.nav.nav-tabs.mb-3(id="myTab" role="tablist")
+						li.nav-item
+							a.nav-link.active(id="tab1-tab" data-toggle="tab" href="#tab1" role="tab" aria-controls="tab1" aria-selected="true") Tất cả
+						li.nav-item
+							a.nav-link(id="tab2-tab" data-toggle="tab" href="#tab2" role="tab" aria-controls="tab2" aria-selected="false") 5 <i class="icz icz-shape-star"></i> (100)
+						li.nav-item
+							a.nav-link(id="tab3-tab" data-toggle="tab" href="#tab3" role="tab" aria-controls="tab3" aria-selected="false") 4 <i class="icz icz-shape-star"></i> (100)
+						li.nav-item
+							a.nav-link(id="tab4-tab" data-toggle="tab" href="#tab4" role="tab" aria-controls="tab4" aria-selected="false") 3 <i class="icz icz-shape-star"></i> (100)
+						li.nav-item
+							a.nav-link(id="tab5-tab" data-toggle="tab" href="#tab5" role="tab" aria-controls="tab5" aria-selected="false") 2 <i class="icz icz-shape-star"></i> (100)
+						li.nav-item
+							a.nav-link(id="tab6-tab" data-toggle="tab" href="#tab6" role="tab" aria-controls="tab6" aria-selected="false") 1 <i class="icz icz-shape-star"></i> (100)
+					
+					.tab-content(id="myTabContent")
+						.tab-pane.fade.show.active(id="tab1" role="tabpanel" aria-labelledby="tab1")
+							.d-flex.align-items-center.mb-3
+								p.color-grey.fs--m Hiển thị <strong class="color-base">0/0</strong> trong 0 kết quả tìm thấy
+								.input-group.ml-auto(style="width:300px")
+									.input-group-append
+										span.input-group-ico
+											i.icz.icz-search
+									input.form-control(type='text' placeholder='SKU/ Tên sản phẩm')
+							.table-responsive
+								table.table.mb-0
+									thead.thead-light
+										tr
+											th.align-middle(scope='col' style="width:40px") #
+											th.align-middle(scope='col' style="width:45%") Đánh giá sản phẩm
+											th.align-middle(scope='col' style="width:45%") Thông tin sản phẩm
+									tbody
+										tr
+											td(colspan="3")
+												.text-center Không có kết quả cần tìm
+										each tableItem in table
+											tr
+												td 1
+												td
+													.d-flex.align-items-center.flex-wrap.mb-2
+														.star-wrap.mr-1
+															i.icz.icz-fill-star
+															i.icz.icz-shape-star
+															i.icz.icz-shape-star
+															i.icz.icz-shape-star
+															i.icz.icz-shape-star
+														strong.mr-1 Thaontn
+														span DD/MM/YYYY HH:MM
+													p.fs--l Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+												td
+													.d-flex.justify-content-start.align-items-start
+														img.img-product.img--s.mr-2(src="https://via.placeholder.com/200x200" alt=page)
+														div
+															a.link-product.d-block.mb-2(href="#!") Apple Watch 4 44mm (GPS)
+															p.fs--m Size: M, L
+															p.fs--m Màu: Đỏ, Xanh
+															p.fs--m 200.000 đ
+															p.fs--m
+																strong Product ID - SKU
+															.star-wrap.mr-1
+																i.icz.icz-fill-star
+																i.icz.icz-shape-star
+																i.icz.icz-shape-star
+																i.icz.icz-shape-star
+																i.icz.icz-shape-star
+									tfoot.tfoot-light
+										tr
+											td(colspan="3")
+												.d-flex.align-items-center
+													.d-flex.align-items-center.mr-2
+														span.color-grey.flex-shrink-0.mr-2 Hiển thị
+														select.custom-select(style="")
+															option(selected value="1") 20
+															option(value="2") 30
+															option(value="3") 40
+															option(value="4") 50
+													.total-table
+														span.color-grey 1-10 of 100
+													nav.ml-auto
+														ul.pagination.pagination-sm.justify-content-end
+															li.page-item.disabled
+																a.page-link(href='#', tabindex='-1')
+																	i.icz.icz-left
+															li.page-item.active
+																a.page-link(href='#') 1
+															li.page-item
+																a.page-link(href='#') 2
+															li.page-item
+																a.page-link(href='#') 3
+															li.page-item
+																a.page-link(href='#')
+																	i.icz.icz-right
+						.tab-pane.fade(id="tab2" role="tabpanel" aria-labelledby="tab2")
+							p 222
+						.tab-pane.fade(id="tab3" role="tabpanel" aria-labelledby="tab3")
+							p 333
+
+
+
+
+
+
+
+

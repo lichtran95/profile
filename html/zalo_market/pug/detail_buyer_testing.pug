@@ -1,0 +1,118 @@
+extends layout.pug
+
+//- Setting
+block setting
+	- var layout = true
+	- var dockbar = false
+	- var modal = true
+	- var swiperjs = true
+	- var fancyboxjs = true
+
+block head
+	include head.pug
+
+block pages
+	- bodyC.push("")
+	- layoutClasses.push("zMarket-layout")
+	- bodyClasses.push("page-content")
+	- dockbarClasses.push("dockbar")
+	
+//- Add Body
+block body
+	include page/_detail_buyer_testing.pug
+
+//- Add Footer
+block dockbar
+
+//- Add Modal
+block modal
+	include page/modal_edit_action.pug
+	include page/modal_edit_action1.pug
+	include page/modal_edit_action2.pug
+
+block javaScripts extend
+	script.
+		$(".func-open-toast").click(function(){
+			$(".module-toast").addClass("is-show");
+			setTimeout(function () {
+				$(".module-toast").removeClass("is-show")
+			}, 1500);
+		})
+		$(".func-share").click(function(){
+			event.stopPropagation();
+			$(".feature-share-list").toggleClass("is-active");
+		});
+		$(".page-content").click(function(){
+			$(".feature-share-list").removeClass("is-active");
+		});
+		let desc_buyer = document.getElementsByClassName('desc-buyer')[0]
+		//- document.getElementById('input-message').onfocus = () => {
+		//- 		$("body").addClass("overlay-open");
+		//- 		$("#chatbox-has-popup").addClass("has-popup-chat")
+		//- 		$("#popup-suggest-message").addClass("is-show");
+		//- }
+		//- document.getElementById('input-message').onblur = () => {
+		//- 		$("body").removeClass("overlay-open");
+		//- 		$("#chatbox-has-popup").removeClass("has-popup-chat")
+		//- 		$(".popup-container").removeClass("is-show");
+		//- }
+		//- $(window).scroll(function() {
+		//- 	if($(window).scrollTop() + $(window).height() > $(document).height() - 100) {
+		//- 		if($('#chatbox-has-popup').hasClass('scroll-to-bottom')){
+
+		//- 		} else {
+		//- 			$('#input-message').trigger('focus')
+		//- 			$('#chatbox-has-popup').addClass('scroll-to-bottom')
+		//- 		}
+		//- 	}
+		//- 	let button_see_more = document.getElementById('see-more-detail')
+		//- 	let top_of_see_more = button_see_more.getBoundingClientRect().top
+		//- 	if(top_of_see_more <= 600){
+		//- 		if($('#chatbox-has-popup').hasClass('scroll-to-bottom')){
+
+		//- 		} else {
+		//- 			$('#input-message').trigger('focus')
+		//- 			$('#chatbox-has-popup').addClass('scroll-to-bottom')
+		//- 		}
+		//- 	}
+		//- });
+		let chatbox_popup = document.getElementById('chatbox-has-popup')
+		let send_seller = document.getElementById('has-contact-seller')
+		let temp_block = document.getElementsByClassName('temp-block-spacing')[0]
+		let btn_send_mess = chatbox_popup.getElementsByClassName('button-send-mess')[0]
+		let inputMess = chatbox_popup.getElementsByTagName('INPUT')[0]
+
+		window.onscroll = value => {
+			if(value){
+				if(chatbox_popup.classList.contains('sent-seller')){
+				} else {
+					chatbox_popup.style.bottom = 0
+					temp_block.classList.add('chat-box-ab')
+				}
+			}
+		}
+
+		btn_send_mess.onclick = () => {
+			if(inputMess.value){
+				temp_block.classList.remove('chat-box-ab')
+				chatbox_popup.classList.add('sent-seller')
+				chatbox_popup.style.bottom = '-999px'
+				send_seller.style.bottom = 0
+			} else {
+				alert('Vui lòng nhập tin nhắn')
+			}
+			
+		}
+
+		$('[data-fancybox="gallery"]').fancybox({
+			beforeShow : function( instance, current ) {
+				document.getElementsByTagName('BODY')[0].classList.add('large-zindex')
+				document.getElementsByClassName('bl-popup')[0].style.zIndex = 99995;
+			},
+			afterClose : function( instance, current ) {
+				$('#chatbox-has-popup').removeClass('is-opacity')
+				document.getElementsByTagName('BODY')[0].classList.remove('large-zindex')
+				document.getElementsByClassName('bl-popup')[0].style.zIndex = 1050;
+			}
+		});
+		
