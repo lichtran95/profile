@@ -1,0 +1,75 @@
+.module-loadingPage {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  position: relative;
+  background-color: #4258C3;
+}
+.module-loadingPage:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 1;
+  background-color: rgba(54, 69, 178, 0.62);
+}
+.module-loadingPage .context {
+  position: relative;
+  z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0 32px;
+  height: 100%;
+}
+.module-loadingPage .context .content {
+  color: #fff;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+  text-align: center;
+}
+.module-loadingPage .context .processBar {
+  width: 100%;
+  margin-bottom: 24px;
+}
+.module-loadingPage .context .processBar .container {
+  width: 100%;
+  border-radius: 16px;
+  height: 16px;
+  background-color: #fff;
+}
+.module-loadingPage .context .processBar .container #current {
+  border-radius: 16px;
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(242, 159, 57, 0.35)), to(#F29F39));
+  background-image: -o-linear-gradient(left, rgba(242, 159, 57, 0.35), #F29F39);
+  background-image: linear-gradient(to right, rgba(242, 159, 57, 0.35), #F29F39);
+  height: 100%;
+  position: relative;
+}
+.module-loadingPage .context .processBar .container #current .img {
+  position: absolute;
+  right: 0;
+  top: -4px;
+  width: 24px;
+  height: 24px;
+}
+.module-loadingPage .context .processBar .container #current .img img {
+  display: block;
+  width: 100%;
+  border: 1px solid #fff;
+  border-radius: 24px;
+}

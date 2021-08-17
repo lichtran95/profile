@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Zalo Fintech</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name="description" content="description here">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="author" content="Lam Nguyen">
+    <meta name="copyright" content="2018 Lam Nguyen">
+    <meta name="robots" content="index, follow">
+    <meta name="revisit-after" content="7 days">
+    <meta property="og:url" content="">
+    <meta property="og:title" content="">
+    <meta property="og:image" content="">
+    <!--link(rel="icon" type="image/ico" href="images/fav.ico")-->
+    <link href="css/layout.css" rel="stylesheet" type="text/css">
+    <link href="css/loading_page.css" rel="stylesheet" type="text/css">
+    <style></style>
+  </head>
+  <body class="is-bg-white">
+    <div class="zFintech-layout">
+      <div class="page-content">
+        <div class="module-loadingPage" style="background-image:url('images/bg_loading.png')">
+          <div class="context">
+            <div class="processBar">
+              <div class="container">
+                <div id="current" style="width:0">
+                  <div class="img"><img src="images/icn_fiza.png" alt=""></div>
+                </div>
+              </div>
+            </div>
+            <div class="content">
+              <p>Khám phá các sản phẩm Tài chính của <strong>Fiza</strong> Vui lòng chờ trong vài giây</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Include Plugin-->
+    <script src="js/jquery.min.js"></script>
+    <script>
+      $(document).ready(function(){
+      	var elem = document.getElementById("current");   
+      	var width = 1;
+      	var id = setInterval(frame, 15);
+      
+      	function frame() {
+       		if (width >= 100) {
+       		clearInterval(id);
+      		//-  window.location.href = "index_v2.html";
+       		} else {
+       		width++; 
+       		elem.style.width = width + '%'; 
+       		}
+       	}
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Zalo Fintech</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name="description" content="description here">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="author" content="Lam Nguyen">
+    <meta name="copyright" content="2018 Lam Nguyen">
+    <meta name="robots" content="index, follow">
+    <meta name="revisit-after" content="7 days">
+    <meta property="og:url" content="">
+    <meta property="og:title" content="">
+    <meta property="og:image" content="">
+    <!--link(rel="icon" type="image/ico" href="images/fav.ico")-->
+    <link href="css/layout.css" rel="stylesheet" type="text/css">
+    <style></style>
+  </head>
+  <body>
+    <div class="zFintech-layout">
+      <div class="page-content">
+        <div class="bl-module is-null is-rating-partner">
+          <div class="heading"><a class="func-back" href="javascript:history.back()"><i class="icn icn-small-left"></i></a>
+            <h2 class="color-base fs--l fw-medium">Thông báo điều khoản</h2>
+          </div>
+        </div>
+        <div class="bl-module module-notify-term">
+          <div class="context-notify-term">
+            <div class="notify-term-content">
+              <h2 class="mb-3">Điều khoản và điều kiện sử dụng tính năng “Tìm kiếm sản phẩm tài chính”</h2>
+              <p>“Tìm kiếm sản phẩm tài chính” là công cụ tin học phát triển bởi Zalo nhằm hỗ trợ các Tổ chức tín dụng được cấp phép hoạt động bởi Ngân hàng Nhà nước Việt Nam (“<strong>TCTD</strong>”) quảng bá sản phẩm tài chính tới người dùng cuối một cách nhanh chóng, dễ dàng và tiện lợi nhất (“<strong>Khách hàng</strong>”).</p>
+              <p>Bằng việc ấn vào nút “Đồng ý” dưới dây để bắt đầu sử dụng tính năng “Tìm kiếm sản phẩm tài chính”, Khách hàng xác nhận và đồng ý rằng:</p>
+              <ul class="default-list">
+                <li>Zalo chỉ cung cấp công cụ tin học để hỗ trợ Khách hàng tiếp cận với các sản phẩm tài chính cung cấp bởi TCTD. TCTD chịu trách nhiệm đưa ra các tiêu chí xét duyệt, phê duyệt hồ sơ, cấp tín dụng và thực hiện toàn bộ các quy trình liên quan tới hoạt động ngân hàng với Khách hàng.</li>
+                <li>Cho phép TCTD/Zalo lưu trữ, phân tích, xử lý một phần hoặc toàn bộ các dữ liệu do bạn cung cấp để có thể đưa ra được gợi ý về khoản vay/thẻ tín dụng hoặc các sản phẩm tài chính phù hợp với bạn theo các tiêu chí xác lập bởi TCTD,</li>
+                <li>Nếu Bạn không đồng ý với bất kỳ nội dung nào được quy định tại thỏa thuận này thì có quyền ngừng sử dụng bằng cách thoát khỏi tính năng “Tìm kiếm sản phẩm tài chính”.</li>
+              </ul>
+            </div>
+            <div class="notify-term-action is-fixed"><a class="btn btn--m btn-primary w-100 disabled" href="card_list.html">Đồng ý</a>
+              <!--p Bằng cách bấm nút "<strong>Đồng ý</strong>", quý khách cam kết đã đọc, hiểu và đồng ý với nội dung điều khoản trước khi đăng ký.-->
+            </div>
+            <div class="trans-bottom otr"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Include Plugin-->
+    <script src="js/jquery.min.js"></script>
+    <script>
+      $(document).ready(function(){
+      	heighWindow = $(window).height();
+      	heighContent = $(".module-notify-term").outerHeight();
+      	if(heighWindow > heighContent){
+      		$(".btn-primary").removeClass("disabled");
+      	}
+      	$(window).scroll(function() {
+      		if($(window).scrollTop() + $(window).height() > $(document).height() - 120 ) {
+      			$(".btn-primary").removeClass("disabled");
+      		}
+      	});
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Zalo Fintech</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name="description" content="description here">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="author" content="Lam Nguyen">
+    <meta name="copyright" content="2018 Lam Nguyen">
+    <meta name="robots" content="index, follow">
+    <meta name="revisit-after" content="7 days">
+    <meta property="og:url" content="">
+    <meta property="og:title" content="">
+    <meta property="og:image" content="">
+    <!--link(rel="icon" type="image/ico" href="images/fav.ico")-->
+    <link href="css/layout.css" rel="stylesheet" type="text/css">
+    <style></style>
+  </head>
+  <body>
+    <div class="zFintech-layout">
+      <div class="page-content">
+        <div class="bl-module module-register is-register-product">
+          <div class="heading"><span class="heading-banner" style="background-image:url(images/upload_v2/img_banner_shinhan.png)"></span><a class="func-close" href="#!"><i class="icn icn-small-remove"></i></a></div>
+          <div class="context-register">
+            <div class="title"><span class="fs--xl fw-bold color-base">Thông tin khoản vay</span></div>
+            <form>
+              <div class="form-group d-flex flex-wrap mb-1">
+                <div class="col-6 pl-0"><span class="label">Hạn mức vay</span><span class="value">300.000.000đ</span></div>
+                <div class="col-6 pl-0"><span class="label">Kỳ hạn vay tối đa</span><span class="value">12 tháng</span></div>
+                <div class="col-6 pl-0"><span class="label tooltip-lx">Lãi suất
+                    <div class="is-tooltip is-left"><i class="icn icn-bold-info"></i>
+                      <div class="content-tooltip">
+                        <p>Lãi suất hiển thị là lãi suất trên dư nợ giảm dần.</p><span class="func-close-tooltip">Tôi đã hiểu</span>
+                      </div>
+                    </div></span><span class="value">8%/năm</span></div>
+                <div class="col-6 pl-0"><span class="label tooltip-tht">Trả hàng tháng
+                    <div class="is-tooltip is-right"><i class="icn icn-bold-info"></i>
+                      <div class="content-tooltip">
+                        <p>Trả hàng tháng là kết quả tính toán chỉ mang tính chất tham khảo và có thể sai lệch nhỏ với kết quả tính toán thực tế.</p><span class="func-close-tooltip">Tôi đã hiểu</span>
+                      </div>
+                    </div></span><span class="value">9.000.000đ</span></div>
+              </div>
+            </form>
+            <hr class="line-spacing is-custom">
+            <div class="title"><span class="fs--xl fw-bold color-base">Thông tin người vay</span></div>
+            <form>
+              <div class="form-group">
+                <label class="d-block mb-1 color-base fs--s fw-medium" for="">Họ tên đầy đủ</label>
+                <input class="form-control" type="text" placeholder="Nhập họ tên đầy đủ" value="Nguyễn Văn Kha">
+              </div>
+              <div class="form-group">
+                <label class="d-block mb-1 color-base fs--s fw-medium" for="">Số CMND</label>
+                <input class="form-control" type="text" placeholder="Nhập số cmnd" value="285663622">
+              </div>
+              <div class="form-group">
+                <label class="d-block mb-1 color-base fs--s fw-medium" for="">Ngày sinh</label>
+                <div class="input-group has-ico align-items-center is-invalid">
+                  <input class="form-control js-date-picker" value="1 Sep 1990"><i class="icn icn-calendar-grid"></i>
+                </div>
+                <div class="invalid-feedback">lorem isum</div>
+              </div>
+              <div class="form-group">
+                <label class="d-block mb-1 color-base fs--s fw-medium" for="">Số điện thoại</label>
+                <input class="form-control" type="text" placeholder="Nhập số số điện thoại" value="0328391112">
+              </div>
+              <div class="form-group">
+                <label class="d-block mb-1 color-base fs--s fw-medium" for="">Email</label>
+                <input class="form-control" type="text" placeholder="Nhập địa chỉ email" value="nguyenvakha@gmail.com">
+              </div>
+              <div class="collapse">
+                <div class="input-upload-image mb-3"><span class="d-block mb-1 color-base fs--s fw-medium">Ảnh cá nhân <i>(Vui lòng chụp chính diện)</i></span>
+                  <ul class="image-list">
+                    <li>
+                      <div class="img-placeholder-wrap is-130">
+                        <div class="inputfile-container">
+                          <input class="inputfile" id="file1" type="file">
+                          <label class="uploaded" for="file1"><span class="ico-edit"><i class="icn icn-bold-pen"></i></span></label>
+                        </div>
+                        <div class="img-placeholder"></div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="input-upload-image mb-3 is-invalid"><span class="d-block mb-1 color-base fs--s fw-medium">Ảnh CMND</span>
+                  <ul class="image-list">
+                    <li>
+                      <div class="img-placeholder-wrap is-130">
+                        <div class="inputfile-container">
+                          <input class="inputfile" id="file2" type="file">
+                          <label for="file2">
+                            <div class="img-placeholder"></div>
+                          </label>
+                        </div>
+                      </div><span class="label-img-placeholder">Mặt trước</span>
+                    </li>
+                    <li>
+                      <div class="img-placeholder-wrap is-130">
+                        <div class="inputfile-container is-invalid">
+                          <input class="inputfile" id="file3" type="file">
+                          <label for="file3"></label>
+                        </div>
+                        <div class="img-placeholder"></div>
+                      </div><span class="label-img-placeholder">Mặt sau</span>
+                    </li>
+                  </ul>
+                  <div class="invalid-feedback">lorem isum</div>
+                </div>
+              </div>
+              <div class="button"><a class="btn btn-primary btn--m w-100" href="#!">Đăng ký ngay</a>
+                <p>Bằng việc nhấn vào nút “Đăng ký ngay”, tôi đồng ý với các <a href="#!" class="fw-medium func-open-policy">Điều khoản & Điều kiện.</a></p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bl-modal bl-modal-policy">
+      <div class="modal-container">
+        <div class="bl-modal-heading">
+          <div class="func-close-modal"><i class="icn icn-small-remove"></i></div><span>Điều khoản và Điều kiện</span>
+        </div>
+        <div class="bl-module module-modal">
+          <!-- Thông báo 1-->
+          <div class="desc-policy">
+            <p>(a) Tôi đồng ý và cho phép Zalo gửi thông tin tôi cung cấp trong mẫu đơn đăng ký thẻ tín dụng này đến Ngân hàng Citibank, N.A. - Chi nhánh TP. Hồ Chí Minh và Chi nhánh Hà Nội (gọi tắt là "Citibank") để nhằm hỗ trợ tôi mở thẻ tín dụng Citi đã chọn. Xem Điều khoản Riêng tư của Citibank <a class="color-link" href="#!">(tại đây).</a></p>
+            <p>(b) Tôi cho phép Citibank liên hệ tôi về đơn mở thẻ tín dụng Citi của tôi và giới thiệu cho tôi những sản phẩm và dịch vụ liên quan của Citibank thông qua email hoặc số điện thoại mà tôi cung cấp.</p>
+            <p>(c) Tôi cũng đồng ý rằng Citibank có thể thu thập thông tin về tôi hoặc chuyển thông tin tôi đã cung cấp cho trung tâm thông tin tín dụng để xử lý hồ sơ mở thẻ tín dụng Citi của tôi.</p>
+            <p>(d) Nếu tôi đủ điều kiện để nhận được quà tặng theo chương trình khuyến mãi (nếu có) của Zalo, tôi cho phép Citibank thông báo Zalo khi và chỉ khi đơn mở thẻ tín dụng Citi của tôi được duyệt thành công để Zalo có thể gửi trao quà tặng cho tôi.</p>
+            <p>f) Tôi đồng ý và cho phép Zalo được thu thập, sử dụng và tiết lộ thông tin tôi cung cấp trong mẫu đơn mở thẻ tín dụng theo Điều khoản Riêng tư của Zalo.</p>
+          </div>
+          <div class="text-center mt-4"><a class="btn btn-primary btn--m func-close-modal" href="#!">Đồng ý</a></div>
+        </div>
+      </div>
+    </div>
+    <!-- Include Plugin-->
+    <script src="js/jquery.min.js"></script>
+    <script>
+      $(".func-close-modal").click(function(){
+      	$("body").removeClass("overlay-open");
+      	$(".bl-modal").removeClass("is-show");
+      });
+      $(".func-open-policy").click(function(){
+      	$("body").addClass("overlay-open");
+      	$(".bl-modal-policy").addClass("is-show");
+      });
+      setTimeout(function() {
+      		$('.desc-policy').addClass('is-scroll');
+      }, 1000);
+      $('.tooltip-lx').click(function(){
+      	event.preventDefault();
+      	$(".content-tooltip").removeClass('is-show')
+      	$(this).find('.content-tooltip').toggleClass('is-show');
+      });
+      $('.tooltip-tht').click(function(){
+      	event.preventDefault();
+      	$(".content-tooltip").removeClass('is-show')
+      	$(this).find('.content-tooltip').toggleClass('is-show');
+      });
+    </script>
+  </body>
+</html>
