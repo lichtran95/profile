@@ -7577,11 +7577,11 @@ background-color: #f2f4f8;
 			text-align: center;
 			width: 50%;
 			img{
-			width: 80px;
+			width: 72px;
 			margin: 0 auto;
 			}
 			.cate-name{
-			padding-top: 12px;
+			padding-top: 8px;
 			font-weight: 700;
 			font-size: 14px;
 			line-height: 22px;
@@ -10296,14 +10296,15 @@ right: 28px;
 			li{
 				flex-shrink:0;
 				.item{
-					margin-right:24px;
+					margin-right:16px;
 					display:flex;
 					flex-direction:column;
 					align-items:center;
 					justify-content:center;
 					color:inherit;
+					width:86px;
 					@media(min-width:400px){
-						margin-right:16px;
+						margin-right:8px;
 					}
 					.img-container{
 						background-color:#fff;
@@ -10335,6 +10336,7 @@ right: 28px;
 						line-height:18px;
 						margin-top:4px;
 						color:#fff;
+						letter-spacing:-0.5px;
 					}
 				}
 			}
