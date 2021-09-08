@@ -10302,6 +10302,9 @@ right: 28px;
 					align-items:center;
 					justify-content:center;
 					color:inherit;
+					@media(min-width:400px){
+						margin-right:16px;
+					}
 					.img-container{
 						background-color:#fff;
 						border-radius:8px;
