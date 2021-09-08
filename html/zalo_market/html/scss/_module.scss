@@ -35,7 +35,7 @@ video {
 .func-share {
 .feature-share-list {
 	display: none;
-	@include position(absolute, 50px 26px null null);
+	@include position(absolute, 50px 12px null null);
 	z-index: 1;
 	background-color: #fff;
 	border: 1px solid $color-border;
