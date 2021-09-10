@@ -12642,6 +12642,29 @@ ul.select-list.custom-for-modal li:first-child .item {
   font-weight: bold;
   color: #1744cf;
 }
+.module-collection-product-v2.is-listing ul.list {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-right: 16px;
+}
+.module-collection-product-v2.is-listing ul.list li {
+  width: calc(50% - 8px);
+}
+.module-collection-product-v2.is-listing ul.list li a.item {
+  width: 100%;
+  margin-right: 0;
+  margin-bottom: 16px;
+}
+.module-collection-product-v2.is-listing ul.list li a.item .img-container {
+  width: 100%;
+}
+.module-collection-product-v2.is-listing ul.list li a.item .img-container .img {
+  width: 100%;
+  height: inherit;
+}
 
 .module-collection-product {
   margin-bottom: 8px;

@@ -10168,6 +10168,28 @@ right: 28px;
 			}
 		}
 	}
+	&.is-listing{
+		ul.list{
+			flex-wrap:wrap;
+			justify-content:space-between;
+			padding-right:16px;
+			li{
+				width:calc(50% - 8px);
+				a.item{
+					width:100%;
+					margin-right:0;
+					margin-bottom:16px;
+					.img-container{
+						width:100%;
+						.img{
+							width:100%;
+							height:inherit;
+						}
+					}
+				}
+			}
+		}
+	}
 }
 .module-collection-product{
 	margin-bottom:8px;
@@ -10278,6 +10300,7 @@ right: 28px;
 			}
 		}
 	}
+	
 }
 .module-discovery-new{
 	padding-bottom:0;
