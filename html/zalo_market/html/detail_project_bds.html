@@ -23,7 +23,15 @@
     <div class="zMarket-layout">
       <div class="page-content">
         <div class="bl-module module-project-detail"> 
-          <div class="module-intro"><img src="https://via.placeholder.com/375x250">
+          <div class="module-intro">
+            <div class="swiper-container swiper-bds">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"><a class="item-banner" href="#!" style="background-image:url(http://via.placeholder.com/375x250)"></a></div>
+                <div class="swiper-slide"><a class="item-banner" href="event_landing.html" style="background-image:url(http://via.placeholder.com/375x250)"></a></div>
+                <div class="swiper-slide"><a class="item-banner" href="event_landing.html" style="background-image:url(http://via.placeholder.com/375x250)"></a></div>
+              </div>
+              <div class="swiper-pagination" id="hero-pagination"></div>
+            </div>
             <div class="main-contain"> 
               <h3 class="title">Vinhomes Grand Park (Vincity Quận 9)</h3>
               <div class="location"> <i class="icn icn-pin"></i>
@@ -115,6 +123,19 @@
     <!-- Include Plugin-->
     <script src="js/jquery.min.js"></script>
     <script src="js/main.js"></script>
-    <script></script>
+    <script src="js/swiper.min.js"></script>
+    <script>
+      var swiper = new Swiper('.swiper-bds', {
+      	slidesPerView: 1,
+      	spaceBetween: 0,
+      	loop: true,
+      	autoplay: {
+      		delay: 3000,
+      	},
+      	pagination: {
+      		el: '#hero-pagination',
+      	},
+      });
+    </script>
   </body>
 </html>
