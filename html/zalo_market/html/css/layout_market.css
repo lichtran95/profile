@@ -12940,6 +12940,11 @@ ul.select-list.custom-for-modal li:first-child .item {
   width: 100%;
   height: inherit;
 }
+.module-collection-product.is-listing ul.list li a.item .desc {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
 .module-collection-product.is-listing ul.list li:last-child a.item {
   margin-bottom: 0;
 }

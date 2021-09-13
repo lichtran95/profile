@@ -10372,6 +10372,9 @@ ul.select-list {
 							height: inherit;
 						}
 					}
+					.desc{
+						flex-grow:1;
+					}
 				}
 				&:last-child {
 					a.item {
