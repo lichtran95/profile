@@ -9148,7 +9148,7 @@ ul.select-list {
 }
 .func-search-fixed{
 	width: 100%;
-	@include position(fixed, -76px 0 null 0);
+	@include position(fixed, -100px 0 null 0);
 	padding:16px;
 	background-color:#fff;
 	z-index:999;	

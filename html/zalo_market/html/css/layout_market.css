@@ -11529,7 +11529,7 @@ ul.select-list.custom-for-modal li:first-child .item {
 .func-search-fixed {
   width: 100%;
   position: fixed;
-  top: -76px;
+  top: -100px;
   right: 0;
   left: 0;
   padding: 16px;
