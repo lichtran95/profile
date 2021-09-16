@@ -824,7 +824,12 @@
     <div class="modal fade modal-center" id="modal-banner-home" tabindex="-1" role="dialog">
       <div class="modal-dialog" role="document">
         <div class="modal-content is-transparent"><a class="func-close-transparent" data-dismiss="modal" aria-label="Close">ĐÓNG [x]</a>
-          <div class="context-banner-home"><a href="bds_listing.html"><img src="images/HnC_mobile_home_Popup_GIF_300x400.gif"></a></div>
+          <div class="context-banner-home"><div id="animation_container" style="background-color:rgba(255, 255, 255, 0.00); width:285px; height:518px">
+<canvas id="canvas" width="285" height="518" style="position: absolute; display: block; background-color:rgba(255, 255, 255, 0.00);"></canvas>
+<div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:285px; height:518px; position: absolute; left: 0px; top: 0px; display: block;">
+</div>
+</div>
+          </div>
         </div>
       </div>
     </div>
@@ -851,8 +856,9 @@
       			}
       	}
        }
-      
-      //popup filter search
+      $(window).on('load', function () {
+      	$("#modal-banner-home").modal("show");
+      }); 
       $('.filter-location').click(()=>{
       	$("body").addClass("overlay-open");
       	$("#popup-full-filter-new").addClass("is-show");

@@ -37,16 +37,6 @@
                 </div>
               </div>
             </div>
-            <div class="swiper_content_wrapper">
-              <div class="swiper-container swiper-hero">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide"><a class="item-banner" href="#!" style="background-image:url(http://via.placeholder.com/343x192)"></a></div>
-                  <div class="swiper-slide"><a class="item-banner" href="event_landing.html" style="background-image:url(http://via.placeholder.com/343x192)"></a></div>
-                  <div class="swiper-slide"><a class="item-banner" href="event_landing.html" style="background-image:url(http://via.placeholder.com/343x192)"></a></div>
-                </div>
-              </div>
-              <div class="swiper-pagination" id="hero-pagination"></div>
-            </div>
           </div>
           <div class="category-block-container">
             <div class="category-block" data-step="2" data-disable-interaction="true" data-intro="Vào trang chuyên &lt;strong&gt;Bất động sản hoặc Xe cộ&lt;/strong&gt; để xem tất cả tin đăng">
@@ -669,7 +659,12 @@
     <div class="modal fade modal-center" id="modal-banner-home" tabindex="-1" role="dialog">
       <div class="modal-dialog" role="document">
         <div class="modal-content is-transparent"><a class="func-close-transparent" data-dismiss="modal" aria-label="Close">ĐÓNG [x]</a>
-          <div class="context-banner-home"><a href="bds_listing.html"><img src="images/HnC_mobile_home_Popup_GIF_300x400.gif"></a></div>
+          <div class="context-banner-home"><div id="animation_container" style="background-color:rgba(255, 255, 255, 0.00); width:285px; height:518px">
+<canvas id="canvas" width="285" height="518" style="position: absolute; display: block; background-color:rgba(255, 255, 255, 0.00);"></canvas>
+<div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:285px; height:518px; position: absolute; left: 0px; top: 0px; display: block;">
+</div>
+</div>
+          </div>
         </div>
       </div>
     </div>
