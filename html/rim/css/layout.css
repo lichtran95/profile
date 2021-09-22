@@ -841,6 +841,7 @@ header .pos-right .w-letter a:hover {
   max-width: 640px;
   letter-spacing: -1px;
   margin-top: 160px;
+  font-weight: 600;
 }
 .section-hero .context .cta {
   display: -webkit-box;
@@ -1058,6 +1059,7 @@ header .pos-right .w-letter a:hover {
   color: #21409A;
   font-size: 48px;
   margin-bottom: 20px;
+  font-weight: 600;
 }
 .section-team .context .desc {
   font-size: 24px;
@@ -1070,6 +1072,9 @@ header .pos-right .w-letter a:hover {
   margin-top: 90px;
   padding-bottom: 80px;
 }
+.section-team .context .swiper-team .swiper-slide {
+  position: relative;
+}
 .section-team .context .swiper-team .swiper-slide .img {
   background-size: cover;
   background-repeat: no-repeat;
@@ -1079,6 +1084,41 @@ header .pos-right .w-letter a:hover {
   content: "";
   display: block;
   padding-top: 142%;
+}
+.section-team .context .swiper-team .swiper-slide .content {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 1;
+  opacity: 0;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+}
+.section-team .context .swiper-team .swiper-slide .content .wrap {
+  padding: 22px;
+  background-color: rgba(71, 230, 180, 0.8);
+  border-radius: 10px;
+}
+.section-team .context .swiper-team .swiper-slide .content .wrap h3 {
+  color: #fff;
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: bold;
+}
+.section-team .context .swiper-team .swiper-slide .content .wrap span {
+  display: block;
+  color: #fff;
+  font-size: 24px;
+  line-height: 24px;
+}
+.section-team .context .swiper-team .swiper-slide .content .wrap p {
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 32px;
+}
+.section-team .context .swiper-team .swiper-slide:hover .content {
+  opacity: 1;
 }
 .section-team .context .swiper-team .swiper-pagination .swiper-pagination-bullet {
   background-color: transparent;
@@ -1743,5 +1783,48 @@ body header .context {
     font-size: 28px;
     margin-top: 24px;
     margin-bottom: 24px;
+  }
+}
+@media (min-width: 2100px) {
+  .section-hero .container {
+    max-width: 1900px;
+  }
+  .section-hero .context h1 {
+    font-size: 80px;
+    line-height: 100px;
+    max-width: 900px;
+  }
+  .section-hero .context .cta {
+    height: 80px;
+    max-width: 300px;
+  }
+  .section-hero .context .cta img {
+    width: 40px;
+  }
+  .section-hero .context .cta span {
+    font-size: 24px;
+    margin-left: 24px;
+  }
+
+  header .logo img {
+    width: 200px;
+  }
+  header nav ul li {
+    margin-right: 64px;
+  }
+  header nav ul li a {
+    font-size: 24px;
+  }
+  header .pos-right .w-letter a {
+    height: 90px;
+    font-size: 24px;
+    width: 250px;
+  }
+  header .pos-right .login a {
+    font-size: 24px;
+  }
+
+  .section-sign-in {
+    min-height: 80vh;
   }
 }
