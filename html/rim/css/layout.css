@@ -1560,14 +1560,14 @@ body header {
     top: 24px;
   }
   .section-hero .context h1 {
-    font-size: 34px;
-    line-height: 40px;
+    font-size: 35px;
+    line-height: 42px;
     margin-top: 0;
-    max-width: 280px;
-    margin-top: 40px;
+    max-width: 300px;
+    margin-top: 30px;
   }
   .section-hero .context .cta {
-    margin-top: 16px;
+    margin-top: 24px;
   }
 
   .section-introduction {
