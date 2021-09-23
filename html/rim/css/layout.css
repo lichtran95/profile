@@ -1044,6 +1044,10 @@ header .pos-right .w-letter a:hover {
   color: #fff;
   font-weight: 300;
 }
+.section-wtsay .context .swiper-wtsay .swiper-slide .img {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
 .section-wtsay .context .swiper-wtsay .swiper-pagination .swiper-pagination-bullet {
   background-color: transparent;
   opacity: 1;
@@ -1822,7 +1826,7 @@ body header {
     margin-top: 70px;
   }
   .section-hero .context h1 {
-    font-size: 28px;
+    font-size: 34px;
     line-height: 36px;
     margin-top: 0;
     max-width: 320px;
@@ -1858,21 +1862,24 @@ body header {
     margin-bottom: 32px;
   }
   .section-introduction .context .content h2 {
-    font-size: 24px;
+    font-size: 34px;
     text-align: center;
     line-height: 28px;
-    margin-bottom: 12px;
+    margin-bottom: 20px;
   }
   .section-introduction .context .content p {
-    font-size: 16px;
+    font-size: 18px;
     line-height: 24px;
     text-align: center;
+    max-width: 400px;
+    margin: 0 auto;
   }
   .section-introduction .context .img {
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
-    width: 100%;
+    width: 60%;
+    margin: 0 auto;
     padding: 0 20px;
   }
   .section-introduction .context.section-1 .content h2 {
@@ -1903,11 +1910,13 @@ body header {
     padding: 60px 0;
   }
   .section-wtsay .context h2 {
-    font-size: 24px;
-    margin-bottom: 12px;
+    font-size: 34px;
+    margin-bottom: 20px;
   }
   .section-wtsay .context .desc {
-    font-size: 16px;
+    font-size: 18px;
+    max-width: 400px;
+    margin: 0 auto;
   }
   .section-wtsay .context .swiper-wtsay {
     margin-top: 32px;
@@ -1958,11 +1967,13 @@ body header {
     padding: 60px 0;
   }
   .section-team .context h2 {
-    font-size: 24px;
-    margin-bottom: 12px;
+    font-size: 34px;
+    margin-bottom: 20px;
   }
   .section-team .context .desc {
-    font-size: 16px;
+    font-size: 18px;
+    max-width: 400px;
+    margin: 0 auto;
   }
   .section-team .context .swiper-team {
     margin-top: 32px;
@@ -2083,7 +2094,7 @@ body header {
   .section-hero .context h1 {
     font-size: 80px;
     line-height: 100px;
-    max-width: 900px;
+    max-width: 920px;
   }
   .section-hero .context .cta {
     height: 80px;
