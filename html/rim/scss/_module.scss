@@ -16,7 +16,7 @@ $color-grey:#808080;
 	max-width:1240px;
 	margin:0 auto;
 	padding:0 24px;
-	@media(max-width:767px){
+	@media(max-width:768px){
 		padding:0 20px;
 	}
 }
@@ -31,6 +31,7 @@ header{
 		align-items:center;
 		width:100%;
 		background-color:#fff;
+		min-height:60px;
 	}
 	.logo{
 		display:block;
@@ -112,6 +113,9 @@ header{
 		margin-top:-60px;
 		display:block;
 		width:100%;
+	}
+	.bg_mb{
+		display:none;
 	}
 	.context{
 		position:absolute;
@@ -503,9 +507,7 @@ body{
 	}
 	header{
 		filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.05));
-		.context{
-			min-height:60px;
-		}
+		
 	}
 }
 
@@ -764,8 +766,282 @@ body{
 		}
 	}
 }
-
-@media(max-width:767px){
+@media(min-width:320px) and (max-width:767px){
+	.section-hero{
+		.bg{
+			margin-top:0;
+			display: none;
+		}
+		.bg_mb{
+			display:block;
+			width:100%;
+		}
+		.context{
+			transform:translateY(0);
+			top:24px;
+			h1{
+				font-size:34px;
+				line-height:40px;
+				margin-top:0;
+				max-width:280px;
+				margin-top:40px;
+			}
+			.cta{
+				margin-top:16px;
+			}
+		}
+	}
+	.section-introduction{
+		padding:60px 0;
+		position:relative;
+		&:after{
+			content:'';
+			position: absolute;
+			bottom:0;
+			right:40px;
+			left:40px;
+			background-color:#D7E1EA;
+			height:0.5px;
+		}
+		.context{
+			flex-direction:column;
+			.content{
+				order:1;
+				width:100%;
+				margin-bottom:32px;
+				h2{
+					font-size:28px;
+					text-align:center;
+					line-height:28px;
+					margin-bottom:15px;
+				}
+				p{
+					font-size:16px;
+					line-height:24px;
+					text-align:center;
+				}
+			}
+			.img{
+				order:2;
+				width:100%;
+				padding:0 20px;
+			}
+			&.section-1{
+				.content{
+					h2{
+						padding-top:0;
+					}
+				}
+			}
+			&.section-3{
+				.content{
+					h2{
+						padding-top:0;
+					}
+				}
+			}
+			&.section-2,&.section-4{
+				.content{
+					order:1;
+					h2{
+						padding-top:0;
+						text-align:center;
+					}
+					p{
+						text-align:center;
+					}
+				}
+				.img{
+					order:2
+				}
+			}
+		}
+	}
+	.section-wtsay{
+		padding:60px 0;
+		.context{
+			h2{
+				font-size:34px;
+				margin-bottom:12px;
+			}
+			.desc{
+				font-size:16px;	
+			}
+			.swiper-wtsay{
+				margin-top:32px;
+				padding-bottom:64px;
+				.swiper-slide{
+					display:flex;
+					.img{
+						img{
+							width:120px;
+							display:block;
+						}
+					}
+					.content{
+						margin-top:0;
+						margin-left:16px;
+						padding-right:0;
+						p{
+							font-size:16px;
+							padding-bottom:16px;
+							font-weight:300;;
+							&:after{
+								content:'';
+								position:absolute;
+								right:0;
+								left:0;
+								bottom:0;
+								background-color:#fff;
+								height:1px;
+							}
+						}
+						.info{
+							margin-top:16px;
+							h3{
+								font-size:16px;
+								color:#fff;
+							}
+							span{
+								font-size:14px;
+								color:#fff;
+								font-weight:300;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	.section-team{
+		padding:60px 0;
+		.context{
+			h2{
+				font-size:34px;
+				margin-bottom:12px;;
+			}
+			.desc{
+				font-size:16px;
+			}
+			.swiper-team{
+				margin-top:32px;
+				padding-bottom: 64px;
+				.swiper-slide{
+					.content{
+						opacity:1;
+						.wrap{
+							padding:8px;
+							border-radius:4px;
+							h3{
+								font-size:14px;
+								line-height:18px;
+							}
+							span{
+								font-size:12px;
+								line-height:12px;
+							}
+							p{
+								display:none;
+							}
+						}
+					}
+				}
+				
+			}
+		}
+	}
+	footer{
+		.context{
+			.join-us{
+				flex-direction:column;
+				justify-content:center;
+				align-items:center;
+				.term{
+					display: block;
+					text-align:center;
+					margin:0;
+				}
+				.social-network{
+					margin-top:16px;
+					padding-top:16px;
+					padding-bottom:16px;
+					margin-bottom:16px;
+					position:relative;
+					flex-direction:column;
+					&:after{
+						content:'';
+						position:absolute;
+						top:0;
+						right:0;
+						left:0;
+						height:1px;
+						margin:0 auto;
+						background-color:#4A6ED7;
+					}
+					&::before{
+						content:'';
+						position:absolute;
+						bottom:0;
+						height:1px;
+						margin:0 auto;
+						right:0;
+						left:0;
+						background-color:#4A6ED7;
+					}
+					h3{
+						margin-right:0;
+						margin-bottom:12px	;
+					}
+				}
+			}
+			.copy-right{
+				padding-top:0;
+			}
+		}
+		&::after{
+			display:none;
+		}
+	}
+	header{
+		
+		.logo{
+			margin-left:20px;
+			margin-right:10px;
+			img{
+				width:80px;
+			}
+		}
+		nav{
+			display:none;
+		}
+		.pos-right{
+			margin-left:auto;
+			.language{
+				margin-right:16px;
+			}
+			.login{
+				a{
+					font-size:12px;
+				}
+			}
+			.w-letter{
+				a{
+					width:100px;
+					font-size:12px;
+				}
+			}
+		}
+	}
+	.section-sign-in{
+		h1{
+			font-size:34px;
+			margin-top:24px;
+			margin-bottom:24px;
+		}
+	}
+}
+@media(min-width:768px) and (max-width:992px){
+	
 	.section-hero{
 		.bg{
 			margin-top:0;
@@ -773,10 +1049,12 @@ body{
 		.context{
 			transform:translateY(0);
 			top:24px;
+			margin-top:70px;
 			h1{
-				font-size:24px;
-				line-height:28px;
+				font-size:28px;
+				line-height:36px;
 				margin-top:0;
+				max-width:320px;
 			}
 			.cta{
 				margin-top:16px;
@@ -918,6 +1196,27 @@ body{
 			.swiper-team{
 				margin-top:32px;
 				padding-bottom: 64px;
+				.swiper-slide{
+					.content{
+						opacity:1;
+						.wrap{
+							padding:8px;
+							border-radius:4px;
+							h3{
+								font-size:14px;
+								line-height:18px;
+							}
+							span{
+								font-size:12px;
+								line-height:12px;
+							}
+							p{
+								display:none;
+							}
+						}
+					}
+				}
+				
 			}
 		}
 	}
@@ -961,7 +1260,7 @@ body{
 					}
 					h3{
 						margin-right:0;
-						margin-bottom:8px	;
+						margin-bottom:15px	;
 					}
 				}
 			}
@@ -974,6 +1273,7 @@ body{
 		}
 	}
 	header{
+		
 		.logo{
 			margin-left:20px;
 			margin-right:10px;
@@ -1010,6 +1310,7 @@ body{
 		}
 	}
 }
+
 @media(min-width:2100px){
 	.section-hero{
 		.container{
@@ -1035,6 +1336,9 @@ body{
 		}
 	}
 	header{
+		.context{
+			min-height: 120px;
+		}
 		.logo{
 			img{
 				width:200px;
@@ -1053,9 +1357,9 @@ body{
 		.pos-right{
 			.w-letter{
 				a{
-					height:90px;
+					height:120px;
 					font-size:24px;
-					width:250px;
+					width:280px;
 				}
 			}
 			.login{
