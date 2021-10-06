@@ -6,6 +6,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="./css/layout.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
 	<title>RIM Homepage</title>
 </head>
 
@@ -78,31 +79,33 @@
 				<div class="lines">
 					<span>Or </span>
 				</div>
-				<form action="#!">
+				<form id="register">
 					<div class="field">
 						<div class="control">
-						  <input class="input is-invalid" type="text" placeholder="Email">
-						  <p class="error-mess">Your account could not be found</p>
+							<input class="input" type="text" placeholder="Email" id="email" name="email">
 						</div>
-					  </div>
-					  <div class="field">
+					</div>
+					<div class="field">
 						<div class="control">
-						  <input class="input" type="text" placeholder="Enter Password">
+							<input class="input" type="password" placeholder="Enter Password" id="password"
+								name="password">
 						</div>
-					  </div>
-					  <div class="field">
+					</div>
+					<div class="field">
 						<div class="control">
-						  <input class="input is-invalid" type="text" placeholder="Re - Enter Password">
-						  <p class="error-mess">Incorrect password</p>
+							<input class="input" type="password" placeholder="Re - Enter Password" id="password_confirm"
+								name="password_confirm">
 						</div>
-					  </div>
-					  <a href="#!" class="button">Continue</a>
+					</div>
+					<button type="submit" class="button">Continue</button>
+					<!-- <a type="submit" class="button">Continue</a> -->
 				</form>
 				<div class="func-other">
 					<div class="term">
-						By creating an account, you are agreeing to our <a href="#!"> Terms of Service and Privacy Policy. </a>
+						By creating an account, you are agreeing to our <a href="#!"> Terms of Service and Privacy
+							Policy. </a>
 					</div>
-					
+
 					<div class="has-account">
 						<span>Already have an account?</span>
 						<a href="sign_in.html">Sign in</a>
@@ -128,17 +131,17 @@
 								</a>
 							</li>
 							<li>
-							   <a href="">
-								   <img src="images/icn_facebook.png" alt="">
-								   <span> Facebook</span>
-							   </a>
-						   </li>
-						   <li>
-							   <a href="">
-								   <img src="images/icn_insta.png" alt="">
-								   <span> Instagram</span>
-							   </a>
-						   </li>
+								<a href="">
+									<img src="images/icn_facebook.png" alt="">
+									<span> Facebook</span>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<img src="images/icn_insta.png" alt="">
+									<span> Instagram</span>
+								</a>
+							</li>
 						</ul>
 					</div>
 				</div>
@@ -149,9 +152,54 @@
 			</div>
 		</div>
 	</footer>
-	<script src="./javascript/jquery.min.js"></script>
-	<script src="./javascript/swiper.min.js"></script>
-	<script src="./javascript/main.js"></script>
+	<script src="./js/jquery.min.js"></script>
+	<script src="./js/jquery.validate.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+	<script src="./js/swiper.min.js"></script>
+	<script src="./js/main.js"></script>
+	<script>
+		$("#register").validate({
+			rules: {
+				email: {
+					required: true,
+					email: true
+				},
+				password: {
+					required: true,
+					minlength: 6
+				},
+				password_confirm: {
+					equalTo: '#password'
+				}
+			},
+			messages: {
+				email: {
+					required: "This field is required",
+					email: "Invalid email"
+				},
+				password: {
+					required: "This field is required",
+					minlength: "Password should not be shorter than 6 characters."
+				},
+				password_confirm: {
+					equalTo: "Password not match"
+				},
+
+			},
+			submitHandler: function (form) {
+				// do other things for a valid form
+				// form.submit();
+				//TO DO
+
+
+				// case success
+				toastr.success('Success');
+
+				// case error
+				// toastr.error('failed')
+			}
+		});
+	</script>
 
 </body>
 

@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./css/layout.css">
+	<link rel="stylesheet" type="text/css"
+		href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+	<title>RIM Homepage</title>
+</head>
+
+<body>
+	<header>
+		<div class="container-fluid">
+			<div class="context">
+				<a href="home.html" class="logo">
+					<img src="images/logo.png" alt="logo here">
+				</a>
+				<nav>
+					<ul>
+						<li>
+							<a href="#rest-in-mind">
+								What's Rest in mind?
+							</a>
+						</li>
+						<li>
+							<a href="#w-tsay">
+								What they say
+							</a>
+						</li>
+						<li>
+							<a href="#team">
+								Team
+							</a>
+						</li>
+					</ul>
+				</nav>
+				<div class="pos-right">
+					<div class="ip language">
+						<a href="#!">
+							<img src="images/language_english.png" alt="">
+						</a>
+					</div>
+					<div class="login">
+						<a href="sign_in.html">Sign in</a>
+					</div>
+					<div class="w-letter">
+						<a href="#!">Write a Letter</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<main>
+		<div class="section-writer-guest">
+			<div class="section-write-letter">
+				<div class="block-login-guest">
+					<div class="section-sign-in">
+						<div class="container">
+							<div class="method">
+								<div class="group-platform">
+									<a class="platform" href='#!'>
+										<img src="images/icn_google.png" alt="">
+										<span>Continue with Google</span>
+									</a>
+									<a class="platform" href='#!'>
+										<img src="images/icn_apple.png" alt="">
+										<span>Continue with Apple</span>
+									</a>
+								</div>
+							</div>
+							<div class="lines">
+								<span>Or </span>
+							</div>
+							<form id="signIn">
+								<button type="submit" class="button">Sign In</button>
+								<!-- <a href="#!" class="button">Continue</a> -->
+							</form>
+							<div class="func-other">
+								<div class="create-new">
+									<span>Don't have an account?</span>
+									<a href="create_account.html">Create an account</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="block-create-letter">
+					<div class="func-zoom">
+						<img class="zoom zoom-in" src="images/icon_zoom_in.png" alt="">
+						<img class="zoom zoom-out" src="images/icon_zoom_out.png" alt="">
+					</div>
+					<div class="heading-create">
+						<div class="pos-left">
+							<h3>
+								A letter from Sep 19th, 2021
+							</h3>
+						</div>
+						<div class="pos-right">
+							<div class="func-more">
+								<div class="dropdown dropdown-more">
+									<!-- dropbtn là để bật dropdown -->
+									<div class="dropbtn"></div>
+									<div class="icon">
+										<img src="images/upload_dashboard/icon_more.png" alt="">
+									</div>
+									<div id="content-more" class="dropdown-content">
+										<div class="content-more">
+											<ul>
+												<li class="active">
+													<div class="icon">
+														<div class="icon">
+															<svg xmlns="http://www.w3.org/2000/svg" width="18"
+																height="20" fill="#797979"
+																xmlns:v="https://vecta.io/nano">
+																<path
+																	d="M16.818 2.223h-.627V15.92c0 .91-.833 1.651-1.856 1.651H7.982 2.931v.508c0 .581.531 1.053 1.184 1.053h6.35 6.35c.654 0 1.184-.472 1.184-1.053V3.276c0-.581-.528-1.053-1.182-1.053zm-8.836 14.75h6.35c.654 0 1.185-.472 1.185-1.053V2.223 1.118c0-.581-.531-1.053-1.184-1.053h-6.35-2.111v.348l.007.111V2.82v.589c0 .818-.748 1.483-1.668 1.483h-.663H.965a1.78 1.78 0 0 1-.103-.004H.45v11.03c0 .581.531 1.053 1.184 1.053h1.299 5.049zm.24-3.58h-4.14c-.309 0-.56-.223-.56-.498s.251-.498.56-.498h4.142c.309 0 .56.223.56.498s-.253.498-.562.498zm4.142-2.541H4.082c-.309 0-.56-.223-.56-.498s.251-.498.56-.498h8.282c.309 0 .56.223.56.498s-.251.498-.56.498zM4.082 7.159h8.282c.309 0 .56.223.56.498s-.251.498-.56.498H4.082c-.309 0-.56-.223-.56-.498s.251-.498.56-.498zM.965 4.297H4.21c.551-.004.99-.394.994-.876V.526c0-.267-.246-.444-.502-.444a.52.52 0 0 0-.349.131L.612 3.54c-.313.279-.092.757.354.757z" />
+															</svg>
+														</div>
+														<span>Save Draft</span>
+													</div>
+												</li>
+												<li class="active">
+													<div class="icon">
+														<div class="icon">
+															<svg xmlns="http://www.w3.org/2000/svg" width="14"
+																height="17" fill="#797979"
+																xmlns:v="https://vecta.io/nano">
+																<path
+																	d="M12.484 2.125H9.563v-.531C9.563.714 8.849 0 7.969 0H5.844C4.964 0 4.25.714 4.25 1.594v.531H1.328A1.33 1.33 0 0 0 0 3.453v1.063a.53.53 0 0 0 .531.531h12.75a.53.53 0 0 0 .531-.531V3.453a1.33 1.33 0 0 0-1.328-1.328zm-7.172-.531a.53.53 0 0 1 .531-.531h2.125a.53.53 0 0 1 .531.531v.531H5.313v-.531zM1.008 6.109c-.095 0-.17.079-.166.174l.438 9.199A1.59 1.59 0 0 0 2.873 17h8.068a1.59 1.59 0 0 0 1.592-1.518l.438-9.199c.005-.095-.071-.174-.166-.174H1.008zm8.023 1.328a.532.532 0 1 1 1.063 0v6.906a.532.532 0 1 1-1.063 0V7.438zm-2.656 0a.531.531 0 1 1 1.063 0v6.906a.531.531 0 1 1-1.062 0V7.438zm-2.656 0a.532.532 0 1 1 1.063 0v6.906a.531.531 0 1 1-1.063 0V7.438z" />
+															</svg>
+														</div>
+														<span>Move to trash</span>
+													</div>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+					<div class="body-create">
+						<div class="document-editor">
+							<div class="toolbar-container"></div>
+							<div class="content-container">
+								<div id="editor">
+									<p>Write letter here!</p>
+								</div>
+							</div>
+						</div>
+						<div class="count-words">
+							20 words
+						</div>
+					</div>
+					<div class="footer-create">
+						<div class="deliver-in">
+							<h4>DELIVER IN</h4>
+							<div class="select-group">
+								<div class="group-time-picker" style="display:none;">
+									<div class="field">
+										<div class="control">
+											<select name="" id="">
+												<option value="">September</option>
+											</select>
+											<div class="icon">
+												<img src="images/upload_dashboard/icon_down.png" alt="">
+											</div>
+										</div>
+									</div>
+									<div class="field">
+										<div class="control">
+											<select name="" id="">
+												<option value="">22</option>
+											</select>
+											<div class="icon">
+												<img src="images/upload_dashboard/icon_down.png" alt="">
+											</div>
+										</div>
+									</div>
+									<div class="field">
+										<div class="control">
+											<select name="" id="">
+												<option value="">2021</option>
+											</select>
+											<div class="icon">
+												<img src="images/upload_dashboard/icon_down.png" alt="">
+											</div>
+										</div>
+									</div>
+								</div>
+								<ul class="duration-list">
+									<li class="active">
+										<div class="item">Right away</div>
+									</li>
+									<li>
+										<div class="item">7 days</div>
+									</li>
+									<li>
+										<div class="item">14 days</div>
+									</li>
+								</ul>
+								<div id="button-select" class="">
+									<div class="icon">
+										<svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="#797979"
+											xmlns:v="https://vecta.io/nano">
+											<g clip-path="url(#A)" fill="#797979">
+												<path
+													d="M6.194 9.379c0-.213-.173-.385-.386-.385H4.462c-.213 0-.386.173-.386.385v1.346c0 .213.173.386.386.386h1.347c.213 0 .386-.173.386-.386V9.379zm3.365 0c0-.213-.173-.385-.385-.385H7.827c-.213 0-.386.173-.386.385v1.346c0 .213.173.386.386.386h1.347c.213 0 .385-.173.385-.386V9.379zm3.365 0c0-.213-.173-.385-.386-.385h-1.347c-.213 0-.386.173-.386.385v1.346c0 .213.173.386.386.386h1.347c.213 0 .386-.173.386-.386V9.379zm-6.73 3.365c0-.213-.173-.386-.386-.386H4.462c-.213 0-.386.172-.386.386v1.346c0 .213.173.386.386.386h1.347c.213 0 .386-.173.386-.386v-1.346zm3.365 0c0-.213-.173-.386-.385-.386H7.827c-.213 0-.386.172-.386.386v1.346c0 .213.173.386.386.386h1.347c.213 0 .385-.173.385-.386v-1.346zm3.365 0c0-.213-.173-.386-.386-.386h-1.347c-.213 0-.386.172-.386.386v1.346c0 .213.173.386.386.386h1.347c.213 0 .386-.173.386-.386v-1.346zm2.408-10.851v2.056a1.68 1.68 0 0 1-1.683 1.679h-1.062a1.69 1.69 0 0 1-1.694-1.679V1.886H6.107V3.95a1.69 1.69 0 0 1-1.693 1.679H3.351A1.68 1.68 0 0 1 1.668 3.95V1.893a1.53 1.53 0 0 0-1.48 1.523v12.052C.188 16.309.871 17 1.712 17h13.576c.84 0 1.524-.693 1.524-1.533V3.416a1.53 1.53 0 0 0-1.48-1.523zm-.493 12.824a.66.66 0 0 1-.659.659H2.791a.66.66 0 0 1-.659-.659V8.492a.66.66 0 0 1 .659-.659H14.18a.66.66 0 0 1 .659.659v6.225zM3.348 4.525h1.05c.319 0 .577-.258.577-.577V.577C4.976.258 4.717 0 4.398 0h-1.05c-.319 0-.577.258-.577.577v3.371c0 .319.258.577.577.577zm9.225 0h1.05c.319 0 .577-.258.577-.577V.577c0-.319-.258-.577-.577-.577h-1.05c-.319 0-.577.258-.577.577v3.371c0 .319.258.577.577.577z" />
+											</g>
+											<defs>
+												<clipPath id="A">
+													<path fill="#fff" d="M0 0h17v17H0z" />
+												</clipPath>
+											</defs>
+										</svg>
+									</div>
+									<span>Schedule Send</span>
+								</div>
+							</div>
+							<div class="noted">
+								Your account maxium schedule limit: 30 days <a href="#!">(upgrade to Life time
+									premium account to unlock limits.)</a>
+							</div>
+						</div>
+						<div class="sent-letter-to">
+							<h4>SENT LETTER TO</h4>
+							<div class="input-group">
+								<div class="input-field">
+									<div class="pos-left">
+										<div class="icon">
+											<svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="none"
+												xmlns:v="https://vecta.io/nano">
+												<g clip-path="url(#A)" fill="#797979">
+													<path
+														d="M16.889 3.851l-4.83 4.83 4.711 4.714a1.64 1.64 0 0 0 .23-.83v-8.13c0-.206-.042-.401-.111-.584zm-1.552-1.079H1.663a1.64 1.64 0 0 0-.763.194l7.26 7.26c.211.211.577.211.783 0l7.226-7.222a1.64 1.64 0 0 0-.832-.232zm-15.198 1A1.65 1.65 0 0 0 0 4.435v8.131a1.64 1.64 0 0 0 .224.818l4.762-4.765L.139 3.772zm11.133 5.696L9.73 11.013c-.647.64-1.696.651-2.354 0L5.772 9.405l-4.71 4.707c.187.073.388.117.6.117h13.674c.207 0 .403-.043.586-.112l-4.651-4.648z" />
+												</g>
+												<defs>
+													<clipPath id="A">
+														<path fill="#fff" d="M0 0h17v17H0z" />
+													</clipPath>
+												</defs>
+											</svg>
+										</div>
+									</div>
+									<div class="pos-right">
+										<input type="text">
+									</div>
+								</div>
+								<div class="input-field field-add">
+									<div class="pos-left">
+										<span>Add:</span>
+									</div>
+									<div class="pos-right">
+										<input type="text">
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="btn-group">
+							<a class="btn is-primary" href="#!">
+								<div class="icon">
+									<svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="none"
+										xmlns:v="https://vecta.io/nano">
+										<g clip-path="url(#A)" fill="#fff">
+											<path
+												d="M6.198 12.475v3.285a.53.53 0 0 0 .531.531.53.53 0 0 0 .428-.217l1.922-2.615-2.881-.985zM16.776.098a.53.53 0 0 0-.554-.038L.285 8.382a.53.53 0 0 0-.284.511.53.53 0 0 0 .358.463L4.79 10.87l9.436-8.068L6.924 11.6l7.426 2.538a.55.55 0 0 0 .171.028c.096 0 .192-.026.276-.077a.53.53 0 0 0 .249-.375L16.994.609a.53.53 0 0 0-.218-.511z" />
+										</g>
+										<defs>
+											<clipPath id="A">
+												<path fill="#fff" d="M0 0h17v17H0z" />
+											</clipPath>
+										</defs>
+									</svg>
+								</div>
+								Send a Letter
+							</a>
+							<a class="btn is-outline func-open-preview" href="#!">
+								<div class="icon">
+									<svg xmlns="http://www.w3.org/2000/svg" width="22" height="15" fill="none"
+										xmlns:v="https://vecta.io/nano">
+										<path
+											d="M11 .645C6.797.645 2.985 3.049.172 6.954c-.23.32-.23.767 0 1.087 2.813 3.91 6.625 6.314 10.828 6.314s8.015-2.404 10.828-6.309c.23-.32.23-.767 0-1.087C19.015 3.049 15.203.645 11 .645zm.302 11.682c-2.79.184-5.094-2.221-4.919-5.142.144-2.409 2.012-4.361 4.316-4.512 2.79-.183 5.094 2.221 4.919 5.142-.149 2.404-2.016 4.357-4.316 4.512zm-.139-2.23c-1.503.099-2.745-1.195-2.646-2.766.077-1.299 1.085-2.348 2.327-2.432 1.503-.099 2.745 1.195 2.646 2.766-.081 1.303-1.089 2.352-2.327 2.432z"
+											fill="#17479e" />
+									</svg>
+								</div>
+								Preview
+							</a>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<script src="./js/jquery.min.js"></script>
+	<script src="./js/swiper.min.js"></script>
+	<script type="text/javascript"
+		src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+	<script src="https://cdn.ckeditor.com/ckeditor5/30.0.0/decoupled-document/ckeditor.js"></script>
+	<script src="./js/main.js"></script>
+
+	<script>
+		// javascript cho chọn schedule
+		$("#button-select").click(function () {
+			var $this = $(this);
+			$this.toggleClass("active");
+			if ($this.hasClass("active")) {
+				$this.find("span").html("Choose duration");
+				$(".group-time-picker").show();
+				$(".duration-list").hide();
+			} else {
+				$this.find("span").html("Schedule Send");
+				$(".group-time-picker").hide();
+				$(".duration-list").show();
+			}
+		});
+		DecoupledEditor
+			.create(document.querySelector('#editor'), {
+				ckfinder: {
+					uploadUrl: '/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files&responseType=json',
+				}
+			})
+			.then(editor => {
+				const toolbarContainer = document.querySelector('main .toolbar-container');
+
+				toolbarContainer.prepend(editor.ui.view.toolbar.element);
+
+				window.editor = editor;
+
+			})
+			.catch(err => {
+				console.error(err.stack);
+		});
+		// zoom block write
+		$(".func-zoom").click(function () {
+			$(".block-create-letter").toggleClass("scale");
+		});
+	</script>
+</body>
+
+</html>

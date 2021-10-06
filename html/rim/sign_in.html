@@ -6,6 +6,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="./css/layout.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
 	<title>RIM Homepage</title>
 </head>
 
@@ -78,24 +79,24 @@
 				<div class="lines">
 					<span>Or </span>
 				</div>
-				<form action="#!">
+				<form id="signIn">
 					<div class="field">
 						<div class="control">
-						  <input class="input is-invalid" type="text" placeholder="Email">
-						  <p class="error-mess">Your account could not be found</p>
+							<input class="input is-invalid" type="text" placeholder="Email" id="email" name="email">
 						</div>
-					  </div>
-					  <div class="field">
+					</div>
+					<div class="field">
 						<div class="control">
-						  <input class="input" type="text" placeholder="Password">
+							<input class="input" type="password" placeholder="Password" id="password" name="password">
 						</div>
-					  </div>
-					  <a href="#!" class="button">Continue</a>
+					</div>
+					<button type="submit" class="button" onclick="window.location.href='write_letter.html'">Continue</button>
+					<!-- <a href="#!" class="button">Continue</a> -->
 				</form>
 				<div class="func-other">
-					<label class="checkbox" >
-					  <input type="checkbox" >
-					  Remember me for 30 days
+					<label class="checkbox">
+						<input type="checkbox">
+						Remember me for 30 days
 					</label>
 					<a href="forgot_password.html" class="forgot-password"> Forgot password</a>
 					<div class="create-new">
@@ -123,17 +124,17 @@
 								</a>
 							</li>
 							<li>
-							   <a href="">
-								   <img src="images/icn_facebook.png" alt="">
-								   <span> Facebook</span>
-							   </a>
-						   </li>
-						   <li>
-							   <a href="">
-								   <img src="images/icn_insta.png" alt="">
-								   <span> Instagram</span>
-							   </a>
-						   </li>
+								<a href="">
+									<img src="images/icn_facebook.png" alt="">
+									<span> Facebook</span>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<img src="images/icn_insta.png" alt="">
+									<span> Instagram</span>
+								</a>
+							</li>
 						</ul>
 					</div>
 				</div>
@@ -144,9 +145,47 @@
 			</div>
 		</div>
 	</footer>
-	<script src="./javascript/jquery.min.js"></script>
-	<script src="./javascript/swiper.min.js"></script>
-	<script src="./javascript/main.js"></script>
+	<script src="./js/jquery.min.js"></script>
+	<script src="./js/jquery.validate.min.js"></script>
+	<script src="./js/swiper.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+	<script src="./js/main.js"></script>
+
+	<script>
+		$("#signIn").validate({
+			rules: {
+				email: {
+					required: true,
+					email: true
+				},
+				password: {
+					required: true,
+					minlength: 6
+				},
+			},
+			messages: {
+				email: {
+					required: "This field is required",
+					email: "Invalid email"
+				},
+				password: {
+					required: "This field is required",
+					minlength: "Password should not be shorter than 6 characters."
+				},
+			},
+			submitHandler: function (form) {
+				// do other things for a valid form
+				// form.submit();
+				//TO DO
+
+				// case success
+				toastr.success('Success');
+
+				// case error
+				// toastr.error('failed')
+			}
+		});
+	</script>
 
 </body>
 
