@@ -3220,8 +3220,7 @@ li {
   width: 205px;
   top: 60px;
   left: 0;
-  min-height: 100vh;
-  max-height: 100vh;
+  bottom: 0;
   background-color: #17479e;
   overflow-x: hidden;
 }
@@ -6451,12 +6450,12 @@ li {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    height: calc(100vh - 60px);
   }
   .sidebar-dashboard .content-sidebar .group-nav .navigation-main {
     -webkit-box-flex: 1;
         -ms-flex-positive: 1;
             flex-grow: 1;
+    padding: 0;
   }
   .sidebar-dashboard .content-sidebar .group-nav .navigation-main li .item-nav {
     padding-right: 0;
@@ -6470,6 +6469,10 @@ li {
     font-size: 8px;
     margin: 0;
     margin-top: 4px;
+  }
+  .sidebar-dashboard .content-sidebar .group-nav .navigation-contact {
+    padding: 0;
+    padding-top: 50px;
   }
   .sidebar-dashboard .content-sidebar .group-nav .navigation-contact li .item-nav {
     padding-right: 0;
@@ -7366,8 +7369,8 @@ li {
     width: 100%;
   }
   .dashboard .body-dashboard .wrap-content .section-inbox .block-inbox .inbox-list {
-    max-height: calc(100vh - 150px);
     margin-bottom: -20px;
+    max-height: 100%;
   }
   .dashboard .body-dashboard .wrap-content .section-inbox .block-inbox .inbox-list li .item {
     background: #fff;
@@ -7463,10 +7466,11 @@ li {
     width: 100%;
     z-index: 99;
     padding: 20px;
+    padding-bottom: 50px;
+    bottom: 0;
     margin-left: 0;
     border: none;
     border-radius: 0;
-    max-height: calc(100vh - 59px);
     overflow-y: auto;
     -webkit-transition: all 300ms ease;
     transition: all 300ms ease;
