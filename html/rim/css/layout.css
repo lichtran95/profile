@@ -7613,13 +7613,13 @@ li {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    max-height: auto;
+    max-height: initial;
   }
   .dashboard .body-dashboard .wrap-content .section-sent .block-sent {
     width: 100%;
   }
   .dashboard .body-dashboard .wrap-content .section-sent .block-sent .sent-list {
-    max-height: auto;
+    max-height: initial;
     margin-bottom: 0px;
     overflow-y: inherit;
   }
@@ -7631,7 +7631,7 @@ li {
     width: 100%;
     z-index: 99;
     padding: 20px 10px;
-    padding-bottom: 50px;
+    padding-bottom: 100px;
     margin-left: 0;
     border: none;
     border-radius: 0;
@@ -7682,6 +7682,7 @@ li {
   }
   .dashboard .body-dashboard .wrap-content .section-sent .block-content-sent .footer-content {
     border-radius: 0 0 10px 10px;
+    min-height: 60px;
   }
   .dashboard .body-dashboard .wrap-content .section-sent .block-content-sent .footer-content .date-info {
     display: block;
