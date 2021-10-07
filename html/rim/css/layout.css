@@ -266,7 +266,8 @@
     padding: 0;
     background: transparent;
     width: 100%;
-    top: 30px;
+    top: 40px;
+    height: 100%;
   }
   .bl-modal .modal-container#modal-preview .block-content-inbox .heading-content {
     padding: 5px 10px 10px 10px;
