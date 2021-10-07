@@ -7574,7 +7574,8 @@ li {
   }
   .dashboard .body-dashboard .wrap-content .section-inbox .block-content-inbox .footer-content {
     border-radius: 0 0 10px 10px;
-    height: 70px;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
   }
   .dashboard .body-dashboard .wrap-content .section-schedule .body-schedule .schedule-list {
     margin-top: 25px;
@@ -7683,7 +7684,8 @@ li {
   }
   .dashboard .body-dashboard .wrap-content .section-sent .block-content-sent .footer-content {
     border-radius: 0 0 10px 10px;
-    min-height: 60px;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
   }
   .dashboard .body-dashboard .wrap-content .section-sent .block-content-sent .footer-content .date-info {
     display: block;

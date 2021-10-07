@@ -4228,7 +4228,7 @@ $color-grey: #808080;
 						}
 						.footer-content{
 							border-radius: 0 0 10px 10px;
-							height:70px;
+							flex-shrink: 0;
 						}
 					}
 				}
@@ -4337,7 +4337,7 @@ $color-grey: #808080;
 						}
 						.footer-content{
 							border-radius:0 0 10px 10px;
-							min-height:60px;
+							flex-shrink: 0;
 							.date-info{
 								display:block;
 							}
