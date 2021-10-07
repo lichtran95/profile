@@ -465,9 +465,15 @@ $(document).ready(function() {
 		$(".inbox-list .item").click(function(){
 			$(".block-content-inbox").addClass("active");
 		});
+
+		$(".sent-list .item").click(function(){
+			$(".block-content-sent").addClass("active");
+		});
+
 		$(".func-back").click(function(){
 			$(".block-create-letter").removeClass("active");
 			$(".block-content-inbox").removeClass("active");
+			$(".block-content-sent").removeClass("active");
 		});
 	};	
 });
