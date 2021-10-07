@@ -7211,7 +7211,6 @@ li {
     min-height: calc(100vh - 59px);
     max-height: calc(100vh - 59px);
     overflow-y: scroll;
-    padding-top: 50px;
     padding-bottom: 100px;
   }
   .dashboard .body-dashboard .wrap-content .section-write-letter .block-create-letter.active {
@@ -7230,7 +7229,7 @@ li {
     margin-top: 0;
   }
   .dashboard .body-dashboard .wrap-content .section-write-letter .block-create-letter .heading-create {
-    padding-top: 30px;
+    padding-top: 60px;
     position: relative;
   }
   .dashboard .body-dashboard .wrap-content .section-write-letter .block-create-letter .heading-create .pos-left {
