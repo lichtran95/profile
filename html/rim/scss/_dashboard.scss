@@ -4184,11 +4184,11 @@ $color-grey: #808080;
 						width:100%;
 						z-index: 99;
 						padding:20px 10px;
-						padding-bottom:50px;
-						bottom:0;
+						padding-bottom:200px;
 						margin-left:0;
 						border:none;
 						border-radius:0;
+						max-height:calc(100vh - 59px);
 						overflow-y:auto;
 						transition:all 300ms ease;
 						&.active{
@@ -4210,8 +4210,8 @@ $color-grey: #808080;
 						}
 						.body-content{flex-grow:1;
 							padding:10px;
-							max-height: calc(100% - 100px);
-							overflow-y:auto;
+							max-height: initial;
+							overflow-y:initial;
 							background-color:#fff;
 							border:1px solid #17479E;
 							.demo-content{
