@@ -7664,8 +7664,8 @@ li {
         -ms-flex-positive: 1;
             flex-grow: 1;
     padding: 10px;
-    max-height: inherit;
-    overflow-y: auto;
+    max-height: initial;
+    overflow-y: initial;
     background-color: #fff;
     border: 1px solid #17479E;
   }
