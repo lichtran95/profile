@@ -172,7 +172,7 @@
 				.footer-content{
 					display:flex;
 					align-items:center;
-					justify-content:end;
+					justify-content:flex-end;
 					background-color:#17479E;
 					padding:10px;
 					.button-write {
@@ -214,8 +214,8 @@
 					.body-content{flex-grow:1;
 						padding:10px;
 						overflow-y:auto;
-						max-height:calc(100vh - 280px);
-						height:calc(100vh - 280px);
+						max-height:55vh;
+						height:55vh;
 						.demo-content{
 							display:block;
 							.img{
@@ -235,7 +235,7 @@
 					.footer-content{
 						display:flex;
 						align-items:center;
-						justify-content:end;
+						justify-content:flex-end;
 						background-color:#17479E;
 						padding:10px;
 						.button-write {

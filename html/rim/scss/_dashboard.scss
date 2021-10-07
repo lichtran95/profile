@@ -7,6 +7,9 @@
 * {
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0); /* Stops flash on tap iOS */
 }
+::placeholder{
+	color: #6f6f6f;
+}
 body,
 html {
 	padding: 0;
@@ -1261,6 +1264,8 @@ $color-grey: #808080;
 								font-family: "Montserrat", sans-serif !important;
 								line-height: 24px;
 								color: #444;
+								-webkit-appearance: none;
+								-moz-appearance: none;
 							}
 							.user-infor {
 								margin-top: 6px;
@@ -1647,6 +1652,8 @@ $color-grey: #808080;
 					}
 				}
 				input{
+					-webkit-appearance: none;
+					-moz-appearance: none;
 					outline:none;
 					border:none;
 					color:#444;
@@ -1997,6 +2004,8 @@ $color-grey: #808080;
 										font-size:16px;
 										margin-left:16px;
 										input{
+											-webkit-appearance: none;
+											-moz-appearance: none;
 											height:20px;
 											width:20px;
 											border-radius:4px;
@@ -3039,6 +3048,8 @@ $color-grey: #808080;
 										outline:none;
 										font-size:16px;
 										color:#444;
+										-webkit-appearance: none;
+										-moz-appearance: none;
 									}
 								}
 								&.field-add{
@@ -3584,6 +3595,8 @@ $color-grey: #808080;
 									.control{
 										input{
 											width:100%;
+											-webkit-appearance: none;
+											-moz-appearance: none;
 										}
 									}
 								}

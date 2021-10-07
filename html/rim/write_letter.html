@@ -856,15 +856,18 @@
 		$(".func-open-feedback").click(function () {
 			$(".bl-modal").addClass("is-show")
 			$("#modal-feedback").addClass("active");
+			$("body").addClass("overlay-modal");
 		});
 		$(".func-open-preview").click(function () {
 			$(".bl-modal").addClass("is-show")
 			$("#modal-preview").addClass("active");
+			$("body").addClass("overlay-modal");
 		});
 
 		$(".func-close-modal,.button-close").click(function () {
 			$(".bl-modal").removeClass("is-show")
 			$(".modal-container").removeClass("active")
+			$("body").removeClass("overlay-modal");
 		});
 
 		DecoupledEditor

@@ -232,7 +232,7 @@
           align-items: center;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
-          justify-content: end;
+          justify-content: flex-end;
   background-color: #17479E;
   padding: 10px;
 }
@@ -279,8 +279,8 @@
             flex-grow: 1;
     padding: 10px;
     overflow-y: auto;
-    max-height: calc(100vh - 280px);
-    height: calc(100vh - 280px);
+    max-height: 55vh;
+    height: 55vh;
   }
   .bl-modal .modal-container#modal-preview .block-content-inbox .body-content .demo-content {
     display: block;
@@ -306,7 +306,7 @@
             align-items: center;
     -webkit-box-pack: end;
         -ms-flex-pack: end;
-            justify-content: end;
+            justify-content: flex-end;
     background-color: #17479E;
     padding: 10px;
   }
@@ -1120,6 +1120,10 @@ ul, li {
   list-style-type: none;
   padding: 0;
   margin: 0;
+}
+
+body.overlay-modal {
+  overflow: hidden;
 }
 
 label.error {
@@ -3075,6 +3079,26 @@ body header {
   /* Stops flash on tap iOS */
 }
 
+::-webkit-input-placeholder {
+  color: #6f6f6f;
+}
+
+::-moz-placeholder {
+  color: #6f6f6f;
+}
+
+:-ms-input-placeholder {
+  color: #6f6f6f;
+}
+
+::-ms-input-placeholder {
+  color: #6f6f6f;
+}
+
+::placeholder {
+  color: #6f6f6f;
+}
+
 body,
 html {
   padding: 0;
@@ -4442,6 +4466,8 @@ li {
   font-family: "Montserrat", sans-serif !important;
   line-height: 24px;
   color: #444;
+  -webkit-appearance: none;
+  -moz-appearance: none;
 }
 .dashboard .body-dashboard .section-setting .tab-content #edit-profile .input-group .input .user-infor {
   margin-top: 6px;
@@ -4867,6 +4893,8 @@ li {
   width: 18px;
 }
 .dashboard .body-dashboard .section-add-contact .func-search input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
   outline: none;
   border: none;
   color: #444;
@@ -5255,6 +5283,8 @@ li {
   margin-left: 16px;
 }
 .dashboard .body-dashboard .section-trash .body-trash .trash-list li .item .content .detail .checkbox input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
   height: 20px;
   width: 20px;
   border-radius: 4px;
@@ -6362,6 +6392,8 @@ li {
   outline: none;
   font-size: 16px;
   color: #444;
+  -webkit-appearance: none;
+  -moz-appearance: none;
 }
 .dashboard .body-dashboard .section-write-letter .block-create-letter .footer-create .sent-letter-to .input-group .input-field.field-add {
   min-width: 350px;
@@ -6912,6 +6944,8 @@ li {
   }
   .dashboard .body-dashboard .wrap-content .section-setting .tab-content #privacy .group-form .field .control input {
     width: 100%;
+    -webkit-appearance: none;
+    -moz-appearance: none;
   }
   .dashboard .body-dashboard .wrap-content .section-setting .tab-content #privacy .feature-facebook {
     display: block;
