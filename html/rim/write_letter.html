@@ -259,7 +259,7 @@
 													<a class="see-profile" href="#!">See your profile</a>
 												</div>
 											</div>
-											<div class="feedback">
+											<div class="feedback func-open-feedback">
 												<a href="#!" class="item">
 													<div class="icon">
 														<!-- icon feedback -->
@@ -839,37 +839,6 @@
 
 	<script>
 
-		var swiperHeroHome = new Swiper(".swiper-promote", {
-			pagination: {
-				el: ".swiper-pagination",
-			},
-			slidesPerView: 1,
-			spaceBetween: 0,
-			speed: 1500,
-			autoplay: {
-				delay: 2000,
-				disableOnInteraction: false,
-			},
-		});
-
-		// event bật modal feedback
-		$(".func-open-feedback").click(function () {
-			$(".bl-modal").addClass("is-show")
-			$("#modal-feedback").addClass("active");
-			$("body").addClass("overlay-modal");
-		});
-		$(".func-open-preview").click(function () {
-			$(".bl-modal").addClass("is-show")
-			$("#modal-preview").addClass("active");
-			$("body").addClass("overlay-modal");
-		});
-
-		$(".func-close-modal,.button-close").click(function () {
-			$(".bl-modal").removeClass("is-show")
-			$(".modal-container").removeClass("active")
-			$("body").removeClass("overlay-modal");
-		});
-
 		DecoupledEditor
 			.create(document.querySelector('#editor'), {
 				ckfinder: {
@@ -902,11 +871,6 @@
 				$(".duration-list").show();
 			}
 
-		});
-
-		// zoom block write
-		$(".func-zoom").click(function () {
-			$(".block-create-letter").toggleClass("scale");
 		});
 	</script>
 </body>

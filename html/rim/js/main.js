@@ -414,31 +414,34 @@
 				: (window.SmoothScroll = et);
 })();
 
-
-
+// danh sách func bật dropdown
 $(".dropdown-notification .dropbtn").click(function () {
-	$(".dropdown-content").removeClass("show");
-	document.getElementById("content-notification").classList.toggle("show");
+	$("#content-feature").removeClass("show")
+	$("#content-filter").removeClass("show");
+	$(this).parent().find("#content-notification").toggleClass("show");
 });
 
 
 $(".dropdown-feature .dropbtn").click(function () {
-	$(".dropdown-content").removeClass("show");
-	document.getElementById("content-feature").classList.toggle("show");
-
+	$("#content-notification").removeClass("show");
+	$(this).parent().find("#content-feature").toggleClass("show");
 });
 
 $(".dropdown-filter .dropbtn").click(function () {
-	$(".dropdown-content").removeClass("show");
-	document.getElementById("content-filter").classList.toggle("show");
+	$("#content-feature").removeClass("show")
+	$("#content-notification").removeClass("show");
+	$(this).parent().find("#content-filter").toggleClass("show");
 
 });
 
 $(".dropdown-more .dropbtn").click(function () {
-	$(".dropdown-content").removeClass("show");
-	document.getElementById("content-more").classList.toggle("show");
-
+	$("#content-feature").removeClass("show")
+	$("#content-notification").removeClass("show");
+	$("#content-filter").removeClass("show");
+	$(this).parent().find("#content-more").toggleClass("show");
 });
+
+
 
 // Close the dropdown if the user clicks outside of it
 window.onclick = function (event) {
@@ -456,7 +459,6 @@ window.onclick = function (event) {
 
 
 // mở letter ( chỉ áp dụng cho tablet và mobile)
-
 $(document).ready(function() {
 	if ( $(window).width() < 1024 ) {
 		$(".draft-list .item").click(function(){
@@ -476,4 +478,57 @@ $(document).ready(function() {
 			$(".block-content-sent").removeClass("active");
 		});
 	};	
+});
+
+// bật modal feedback
+$(".func-open-feedback").click(function(){
+	$("body").addClass("overlay-modal");
+	$(".bl-modal").addClass("is-show");
+	$("#modal-feedback").addClass("active");
+});
+
+// event bật deactive ở trang setting
+$(".open-modal-deactive").click(function(){
+	$("body").addClass("overlay-modal");
+	$(".bl-modal").addClass("is-show");
+	$("#modal-confirm").addClass("active");
+});
+
+// event bật alert login ở trang writer guest
+$(".open-alert-login").click(function(){
+	$("body").addClass("overlay-modal");
+	$(".bl-modal").addClass("is-show")
+	$("#modal-alert-login").addClass("active");
+});
+
+// func bật modal preview
+$(".func-open-preview").click(function () {
+	$(".bl-modal").addClass("is-show")
+	$("#modal-preview").addClass("active");
+	$("body").addClass("overlay-modal");
+});
+
+
+
+// func-close-modal
+$(".func-close-modal, .button-close").click(function(){
+	$("body").removeClass("overlay-modal");
+	$(".bl-modal").removeClass("is-show")
+	$(".modal-container").removeClass("active")
+});
+
+// func tab ở trang setting
+$('.section-setting .tab a').on('click', function (e) {
+	e.preventDefault();
+	$(this).parent().addClass('active');
+	$(this).parent().siblings().removeClass('active');
+
+	target = $(this).attr('href');
+	$('.tab-content .wrap > div').not(target).hide();
+	$(target).fadeIn(600);
+});
+
+// zoom block write
+$(".func-zoom").click(function () {
+	$(".block-create-letter").toggleClass("scale");
 });

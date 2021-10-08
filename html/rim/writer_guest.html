@@ -56,7 +56,7 @@
 	<main>
 		<div class="section-writer-guest">
 			<div class="section-write-letter">
-				<div class="block-login-guest">
+				<!-- <div class="block-login-guest">
 					<div class="section-sign-in">
 						<div class="container">
 							<div class="method">
@@ -76,7 +76,7 @@
 							</div>
 							<form id="signIn">
 								<button type="submit" class="button">Sign In</button>
-								<!-- <a href="#!" class="button">Continue</a> -->
+								
 							</form>
 							<div class="func-other">
 								<div class="create-new">
@@ -86,7 +86,7 @@
 							</div>
 						</div>
 					</div>
-				</div>
+				</div> -->
 				<div class="block-create-letter">
 					<div class="func-zoom">
 						<img class="zoom zoom-in" src="images/icon_zoom_in.png" alt="">
@@ -261,7 +261,7 @@
 							</div>
 						</div>
 						<div class="btn-group">
-							<a class="btn is-primary" href="#!">
+							<a class="btn is-primary open-alert-login" href="#!">
 								<div class="icon">
 									<svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="none"
 										xmlns:v="https://vecta.io/nano">
@@ -296,7 +296,21 @@
 			</div>
 		</div>
 	</main>
-
+	<div class="bl-modal">
+		<div class="modal-container" id="modal-alert-login">
+			<div class="content-modal">
+				<p>Welcome back! Sign in to send your letter</p>
+				<div class="btn-group">
+					<a class="btn is-outline func-close-modal" href="#!">
+						Cancel
+					</a>
+					<a class="btn is-primary" href="sign_in.html">
+						Sign In
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
 	<script src="./js/jquery.min.js"></script>
 	<script src="./js/swiper.min.js"></script>
 	<script type="text/javascript"
@@ -319,6 +333,7 @@
 				$(".duration-list").show();
 			}
 		});
+		// js ckediter
 		DecoupledEditor
 			.create(document.querySelector('#editor'), {
 				ckfinder: {

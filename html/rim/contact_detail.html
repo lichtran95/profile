@@ -24,7 +24,7 @@
 			<div class="group-nav">
 				<ul class="navigation-main">
 					<li>
-						<a class="item-nav" href='#!'>
+						<a class="item-nav" href='inbox.html'>
 							<div class="icon">
 								<!-- icon inbox -->
 								<svg xmlns="http://www.w3.org/2000/svg" width="17" height="13" fill="none"
@@ -39,7 +39,7 @@
 						</a>
 					</li>
 					<li>
-						<a class="item-nav" href='#!'>
+						<a class="item-nav" href='schedule.html'>
 							<div class="icon">
 								<!-- icon schedule -->
 								<svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="none"
@@ -60,7 +60,7 @@
 						</a>
 					</li>
 					<li>
-						<a class="item-nav" href='#!'>
+						<a class="item-nav" href='sent.html'>
 							<div class="icon">
 								<!-- icon sent -->
 								<svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="none"
@@ -81,7 +81,7 @@
 						</a>
 					</li>
 					<li>
-						<a class="item-nav" href='#!'>
+						<a class="item-nav" href='plans.html'>
 							<div class="icon">
 								<!-- icon plans -->
 								<svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="none"
@@ -102,7 +102,7 @@
 						</a>
 					</li>
 					<li>
-						<a class="item-nav" href='#!'>
+						<a class="item-nav" href='trash.html'>
 							<div class="icon">
 								<!-- icon trash -->
 								<svg xmlns="http://www.w3.org/2000/svg" width="14" height="17" fill="#fff"
@@ -117,7 +117,7 @@
 				</ul>
 				<ul class="navigation-contact">
 					<li>
-						<a class="item-nav" href="#!">
+						<a class="item-nav active" href="add_contact.html">
 							<div class="icon">
 								<!-- icon add contact -->
 								<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="#fff"
@@ -130,7 +130,7 @@
 						</a>
 					</li>
 					<li>
-						<a class="item-nav" href="#!">
+						<a class="item-nav" href="my_contact.html">
 							<div class="icon">
 								<!-- icon contact -->
 								<svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" fill="none"
@@ -257,7 +257,7 @@
 													<a class="see-profile" href="#!">See your profile</a>
 												</div>
 											</div>
-											<div class="feedback">
+											<div class="feedback func-open-feedback">
 												<a href="#!" class="item">
 													<div class="icon">
 														<!-- icon feedback -->
@@ -585,28 +585,35 @@
 		</div>
 
 	</main>
-
+	<!-- modal -->
+	<div class="bl-modal">
+		<div class="modal-container" id="modal-feedback">
+			<div class="content-modal">
+				<div class="module-feedback">
+					<h4>
+						Help us improve the new Rest in mind
+					</h4>
+					<div class="group">
+						“I've been writing letters to my future self using @Restinmind since 2021. It has such a cathartic effect and has helped me set long term goals and reminders. Highly recommended!”
+					</div>
+					<div class="btn-group">
+						<a class="btn is-outline func-close-modal" href="#!">
+							Cancel
+						</a>
+						<a class="btn is-primary" href="#!">
+							Confirm
+						</a>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</div>
 	<script src="./js/jquery.min.js"></script>
 	<script src="./js/swiper.min.js"></script>
 	<script type="text/javascript"
 		src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
 	<script src="./js/main.js"></script>
-
-	<script>
-
-		var swiperHeroHome = new Swiper(".swiper-promote", {
-			pagination: {
-				el: ".swiper-pagination",
-			},
-			slidesPerView: 1,
-			spaceBetween: 0,
-			speed: 1500,
-			autoplay: {
-				delay: 2000,
-				disableOnInteraction: false,
-			},
-		});
-	</script>
 </body>
 
 </html>

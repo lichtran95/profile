@@ -257,7 +257,7 @@
 													<a class="see-profile" href="#!">See your profile</a>
 												</div>
 											</div>
-											<div class="feedback">
+											<div class="feedback func-open-feedback">
 												<a href="#!" class="item">
 													<div class="icon">
 														<!-- icon feedback -->
@@ -601,32 +601,6 @@
 	<script type="text/javascript"
 		src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
 	<script src="./js/main.js"></script>
-
-	<script>
-
-		var swiperHeroHome = new Swiper(".swiper-promote", {
-			pagination: {
-				el: ".swiper-pagination",
-			},
-			slidesPerView: 1,
-			spaceBetween: 0,
-			speed: 1500,
-			autoplay: {
-				delay: 2000,
-				disableOnInteraction: false,
-			},
-		});
-
-		// event bật modal
-		$(".func-open-feedback").click(function(){
-			$(".bl-modal").addClass("is-show")
-			$("#modal-feedback").addClass("active");
-		});
-		$(".func-close-modal").click(function(){
-			$(".bl-modal").removeClass("is-show")
-			$(".modal-container").removeClass("active")
-		});
-	</script>
 </body>
 
 </html>

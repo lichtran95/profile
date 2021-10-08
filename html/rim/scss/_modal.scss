@@ -60,6 +60,42 @@
 				}
 			}
 		}
+		&#modal-alert-login{
+			width:400px;
+			
+			p{
+				font-size:16px;
+				color:#444;
+				margin-top:12px;
+				margin-bottom: 24px;
+				text-align:center;
+			}
+			.btn-group{
+				display:flex;
+				justify-content:center;
+				.btn{
+					font-size:14px;
+					font-weight:700;
+					height:44px;
+					display:flex;
+					align-items:center;
+					justify-content:center;
+					border-radius:10px;
+					min-width:140px;
+					text-align:center;
+					padding:5px 0;
+					&.is-outline{
+						border:1px solid #17479E;
+						color:#17479E;
+					}
+					&.is-primary{
+						background-color:#17479E;
+						color:#fff;
+						margin-left:5px;
+					}
+				}
+			}
+		}
 		&#modal-feedback{
 			width:600px;
 			h4{
