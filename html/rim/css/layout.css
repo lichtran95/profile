@@ -7940,6 +7940,7 @@ li {
     font-size: 12px;
     font-weight: 700;
     border-radius: 10px;
+    min-width: 140px;
     z-index: 90;
     text-align: center;
     padding: 5px 10px;
