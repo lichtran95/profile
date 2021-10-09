@@ -542,7 +542,7 @@ var swiperHeroHome = new Swiper(".swiper-promote", {
 	spaceBetween: 0,
 	speed: 1500,
 	autoplay: {
-		delay: 2000,
+		delay: 5000,
 		disableOnInteraction: false,
 	},
 });
