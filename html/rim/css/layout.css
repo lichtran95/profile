@@ -1145,6 +1145,10 @@ button.swiper-pagination-bullet {
 }
 
 /* Prevent Tap */
+[contenteditable] {
+  outline: 0px solid transparent;
+}
+
 * {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -3278,6 +3282,10 @@ body header {
     min-height: 80vh;
   }
 }
+[contenteditable] {
+  outline: 0px solid transparent;
+}
+
 * {
   box-sizing: border-box;
   -moz-box-sizing: border-box;

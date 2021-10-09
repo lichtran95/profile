@@ -546,3 +546,39 @@ var swiperHeroHome = new Swiper(".swiper-promote", {
 		disableOnInteraction: false,
 	},
 });
+
+
+// xử lý sự kiện ở trang writer
+DecoupledEditor
+	.create(document.querySelector('#editor'), {
+		ckfinder: {
+			uploadUrl: '/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files&responseType=json',
+		}
+	})
+	.then(editor => {
+		const toolbarContainer = document.querySelector('main .toolbar-container');
+
+		toolbarContainer.prepend(editor.ui.view.toolbar.element);
+
+		window.editor = editor;
+
+	})
+	.catch(err => {
+		console.error(err.stack);
+});
+
+// javascript cho chọn schedule
+$("#button-select").click(function () {
+	var $this = $(this);
+	$this.toggleClass("active");
+	if ($this.hasClass("active")) {
+		$this.find("span").html("Choose duration");
+		$(".group-time-picker").show();
+		$(".duration-list").hide();
+	} else {
+		$this.find("span").html("Schedule Send");
+		$(".group-time-picker").hide();
+		$(".duration-list").show();
+	}
+
+});

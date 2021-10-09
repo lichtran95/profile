@@ -317,45 +317,6 @@
 		src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
 	<script src="https://cdn.ckeditor.com/ckeditor5/30.0.0/decoupled-document/ckeditor.js"></script>
 	<script src="./js/main.js"></script>
-
-	<script>
-		// javascript cho chọn schedule
-		$("#button-select").click(function () {
-			var $this = $(this);
-			$this.toggleClass("active");
-			if ($this.hasClass("active")) {
-				$this.find("span").html("Choose duration");
-				$(".group-time-picker").show();
-				$(".duration-list").hide();
-			} else {
-				$this.find("span").html("Schedule Send");
-				$(".group-time-picker").hide();
-				$(".duration-list").show();
-			}
-		});
-		// js ckediter
-		DecoupledEditor
-			.create(document.querySelector('#editor'), {
-				ckfinder: {
-					uploadUrl: '/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files&responseType=json',
-				}
-			})
-			.then(editor => {
-				const toolbarContainer = document.querySelector('main .toolbar-container');
-
-				toolbarContainer.prepend(editor.ui.view.toolbar.element);
-
-				window.editor = editor;
-
-			})
-			.catch(err => {
-				console.error(err.stack);
-		});
-		// zoom block write
-		$(".func-zoom").click(function () {
-			$(".block-create-letter").toggleClass("scale");
-		});
-	</script>
 </body>
 
 </html>
