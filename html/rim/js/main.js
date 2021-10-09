@@ -532,3 +532,17 @@ $('.section-setting .tab a').on('click', function (e) {
 $(".func-zoom").click(function () {
 	$(".block-create-letter").toggleClass("scale");
 });
+
+// swiper promote
+var swiperHeroHome = new Swiper(".swiper-promote", {
+	pagination: {
+		el: ".swiper-pagination",
+	},
+	slidesPerView: 1,
+	spaceBetween: 0,
+	speed: 1500,
+	autoplay: {
+		delay: 2000,
+		disableOnInteraction: false,
+	},
+});
