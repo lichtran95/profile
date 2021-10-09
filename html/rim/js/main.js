@@ -533,6 +533,33 @@ $(".func-zoom").click(function () {
 	$(".block-create-letter").toggleClass("scale");
 });
 
+// javascript cho chọn schedule
+$("#button-select").click(function () {
+	var $this = $(this);
+	$this.toggleClass("active");
+	if ($this.hasClass("active")) {
+		$this.find("span").html("Choose duration");
+		$(".group-time-picker").show();
+		$(".duration-list").hide();
+	} else {
+		$this.find("span").html("Schedule Send");
+		$(".group-time-picker").hide();
+		$(".duration-list").show();
+	}
+});
+
+// open create reply
+$(".func-open-reply").click(function(){
+	$(".section-inbox .block-content-inbox").addClass("is-hide");
+	$(".section-inbox .block-create-letter").addClass("is-active");
+});
+
+// create reply 
+$(".block-create-letter .func-back").click(function(){
+	$(".section-inbox .block-content-inbox").removeClass("is-hide");
+	$(".section-inbox .block-create-letter").removeClass("is-active");
+});
+
 // swiper promote
 var swiperHeroHome = new Swiper(".swiper-promote", {
 	pagination: {
@@ -567,18 +594,3 @@ DecoupledEditor
 		console.error(err.stack);
 });
 
-// javascript cho chọn schedule
-$("#button-select").click(function () {
-	var $this = $(this);
-	$this.toggleClass("active");
-	if ($this.hasClass("active")) {
-		$this.find("span").html("Choose duration");
-		$(".group-time-picker").show();
-		$(".duration-list").hide();
-	} else {
-		$this.find("span").html("Schedule Send");
-		$(".group-time-picker").hide();
-		$(".duration-list").show();
-	}
-
-});
