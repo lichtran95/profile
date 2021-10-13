@@ -1329,7 +1329,11 @@ body{
 									border-color:transparent;
 								}
 							}
+							&.has-input{
+								width:66%;
+							}
 						}
+						
 					}
 					#button-select{
 						margin-top:12px;

@@ -2664,6 +2664,9 @@ body header {
     background: #17479e;
     border-color: transparent;
   }
+  .section-write-letter .block-create-letter .footer-create .deliver-in .duration-list li.has-input {
+    width: 66%;
+  }
   .section-write-letter .block-create-letter .footer-create .deliver-in #button-select {
     margin-top: 12px;
     margin-right: 0;
@@ -8152,6 +8155,9 @@ li {
     background: #17479e;
     border-color: transparent;
   }
+  .dashboard .body-dashboard .wrap-content .section-write-letter .block-create-letter .footer-create .deliver-in .duration-list li.has-input {
+    width: 66%;
+  }
   .dashboard .body-dashboard .wrap-content .section-write-letter .block-create-letter .footer-create .deliver-in #button-select {
     margin-top: 12px;
     margin-right: 0;
@@ -8478,6 +8484,9 @@ li {
     color: #fff;
     background: #17479e;
     border-color: transparent;
+  }
+  .dashboard .body-dashboard .wrap-content .section-inbox .block-create-letter .footer-create .deliver-in .duration-list li.has-input {
+    width: 66%;
   }
   .dashboard .body-dashboard .wrap-content .section-inbox .block-create-letter .footer-create .deliver-in #button-select {
     margin-top: 12px;

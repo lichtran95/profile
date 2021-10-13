@@ -4513,6 +4513,9 @@ $color-grey: #808080;
 												border-color:transparent;
 											}
 										}
+										&.has-input{
+										width:66%;
+										}
 									}
 								}
 								#button-select{
@@ -4827,6 +4830,9 @@ $color-grey: #808080;
 												border-color:transparent;
 											}
 										}
+										&.has-input{
+											width:66%;
+											}
 									}
 								}
 								#button-select{
