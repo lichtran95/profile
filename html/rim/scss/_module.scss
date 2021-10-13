@@ -1076,11 +1076,16 @@ body{
 									box-shadow: none;
 									-webkit-appearance: none;
 									-moz-appearance: none;
+									font-size:14px;
+									font-family: 'Montserrat', sans-serif;
+									min-width: 200px;
 								}
 							}
 							&:hover,&.active{
 								.item{
 									border:1px solid #17479e;
+									input{
+									}
 								}
 							}
 						}

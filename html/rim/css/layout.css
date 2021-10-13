@@ -2377,6 +2377,9 @@ body header {
           box-shadow: none;
   -webkit-appearance: none;
   -moz-appearance: none;
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+  min-width: 200px;
 }
 .section-write-letter .block-create-letter .footer-create .deliver-in .duration-list li.has-input:hover .item, .section-write-letter .block-create-letter .footer-create .deliver-in .duration-list li.has-input.active .item {
   border: 1px solid #17479e;
@@ -6156,6 +6159,9 @@ li {
           box-shadow: none;
   -webkit-appearance: none;
   -moz-appearance: none;
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+  min-width: 200px;
 }
 .dashboard .body-dashboard .section-inbox .block-create-letter .footer-create .deliver-in .duration-list li.has-input:hover .item, .dashboard .body-dashboard .section-inbox .block-create-letter .footer-create .deliver-in .duration-list li.has-input.active .item {
   border: 1px solid #17479e;
@@ -7086,6 +7092,9 @@ li {
           box-shadow: none;
   -webkit-appearance: none;
   -moz-appearance: none;
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+  min-width: 200px;
 }
 .dashboard .body-dashboard .section-write-letter .block-create-letter .footer-create .deliver-in .duration-list li.has-input:hover .item, .dashboard .body-dashboard .section-write-letter .block-create-letter .footer-create .deliver-in .duration-list li.has-input.active .item {
   border: 1px solid #17479e;
