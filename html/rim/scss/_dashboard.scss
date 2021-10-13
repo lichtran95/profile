@@ -2578,12 +2578,35 @@ $color-grey: #808080;
 									color:#797979;
 									margin-right:5px;
 									cursor:pointer;
+									
 								}
 								&:hover,&.active{
 									.item{
 										color:#fff;
 										background:#17479e;
 										border-color:transparent;
+									}
+								}
+								&.has-input{
+									.item{
+										padding:0;
+										background:#fff !important;
+										input{
+											height:100%;
+											width:100%;
+											border-radius:5px;
+											padding:0 10px;
+											border:1px solid #797979;
+											border:none;
+											box-shadow: none;
+											-webkit-appearance: none;
+											-moz-appearance: none;
+										}
+									}
+									&:hover,&.active{
+										.item{
+											border:1px solid #17479e;
+										}
 									}
 								}
 							}
@@ -3395,12 +3418,35 @@ $color-grey: #808080;
 									color:#797979;
 									margin-right:5px;
 									cursor:pointer;
+									
 								}
 								&:hover,&.active{
 									.item{
 										color:#fff;
 										background:#17479e;
 										border-color:transparent;
+									}
+								}
+								&.has-input{
+									.item{
+										padding:0;
+										background:#fff !important;
+										input{
+											height:100%;
+											width:100%;
+											border-radius:5px;
+											padding:0 10px;
+											border:1px solid #797979;
+											border:none;
+											box-shadow: none;
+											-webkit-appearance: none;
+											-moz-appearance: none;
+										}
+									}
+									&:hover,&.active{
+										.item{
+											border:1px solid #17479e;
+										}
 									}
 								}
 							}
