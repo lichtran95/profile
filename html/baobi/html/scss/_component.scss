@@ -98,20 +98,43 @@ header{
 				}
 				&.pll-parent-menu-item{
 					background-position-x:99% !important;
-					
+					position:relative;
+					&:after{
+						content:'';
+						border: solid black;
+						border-width: 0 2px 2px 0;
+						display: inline-block;
+						padding: 4px;
+						transform: rotate(-135deg);
+  						-webkit-transform: rotate(45deg) translateY(-50%);
+						position:absolute;
+						top:35%; right:0px;
+					}
 					a{
-						font-size:14px;
+						font-size:16px !important;
 						color:$color-text !important;
 					}
 					.sub-menu{
 						left:0 !important;
+						margin:0 auto;
 						width:100% !important;
 						top:28px !important;
 						background: #F2F4F8;
 						border-radius: 0 0 16px 16px;
 						box-shadow: 0px 16px 32px rgb(0, 0, 0, 0.16);
+						position:absolute;
+						display:none;
+						&.is-active{
+							display:block;
+						}
 						li{
 							padding:8px 0;
+							width:100%;
+							a{
+								padding:8px 16px;
+								font-size:14px !important;
+
+							}
 							&:hover{
 								a{color:$primary !important;}
 							}
@@ -161,6 +184,58 @@ header{
 						select{
 							display:block;
 							margin:24px auto;
+						}
+						&.pll-parent-menu-item{
+						
+							a{
+								font-size:16px !important;
+								color:$color-text !important;
+							}
+							&:after{
+								content:'';
+								border: solid black;
+								border-width: 0 2px 2px 0;
+								display: inline-block;
+								padding: 4px;
+								transform: rotate(-135deg);
+								  -webkit-transform: rotate(45deg) translateY(-50%);
+								position:absolute;
+								top:35%; right:30px;
+							}
+							.sub-menu{
+								left:0 !important;
+								right:0 !important;
+								margin:0 auto;
+								width:fit-content !important;
+								top:54px !important;
+								background: #F2F4F8;
+								border-radius: 0 0 16px 16px;
+								box-shadow: 0px 16px 32px rgb(0, 0, 0, 0.16);
+								position:absolute;
+								display:none;
+								&.is-active{
+									display:block;
+								}
+								li{
+									padding:8px 0;
+									// width:100%;
+									a{
+										padding:8px 16px;
+									}
+									&:hover{
+										a{color:$primary !important;}
+									}
+								}
+		
+							}
+							@media(max-width:568px){
+								width:50%;
+								background-position-y:10px !important;
+								margin:24px auto 0 ;
+								a{
+									padding:8px 0;
+								}
+							}
 						}
 					}
 				}

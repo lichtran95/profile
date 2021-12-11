@@ -5,19 +5,22 @@ $(document).ready(function(){
 		},
 		loop:true,
 		runCallbacksOnInit:true,
-		speed:1500,
+		speed:1000,
 		autoplay: {
-			delay: 2500,
+			delay: 1800,
 			disableOnInteraction: false,
 		},
 	});
+	
 	var swiperProduct = new Swiper(".swiperProduct", {
 		slidesPerView: 4,
 		pagination: {
 			el: ".swiper-pagination",
 		},
-		// effect:'slide',
+		effect:'slide',
 		runCallbacksOnInit:true,
+		autoHeight: true,
+		loopedSlides:4,
 		loop:true,
 		speed:2000,
 		autoplay: {
@@ -42,6 +45,13 @@ $(document).ready(function(){
 			}
 		  }
 	});
+	var onSlideChangeEnd =  function(){
+		if(swiperProduct.activeIndex== swiperProduct.slides.length-1)
+		{
+			swiperProduct.swipeTo(0, 600);
+		}
+		swiperProduct.startAutoplay()
+		}
 	var swiperImageProduct = new Swiper(".swiperImageProduct", {
 		pagination: {
 			el: ".swiper-pagination",
@@ -103,4 +113,14 @@ $(document).ready(function(){
 		hamberger.classList.toggle('is-active');
 		$("header").toggleClass('is-fixed');
 	})
+	$(".pll-parent-menu-item").click(function(){
+		$(".sub-menu").toggleClass("is-active");
+	})
+
+	//  mở rộng nội dung giới thiệu
+
+	$(".section-main-intro .cta-extend").click(function(){
+		$(this).hide();
+		$(".section-sub-intro").show();
+	});
 });
