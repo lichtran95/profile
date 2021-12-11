@@ -1874,6 +1874,7 @@ html {
 }
 .section-hero-home .context .swiper-container {
   padding-bottom: 96px;
+  padding-left: 10px;
 }
 .section-hero-home .context .swiper-container .swiper-wrapper .swiper-slide {
   opacity: 0 !important;
