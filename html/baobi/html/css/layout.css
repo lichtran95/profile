@@ -1176,7 +1176,7 @@ header .container ul li.pll-parent-menu-item .sub-menu li:hover a {
 }
 
 footer {
-  background-color: #006357;
+  background-color: #005345;
   padding: 60px 0 20px;
 }
 footer .col {
@@ -1758,6 +1758,7 @@ html {
 .section-new-reason .container .context-right ul li p {
   position: relative;
   padding-left: 16px;
+  font-weight: 600;
 }
 .section-new-reason .container .context-right ul li p:after {
   content: "";
@@ -1800,7 +1801,7 @@ html {
 }
 
 .section-hero-home {
-  background-color: #004C3A;
+  background-color: #005345;
   padding: 48px 0 96px;
   position: relative;
 }

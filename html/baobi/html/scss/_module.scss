@@ -443,6 +443,7 @@
 					p{
 						position:relative;
 						padding-left:16px;
+						font-weight:600;
 						&:after{
 							content:'';
 							width:4px;
@@ -489,7 +490,7 @@
 	}
 }
 .section-hero-home{
-	background-color:#004C3A;
+	background-color:rgba(0, 83, 69, 1);
 	padding:48px 0 96px;
 	position:relative;
 	.context{
