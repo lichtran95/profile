@@ -122,5 +122,11 @@ $(document).ready(function(){
 	$(".section-main-intro .cta-extend").click(function(){
 		$(this).hide();
 		$(".section-sub-intro").show();
+		$(".cta-collapse").show();
+	});
+	$(".cta-collapse").click(function(){
+		$(this).hide();
+		$(".section-sub-intro").hide();
+		$(".section-main-intro .cta-extend").show();
 	});
 });
