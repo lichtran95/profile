@@ -5,10 +5,13 @@ $(document).ready(function(){
 		},
 		loop:true,
 		runCallbacksOnInit:true,
-		speed:1000,
+		spaceBetween: 30,
+		effect:'fade',
+		speed:2000,
 		autoplay: {
-			delay: 1800,
-			disableOnInteraction: false,
+			delay: 2500,
+			disableOnInteraction: true,
+			clickable:true
 		},
 	});
 	

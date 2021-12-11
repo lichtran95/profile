@@ -99,6 +99,7 @@ header{
 				&.pll-parent-menu-item{
 					background-position-x:99% !important;
 					position:relative;
+					width:42px;
 					&:after{
 						content:'';
 						border: solid black;
@@ -113,9 +114,13 @@ header{
 					a{
 						font-size:16px !important;
 						color:$color-text !important;
+						img{
+							display:block;
+							width:24px;
+						}
 					}
 					.sub-menu{
-						left:0 !important;
+						left:-7px !important;
 						margin:0 auto;
 						width:100% !important;
 						top:28px !important;
@@ -124,6 +129,8 @@ header{
 						box-shadow: 0px 16px 32px rgb(0, 0, 0, 0.16);
 						position:absolute;
 						display:none;
+					border-radius:8px !important;
+
 						&.is-active{
 							display:block;
 						}
@@ -131,7 +138,7 @@ header{
 							padding:8px 0;
 							width:100%;
 							a{
-								padding:8px 16px;
+								padding:8px 8px;
 								font-size:14px !important;
 
 							}
