@@ -9,7 +9,7 @@ $(document).ready(function(){
 		effect:'fade',
 		speed:2000,
 		autoplay: {
-			delay: 2500,
+			delay: 3000,
 			disableOnInteraction: true,
 			clickable:true
 		},
