@@ -6,7 +6,7 @@ $(".hamberger").click(function(event){
 });
 
 
-$(window).click(function() {
+$('body').click(function() {
 	$('.sidebar').removeClass("sidebar-visible");
   });
   

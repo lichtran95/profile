@@ -3192,6 +3192,7 @@ h2.title .input-search input::placeholder {
   font-size: 16px;
   display: block;
   margin-left: 4px;
+  white-space: nowrap;
 }
 .module-support ul.breadcrumb li img {
   display: block;
