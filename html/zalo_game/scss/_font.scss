@@ -1,0 +1,67 @@
+// Font Roboto
+//@font-face{font-family:"Roboto";font-weight:300;font-style:normal;src:url("../fonts/roboto/roboto-light-webfont.eot") format("embedded-opentype");
+//src:url("../fonts/roboto/roboto-light-webfont.eot?#iefix") format("embedded-opentype"),
+//url("../fonts/roboto/roboto-light-webfont.woff") format("woff"),
+//url("../fonts/roboto/roboto-light-webfont.ttf") format("ttf"),
+//url("../fonts/roboto/roboto-light-webfont.svg#roboto") format("svg")
+//}
+//@font-face{font-family:"Roboto";font-weight:500;font-style:normal;src:url("../fonts/roboto/roboto-medium-webfont.eot") format("embedded-opentype");
+//src:url("../fonts/roboto/roboto-medium-webfont.eot?#iefix") format("embedded-opentype"),
+//url("../fonts/roboto/roboto-medium-webfont.woff") format("woff"),
+//url("../fonts/roboto/roboto-medium-webfont.ttf") format("ttf"),
+//url("../fonts/roboto/roboto-medium-webfont.svg#roboto") format("svg")
+//}
+//@font-face{font-family:"Roboto";font-weight:normal;font-style:normal;src:url("../fonts/roboto/roboto-regular-webfont.eot") format("embedded-opentype");
+//src:url("../fonts/roboto/roboto-regular-webfont.eot?#iefix") format("embedded-opentype"),
+//url("../fonts/roboto/roboto-regular-webfont.woff") format("woff"),
+//url("../fonts/roboto/roboto-regular-webfont.ttf") format("ttf"),
+//url("../fonts/roboto/roboto-regular-webfont.svg#roboto") format("svg")
+//}
+//@font-face{font-family:"Roboto";font-weight:bold;font-style:normal;src:url("../fonts/roboto/roboto-bold-webfont.eot") format("embedded-opentype");
+//src:url("../fonts/roboto/roboto-bold-webfont.eot?#iefix") format("embedded-opentype"),
+//url("../fonts/roboto/roboto-bold-webfont.woff") format("woff"),
+//url("../fonts/roboto/roboto-bold-webfont.ttf") format("ttf"),
+//url("../fonts/roboto/roboto-bold-webfont.svg#roboto") format("svg")
+//}
+//@font-face{font-family:"Roboto";font-weight:normal;font-style:italic;src:url("../fonts/roboto/roboto-italic-webfont.eot") format("embedded-opentype");
+//src:url("../fonts/roboto/roboto-italic-webfont.eot?#iefix") format("embedded-opentype"),
+//url("../fonts/roboto/roboto-italic-webfont.woff") format("woff"),
+//url("../fonts/roboto/roboto-italic-webfont.ttf") format("ttf"),
+//url("../fonts/roboto/roboto-italic-webfont.svg#roboto") format("svg")
+//}
+
+// Font
+@font-face {
+	font-family: 'SFUIText';
+	src: url('../fonts/SF/SFUIText-Regular.eot?#iefix') format('embedded-opentype'),  url('../fonts/SF/SFUIText-Regular.woff') format('woff'), url('../fonts/SF/SFUIText-Regular.ttf')  format('truetype'), url('../fonts/SF/SFUIText-Regular.svg#SFUIText-Regular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'SFUIText';
+	src: url('../fonts/SF/SFUIText-Bold.eot?#iefix') format('embedded-opentype'),  url('../fonts/SF/SFUIText-Bold.woff') format('woff'), url('../fonts/SF/SFUIText-Bold.ttf')  format('truetype'), url('../fonts/SF/SFUIText-Bold.svg#SFUIText-Bold') format('svg');
+	font-weight: bold;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'SFCompactDisplay';
+	src: url('../fonts/SF/SFCompactDisplay-Regular.eot?#iefix') format('embedded-opentype'),  url('../fonts/SF/SFCompactDisplay-Regular.otf')  format('opentype'),
+		 url('../fonts/SF/SFCompactDisplay-Regular.woff') format('woff'), url('../fonts/SF/SFCompactDisplay-Regular.ttf')  format('truetype'), url('../fonts/SF/SFCompactDisplay-Regular.svg#SFCompactDisplay-Regular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'SFCompactDisplay';
+	src: url('../fonts/SF/SFCompactDisplay-Medium.eot?#iefix') format('embedded-opentype'),  url('../fonts/SF/SFCompactDisplay-Medium.otf')  format('opentype'),
+		 url('../fonts/SF/SFCompactDisplay-Medium.woff') format('woff'), url('../fonts/SF/SFCompactDisplay-Medium.ttf')  format('truetype'), url('../fonts/SF/SFCompactDisplay-Medium.svg#SFCompactDisplay-Medium') format('svg');
+	font-weight: 500;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'SFCompactDisplay';
+	src: url('../fonts/SF/SFCompactDisplay-Bold.eot?#iefix') format('embedded-opentype'),  url('../fonts/SF/SFCompactDisplay-Bold.otf')  format('opentype'),
+		 url('../fonts/SF/SFCompactDisplay-Bold.woff') format('woff'), url('../fonts/SF/SFCompactDisplay-Bold.ttf')  format('truetype'), url('../fonts/SF/SFCompactDisplay-Bold.svg#SFCompactDisplay-Bold') format('svg');
+	font-weight: bold;
+	font-style: normal;
+}
+

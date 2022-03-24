@@ -1,0 +1,49 @@
+$background       : #fff !default;
+
+// Color Font
+$color-base       : #000 !default;
+$color-main       : #0093FF !default;
+$color-second     : #888 !default;
+$color-third      : #777 !default;
+$color-four       : #F27813 !default;
+$color-border     : #efefef !default;
+$color-link       : $color-main !default;
+
+$color-gray          : #1F2D3D !default;
+$color-gray-1        : #273444 !default;
+$color-gray-2        : #3C4858 !default;
+$color-gray-3        : #8492A6 !default;
+$color-gray-4        : #273444 !default;
+
+$color-smoke         : #E0E6ED !default;
+$color-dark-smoke    : #D3DCE6 !default;
+$color-dark-smoke-ex : #C0CCDA !default;
+
+$color-snow          : #F9FAFC !default;
+$color-dark-snow     : #EFF2F7 !default;
+$color-dark-snow-ex  : #E5E9F2 !default;
+
+$color-success       : #3acc33 !default;
+$color-error         : #fc4a4a !default;
+$color-warning       : #FFC82C !default;
+
+// Font Style
+$font-icon        : 'lazalo'!default;
+
+// media screen
+$tiny-screen: 349px !default;
+$small-screen: 576px !default;
+$medium-screen: 768px !default;
+$large-screen: 992px !default;
+$xlarge-screen: 1200px !default;
+
+// Page
+$primary-font: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+//$primary-font: "Roboto", "Helvetica Neue", "Helvetica", Arial, "Apple Color Emoji", "Segoe UI Emoji","Segoe UI Symbol", sans-serif;
+$main_sprites:"../images/main_sprites.1.0.1.png";
+$main_sprites_size:200px 200px;
+$game_sprites:"../images/game_sprites.1.0.2.png";
+$game_sprites_size:356px 80px;
+$game_sprites_size_ipad:534px 120px;
+$line-height:1.42857143;
+

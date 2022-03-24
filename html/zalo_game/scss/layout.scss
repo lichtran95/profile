@@ -1,0 +1,31 @@
+// Core variables and mixins bourbon
+@import "bourbon/bourbon";
+@import "susy";
+
+@import "variable";
+@import "mixin_lib";
+
+// All Page
+$susy: (
+    columns: 12,  // The number of columns in your grid
+//    container: 1120px, // set max-width
+    gutters: 0, // The size of a gutter in relation to a single column
+);
+
+//$susy: (
+//    columns: 2 1,  // The number of columns in your grid
+//    output: isolate,
+//);
+
+// Reset
+@import "reset";
+
+// Component
+@import "component";
+
+
+// Swiper
+@import "swiper";
+
+// Page
+@import "page";
